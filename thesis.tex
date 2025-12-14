@@ -26,6 +26,11 @@
 \usepackage{multirow}
 \usepackage{tabularx}
 
+\usepackage{lipsum}
+
+
+
+
 % Uncomment the following to attempt to enforce Type 1 or TrueType 
 % fonts. ProQuest does not want the type 3 fonts used by default as
 % of Dec. 2019 - see 
@@ -88,7 +93,11 @@
 % even for non-included files.
 %\includeonly{chapter1}
 
+
+
 \begin{document}
+% Prevent LaTeX from stretching short pages to the bottom; this keeps headings above the footer
+\raggedbottom
 
 % Preliminary pages are always loaded (TOC, CV, etc.)
 \preliminarypages
@@ -96,7 +105,16 @@
 % Include the different components of your thesis, in separate files.
 % Using \include allows you to set \includeonly above.
 \include{tex/standard_model}
-%\include{chapter2}
+\include{tex/bsm_physics}
+\include{tex/experimental_apparatus}
+\include{tex/object_definition}
+\include{tex/searches_toolkit}
+\include{tex/HEP_searches_toolkit}
+\include{tex/QBH_search}
+\include{tex/Zprime_search}
+\include{tex/Clockwork_search}
+\include{tex/nsw_trigger}
+\include{tex/conclusions}
 % ... and so on
 
 % These commands fix an odd problem in which the bibliography line
