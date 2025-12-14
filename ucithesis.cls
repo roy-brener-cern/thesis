@@ -48,9 +48,7 @@
 \newcommand{\othercommitteemembers}[1]{\newcommand\Othercommitteemembers{#1}}
 \newcommand{\copyrightdeclaration}[1]{\newcommand\Copyrightdeclaration{#1}}
 \newcommand{\prepublishedcopyrightdeclaration}[1]{\newcommand\Prepublishedcopyrightdeclaration{#1}}
-\newcommand{\dedications}[1]{\newcommand\Dedications{#1}}
 \newcommand{\acknowledgments}[1]{\newcommand\Acknowledgments{#1}}
-\newcommand{\curriculumvitae}[1]{\newcommand\Curriculumvitae{#1}}
 \newcommand{\thesisabstract}[1]{\newcommand\Thesisabstract{#1}}
 
 \newcommand{\thesistitlepage}
@@ -59,14 +57,13 @@
 	\thispagestyle{empty}
 	\singlespacing
 	\begin{center}
-		UNIVERSITY OF CALIFORNIA, \\
-		IRVINE \\
+		WEIZMANN INSTITUTE OF SCIENCE \\
 		\vspace{0.4in}
 		\Thesistitle \\
 		\vspace{0.15in}
 		\MakeUppercase\Documenttitle \\
 		\vspace{0.4in}
-		submitted in partial satisfaction of the requirements \\
+		submitted in partial fulfilment of the requirements \\
 		for the degree of \\
 		\vspace{0.4in}
 		\MakeUppercase\Degreename \\
@@ -77,12 +74,6 @@
 		\vspace{0.4in}
 		\Authorname \\
 	\end{center}
-	\vspace{1in}
-	\begin{flushright}
-		\Documenttitle \;Committee: \\
-		\Committeechair, Chair \\
-		\Othercommitteemembers \\
-	\end{flushright}
 	\vfill
 	\begin{center}
 		\Degreeyear
@@ -137,16 +128,6 @@
 	\clearpage
 }
 
-\newcommand{\dedicationpage}
-{
-	\begin{center}
-		\textbf{\Large DEDICATION} \\
-		\vspace{0.4in}
-		\Dedications
-	\end{center}
-	\clearpage
-}
-
 \newcommand{\acknowledgmentspage}
 {
 	\begin{center}
@@ -158,16 +139,7 @@
 	\clearpage
 }
 
-\newcommand{\curriculumvitaepage}
-{
-	\begin{center}
-		\textbf{\Large VITA} \\
-		\vspace{0.4in}
-		\textbf{\large{\Authorname}}
-	\end{center}
-	\Curriculumvitae
-	\clearpage
-}
+
 
 \newcommand{\abstractpage}
 {
@@ -180,11 +152,7 @@
 		\vspace{0.2in}
 		\Authorname \\
 		\vspace{0.2in}
-		\Degreename\ in \Degreefield \\
-		\vspace{0.2in}
-		University of California, Irvine, \Degreeyear \\
-		\vspace{0.2in}
-		\Committeechair, Chair \\
+		Weizmann Institute of Science, \Degreeyear \\
 	\end{center}
 	\vspace{0.2in}
 	\doublespacing
@@ -218,10 +186,6 @@
         \fi
 	\setcounter{page}{2}
 	%\signaturepage  %% not for electronic submission
-        \ifx\Dedications\undefined
-	\else
-	  \dedicationpage
-	\fi
 	\tableofcontents
 	\clearpage
 	\phantomsection
@@ -244,13 +208,6 @@
 	\addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
 	\acknowledgmentspage
 	\clearpage
-	\ifx\Curriculumvitae\undefined
-	\else
-	  \phantomsection
-	  \addcontentsline{toc}{chapter}{VITA}
-	  \curriculumvitaepage
-	  \clearpage
-	\fi
 	\phantomsection
 	\addcontentsline{toc}{chapter}{ABSTRACT OF THE \uppercase{\Documenttitle}}
 	\abstractpage
