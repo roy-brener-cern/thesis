@@ -1,0 +1,25 @@
+\subsection{Context and Motivation}
+The LHC is currently operating at Run3 running period, where its centre-of-mass energy is $\sqrt{s} = 13.6~\textrm{TeV}$~\cite{ATLAS:2023dns}, a modest increase of 0.6~TeV with respect to Run2. The total integrated luminosity recorded by ATLAS thus far is $165~\textrm{fb}^{-1}$ and it includes proton-proton collision data recorded during 2022--2024. Partial Run 3 (2022-2024) compared to Run 2 therefore has a slightly higher centre of mass energy and more data. Both of these benefit QBH searches.
+% The combination of these two parameters in conjunction with a motivation to search for New Physics (NP) with leptons during Run3 underline the necessity to focus on signals that would benefit from the slight increase of centre-of-mass energy with a limited integrated luminosity.In other words, what are the signals to which ATLAS can increase its exclusion range with a partial Run3 dataset? 
+QBH production cross-sections increase significantly with $\sqrt{s}$, such that even a moderate rise in the collider energy would induce considerably higher $\sigma(\textrm{QBH})$~\cite{Gingrich:2006hm}. They are one of the very few signals (if not the only) which would considerably benefit from this small energy increase. To probe this expected increase, production cross sections of QBHs generated with the event generator \texttt{QBH v3.02}~\cite{Gingrich:2009da}, which follow the six quantum states noted in Section~\ref{ch:theory}, are computed for $\sqrt{s} = 13.0$ and 13.6~TeV for the ADD and RS models in the 3--9~TeV range, as shown in FIG.~\ref{fig:QBH_XS_Run2_vs_Run3}.
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figures/QBH/intro/ADD_QBH_XS_Run3_vs_Run2.pdf}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=\textwidth]{figures/QBH/intro/RS1_QBH_XS_Run3_vs_Run2.pdf}
+  \end{subfigure}
+
+  \caption{Summed production cross sections times branching fractions of QBHs at different threshold masses, $M_{\textrm{th}}$, for ADD (left) and RS (right) models with $n=6$ and $n=1$ extra dimensions, respectively. The colours indicate all possible quantum states of the QBH that can decay to a $\ell j$ final state. Solid and dashed lines indicate the two $\sqrt{s}$ values of the LHC centre-of-mass energy, 13.0~TeV and 13.6~TeV for Run2 and Run3, respectively. The bottom pane shows the relative increase (\%) in cross section, calculated as the difference between the Run 3 and Run 2 values, divided by the Run 2 value. This represents the gain due to the higher $\sqrt{s}$.}
+  \label{fig:QBH_XS_Run2_vs_Run3}
+\end{figure}
+
+The gain becomes gradually more pronounced as $M_{\textrm{th}}$ grows. By increasing $\sqrt{s}$ to 13.6~TeV, $\sigma({\textrm{QBH}})$ increases by $\sim 12\%$ to above 250\% for $3 \leq M_{\textrm{th}} \leq 9~\textrm{TeV}$. 
+% In the context of a partial Run3 search, another question to address is the limited integrated luminosity available. 
+The addition of the expected integrated luminosity of 2024 would likely induce a gain in exclusion power for both models, at $\mathcal{O}(500)~\textrm{GeV}$. Therefore, the motivation to include QBH signals with a partial Run3 dataset is clear. %The total data-taking period included in the search is a matter of analysis choice.
+
+An early Run3 search with leptons and jets in ATLAS is also highly motivated from a completely experimental point of view. Apart from software-based upgrades to the data and simulation processing, storage and availability, during the 2019--2022 shutdown the ATLAS detector underwent several major upgrades that are expected to effect the reconstruction of leptons and jets. Apart from re-configuring the combined-performance analyses into object-specific reconstruction quality, it is also desired to perform early searches where a full set of recommended quality requirements are applied on different objects (electrons, muons, jets, $E^{\textrm{miss}}_{\textrm{T}}$) used within them. Finally, towards Run3, ATLAS has made several important upgrades to its data processing software \texttt{Athena}~\cite{Bielski_2020}, key amongst which are support for multi-threaded event processing, quicker tracking reconstruction and most importantly, reconstruction and simulation of the New Small Wheel (NSW). Therefore, it is desired to consolidate new software updates to early Run3 analyses to test recent improvements.
+
+

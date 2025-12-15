@@ -1,4 +1,7 @@
-\chapter{The Stadard Model}
+\chapter{The Standard Model}
+Employing the gifts of Quantum Field Theory (QFT), a mathematical framework combines Quantum Mechanics (QM) and special relativity to describe the behaviour of fundamental particles and their interactions. The Standard Model (SM) is a QFT that codifies matter particles and force carriers within a unified theoretical structure. It describes three of the four known forces in the Universe: the electromagnetic, weak, and strong interactions. The SM has been remarkably successful in providing accurate predictions for a wide range of phenomena in particle physics, which have been confirmed by numerous experimental results.
+
+This chapter gives and overview of the SM, starting from its underlying symmetries, followed by a description of its matter content and fundamental interactions. The chapter then introduces the quantum fields that represent particles with different spins, and discusses the Higgs mechanism responsible for electroweak symmetry breaking and mass generation. Finally, the chapter highlights limitations of the SM, motivating searches for physics beyond its framework.
 
 This is an example using the \LaTeX{} template for UCI theses and
 dissertation documents \cite{uci-thesis-latex}. Figure
@@ -17,16 +20,197 @@ int main(int argc, char** argv) {
   \label{fig:sourcecode}
 \end{figure}
 
+
 \section{Symmetries and Conservation Laws}
 
-\section{Matter and Interactions}
+\subsection{Spacetime Symmetries and Noether's Theorem}
 
-words about partiles and interactions, forces of the standard model.
+Any relativistic quantum field theory must be invariant under the Poincaré group, which combines spacetime translations and Lorentz transformations (rotations and boosts). We write this as
+\begin{equation}
+\mathcal{P} = \mathbb{R}^{1,3} \rtimes \mathrm{SO}(1,3),
+\label{eq:poincare_group}
+\end{equation}
+where $\mathbb{R}^{1,3}$ denotes spacetime translations and $\mathrm{SO}(1,3)$ the Lorentz group. The semi-direct product $\rtimes$ reflects that these operations don't commute: a Lorentz transformation followed by a translation differs from the reverse order, since the transformation rotates the direction of translation in spacetime.
 
-\section{Spin-0, Spin-1/2, and Spin-1 Fields}
+Invariance under spacetime translations means physics is the same everywhere and at all times. Lorentz invariance ensures all inertial observers agree on the fundamental laws. These symmetries connect directly to conservation laws through Noether's theorem: every continuous symmetry of the action corresponds to a conserved quantity.
+
+Consider an action
+\begin{equation}
+S = \int d^{4}x \, \mathcal{L}(\phi, \partial_{\mu}\phi),
+\label{eq:action_general}
+\end{equation}
+where $\mathcal{L}$ is the Lagrangian density and $\phi$ represents the fields. If the action is invariant under a continuous field transformation
+\begin{equation}
+\phi(x) \rightarrow \phi(x) + \delta \phi(x).
+\label{eq:field_variation}
+\end{equation}
+then there exists a conserved current $j^{\mu}$ satisfying
+\begin{equation}
+\partial_{\mu} j^{\mu} = 0.
+\label{eq:current_conservation}
+\end{equation}
+
+This implies the charge
+\begin{equation}
+Q = \int d^{3}x \, j^{0}(x),
+\label{eq:conserved_charge}
+\end{equation}
+is constant in time. Time translation invariance yields energy conservation, spatial translations give momentum conservation, and rotations ensure angular momentum is conserved.
+
+\subsection{Internal Symmetries and Gauge Fields}
+
+Beyond spacetime symmetries, fields can have internal symmetries—transformations that act on the fields themselves while leaving coordinates unchanged. Consider a complex scalar field with Lagrangian
+\begin{equation}
+\mathcal{L} = \partial_{\mu}\phi^{\dagger} \partial^{\mu}\phi - m^{2}\phi^{\dagger}\phi,
+\label{eq:complex_scalar_lagrangian}
+\end{equation}
+which describes a complex scalar field $\phi(x)$. This is invariant under the global phase transformation
+\begin{equation}
+\phi(x) \rightarrow e^{i\alpha} \phi(x),
+\label{eq:global_u1}
+\end{equation}
+where $\alpha$ is constant everywhere. This is a global $U(1)$ symmetry—the group of unit complex numbers under multiplication. Noether's theorem gives the conserved current
+\begin{equation}
+j^{\mu} = i \left( \phi^{\dagger} \partial^{\mu}\phi - \partial^{\mu}\phi^{\dagger} \phi \right),
+\label{eq:u1_current}
+\end{equation}
+with $\partial_{\mu} j^{\mu} = 0$. The conserved charge represents particle number or electric charge depending on context. This symmetry is Abelian: transformations commute.
+
+The key step is promoting this to a local symmetry where $\alpha$ depends on position,
+\begin{equation}
+\phi(x) \rightarrow e^{i\alpha(x)} \phi(x).
+\label{eq:local_u1}
+\end{equation}
+However, the Lagrangian in Eq.~\eqref{eq:complex_scalar_lagrangian} fails to be invariant under this transformation, because derivatives of $\phi$ produce unwanted terms involving $\partial_{\mu}\alpha(x)$.
+
+Restoring invariance requires introducing a new vector field $A_{\mu}(x)$, the gauge field, and replacing ordinary derivatives with covariant derivatives,
+\begin{equation}
+D_{\mu} = \partial_{\mu} + i e A_{\mu},
+\label{eq:covariant_derivative}
+\end{equation}
+where $e$ is a coupling constant. Under the local transformation, the gauge field must transform as $A_{\mu} \rightarrow A_{\mu} - (1/e)\partial_{\mu}\alpha(x)$ to compensate for the derivative terms. This procedure—demanding local gauge invariance—naturally produces quantum electrodynamics (QED), where $A_{\mu}$ is identified with the photon field and $e$ with the electric charge.
+
+The profound lesson is that requiring local symmetry inevitably introduces interaction: the gauge field mediates forces between charged particles. This gauge principle, applied to more elaborate symmetry groups, generates the complete structure of the Standard Model.
+
+\subsection*{Non-Abelian Gauge Symmetries}
+
+The gauge principle extends beyond the Abelian $U(1)$ case to non-Abelian groups, where multiple symmetry generators do not commute with one another. These non-Abelian symmetries lead to richer physics: the gauge fields themselves carry the charges associated with the symmetry, leading to self-interactions absent in QED.
+
+In the Standard Model, the full gauge group is
+\begin{equation}
+SU(3)_{\mathrm{C}} \times SU(2)_{\mathrm{L}} \times U(1)_{\mathrm{Y}},
+\label{eq:sm_gauge_group}
+\end{equation}
+where $SU(3)_{\mathrm{C}}$ describes the strong interactions between quarks (quantum chromodynamics), $SU(2)_{\mathrm{L}}$ governs the weak interactions acting on left-handed fermions, and $U(1)_{\mathrm{Y}}$ represents the hypercharge interaction. The $SU(3)$ and $SU(2)$ factors are non-Abelian, resulting in the self-interactions of gluons and weak bosons that distinguish these forces from electromagnetism.
+
+The complete realization of this gauge structure requires additional elements, particularly spontaneous symmetry breaking through the Higgs mechanism, which generates masses for the weak gauge bosons while preserving the underlying gauge invariance. These aspects, along with the detailed structure of fermion representations under the gauge group, will be developed in the sections that follow.
 
 
-\section{The Higgs Mechanism}
+
+\section{Matter Content and Fundamental Interactions}
+
+The Standard Model (SM) of particle physics is a relativistic quantum field theory defined by the fundamental gauge group
+\begin{equation}
+    \mathcal{G}_{\mathrm{SM}} = SU(3)_{\mathrm{C}} \times SU(2)_{\mathrm{L}} \times U(1)_{\mathrm{Y}}.
+    \label{eq:sm_gauge_group_full}
+\end{equation}
+The fundamental fields are classified by their transformation properties (representations) under these three factor groups, which dictates their interactions:
+\begin{itemize}
+    \item $SU(3)_{\mathrm{C}}$ (Color): Governs the strong force (QCD).
+    \item $SU(2)_{\mathrm{L}}$ (Weak Isospin): Governs the weak force.
+    \item $U(1)_{\mathrm{Y}}$ (Hypercharge): Governs the electromagnetic interaction (after symmetry breaking).
+\end{itemize}
+
+\subsection{The Gauge Boson Sector}
+
+The gauge fields (bosons) mediate the forces and arise directly from the local gauge invariance requirement. The number of gauge fields is equal to the dimension (number of generators) of the associated symmetry group:
+\begin{itemize}
+    \item $U(1)_{\mathrm{Y}}$: 1 generator $\implies$ 1 gauge field ($B_{\mu}$).
+    \item $SU(2)_{\mathrm{L}}$: $2^2 - 1 = 3$ generators $\implies$ 3 gauge fields ($W_{\mu}^{a}$, $a=1, 2, 3$).
+    \item $SU(3)_{\mathrm{C}}$: $3^2 - 1 = 8$ generators $\implies$ 8 gauge fields ($G_{\mu}^{A}$, $A=1, \dots, 8$).
+\end{itemize}
+In total, the SM features 12 gauge bosons. The kinetic term for the non-Abelian gauge fields is given by the Yang-Mills Lagrangian density:
+\begin{equation}
+    \mathcal{L}_{\mathrm{YM}} = -\frac{1}{4} F^{A}_{\mu\nu} F^{\mu\nu, A},
+    \label{eq:ym_lagrangian}
+\end{equation}
+where the field strength tensor $F^{A}_{\mu\nu}$ includes terms representing the crucial self-interaction of the non-Abelian gauge bosons (gluons and $W/Z$ fields).
+
+\subsection{The Fermion Sector (Matter)}
+
+The matter content consists of 12 fundamental fermions (and their antiparticles), organized into three generations. Fermions are introduced as left-handed ($\psi_{\mathrm{L}}$) and right-handed ($\psi_{\mathrm{R}}$) Weyl spinors. This distinction is vital, as the $SU(2)_{\mathrm{L}}$ weak interaction only couples to left-handed fields.
+
+The representation of each field under $\mathcal{G}_{\mathrm{SM}}$ determines its charge and interaction. We list the fields for a single generation (electron/neutrino and up/down quarks) in Table~\ref{tab:sm_fermions}. 
+
+\begin{table}[h]
+\centering
+\caption{Fermionic Content of the Standard Model (One Generation)}
+\label{tab:sm_fermions}
+\begin{tabular}{l c c c c c}
+\toprule
+\textbf{Field Name} & \textbf{Symbol} & $\mathbf{SU(3)_{\mathrm{C}}}$ & $\mathbf{SU(2)_{\mathrm{L}}}$ & $\mathbf{U(1)_{\mathrm{Y}}}$ & \textbf{Total Components} \\
+\midrule
+Lepton Doublet & $L_{\mathrm{L}}$ & $\mathbf{1}$ (Singlet) & $\mathbf{2}$ (Doublet) & $-1/2$ & 4 \\
+Electron Singlet & $e_{\mathrm{R}}$ & $\mathbf{1}$ (Singlet) & $\mathbf{1}$ (Singlet) & $-1$ & 2 \\
+Quark Doublet & $Q_{\mathrm{L}}$ & $\mathbf{3}$ (Triplet) & $\mathbf{2}$ (Doublet) & $+1/6$ & $3 \times 2 = 6$ \\
+Up-type Singlet & $u_{\mathrm{R}}$ & $\mathbf{3}$ (Triplet) & $\mathbf{1}$ (Singlet) & $+2/3$ & $3 \times 1 = 3$ \\
+Down-type Singlet & $d_{\mathrm{R}}$ & $\mathbf{3}$ (Triplet) & $\mathbf{1}$ (Singlet) & $-1/3$ & $3 \times 1 = 3$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The physical electric charge $Q$ is derived from the weak isospin third component ($T_3$) and the hypercharge ($Y$) via the **Gell-Mann–Nishijima Relation** (in the context of electroweak theory):
+\begin{equation}
+    Q = T_3 + Y.
+    \label{eq:gm_nishijima}
+\end{equation}
+
+\subsubsection*{Explicit Field Components and Charges (First Generation)}
+
+\begin{itemize}
+    \item \textbf{Lepton Doublet ($L_{\mathrm{L}}$):}
+    $$L_{\mathrm{L}} = \begin{pmatrix} \nu_{e} \\ e \end{pmatrix}_{\mathrm{L}}, \quad T_3 = \begin{pmatrix} +1/2 \\ -1/2 \end{pmatrix}, \quad Y = -1/2.$$
+    \begin{itemize}
+        \item $\nu_{e, \mathrm{L}}$ (Neutrino): $Q = +1/2 + (-1/2) = 0$.
+        \item $e_{\mathrm{L}}$ (Electron): $Q = -1/2 + (-1/2) = -1$.
+    \end{itemize}
+    \item \textbf{Quark Doublet ($Q_{\mathrm{L}}$):} (3 color components for each element)
+    $$Q_{\mathrm{L}} = \begin{pmatrix} u \\ d \end{pmatrix}_{\mathrm{L}}, \quad T_3 = \begin{pmatrix} +1/2 \\ -1/2 \end{pmatrix}, \quad Y = +1/6.$$
+    \begin{itemize}
+        \item $u_{\mathrm{L}}$ (Up Quark): $Q = +1/2 + 1/6 = +2/3$.
+        \item $d_{\mathrm{L}}$ (Down Quark): $Q = -1/2 + 1/6 = -1/3$.
+    \end{itemize}
+\end{itemize}
+The right-handed fields ($e_{\mathrm{R}}$, $u_{\mathrm{R}}$, $d_{\mathrm{R}}$) are $SU(2)_{\mathrm{L}}$ singlets, thus $T_3=0$, and their charges are simply $Q = Y$.
+
+\subsection{The Higgs Sector}
+
+The model requires a complex scalar field, the Higgs doublet, $\Phi$, to implement electroweak symmetry breaking (EWSB).
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l c c c c}
+\toprule
+\textbf{Field Name} & \textbf{Symbol} & $\mathbf{SU(3)_{\mathrm{C}}}$ & $\mathbf{SU(2)_{\mathrm{L}}}$ & $\mathbf{U(1)_{\mathrm{Y}}}$ \\
+\midrule
+Higgs Doublet & $\Phi$ & $\mathbf{1}$ (Singlet) & $\mathbf{2}$ (Doublet) & $+1/2$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The Higgs field facilitates two essential mechanisms:
+\begin{enumerate}
+    \item **EWSB:** Spontaneous symmetry breaking via the Higgs field breaks $\mathcal{G}_{\mathrm{EW}} \rightarrow U(1)_{\mathrm{EM}}$, thereby generating masses for the $W^{\pm}$ and $Z^{0}$ bosons.
+    \item **Fermion Masses:** The Higgs field couples to fermions via Yukawa couplings, which, after EWSB, give mass to the fundamental matter particles.
+\end{enumerate}
+The detailed implementation of EWSB and mass generation will be covered in the following sections.
+
+
+\section{Spin-0, Spin-1/2, and Spin-1 Quantum Fields}
+
+
+\section{The Higgs Mechanism and Electroweak Symmetry Breaking}
 
 
 \section{Limitations of the Standard Model}
+
