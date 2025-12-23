@@ -1,0 +1,71 @@
+\chapter{QBH mass resolution}
+\label{sec:app_reso}
+
+Target of this study is obtaining of fine binning over $m_{lj}$ in SR. We expect, it will improve sensitivity at limits estimation. Estimation of minimal bin width at different QBH mass ($M_{\textrm{th}}$) is needed for that. Relative difference of reconstructed mass ($m_{lj}^{reco}$) and truth Monte Carlo mass ($m_{lj}^{truth}$) was calculated per signal points in each channel with following recipe:
+\begin{equation}
+(m_{lj}^{reco}-m_{lj}^{truth})/m_{lj}^{truth}
+\end{equation}
+Obtained distributions were fitted with double-sided Crystal Ball (CB) function that provides best fit amongst trials (Gauss, CB, Gauss+CB). The fit examples for ADDn6 model at $M_{\textrm{th}}=9.5~\textrm{TeV}$ are shown in FIG.~\ref{fig:reso_ADDn6m95}. This mass point is close to upper limit obtained in Run2 analysis \cite{ATLAS:2023vat}. 
+
+\begin{figure}[h]
+    \centering
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/mass_resolution/ADDn6_m95_deltaM_el.pdf}
+    }
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/mass_resolution/ADDn6_m95_deltaM_mu.pdf}
+    }
+  \caption{Relative mass resolution of detector for ADDn6 model at $M_{\textrm{th}}=9.5~\textrm{TeV}$. (a) electron channel; (b) muon channel.}
+  \label{fig:reso_ADDn6m95}
+\end{figure}
+
+The ranges of relative resolution [--0.2, 0.1] and [--0.7, 1.0] are selected as the fit regions for the $e j$ ($\mu j$) channels respectively. These ranges allow to fit the resolution even in the tails with values near to 0. The ranges are adapted to cover the different  resolutions in full mass region (6--10.5~$\textrm{TeV}$) of all signal models for both channels. The resolution histograms are divided into 150 (170) bins of equal size in the $e j$ ($\mu j$) channel. No significant change in the fit parametrization is observed also for shorter ranges ([--0.75, 0.75] and [--0.4, 0.5]). 
+
+The average of left ($\sigma_{L}$) and right ($\sigma_{R}$) standard deviations of fit-function are considered as relative mass resolution of detector: 
+\begin{equation}
+\sigma_{fit}=(\sigma_{L}+\sigma_{R})/2
+\label{eq:sigma_fit}
+\end{equation}
+Error of relative resolution is calculated as square root of $\sigma_{L}$ and $\sigma_{R}$ errors summed quadratically:
+\begin{equation}
+Err(\sigma_{fit})=\sqrt{Err^{2}(\sigma_{L})+Err^{2}(\sigma_{R})}/2
+\label{eq:sigma_fit_err}
+\end{equation}
+Relative mass resolution ($\sigma_{fit}$) can be converted to percent and $\textrm{GeV}$ after multiplying by 100\% and corresponding QBH mass, $M_{\textrm{th}}$. One can see mass resolution obtained from every fit in percent and in $\textrm{GeV}$ in FIG.~\ref{fig:reso_all_points} for all mass points of all used models in electron and muon channels. Dots correspond to resolution for every QBH mass obtained in result of the fit and Eq.~\ref{eq:sigma_fit} converted to percent and $\textrm{GeV}$. Errors of dots are resolution errors obtained by Eq.~\ref{eq:sigma_fit_err} converted to percent and $\textrm{GeV}$ also. Color bands are ±1 and ±2 standard deviation of dots relative to fit line. Dependences of resolution vs. $M_{\textrm{th}}$ are good fitted by polynomial function of 2nd order in $e j$ channel and by straight line in $\mu j$ channel. 
+
+\begin{figure}[h]
+    \centering
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/mass_resolution/allMassReso_percent_el.pdf}
+    }
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/mass_resolution/allMassReso_percent_mu.pdf}
+    }
+    \hfill
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/mass_resolution/allMassReso_GeV_el.pdf}
+    }    
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/mass_resolution/allMassReso_GeV_mu.pdf}
+    }
+  \caption{Mass resolution in percent and in $\textrm{GeV}$ vs. $M_{\textrm{th}}$ for all mass points of all used models in electron and muon channels. (a) resolution in percent, electron channel; (b) resolution in percent, muon channel; (c) resolution in $\textrm{GeV}$, electron channel; (d) resolution in $\textrm{GeV}$, muon channel.}
+  \label{fig:reso_all_points}
+\end{figure}
+
+Direct comparison of fitted resolution in $e j$ and $\mu j$ channels is shown in FIG.~\ref{fig:reso_final}. As it was expected, the electron resolution is about 10 times better than muon one. The electron channel shows a slow monotonic growth with mass increasing. The muon channel shows a steeper monotonic growth.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/mass_resolution/Reso_final_percent.pdf}
+    }
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/mass_resolution/Reso_final_GeV.pdf}
+    }
+  \caption{Comparison of final mass resolution in electron and muon channels. (a) resolution in percent; (b) minimal bin width (resolution in $\textrm{GeV}$).}
+  \label{fig:reso_final}
+\end{figure}
+
+The resolution in $\textrm{GeV}$ is considered as the lower bound of bin width at each $M_{\textrm{th}}$. It is start point to assess the finest binning. It should say, the real bin width can be more than this value because statistical reasons. It is needed to avoid bins with zero value of background + signal in SR bins. Expected statistics of both background and signal at $m_{lj}\approx6~\textrm{TeV}$ is few events per 1~$\textrm{TeV}$ in both channels. Then minimal bin width at $m_{lj}=6~\textrm{TeV}$ should be $\approx1~\textrm{TeV}$ for both channels and it should reach $\approx2~\textrm{TeV}$ at $m_{lj}=10.5~\textrm{TeV}$. 
+
+\FloatBarrier

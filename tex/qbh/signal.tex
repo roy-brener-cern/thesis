@@ -1,0 +1,46 @@
+QBH production and decay is simulated using a MC generator of black holes in $pp$ collisions \cite{Gingrich:2009da}, \texttt{QBHv3.02} \footnote{\href{https://qbh.hepforge.org/}{https://qbh.hepforge.org/}}. The signals produced couple universally to all quarks, leptons and gauge bosons. Lorentz invariance is assumed so only angular momentum-conserving decays are permitted. Baryon and lepton numbers are violated in the final states. In the LHC, QBHs can be produced via quarks and gluons such that nine electric charge states are possible: $\pm 4/3, \pm 1, \pm 2/3, \pm 1/3$ and $0$. The $+4/3$-charge state can be formed by quark pairs, $+2/3$ by either an antiquark pair or a quark-gluon combination, $+1/3$ by a quark pair or antiquark-gluon combination, $+1$ by a quark-antiquark pair and $0$ by either a quark-antiquark or a gluon-gluon pairs. By analogy with above compositions of the black hole the negative charge states can be enumerated in a similar way. Therefore, the six initial states producing QBHs which are allowed to decay to a lepton-quark pair, as well as their corresponding charge, are \cite{Gingrich:2009hj}:
+\begin{enumerate}
+    \item $uu \rightarrow \textrm{QBH}^{+4/3}_{uu} \rightarrow e^{+}\bar{d}, \mu^{+}\bar{d}$
+    \item $\bar{d}\bar{d} \rightarrow \textrm{QBH}^{+2/3}_{\bar{d}\bar{d}} \rightarrow e^{+}d, \mu^{+}d$
+    \item $ud \rightarrow \textrm{QBH}^{+1/3}_{ud} \rightarrow e^{+}\bar{u}, \mu^{+}\bar{u}$
+    \item $\bar{u}\bar{d} \rightarrow \textrm{QBH}^{-1/3}_{\bar{u}\bar{d}} \rightarrow e^{-}u, \mu^{-}u$
+    \item $dd \rightarrow \textrm{QBH}^{-2/3}_{dd} \rightarrow e^{-}\bar{d}, \mu^{-}\bar{d}$
+    \item $\bar{u}\bar{u} \rightarrow \textrm{QBH}^{-4/3}_{\bar{u}\bar{u}} \rightarrow e^{-}d, \mu^{-}d$
+\end{enumerate}
+%
+where $u$, $d$ denotes all up-, down-type quarks, respectively. The branching fractions for $\textrm{QBH}^{+4/3}_{uu} \rightarrow e^{+}\bar{d}, \mu^{+}\bar{d}$, $\textrm{QBH}^{+2/3}_{\bar{d}\bar{d}} \rightarrow e^{+}d, \mu^{+}d$ and $\textrm{QBH}^{+1/3}_{ud} \rightarrow e^{+}\bar{u}, \mu^{+}\bar{u}$ are 11\%, 6.7\% and 5.6\% for each lepton flavour. The \texttt{QBHv3.02} generator is used to simulate the hard-scatter and compute the $QBH$ production cross-sections. Events are then interfaced to \texttt{Pythia8} for parton showering and hadronisation modelling. The QBH is assumed to have zero angular momentum and the total angular momentum is conserved through the production and decay process. The PDF set \texttt{CTEQ6L1} is used with QCD scale equal to the inverse gravitational radius. The conditions $M_{\textrm{th}} = M_{D}$ and $M_{\textrm{th}} < 3\times M_{D}$ are used to keep non-thermal decay. Only two-body decays are considered. The production cross-sections of QBHs in ADD ($D=10$) and RS ($D=5$) at $\sqrt{s}=13.6 \; \textrm{TeV}$ are shown in FIG.~\ref{fig:QBH_XS_Run3_ADD_RS}.
+\begin{figure}
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/qbh/signal/QBH_XS_ADD.pdf}
+    }
+    %\hfill
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/qbh/signal/QBH_XS_RS1.pdf}
+    }
+\caption{Production cross section of QBHs at different threshold masses, $M_{\textrm{th}}$, for ADD (left) and RS (right) models with $n=6$ ($D=10$) and $n=1$ ($D=5$) extra (total) dimensions, respectively, with centre-of-mass energy $\sqrt{s}=13.6\;\textrm{TeV}$. The colours indicate all possible quantum states of the QBH that can decay to a $\ell q$ final state.}    
+\label{fig:QBH_XS_Run3_ADD_RS}
+\end{figure}
+%
+As can be seen, the production cross-section of $\textrm{QBH}_{qq}$ state is several orders of magnitude higher than the cross-section of its charge-conjugated state and hence the latter is not considered in the analysis. MC samples are produced simulating QBHs in ADD model with $n=2,4$ and $6$ EDs and in RS model with $n=1$ ED. Samples are produced in $0.5 \; \textrm{TeV}$ steps through a range of masses, $M_{\textrm{th}} \in [8, 10.5], [6, 8.5]\; \textrm{TeV}$ for RS, ADD models, respectively. The mass range lower bounds choices follow exclusion limits set by ATLAS search for QBHs in the $\ell j$ final state with full Run2 dataset \cite{ATLAS:2023vat} at 6.8 TeV, 9.2 TeV for RS, ADD models, respectively. Signal samples were produced in \texttt{mc23a}, \texttt{mc23d} and \texttt{mc23e} as described fully in Table \ref{tab:QBH_Sig_Production_Table} for both the electron and muon channels. The cross-sections and branching fractions are the same for both lepton channels, and the same number of events was generated for each, the only difference being the DSIDs. Two examples of signal sample distributions in invariant lepton+jet mass are shown in FIG. \ref{fig:QBH_Sig_mlj} to demonstrate the signal width. 
+
+\begin{figure}
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/qbh/mlj_plots/el/mLepJetADD.pdf}
+    }
+    %\hfill
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/qbh/mlj_plots/el/mLepJetRS.pdf}
+    }
+\caption{Distribution of signal samples over invariant mass of the lepton + jet shown for ADD (left) and RS (right) models with $n=6$ and $n=1$ extra dimensions, respectively. Variation of threshold masses, $M_{\textrm{th}}$, indicated by different colours. Both examples shown for QBH decaying to electron + jet final state at centre-of-mass energy $\sqrt{s}=13.6\;\textrm{TeV}$.}    
+\label{fig:QBH_Sig_mlj}
+\end{figure}
+
+% Doug suggested putting these tables in apendix:
+\input{tables/qbh/signal/QBH_Sig_Production_Table_NoNEvents.tex}
+
+
+In this analysis iteration, the signal generation is streamlined by considering only the direct decays of QBHs into electron+jet and muon+jet final states, consistent with previous studies from Run1~\cite{ATLAS:2013wgh} and Run2~\cite{ATLAS:2023vat}. This approach neglects contributions from leptonic tau-lepton decays ($\tau \to e/\mu$). The leptonic tau decays are expected to contribute approximately 17\% of the inclusive signal yield to the electron and muon channels, albeit with a characteristically softer $p_{\textrm{T}}$ spectrum. The neglect of these contributions yields a conservative cross-section limit, as including them would most likely increase the effective signal yield and thus strengthen the derived limits.
+
+
+
+

@@ -1,0 +1,206 @@
+The background simulations described in Section~\ref{sec:background} and data-driven fake-electron background estimation shown in Chapter~\ref{chp:fakes} are compared to data in dedicated control and validation regions as outlined in Chapter~\ref{chp:EvSel}. All systematic uncertainties elaborated in the next chapter are included to estimate the total error on the estimation of the different background contributions. Compatibility of the total background estimation with the data is estimated in these regions within a profile-likelihood fit-to-data, deriving normalisation factors for the leading backgrounds, $W$+jets and $Z$+jets, that are then corrected as per the factors outlined in FIG.~\ref{fig:norm_factor}to construct and Asimov dataset used in the SR.
+
+
+\begin{figure}[h]
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/NormFactors.pdf}
+  }
+  %\hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/NormFactors.pdf}
+  }
+  \caption{Normalisation factors on the $W$+jets and $Z$+jets backgrounds for the $e+j$ channel (left) and $\mu+j$ channel (right).}
+  \label{fig:norm_factor}
+\end{figure}
+
+
+\section{$W$+jets Control and Validation Regions}
+This region includes selections to increase the contribution from $W$+jet processes: $\sigma(E^{\textrm{miss}}_{\textrm{T}}) > 5.0, 3.5$ for the $e+j$, $\mu+j$ channels, respectively. The pie-charts given in FIG. \ref{fig:Pie_Charts_WCRVR} illustrate the contribution of different background sources to the $W$ CR (VR).
+
+
+\begin{figure}
+    \subfloat{
+      \includegraphics[width=0.5\textwidth]{figures/background_modelling/pie_plots/WCRVR_background_pie_el.pdf}
+    }
+    %\hfill
+    \subfloat{
+      \includegraphics[width=0.5\textwidth]{figures/background_modelling/pie_plots/WCRVR_background_pie_mu.pdf}
+    }
+\caption{Background contributions pie plots in the $W$+jets control and validation regions in $e+j$ channel (left) and $\mu+j$ channel (right).}    
+\label{fig:Pie_Charts_WCRVR}
+\end{figure}
+%
+
+FIG. \ref{fig:Wjets_CR} shows the single-bin invariant mass of the lepton-jet pair in the $W$+jets CR
+
+
+\begin{figure}[h!]
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/Plots/Wjets_CR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/Plots/Wjets_CR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/Plots/Wjets_CR_postFit.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/Plots/Wjets_CR_postFit.pdf}
+  }
+\caption{Invariant mass of the lepton-jet pair in the $W$+jets Control Region in the $e+j$ (left) and $\mu+j$ (right), pre-fit (top) and post-fit (bottom). The data-to-background ratio is shown in the bottom panes. The total uncertainty which includes statistical and systematic errors is shown the hatched bands. The multijet background is estimated from data, MC in the $e+j$, $\mu+j$ channels, respectively.}    
+\label{fig:Wjets_CR}
+\end{figure}
+%
+The $W$+jet background is validated in the VR, which has equal requirements albeit a higher $m_{\ell j}$ at 2--3 TeV. FIG. \ref{fig:Wjets_VR} shows the single-bin invariant mass of the lepton-jet pair in the $W$+jets VR.
+
+
+\begin{figure}[h!]
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/Plots/Wjets_VR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/Plots/Wjets_VR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/Plots/Wjets_VR_postFit.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/Plots/Wjets_VR_postFit.pdf}
+  }
+\caption{Invariant mass of the lepton-jet pair in the $W$+jets Validation Region in the $e+j$ (left) and $\mu+j$ (right), pre-fit (top) and post-fit (bottom). The data-to-background ratio is shown in the bottom panes. The total uncertainty which includes statistical and systematic errors is shown the hatched bands. The multijet background is estimated from data, MC in the $e+j$, $\mu+j$ channels, respectively.}    
+\label{fig:Wjets_VR}
+\end{figure}
+%
+These regions are used in the profile-likelihood fit described in Chapter~\ref{chp:fit} to derive a normalisation factor on the $W$+jets background, $\mu_{W\textrm{+jets}}$, shown in FIG.~\ref{fig:norm_factor}.
+
+
+The single-binned $W$ CR and VR were chosen after confirmation of lack of shape effects that would necessitate multi-binned regions. To take one example using an RS1 signal at 6.0~\textrm{TeV}, a signal+background fit is conducted using a multi-binned $W$ CR and VR. FIG.~\ref{fig:Wjets_CR_multibinWCRVR} shows the $W$ CR in this scheme.
+
+\begin{figure}[h!]
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/multibinWCRVR/QBH_el_RSn1_Mth6.0/Plots/Wjets_CR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/multibinWCRVR/QBH_mu_RSn1_Mth6.0/Plots/Wjets_CR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/multibinWCRVR/QBH_el_RSn1_Mth6.0/Plots/Wjets_CR_postFit.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/multibinWCRVR/QBH_mu_RSn1_Mth6.0/Plots/Wjets_CR_postFit.pdf}
+  }
+\caption{Invariant mass of the lepton-jet pair in the unused multi-binned $W$+jets Control Region in the $e+j$ (left) and $\mu+j$ (right), pre-fit (top) and post-fit (bottom). The data-to-background ratio is shown in the bottom panes. The total uncertainty which includes statistical and systematic errors is shown the hatched bands. The multijet background is estimated from data, MC in the $e+j$, $\mu+j$ channels, respectively.}    
+\label{fig:Wjets_CR_multibinWCRVR}
+\end{figure}
+%
+The plots in FIG.~\ref{fig:Wjets_CR_multibinWCRVR} show no shape effect in the region where the $W$+jets normalisation factor is derived and hence allow this region to be single-bin for simplicity. Similarly, FIG.~\ref{fig:Wjets_VR_multibinWCRVR} shows the same distributions in the $W$ VR.
+
+\begin{figure}[h!]
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/multibinWCRVR/QBH_el_RSn1_Mth6.0/Plots/Wjets_VR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/multibinWCRVR/QBH_mu_RSn1_Mth6.0/Plots/Wjets_VR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/multibinWCRVR/QBH_el_RSn1_Mth6.0/Plots/Wjets_VR_postFit.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/multibinWCRVR/QBH_mu_RSn1_Mth6.0/Plots/Wjets_VR_postFit.pdf}
+  }
+\caption{Invariant mass of the lepton-jet pair in the unused multi-binned $W$+jets Validation Region in the $e+j$ (left) and $\mu+j$ (right), pre-fit (top) and post-fit (bottom). The data-to-background ratio is shown in the bottom panes. The total uncertainty which includes statistical and systematic errors is shown the hatched bands. The multijet background is estimated from data, MC in the $e+j$, $\mu+j$ channels, respectively.}    
+\label{fig:Wjets_VR_multibinWCRVR}
+\end{figure}
+%
+To reiterate, the VRs are used only to validate the analysis choices made to estimate the leading MC background, $W+$jets, and it does not enter the calculation of $\mu_{W+\mathrm{jets}}$. For clarification, these multi-bin plots are not used in the limit calculation---or in any other part of the analysis---but are shown solely to address potential concerns about unaccounted-for shape effects in a single-bin region. Although the \(\mu+j\) plots in Fig.~\ref{fig:Wjets_VR_multibinWCRVR} show some mismodelling in individual bins, the relatively flat data-to-background ratios in Fig.~\ref{fig:Wjets_CR_multibinWCRVR} demonstrate that shape effects are not significant.
+
+\section{$Z$+jets Control and Validation Regions}
+
+This region includes selections to increase the contribution from $Z$+jet processes: $m_{\ell\ell} \in [60,120]\; \textrm{GeV}$. In addition to the signal lepton, the presence of another baseline lepton is required. The pie-charts given in FIG. \ref{fig:Pie_Charts_ZCRVR} illustrate the contribution of different background sources to the $Z$ CR (VR).
+
+\begin{figure}
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/background_modelling/pie_plots/ZCRVR_background_pie_el.pdf}
+  }
+  %\hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/background_modelling/pie_plots/ZCRVR_background_pie_mu.pdf}
+  }
+\caption{Background contributions pie plots in the $Z$+jets control and validation regions in $e+j$ channel (left) and $\mu+j$ channel (right).}    
+\label{fig:Pie_Charts_ZCRVR}
+\end{figure}
+%
+
+FIG. \ref{fig:Zjets_CR} shows the single-bin invariant mass of the lepton-jet pair in the $Z$+jets CR
+
+\begin{figure}
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/Plots/Zjets_CR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/Plots/Zjets_CR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/Plots/Zjets_CR_postFit.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/Plots/Zjets_CR_postFit.pdf}
+  }
+\caption{Invariant mass of the lepton-jet pair in the $Z$+jets Control Region in the $e+j$ (left) and $\mu+j$ (right), pre-fit (top) and post-fit (bottom). The data-to-background ratio is shown in the bottom panes. The total uncertainty which includes statistical and systematic errors is shown the hatched bands. The multijet background is estimated from data, MC in the $e+j$, $\mu+j$ channels, respectively.}    
+\label{fig:Zjets_CR}
+\end{figure}
+%
+The $Z$+jet background is validated in the VR, which has equal requirements albeit a higher $m_{\ell j}$ at 2--3 TeV. FIG. \ref{fig:Zjets_VR} shows the single-bin invariant mass distribution of the lepton-jet pair in the $Z$+jets VR.
+
+
+\begin{figure}
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/Plots/Zjets_VR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/Plots/Zjets_VR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/Plots/Zjets_VR_postFit.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/Plots/Zjets_VR_postFit.pdf}
+  }
+\caption{Invariant mass of the lepton-jet pair in the $Z$+jets Validation Region in the $e+j$ (left) and $\mu+j$ (right), pre-fit (top) and post-fit (bottom). The data-to-background ratio is shown in the bottom panes. The total uncertainty which includes statistical and systematic errors is shown the hatched bands. The multijet background is estimated from data, MC in the $e+j$, $\mu+j$ channels, respectively.}    
+\label{fig:Zjets_VR}
+\end{figure}
+%
+% \textcolor{red}{The large uncertainty in the $\mu+j$ channel is driven by an overly-conservative error on the reconstruction efficiency of high-$p_{\textrm{T}}$ muons in Run3. The reason for this is a WRONG fit used to derive these by MCP --- the issue is known and currently mitigated by MCP.}
+These regions are used in the profile-likelihood fit described in Chapter~\ref{chp:fit} to derive a normalisation factor on the $Z$+jets background, $\mu_{Z\textrm{+jets}}$, shown in FIG.~\ref{fig:norm_factor}.
+
+FIG. \ref{fig:Zjets_multibinZCRVR} shows the pre-fit multi-bin invariant mass distribution of the lepton-jet pair in the $Z$+jets CR and VR. The plots show small shape effect that is comparable with statistical errors.
+
+\begin{figure}
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/background_modelling/ZCRVR/el/mLepJetCRVR.pdf}
+  }
+  \hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/background_modelling/ZCRVR/mu/mLepJetCRVR.pdf}
+  }
+\caption{Invariant mass of the lepton-jet pair pre-fit distributions in the $Z$+jets Control (1-2 TeV) and Validation (2-3 TeV) Regions in the $e+j$ (left) and $\mu+j$ (right). The data-to-background ratio is shown in the bottom panes. The statistical errors only is shown the hatched bands. The multijet background is estimated from data, MC in the $e+j$, $\mu+j$ channels, respectively.}    
+\label{fig:Zjets_multibinZCRVR}
+\end{figure}

@@ -1,0 +1,224 @@
+%Object Definition
+
+% The first requirement which an event must pass, is to have at least one $pp$ interaction vertex with at least two reconstructed tracks. If there are multiple vertices, then the primary vertex is selected to be the one with the highest summed $p^{2}_{\textrm{T}}$ of tracks with transverse momentum $p_{\textrm{T}}$ $> 0.4$ GeV associated with the vertex \cite{ATL-PHYS-PUB-2015-026}. % this is outdated for R22+ and belongs in event selection 
+
+In this analysis, two quality levels for leptons and jets are defined, called baseline and signal, where signal objects are a subset of baseline. The baseline cuts are used to calculate the missing transverse momentum and resolve ambiguities between overlapping physics objects, described later in this section. The baseline cuts are looser than the signal and so have a higher efficiency. A signal lepton is also trigger-matched.
+
+ Object definitions discussed in this section are also noted in Lepton+Jet Umbrella twiki\footnote{\href{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/LeptonPlusJet}{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/LeptonPlusJet}}. Furthermore, all object definitions and recommendations used for \texttt{data22} and \texttt{data23} with their corresponding MC simulations \texttt{mc23a} and \texttt{mc23d} match exactly the ones used in the search for resonant LQs published by ATLAS in 2025~\cite{ATLAS:2025upm}. The differences between recommendations used for \texttt{data22} and \texttt{data23} and those used for \texttt{data24}, with respective MC simulations, are outlined below.
+
+\begin{itemize}
+    \item Electrons:
+    \begin{itemize}
+      \item \texttt{data22} \& \texttt{data23} (mc23a \& \texttt{mc23d}): using Run3 pre-recommendations, based on Run2 reprocessed data and \texttt{mc20} with additional systematics to account for the differences to Run3\footnote{\href{https://atlas-egamma-calibration.docs.cern.ch/recommendations/run3/}{https://atlas-egamma-calibration.docs.cern.ch/recommendations/run3/}}. 
+      \item \texttt{data24} (\texttt{mc23e}): using final Run3 consolidated recommendations, except for \texttt{LH\_ID} which uses Run3 pre-recommendations.
+    \end{itemize}
+    \item Muons: 
+    \begin{itemize}
+      \item \texttt{data22} \& \texttt{data23} (\texttt{mc23a} \& \texttt{mc23d}): using MCP Run3 pre-recommendations, non- final \texttt{HighPt} ID working point.
+      \item data24 (mc23e): using updated MCP recommendations, including update to \texttt{HighPt} ID working point.  
+    \end{itemize}
+    \item Jet \& $E^{\textrm{miss}}_{\textrm{T}}$: same Run3 pre-recommendations used across productions\footnote{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetEtmissRecommendationsR22}{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetEtmissRecommendationsR22} }. These recommendations are available for \texttt{mc23a} \& \texttt{mc23d} and \texttt{data22} \& \texttt{data23}, with checks performed and uncertainties derived.
+\end{itemize}
+
+
+Table~\ref{tab:cp_recommendations} summarises the CP groups recommendations used for each dataset and MC campaign.
+
+\begin{table}[ht]
+\centering
+\input{tables/QBH_CP_table}
+\caption{Object recommendations used for different datasets and MC campaigns.}
+\label{tab:cp_recommendations}
+\end{table}
+
+
+
+\section{Electron Candidates}
+\label{sec:ObjectDefinition_Electrons}
+
+Electron candidates are reconstructed using energy clusters in the EM calorimeter, calibrated as described in \cite{EGAM-2018-01},  which are matched to a track of Inner Detector (ID).  
+
+Requirements for electrons are summarised in table \ref{tab:electron_objectdef}\footnote{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaRecommendationsR22}{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaRecommendationsR22}}.
+To ensure the Baseline electron candidates pass through the fine-granularity region of the EM
+calorimeter, they are required to have $|\eta|$ $<$ 2.47, while being excluded from the transition region between the barrel and end cap EM calorimeters, 1.37 $<$ $|\eta|$ $<$ 1.52. Their energy calibration is done using  \texttt{es2022\_R22\_PRE} for the data22 and data23 (\texttt{mc23a} and \texttt{mc23d}) production and \texttt{es2024\_Run3\_v0} for data24 (mc23e).  
+
+Baseline electrons must also have $p_{\textrm{T}}$ $>$10 GeV and satisfy the Loose identification criteria. They must not be from a bad calorimeter cluster (\texttt{BADCLUSELECTRON}). 
+
+To ensure these Baseline electrons originate from the primary vertex, their associated tracks are required to have a longitudinal impact parameter relative to the primary vertex ($z_{0}$) such that $|z_0^{\text{BL}}\sin\theta |$ $<$ $0.5$ mm. This requirement is to suppress electrons originating from pileup. 
+
+\par Signal electrons pass the Baseline criteria, but in addition have the additional requirements that their $p_{\textrm{T}}$ $>$ 20 GeV, they satisfy the Tight identification criteria and HighPtCaloOnly isolation requirements \cite{EGAM-2018-01}. Also, the track associated with each Signal electron must have a transverse impact parameter significance $|d_{0}^{\text{BL}}(\sigma)|$ $\leq$ 5. 
+
+As noted in Chapter~\ref{chp:fakes}, in addition to the baseline and signal definition in Table \ref{tab:electron_objectdef}, a third Working Point (WP), \texttt{LH\_Medium}, is used as \textit{baseline} only in the context of computing the fake rate. These electrons follow all criteria as defined for baseline in Table \ref{tab:electron_objectdef} except are required to pass \texttt{LH\_Medium} identification (WP), instead of \texttt{LH\_LooseBL}. 
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l|l|l}
+    \hhline{===}
+    Property & Baseline Requirement & Signal Requirement \\
+    \hline
+    \hline
+    Transverse momentum $p_\text{T}$& $> 10$ GeV& $> 20$ GeV\\ \hline \Tstrut \Bstrut
+    Pseudorapidity range $|\eta|$& \multicolumn{2}{c}{$|\eta| < 1.37$ , $ 1.52 < |\eta| < 2.47$}\\ \hline \Tstrut \Bstrut
+    Identification (LH) & \texttt{LooseBL}& \texttt{Tight} \\ \hline \Tstrut \Bstrut
+    Isolation & - & \texttt{HighPtCaloOnly} \\ \hline \Tstrut \Bstrut
+    Impact Parameters & $|z_0^{\text{BL}} \sin\theta| < 0.5$ mm & \makecell{$|z_0^{\text{BL}} \sin\theta| < 0.5$ mm \\ $|d_{0}^{\text{BL}}(\sigma)| < 5 $ }\\ \hline \Tstrut \Bstrut
+    Energy Scale & \multicolumn{2}{c}{\makecell{data22/23 (\texttt{mc23a}/d): \texttt{es2022\_R22\_PRE}  \\data24 (mc23e): \texttt{es2024\_Run3\_v0} }} \\ \hline \Tstrut \Bstrut
+    LH\_ID & \multicolumn{2}{c}{\texttt{2024\_Consolidated\_Prerecom\_v1}} \\
+    \hhline{===}
+    \end{tabular}
+    \caption{Requirements for baseline and signal electrons.}
+    \label{tab:electron_objectdef}
+\end{table}
+ 
+
+
+
+\section{Muon Candidates}
+\label{sec:ObjectDefinition_Muons}
+
+Requirements for muons are defined in table \ref{tab:muon_objectdef}\footnote{\href{https://atlas-mcp.docs.cern.ch/guidelines/release22/index.html}{https://atlas-mcp.docs.cern.ch/guidelines/release22/index.html}}. 
+
+Baseline muon candidates are reconstructed by matching ID tracks to tracks reconstructed in the Muon Spectrometer, in the region $|\eta|$ $<$ 2.5. Calibration is performed \textit{in situ} using $Z \rightarrow \mu \mu $ decays \cite{PERF-2015-10}. The \texttt{notCorrectData\_CB} calibration scheme is used.
+These Baseline muon candidates must have $p_{\textrm{T}}$ $>$10 GeV, pass the \texttt{HighPt} track quality cuts \cite{PERF-2015-10}, and pass the longitudinal impact parameter requirement, $|z_0^{\text{BL}} \sin\theta|$ $<$ $0.5$ mm. 
+
+\par Signal muons, in addition to passing the Baseline criteria, have $p_{\textrm{T}}$ $>$ 20 GeV, their tracks must have a transverse impact parameter significance $|d_{0}^{\text{BL}}(\sigma)|$ $\leq$ 3, they satisfy \texttt{HighPt}
+muon identification requirements \cite{PERF-2015-10} and also pass a track-based isolation criterion \texttt{PflowTightVarRad}. 
+ 
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l|l|l}
+    \hhline{===}
+    Property & Baseline Requirement & Signal Requirement \\
+    \hline
+    \hline
+    Transverse momentum $p_\text{T}$ & $> 10$ GeV& $> 20$ GeV\\ \hline \Tstrut \Bstrut
+    Pseudorapidity range $|\eta|$ & \multicolumn{2}{c}{$< 2.5$ }\\ \hline \Tstrut \Bstrut
+    Efficiency Calibration& \multicolumn{2}{c}{\makecell{data22/23 (\texttt{mc23a}/d): \texttt{240711\_Preliminary\_r24run3} \\data24 (mc23e): \texttt{250418\_Preliminary\_r24run3} }}\\ \hline \Tstrut \Bstrut
+    Momentum Calibration& \multicolumn{2}{c}{\makecell{data22/23 (\texttt{mc23a}/d): \texttt{Recs2024\_05\_06\_Run2Run3} \\data24 (mc23e): \texttt{Recs2025\_03\_26\_Run2Run3} } }\\ \hline \Tstrut \Bstrut
+    calibMode& \multicolumn{2}{c}{\texttt{notcorrectData\_CB}}\\ \hline \Tstrut \Bstrut
+    Selection Working Point& \multicolumn{2}{c}{\texttt{HighPt} }\\ \hline \Tstrut \Bstrut %need to check not medium for basline 
+    Isolation Working Point& - & \texttt{PflowTight\_VarRad} \\ \hline \Tstrut \Bstrut
+    Impact Parameters & $|z_0^{\text{BL}} \sin\theta| < 0.5$ mm & \makecell{$|z_0^{\text{BL}} \sin\theta| < 0.5$ mm \\ $|d_{0}^{\text{BL}}(\sigma)| < 3 $ }\\
+    \hhline{===} 
+    \end{tabular}
+    \caption{Requirements for baseline and signal muons.}
+    \label{tab:muon_objectdef}
+\end{table}
+
+
+
+
+
+\section{Jet Candidates}
+
+
+The small-$R$ jet object definition is shown in table \ref{tab:jet_objectdef}. These are using preliminary CP recommendations\footnote{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetEtmissRecommendationsR22}{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetEtmissRecommendationsR22}} with added uncertainties to account for the difference between Athena software releases R21 and R22+. %updates to Athena algorithms 
+
+Jets are reconstructed using the anti-$k_{t}$ algorithm \cite{Cacciari:2008gp} implemented in the FastJet library \cite{Fastjet} with a distance parameter $R$ = 0.4 in the range $|\eta|$ $<$ 4.9 from massless clusters of energy depositions in the calorimeter \cite{PERF-2014-07} (EMPFlow jets). The jets are calibrated as described in References \cite{PERF-2014-02} \cite{PERF-2016-04}. %check source for 4.9 value 
+The baseline jets must have $p_{\textrm{T}}$ $>$ 20 GeV and $|\eta|$ $<$ 2.5. Events which contain jets induced by calorimeter noise or noncollision background are vetoed, rejection criteria described in Reference \cite{ATLAS-CONF-2015-029}. Also jets resulting from pileup interactions are vetoed by using a dedicated track-based selection (Jet Vertex Tagger \cite{PERF-2014-03}). This relies on classifying the tracks associated with the jet as pointing or not pointing to the primary vertex. %check JvT FixedEffPt 
+Jet candidates passing all of the above requirements are called Signal jets. 
+
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l|l}
+    \hhline{==}
+      Property & \multicolumn{1}{c}{Criterion} \\ 
+    \hhline{==}
+      Algorithm & Anti-$k_{t}$ \\ \Tstrut \Bstrut
+      \(R\)-parameter & 0.4 \\ \Tstrut \Bstrut
+      Input constituent & EMPFlow \\ \Tstrut \Bstrut
+      \texttt{CalibArea} tag & 00-04-83 \\
+      \hline
+      %Calibration configuration & \texttt{AntiKt4EMPFlow\_MC23a\_PreRecR22\_Phase2\_CalibConfig\_ResPU\_EtaJES\_GSC\_240306\_InSitu.config} \\ \Tstrut \Bstrut
+      Calibration sequence (Data) & \texttt{JetArea\_Residual\_EtaJES\_GSC\_Insitu} \\ \Tstrut \Bstrut
+      Calibration sequence (MC) & \texttt{JetArea\_Residual\_EtaJES\_GSC} \\ 
+      %\hline
+      %\multicolumn{2}{c}{Selection requirements} \\ 
+      \hline
+      Jet cleaning & \texttt{LooseBad} \\ \Tstrut \Bstrut
+      BatMan cleaning & No \\ \Tstrut \Bstrut
+      Transverse momentum $p_\text{T}$ & \( > 20~\GeV \) \\ \Tstrut \Bstrut
+      Pseudorapidity range $|\eta|$& \( < 2.5 \) \\ \Tstrut \Bstrut
+      NNJvt & \texttt{FixedEffPt} WP for $\pt < 60~\GeV$ and $|\eta| < 2.5$ \\ 
+      \hhline{==}
+    \end{tabular}
+    \caption{Jet object definition}%
+    \label{tab:jet_objectdef}
+\end{table}
+
+
+
+
+\section{Missing Transverse Momentum}
+
+The missing transverse momentum is the negative vector sum of the transverse momenta of all identified objects (electrons, photons, muons, jets and $\tau$-leptons) and an additional soft term accounting for tracks.
+
+\begin{equation}
+p^{\textrm{miss}}_{\textrm{T}} = -\sum_i \vec{p}_{\textrm{T}}^{i},
+\end{equation}
+
+whose magnitude is given by
+
+\begin{equation}
+p^{\textrm{miss}}_{\textrm{T}} = |\vec{p}^{\textrm{miss}}_{\textrm{T}}| = \sqrt{({p^{\textrm{miss}}_{\textrm{T}}}^x)^2 + ({p^{\textrm{miss}}_{\textrm{T}}}^y)^2}
+\end{equation}
+
+where ${p^{\textrm{miss}}_{\textrm{T}}}^x$ and ${p^{\textrm{miss}}_{\textrm{T}}}^y$ are the components of the missing transverse momentum vector. The MET significance is used in the definition of analysis regions, discussed in Chapter~\ref{chp:EvSel}, it is defined as:
+
+
+\begin{equation} % 
+  \sigma(p^{\textrm{miss}}_{\textrm{T}}) = \frac{p^{\textrm{miss}}_{\textrm{T}}}{\sqrt{\sigma^{2}_{\textrm{L}}(1 - \rho^{2}_{\textrm{LT}})}},
+  \label{equ:sig_Etmiss}
+\end{equation}
+where $\sigma_{\textrm{L}}$ is the longitudinal resolution to $p^{\textrm{miss}}_{\textrm{T}}$ and $\rho_{\textrm{LT}}$ the correlation between the transverse and longitudinal resolutions relative to $p^{\textrm{miss}}_{\textrm{T}}$.
+
+The object definition for $p^{\textrm{miss}}_{\textrm{T}}$ used in this analysis is given in table \ref{tab:object:met}\footnote{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetEtmissRecommendationsR22}{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetEtmissRecommendationsR22}}.  Fully calibrated electrons, muons, photons, jets, hadronically decaying $\tau$-leptons and charged-particle tracks are used to reconstruct $E^{miss}_{\textrm{T}}$ \cite{ATLAS-CONF-2018-023,PERF-2016-07}. This is calculated with the \texttt{EMPFlow} algorithm using baseline leptons not used in overlap removal. 
+
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l|l}
+    \hhline{==}
+      Feature & \multicolumn{1}{c|}{Criterion} \\ 
+      \hline
+      Algorithm & EMPFlow \\ \hline \Tstrut \Bstrut
+      Soft term & Track-based (TST) \\ \hline \Tstrut \Bstrut
+      MET operating point & \texttt{Tight} \\ \hline \Tstrut \Bstrut
+      Calibration tag & \texttt{METUtilities/R22\_PreRecs} \\ 
+      \hhline{==}
+    \end{tabular}
+    \caption{$E^{\textrm{miss}}_{\textrm{T}}$ reconstruction criteria}%
+    \label{tab:object:met}
+\end{table}
+
+
+
+\section{Overlap removal}
+
+The reconstruction of the same energy deposits as multiple objects is resolved using the standard overlap removal tools, \texttt{AssociationUtils}, documented \href{https://gitlab.cern.ch/atlas/athena/blob/21.2/PhysicsAnalysis/AnalysisCommon/AssociationUtils/README.rst}{here}. The baseline leptons and jets passing the requirements described in the subsections before are passed to the OR algorithm, which applies selection as specified in Table~\ref{tab:overlap_removal}.
+
+
+\begin{table}[ht]
+  \centering
+  % \resizebox{\textwidth}{!}{
+  \begin{tabular}{lll}
+    \hhline{===}
+    Reject & Against & Criteria \\
+    \midrule    
+    Muon     & Electron & is Calo-Muon and shared ID track \\
+    Electron & Muon     & shared ID track \\    
+    Jet      & Electron & $\Delta R < 0.2$ \\
+    Electron & Jet      & $\Delta R < 0.2$ \\
+    Jet      & Muon     & $\texttt{NumTrack} < 3$ \& (ghost-associated or $\Delta R < 0.2$) \\                      
+    Muon     & Jet      & $\Delta R < 0.4$ \\    
+    \hhline{===}
+  \end{tabular}
+  % }
+  \caption{Overlap removal algorithm criteria applied to baseline physics objects.}
+  \label{tab:overlap_removal}
+\end{table}
+
+\(\Delta R\) is calculated using rapidity by default.
+
+  

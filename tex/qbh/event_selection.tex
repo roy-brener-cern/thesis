@@ -1,0 +1,88 @@
+
+Simulated events are weighted to correct the MC simulation to enhance compatibility with data. Corrections are applied event-by-event to efficiencies of the electron and muon trigger, reconstruction, identification and isolation, the jet vertex tagging and pileup rejection by applying the respective weights.
+
+This analysis searches for QBHs decaying to lepton+jet final-states. The two-body decay products contain exactly one energetic electron or muon and quark. Each event is required to contain exactly one signal lepton, either an electron or muon, and at least one signal jet. The leading signal jet and signal leptons are used to reconstruct the QBH threshold mass and constitute the analysis' discriminant. High-$p_{\textrm{T}}$ requirements are set on the leading lepton and jet, in addition to geometrical cuts which select back-to-back two-body decay. The analysis strategy is equivalent amongst the two lepton flavours, except the fact in the $e+j$ channel, the multijet background is significant whereas in the $\mu+j$ channel it is nearly negligible. To that end, it is estimated from data using the Matrix Method in the former and from dijet $MC$ in the latter. The analysis region definitions and cuts for the $e+j$ channel are presented in Table \ref{tab:event_selection_electron}.
+
+
+\input{tables/qbh/selection/electron_channel_event_selection_table}
+
+The analysis choices illustrated in Table \ref{tab:event_selection_electron} are specific to the $e+j$ in that they include the fake-electron background as a controlled and validated background source. Its control region requires $\sigma(E^{\textrm{miss}})<3.0$ to suppress contributions from $W$+jets events and its validation region sets $3.0<\sigma(E^{\textrm{miss}})<5.0$ as a middle ground between a fake-enriched region and $W$+jets contamination. The contribution of fake-electron background in fake CR is equal to 35\% while W+jet contamination is 47\% in this region. To maintain orthogonality between these regions, the $W$+jets CR (VR) begins at $\sigma(E^{\textrm{miss}})=5.0$. The purity of W+jet background in W+jet CR+VR in electron channel is 69\%. Further details of the fake-electron background estimation is given in Chapter REFER TO FAKES.
+
+
+For the $\mu+j$ channel, a similar-but-simpler analysis strategy is devised, where the only backgrounds controlled and validated are $W$+jets and $Z$+jets. Lacking the need to estimate a fake-electron background, the $W$+jets validation region starts a lower value of $\sigma(E^{\textrm{miss}})=3.5$. The purity of W+jet background in W+jet CR+VR in muon channel is 72\% while contribution of fake-muon background is less than 1\%. The analysis strategy in the $\mu+j$ channel is elaborated in Table \ref{tab:event_selection_muon}.
+
+\input{tables/qbh/selection/muon_channel_event_selection_table}
+ 
+The $Z$+jets CR (VR), for both electron and muon channels, is enriched by requiring the presence of a baseline lepton in addition to the signal lepton. The invariant dilepton mass must lie within $30\; \textrm{GeV}$ of the $m_{Z}$, i.e. $[60, 120] \; \textrm{GeV}$. The purity of Z+jet background in Z+jet CR+VR is 95\% in both electron and muon channels. Other subdominant sources of backgrounds such as events from top decays and diboson processes each amount to less than $10\%$ in the SR are not included in the dedicated control and validation analysis strategy.
+
+To ensure orthogonality between the two control and validation regions they have distinct requirements on the number of baseline leptons. As detailed in Tables \ref{tab:event_selection_electron} and \ref{tab:event_selection_muon} the $Z$+jets CR (VR) requires exactly two baseline leptons and the $W$+jets CR (VR) requires one. 
+
+FIG. \ref{fig:SR_cutflow} and \ref{fig:WR_cutflow} are cutflow plots, showing the weighted number of events after each cut is applied, for the signal region and $W$+jets CR and VR respectivley. 
+
+\begin{figure}[h]
+  \captionsetup[subfigure]{labelformat=empty}
+  \subfloat[]{
+    \includegraphics[width=0.5\textwidth]{figures/qbh/selection/el_SR_Cutflow_w.pdf}
+  }
+  %\hfill
+  \subfloat[]{
+    \includegraphics[width=0.5\textwidth]{figures/qbh/selection/mu_SR_Cutflow_w.pdf}
+  }
+  \caption{Cutflow of weighted events in the signal region for the $e+j$ channel (left) and $\mu+j$ channel (right). }
+  \label{fig:SR_cutflow}
+\end{figure}
+
+\begin{figure}[h]
+  \captionsetup[subfigure]{labelformat=empty}
+  \subfloat[]{
+    \includegraphics[width=0.5\textwidth]{figures/qbh/selection/el_WR_Cutflow_w.pdf}
+  }
+  %\hfill
+  \subfloat[]{
+    \includegraphics[width=0.5\textwidth]{figures/qbh/selection/mu_WR_Cutflow_w.pdf}
+  }
+  \caption{Cutflow of weighted events in the $W$+jets CR and VR for the $e+j$ channel (left) and $\mu+j$ channel (right). }
+  \label{fig:WR_cutflow}
+\end{figure}
+
+
+\subsection*{Angular cuts}
+To enhance sensitivity in the SRs, angular cuts on the lepton-jet system are applied, leveraging the expected event topology of $\textrm{QBH}\rightarrow\ell+j$ decays. Specifically, requiring $\Delta\phi_{\ell j} > 2.8$ and $\Delta\eta_{\ell j} < 3.25$ selects events where the lepton and jet are approximately back-to-back in the transverse plane while maintaining high signal efficiency. FIG.~\ref{fig:QBH:angular_cuts} includes distributions of these variables, employing all SR cuts specified in FIG.~\ref{fig:Analysis_Strategy} but the angular ones. These cuts efficiently suppress background contamination while retaining most of the signal. 
+
+\begin{figure}[h]
+    \captionsetup[subfigure]{labelformat=empty}
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/qbh/selection/angular_cuts/el/detaLepJet.pdf}
+    }
+    \hfill
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/qbh/selection/angular_cuts/mu/detaLepJet.pdf}
+    }
+    \hfill
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/qbh/selection/angular_cuts/el/dphiLepJet.pdf}
+    }
+    \hfill
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/qbh/selection/angular_cuts/mu/dphiLepJet.pdf}
+    }
+    \hfill
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/qbh/selection/angular_cuts/el/dRLepJet.pdf}
+    }
+    \hfill
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/qbh/selection/angular_cuts/mu/dRLepJet.pdf}
+    }
+
+  \caption{Topological separation of the lepton-jet final-state components. Distributions of $\Delta\eta_{\ell j}$ (top), $\Delta\phi_{\ell j}$ (middle), and $\Delta R_{\ell j}$ (bottom) illustrate the event topology in the signal region. The $e+j$ channel is shown on the left and the $\mu+j$ channel on the right.}    
+  \label{fig:QBH:angular_cuts}
+  \end{figure}
+
+While $\Delta R_{\ell j} = \sqrt{(\Delta\eta_{\ell j})^2 + (\Delta\phi_{\ell j})^2}$ provides a measure of angular separation, it does not distinguish between azimuthal and longitudinal components of the event topology. Since QBH decays result in a lepton and jet primarily recoiling against each other in the transverse plane, ensuring a large $\Delta\phi_{\ell j}$ directly selects events with the expected back-to-back topology. Meanwhile, an upper bound on $\Delta\eta_{\ell j}$ suppresses configurations where the lepton and jet are widely separated in pseudorapidity, which tend to originate from background processes rather than the central, isotropic production expected for QBH decays. The distribution of $\Delta R_{\ell j}$, also shown in FIG.~\ref{fig:QBH:angular_cuts}, illustrates that a single cut on $\Delta R_{\ell j}$ would not independently control these two components, making explicit $\Delta\phi_{\ell j}$ and $\Delta\eta_{\ell j}$ requirements essential. 
+
+The two-body decay of massive QBH is close to back-to-back geometry while background has wider angle distribution of  lepton and leading jet. Angle cuts allow to increase purity of signal in SR by selection of lepton-jet pair nearly back-to-back.
+
+The optimised criteria strike a balance between signal retention, background rejection and statistics, thereby improving the overall sensitivity of the analysis. Statistics requirement is more important for muon channel and the angle criteria should be softer for muons. However, the same cuts were taken also for electrons because signal sensitivity become slightly better without a worsening of background rejection.
+
+The angular cuts was not used in Run2 analysis. The cuts re-optimized for Run3 are tighter than in Run1 where they were used. It provide better purity of signal without loss of efficiency. Further information on the study and selection of these cuts is detailed in appendix~REFER TO APPENDIX.

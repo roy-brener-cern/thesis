@@ -1,0 +1,60 @@
+Background events, in this analysis, are those which contain a high-$p_{T}$ lepton and one or more jets, but do not originate from a QBH. Such signatures arise from electroweak processes including vector boson production with additional jets ($W$/$Z$+jets), dibosons ($W$$W$, $W$$Z$ and $Z$$Z$), top-quark pair ($t$$\bar{t}$) and single-top-quark production, and multjet processes including nonprompt leptons from leptonic hadron decays and jets misidentified as leptons.
+
+The expected contributions of various SM processes as well as possible QBH signals is modelled using MC simulation. The background samples are generated using mc23e campaign. The SM backgrounds are determined from MC simulation, either directly or adjusted by the fit to data in dedicated control regions. The multijet background is measured directly in data, which is collected by a set of unprescaled single-lepton triggers with different $p_{T}$-thresholds. 
+
+
+For Monte Carlo samples, the effect of pileup, i.e., multiple $pp$ interactions in the same or neighboring bunch crossings, is included in all simulated event samples. Multijet, $ttV$ and top samples use \texttt{Pythia 8.230} \cite{Sjostrand:2014zea} to simulate the pileup in collisions, using the ATLAS A3 set of tuned parameters and the NNPDF3.0 PDF set \cite{Ball:2014uwa}. These are weighted to reproduce the average number of pileup interactions per bunch crossing observed in data. The generated background events are passed through a full detector simulation \cite{SOFT-2010-01} based on Geant4 \cite{Agostinelli:2002hh}.
+
+
+
+
+\subsection*{V+jets} 
+
+%multi boson simulation \cite{ATL-PHYS-PUB-2016-002} 
+
+
+The $W$+jets, $Z$+jets samples are simulated with the \texttt{Sherpa 2.2.14} generator \cite{Bothmann:2019yzt} and are listed in Tables~\ref{tab:wjets_MC} and \ref{tab:zjets_MC}. The strong production of $Z$ bosons in association with multiple jets are generated with up to 2 additional partons at NLO and up to 5 additional partons at LO using the NNPDF3.0nnlo PDF set~\cite{Ball:2014uwa}. The samples are enhanced in max(HT,pTV) and sliced in quark flavour content.
+
+
+We utilised the \texttt{Sherpa 2.2.14} version for the $\text{V}+\text{jets}$ background to meet the required analysis timeline, consistent with other parallel searches such as $\text{LQ} \to \text{lep}+\text{jet}$. We acknowledge the ongoing work by the Physics Monte Carlo Group (PMG) to enhance high-$p_{\textrm{T}}$ modelling in subsequent releases. Our dedicated systematic uncertainty studies demonstrate that the overall theoretical error adequately covers the level of $p_{\textrm{T}}$ modelling variations. Furthermore, given that the current analysis remains statistically-limited, the effect of these kinematic variations on the final results is negligible. We conclude that the conservative uncertainty applied to the normalisation factors for the $\text{V}+\text{jets}$ samples is sufficient to account for any modelling discrepancies.
+
+
+\input{tables/qbh/background/wjets_mc}
+
+\input{tables/qbh/background/zjets_mc}
+
+\newpage
+
+\subsection*{Diboson} 
+
+
+Samples of diboson final states ($VV$) were simulated with the \texttt{Sherpa 2.2.14} generator \cite{Bothmann:2019yzt}, and are shown in Table~\ref{tab:vv_MC}. Fully leptonic final states and semileptonic final states, where one boson decays leptonically and the other hadronically, were generated using matrix elements at NLO accuracy in QCD for up to one additional parton and at LO accuracy for up to three additional parton  emissions. Electroweak production ("vector-boson fusion") of diboson was generated with up to one additional  parton in the fully leptonic final state. The NNPDF3.0nnlo set of PDFs is used, along with the  dedicated set of tuned parton-shower parameters developed by the Sherpa authors.
+
+\input{tables/qbh/background/vv_mc}
+
+\newpage
+
+\subsection*{Top}
+
+Table~\ref{tab:top_MC} lists the top samples used in this analysis. The $t\bar{t}$ and single-$t$ background events are generated as follows:
+
+The $t\bar{t}$ events were modelled using the \texttt{Powheg Box v2}~\cite{Alioli:2010xd} generator at NLO with the NNPDF3.0nlo \cite{Ball:2014uwa}  PDF set and the $h_{\textrm{damp}}$ parameter set to 1.5 $m_{\textrm{top}}$. These events were interfaced to \texttt{Pythia 8.230} \cite{Sjostrand:2014zea} to model the parton shower, hadronisation, and underlying event, with  parameters set according to the A14 tune using the NNPDF3.0 set of PDFs \cite{Ball:2014uwa}. EvtGen 1.6.0 was used to perform the decays of bottom and charm hadrons.  
+ 
+
+The associated production of top quarks with $W$ bosons (tW) were modelled by the \texttt{Powheg Box v2} generator at NLO in QCD using the five-flavour scheme and the NNPDF3.0nlo set of PDFs. To remove interference and overlap with $t\bar{t}$ production, the diagram removal scheme was employed. Events were interfaced to \texttt{Pythia 8.230} using the A14 tune and the NNPDF3.0 set of PDFs. 
+
+The single-top $t$-channel ($s$-channel) production was modelled using the \texttt{Powheg Box v2} generator at NLO in QCD using the four-flavour (five-flavour) scheme and the corresponding NNPDF3.0nlo set of PDFs. These events were also interfaced with \texttt{Pythia 8.230} using the A14 tune and the NNPDF3.0 set of PDFs. The top samples for mc23 have been generated with a filter strategy in which the $t\bar{t}$ samples are split into all had-, single-lep and dilep-filtered samples, which is different to previous mc20 which split into allhad and non-allhad samples.
+
+\input{tables/qbh/background/top_mc}
+
+\subsection*{$\mathbf{t\bar{t}V}$} 
+
+Table \ref{tab:ttv_MC} lists all $t\bar{t}W$ MC samples used in this analysis. All $t\bar{t}W$ samples are simulated using \texttt{Sherpa 2.2.14}  \cite{Bothmann:2019yzt}.  Other samples were produced using  \texttt{MadGraph5\_aMC@NLO} 2.3.3 \cite{Alwall:2014hca} generator using the NNPDF3.0nlo set of PDFs. They were interfaced with \texttt{Pythia 8.210} \cite{Sjostrand:2014zea} using the A14 tune and the NNPDF3.0 set of PDFs.
+
+\input{tables/qbh/background/ttv_mc}
+
+\subsection*{Dijet} 
+
+Monte Carlo dijet samples are only used for the muon+jet background channel. These samples are listed in Table \ref{tab:jj_MC}. Contribution of this background in muon channel is $<1\%$ in SR ($m_{\ell j}>3$~TeV, see Figure~\ref{fig:Pie_Charts_SR}). For the electron+jet channel this background is much more significant in SR ($=40\%$, see Figure~\ref{fig:Pie_Charts_SR}) and is estimated using data-driven fake estimation method, described in Chapter~\ref{chp:fakes}. These samples were produced with \texttt{Pythia 8.230} using the A14 tune and the NNPDF3.0 set of PDFs.
+
+\input{tables/qbh/background/jj_mc} 

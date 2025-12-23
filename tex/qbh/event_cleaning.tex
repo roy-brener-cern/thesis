@@ -1,0 +1,25 @@
+Following the \href{https://twiki.cern.ch/twiki/bin/viewauth/Atlas/DataPreparationCheckListForPhysicsAnalysis}{recommendations} of the DataPrep group, the following event-level requirements are made. We use the official GRLs to ensure a fully working detector during data taking:
+\begin{itemize}
+    \item \scriptsize \texttt{data22\_13p6TeV.periodAllYear\_DetStatus-v109-pro28-04\_MERGED\_PHYS\_StandardGRL\_All\_Good\_25ns\_ignore\_TRIGLAR.xml}
+    \item \scriptsize \texttt{data23\_13p6TeV.periodAllYear\_DetStatus-v110-pro31-06\_MERGED\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
+    \item \scriptsize \textcolor{red}{\texttt{physics\_25ns\_data24.xml}}
+\end{itemize}
+
+There is some ambiguity for the Run3 datasets which GRLs\footnote{\href{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/GoodRunListsForAnalysisRun3\#\#GRL\_for\_2024\_pp\_collision\_data\_l}{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/GoodRunListsForAnalysisRun3\#\#GRL\_for\_2024\_pp\_collision\_data\_l}} to use. We chose the GRL which is applicable
+for the whole analysis. For 2022 our choice represents the GRL that is suitable for analyses relying with muon triggers (as these are used in the muon+jet channels) while for 2023 it represents the GRL suitable for jet triggers (as these are used in the fake-lepton estimation). 
+The following event-level vetoes are made to reject bad/corrupt events:
+
+\begin{itemize}
+    \item LAr noise burst and data corruption (\texttt{xAOD::EventInfo::LAr});
+    \item Tile corrupted events (\texttt{xAOD::EventInfo::Tile});
+    \item events affected by the SCT recovery procedure for single event upsets (\texttt{xAOD::EventInfo::SCT});
+    \item incomplete events (\texttt{xAOD::EventInfo::Core}).
+\end{itemize}
+
+Debug stream events have not been included. 
+Events are required to have a primary vertex with at least two associated tracks. The primary vertex is
+selected as the one with the largest $\Sigma p^{2}_{\textrm{T}}$, where the sum is over all tracks with transverse momentum
+$p_{\textrm{T}} > 0.4~\textrm{GeV}$ that are associated with the vertex.
+
+Furthermore, events in which a jet does not pass the \textit{Loose} jet cleaning criteria\footnote{\href{https://cds.cern.ch/record/2037702/files/ATLAS-CONF-2015-029.pdf}{https://cds.cern.ch/record/2037702/files/ATLAS-CONF-2015-029.pdf}} are vetoed to reject
+non-collision backgrounds and jets from calorimeter noise. This strictly follows the recommendations\footnote{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/HowToCleanJetsR21}{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/HowToCleanJetsR21}} from the JetEtmiss CP group, so we don’t specify the detailed jet-cleaning requirements here.

@@ -1,0 +1,143 @@
+\chapter{Signal Acceptance and Efficiency}
+\label{sec:app_acc_eff}
+
+\section{Acceptance and Efficiency of Run3 event selection}
+\label{sec:acc_eff_Run3}
+
+Acceptance ($A$) characterises a region in phase space, accessible for recording of particles in detector. Acceptance is defined at a truth level, where truth transverse momentum $\pT$, pseudo rapidity $\eta$ and other cuts define the above phase region. Efficiency ($\epsilon$) is defined, when the events selected for acceptance pass also all cuts at the reconstruction level. To obtain $A$ and $\epsilon$, we need to define a window around the signal peak:
+\begin{equation}
+W_{mass} \geq 2\cdot\sigma_{peak} = 2\cdot\sqrt{\sigma_{detector}^{2}+\sigma_{signal}^{2}} , 
+%\label{eq:M_window}
+\end{equation}
+where the effects of the detector resolution and the signal peak width are being included.
+
+We have wide peaks with $\sigma_{signal}$ varying in range 1--2~$\textrm{TeV}$ in different models and in electron and muon channels. The detector resolution, $\sigma_{detector}$, is varying in range 0.1--0.2~$\textrm{TeV}$ in electron channel and 1--2~$\textrm{TeV}$ for muons (see Section~\ref{sec:app_reso}). Then $W_{mass} \geq$~2--5~$\textrm{TeV}$ in different models and mass points. Moreover, the peak position is varying in range 6--10.5~$\textrm{TeV}$ within wide SR (3--13~$\textrm{TeV}$). Therefore, we use full SR as the mass window to provide the same conditions for any considered signal.
+
+First of all, we need to remove events falling outside the window at truth level, i.e. $N_{W}$ is number of events passing trigger and found inside the window, $W_{mass}$. On the next step we remove events which failed the truth level kinematic cuts, i.e. $N_{K}$ is number of events in window after passing of the truth kinematic cuts. Then we remove from $N_{K}$ the events which failed selection at reconstruction level, i.e. $N_{Q}$ is the number of events after passing all cuts after reconstruction of events. Now we can get acceptance
+\begin{equation}
+A = N_{K}/N_{W},
+%\label{eq:Acc}
+\end{equation}
+and efficiency
+\begin{equation}
+\epsilon = N_{Q}/N_{K}.
+%\label{eq:Eff}
+\end{equation}
+The product of acceptance and efficiency is
+\begin{equation}
+A\times\epsilon = N_{Q}/N_{W}.
+\label{eq:Acc_Eff}
+\end{equation}
+The pre-selection and skimming cuts are used at the Ntuples production before all analysis cuts. These pre-selection and skimming cuts should be also taken into account as corresponding efficiency. This efficiency, $E\!f\!f_{skim}$, is calculated as ratio of number of events after pre-selection and skimming to number of generated signal events. Then final equation of $A\times\epsilon$ is a following:
+\begin{equation}
+A\times\epsilon = E\!f\!f_{skim}\times(A\times\epsilon)_{cuts}, 
+\label{eq:Acc_Eff_fin}
+\end{equation}
+where $(A\times\epsilon)_{cuts}$ reflect all analysis cuts and it is calculated according to Eq.~(\ref{eq:Acc_Eff}). 
+
+One can see in FIG.~\ref{fig:AxE_diff} the examples of differential distribution of $(A\times\epsilon)$ vs. $m_{inv}$ in the SR for two models (ADDn6\_m9.0 and RSn1\_m7.0) in muon and electron channels. Dots show $A\times\epsilon$ calculated at different $m_{inv}$. Red line is the fit by Sigmoid function. Blue line corresponds to $(A\times\epsilon)_{total}$ estimated by Eq.~(\ref{eq:Acc_Eff} and \ref{eq:Acc_Eff_fin}), where $N_{Q}$ and $/N_{W}$ are accounted over whole SR.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/Acc_Eff/AxE_ADDn6_m9p0_el.pdf}
+    }
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/Acc_Eff/AxE_ADDn6_m9p0_mu.pdf}
+    }
+    \hfill
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/Acc_Eff/AxE_RSn1_m7p0_el.pdf}
+    }    
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/Acc_Eff/AxE_RSn1_m7p0_mu.pdf}
+    }
+  \caption{Differential distribution of $(A\times\epsilon)$ vs. $m_{inv}$ in the SR for two models (ADDn6\_m9.0 and RSn1\_m7.0) in muon and electron channels. (a) ADDn6\_m9.0 signal, electron channel; (b) ADDn6\_m9.0 signal, muon channel; (c) RSn1\_m7.0 signal, electron channel; (d) RSn1\_m7.0 signal, muon channel.}
+  \label{fig:AxE_diff}
+\end{figure}
+
+Distributions of $(A\times\epsilon)_{total}$ vs. $M_{\textrm{th}}$ for all models and mass points in both channel are shown in FIG.~\ref{fig:AxE_total}. Dots of $(A\times\epsilon)_{total}$ are well fitted by red straight line (polynomial fit of 1st order) in both electron and muon channels. The simple average of $(A\times\epsilon)_{total}$ over all masses and all models is equal to $0.854\pm0.008$ and $0.545\pm0.018$ for electron and muon channels respectively. These values we can use for preliminary rough estimations of signal strength and limits. Linear fit is applied to estimate final limits.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/Acc_Eff/allMassAxE_fitPoly1_el.pdf}
+    }
+    \subfloat[]{
+      \includegraphics[width=0.5\textwidth]{figures/Acc_Eff/allMassAxE_fitPoly1_mu.pdf}
+    }
+  \caption{Distribution of $(A\times\epsilon)_{total}$ vs. $M_{\textrm{th}}$ for all models and mass points. (a) electron channel; (b) muon channel.}
+  \label{fig:AxE_total}
+\end{figure}
+
+The final $Acceptance \times Efficiency$ of both channels is shown in FIG.~\ref{fig:AxE_final}. The slope of $A\times\epsilon$ with growth of $M_{\textrm{th}}$ is somewhat more in muon channel. The mean value is significantly more in electron channel. Ratio $e/\mu$ of mean $A\times\epsilon$ is equal to 0.854 / 0.545 = 1.57.
+
+\begin{figure}[h]
+  \centering
+     \includegraphics[width=0.5\textwidth]{figures/Acc_Eff/AccEff_final.pdf}
+  \caption{Final $A\times\epsilon$ vs. $M_{\textrm{th}}$ -- the linear fit result. (a) electron channel; (b) muon channel.}
+  \label{fig:AxE_final}
+\end{figure}
+
+\FloatBarrier
+
+
+\section{Discussion of limits in Run1, Run2 and Run3}
+\label{sec:limits_Run1_2_3}
+
+There is notable difference of expected upper limits on $\sigma \times Br$ between electron and muon channels in Run3 (see section~\ref{sec:exc_limits}). The muon limit on $\sigma \times Br$ is more than electron limit in about 3.5 times. Comparison of Run3 with results of Run1 and Run2 was made to understand possible cause of mentioned difference. All numbers below are considered for the ADDn6 model which is used in all three runs. 
+
+Ratio for Acceptance and Efficiency ($A\times\epsilon$) and upper limits on $\sigma \times Br$ of electron channel and muon channel are the following:
+
+\begin{tabular}{llll}
+                           & Run1 & Run2 & Run3 \\
+$A\times\epsilon$, $e/\mu$ & 0.54 / 0.33 = 1.7  & 0.67 / 0.66 = 1.02   & 0.88 / 0.93 = 0.94  \\
+$\sigma\times Br$, $\mu/e$ & 0.49 / 0.27 = 1.8  & 0.085 / 0.091 = 0.93 & 0.07 / 0.02 = 3.5   \\
+\end{tabular}
+
+\textbf{Run1.} Limits on $\sigma \times Br$ were set at $m_{\ell j}>3.5$~TeV, where number of observed events tends to zero. Here numbers of expected events of electrons and muons are equal within their errors and they don't contradict zero within their errors (see Table~2 in paper~\cite{ATLAS:2013wgh}).
+
+\textbf{Run2.} Limits on $\sigma \times Br$ were taken at $M_{th}=8$~TeV, where number of data tends to zero. Here numbers of observed and expected events of electrons and muons are equal within their errors and they are slightly more than 3 events what is minimal possible value in toys method (see Tables 36 and 37 in INT note~\href{https://cds.cern.ch/record/2637190/files/ATL-COM-PHYS-2018-1269.pdf}{ATL-COM-PHYS-2018-1269}). 
+
+\textbf{Run3.} Limits on $\sigma \times Br$ were taken at $M_{th}=8$~TeV what is minimal mass point used in the Run3 analysis. Upper limits were estimated with use asymptotic method. 
+
+\textbf{Comparison of three runs.} This difference between runs can be related to different reconstruction, identification, selection cuts (softer or harder requirements), and as result $A\times\epsilon$ can be different. For example, the same angle cuts on $\Delta\phi$ and $\Delta\eta$ in Run3 give tighter selection for muons than for electrons. Electron background statistics in SR is decreased in 3.3 times but the decreasing for muons is 4.2. The angle cuts were softer in Run1 than in Run3, and they were not applied in Run2. Other cuts are also somewhat different in Run1, Run2 and Run3.
+
+However, the $e/\mu$ ratio of $A\times\epsilon$ is comparable with $\mu/e$ ratio of $\sigma\times Br$ in Run1 and Run2: 1.7 vs. 1.8 in Run1, and 1.0 vs. 0.93 in Run2. The ratio of $\sigma\times Br$ is about 3.5 times larger than ratio of $A\times\epsilon$ in Run3. In addition, the $A\times\epsilon$ in Run3 is better for muons than for electrons but statistics of background in SR is 3 times less for muons. It looks like somewhat inconsistently and questions are appeared to $A\times\epsilon$ in Run3. The comparison of cutflow for ADDn6\_m9.0 signal in electron and muon channels was made to understand where losses of muon events are the largest relative to electrons. One can see this comparison in the Table~\ref{tab:ADDn6_m90_cuts}. 
+
+\begin{table}[]
+%%
+\centering
+%%{\small
+{\footnotesize
+\begin{tabular}{l|c|c|c|c|c|c|c|c}
+\hline
+    &  \multicolumn{4}{c|}{Electrons}  &  \multicolumn{4}{c}{Muons} \\ \hline
+Cut & N\_events & $cut_{i}/cut_{i-1}$ & W\_events & $cut_{i}/cut_{i-1}$ & 
+N\_events & $cut_{i}/cut_{i-1}$ & W\_events & $cut_{i}/cut_{i-1}$ \\ \hline
+none (generated ev.) & 90000 &         &         &         & 90000 &         &         &         \\ 
+lepton1 is $e/\mu$   & 89818 & 0.99798 & 13.1778 &         & 62827 & 0.69808 & 8.53953 &         \\ 
+1-lepton trigger     & 87328 & 0.97228 & 12.8507 & 0.97518 & 52776 & 0.84002 & 7.13009 & 0.83495 \\ 
+lepton1 $\eta$       & 87177 & 0.99827 & 12.8286 & 0.99828 & 52776 & 1.00000 & 7.13009 & 1.00000 \\ 
+$m_{lj}>3$ TeV       & 86715 & 0.99470 & 12.7617 & 0.99479 & 52502 & 0.99481 & 7.09568 & 0.99517 \\ 
+lepton1 is signal    & 80633 & 0.92986 & 11.8432 & 0.92803 & 52287 & 0.99590 & 7.06700 & 0.99596 \\ 
+1 only signal lepton & 80614 & 0.99976 & 11.8399 & 0.99972 & 52279 & 0.99984 & 7.06571 & 0.99982 \\ 
+$p_{T}>150$ GeV      & 80614 & 1.00000 & 11.8399 & 1.00000 & 52279 & 1.00000 & 7.06571 & 1.00000 \\ 
+$\Delta\phi>2.8$     & 80319 & 0.99643 & 11.7960 & 0.99629 & 52072 & 0.99604 & 7.04132 & 0.99655 \\ 
+$\Delta\eta<3.25$    & 76314 & 0.95014 & 11.2115 & 0.95044 & 48586 & 0.93305 & 6.58865 & 0.93571 \\ \hline
+last cut / first cut &       & 0.84965 &         & 0.85079 &       & 0.77333 &         & 0.77155 \\ 
+last cut / generated &       & 0.84793 &         &         &       & 0.53984 &         &         \\ \hline
+\end{tabular}
+}
+%%
+\caption{The cuts impact on the QBH ADDn6 model with $M_{th}=9.0$~TeV in the electron and muon channels.}
+\label{tab:ADDn6_m90_cuts}
+\end{table}
+
+The left column shows cutflow as it is applied in analysis. One can see the ratio of $cut_{i}/cut_{i-1}$ is very similar for number of events (N\_events) and for weighted events (W\_events). I.e. additional losses could not appear in result of applying of weights and efficiencies obtained according recommendations of the CP group. Ratio of numbers after the first cut ( leading lepton is $e or \mu$) to number of generated events is 0.99798 for electrons, and it is 0.69808 for muons. This ratio includes pre-selection efficiency and skimming at the Ntuples production (it is also some cuts). It gives maximal losses of muons relative to electrons. And we didn't include these efficiencies in our $A\times\epsilon$ obtained earlier and shown above. The last value accounts all other cuts in this Table. If we multiply $A\times\epsilon$ obtained earlier by factor $E\!f\!f_{skimm}=0.99798$ for electrons and 0.69808 for muons, then new electron efficiency will be $A\times\epsilon=0.879\times0.99798=0.88$ and for muons it will be $A\times\epsilon=0.932\times0.69808=0.65$. The new ratio $e/\mu$ efficiencies will be $A\times\epsilon=0.88/0.65=1.35$. The last values look more adequate to statistics. It gives a hope to obtain more correct estimation of limits. 
+
+These $A\times\epsilon$ values obtained for one mass of one model. Estimation of new corrected $A\times\epsilon$ for all models and all mass is represented in section~\ref{sec:acc_eff_Run3}. It was made with accounting of efficiency of the pre-selection and skimming. The mean value of new $A\times\epsilon$ over all models in electron channel is equal to $0.854\pm0.008$. It differs from old value ($0.879\pm0.006$) not so much. The mean value of new $A\times\epsilon$ in muon channel is $0.545\pm0.018$.It differs significantly from old value ($0.932\pm0.003$) and it is visibly less than in electron channel as it is expected.
+
+In addition, we should estimate expected limits by toys method or/and Asimov method which give more correct estimation in comparison with asymptotic formula and the simple likelihood fit. 
+
+%\FloatBarrier

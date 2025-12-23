@@ -1,0 +1,25 @@
+\section{Code and Analysis Version}
+\label{CodeAna}
+
+The data, signal and background samples are described in Sections~\ref{sec:data}, \ref{sec:signal} and \ref{sec:background}. The analysis is performed with Athena, the ATLAS software framework used for event reconstruction and physics analysis. In practical terms, Athena reads detector data and simulated events, reconstructs physics objects (electrons, muons, jets and missing transverse momentum), and provides a reproducible environment to apply calibrations, selections and algorithms across large datasets. For this thesis we use the standard Run~3 software releases and produce compact “ntuples” (lightweight summary trees) derived from centrally prepared ATLAS datasets to enable fast iteration in the final analysis stage.
+% Doug suggested spliting paragraph below to where releavant
+For Monte Carlo samples, the effect of pileup, i.e., multiple $pp$ interactions in the same or neighboring bunch crossings, is included in all simulated event samples. Signal samples use \texttt{Pythia 8.8309} and multijet, $ttV$ and top samples use \texttt{Pythia 8.230} to simulate the pileup in collisions, using the ATLAS A3 set of tuned parameters and the NNPDF3.0 PDF set \cite{Ball:2014uwa}. These are weighted to reproduce the average number of pileup interactions per bunch crossing observed in data. The generated background events are passed through a full detector simulation \cite{SOFT-2010-01} based on Geant4 \cite{Agostinelli:2002hh}. For the simulated QBH event samples, for the calorimeter, a fast parametrization response \cite{ATL-PHYS-PUB-2010-013} is used. The other detector systems used Geant4.
+
+\section{Collision Data}
+\label{sec:data}
+
+This analysis uses $\sqrt{s} = 13.6~\textrm{TeV}$ proton–proton collision data recorded between 2022–2024 in Run~3 of the LHC, corresponding to a total integrated luminosity of $165.4~\textrm{fb}^{-1}$.
+
+The data were collected by the ATLAS detector during stable beam conditions with all detector systems operating normally. Events are selected using the lowest unprescaled single-lepton triggers, which depend on the data-taking period. An overview of the triggers used for each period is presented in Table~\ref{tab:datasets::triggers}.
+
+For the electron channel, events are required to pass at least one of the three single-electron triggers, with the same Level 1 requirement of an EM object with transverse momentum greater than 22~GeV and High Level Trigger requirements of: $p_{\textrm{T}}$ threshold of 26~GeV with a tight likelihood requirement accompanied by a loose isolation requirement; or a higher $p_{\textrm{T}}$ threshold of 60~GeV and a medium likelihood condition; or 140~GeV transverse momentum with a looser identification criteria.  The L1 requirements for these triggers depend on the data-taking period, as shown in Table~\ref{tab:datasets::triggers}.
+
+The estimation of fake-electron background, described in chapter \ref{chp:fakes}, uses the loosest, lowest available unprescaled triggers described in Table~\ref{tab:datasets::triggers}, namely \texttt{HLT\_e140\_lhloose\_L1EM22VHI} for 2022 and \texttt{HLT\_e140\_lhloose\_L1eEM26M} for 2023 and 2024.
+
+In the muon channel, events are recorded if they pass one of two single-muon triggers: either one with a $p_{\textrm{T}}$ requirement of at least 24~GeV and a medium identification criterion, or a trigger with a 50~GeV $p_{\textrm{T}}$ requirement.
+
+\input{tables/qbh/data/triggers}
+
+To ensure data quality, events with noise bursts or coherent noise in the calorimeters are removed. All events are required to satisfy the official ATLAS Good Runs Lists (GRL) for each data-taking year. The GRL used in this analysis are listed in Table~\ref{tab:GRL} and correspond to a total integrated luminosity of $165.4~\textrm{fb}^{-1}$.
+
+\input{tables/qbh/data/grl}

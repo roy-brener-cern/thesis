@@ -1,0 +1,81 @@
+\chapter{Sytematic Uncertainties}
+\label{sec:app_systematics}
+
+\section{Muon}
+
+The systematic \texttt{MUON\_EFF\_RECO\_SYS} was found to be very large, as shown in figure~\ref{fig:MUON_EFF_before}. Following discussions with MCP this is believed to be due to an extremely conservative estimate of this systematic when extrapolating to high $m_{\ell j}$. 
+Due to time constraints MCP approved the use of Run2 uncertainties plus an additional saftey factor. The Run2 uncertainties were 0.19\% in the WCRVR and SR, and 0.21\% in the ZCRVR. A study was conducted to see the impact of expected limits of an additional saftey factor. Two examples are shown in figure~\ref{fig:MUON_EFF_Limits} and all limit values summarised in table~\ref{tab:MUON_EFF_limits}. This shows that an effect is only begun to be seen at 100\% saftey factor, therefore approval to use Run2 values without a saftey factor was given. 
+
+\begin{figure}[h]
+  \subfloat{
+    \includegraphics[width=0.9\textwidth]{figures/SystTool/appendix/MUON_EFF_Before.pdf}
+  }
+  \caption{\texttt{MUON\_EFF\_RECO\_SYS} for total background in the signal region for the $\mu+j$ channel, before solution is applied.}
+  \label{fig:MUON_EFF_before}
+\end{figure}
+
+\begin{figure}[h]
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/SystTool/appendix/limits_MUON_EFF_0.pdf}
+  }
+  %\hfill
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{figures/SystTool/appendix/limits_MUON_EFF_50.pdf}
+  }
+  \caption{Expected limits for the ADD n=6 model, calculated using Run2 values \texttt{MUON\_EFF\_RECO\_SYS} with an additional safety factor of (a) 0\% and (b) 50\%.}
+  \label{fig:MUON_EFF_Limits}
+\end{figure}
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|ccccc}
+        \hline
+        Safety factor: & 0\% & 10\% & 20\% & 50\% & 100\% \\
+        \hline
+        M\_th & \multicolumn{5}{c}{$\sigma \times BR$ [fb]} \\
+        \hline
+        8.0  & 0.2179 & 0.2176 & 0.2178 & 0.2180 & 0.2166 \\
+        8.5  & 0.2183 & 0.2181 & 0.2182 & 0.2185 & 0.2171 \\
+        9.0  & 0.2244 & 0.2241 & 0.2243 & 0.2245 & 0.2231 \\
+        9.5  & 0.2249 & 0.2250 & 0.2247 & 0.2250 & 0.2236 \\
+        10.0 & 0.2279 & 0.2277 & 0.2278 & 0.2281 & 0.2267 \\
+        10.5 & 0.2360 & 0.2362 & 0.2360 & 0.2362 & 0.2347 \\
+        \hline
+    \end{tabular}
+    \caption{Expected limits for the ADD n=6 model, calculated using Run2 values \texttt{MUON\_EFF\_RECO\_SYS} with varying additional safety factors.}
+    \label{tab:MUON_EFF_limits}
+\end{table}
+
+
+\section{Electron}
+
+The EGamma CP group have found an issue with their calorimeter isolaiton, which affects the systematic \texttt{EL\_EFF\_Iso\_TOTAL}. This issue was found to have a large effect on the HighPtCaloOnly working point of up to a 10\% difference at high $p_T$. Figure~\ref{fig:MUON_EFF_before} shows this systematic in our signal region, which is always less than ~10\%. Therefore a solution to use flat 20\% systematic was agreed as covers any possibe changes from the bug. Again the effect of this on the limits was checked, this is summarised in table~\ref{tab:EL_ISO_limits}, which shows there is no significant effect.  
+
+\begin{figure}[h]
+  \subfloat{
+    \includegraphics[width=0.9\textwidth]{figures/SystTool/appendix/EL_ISO_Before.pdf}
+  }
+  \caption{\texttt{EL\_EFF\_Iso\_TOTAL} for total background in the signal region before solution is applied.}
+  \label{fig:MUON_EFF_before}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|cc}
+\hline
+ & Original & Fixed 20\% \\
+\hline
+M\_th & \multicolumn{2}{c}{$\sigma \times BR$ [fb]} \\
+\hline
+8.0  & 0.0189851 & 0.0188353 \\
+8.5  & 0.0188295 & 0.0186812 \\
+9.0  & 0.0187821 & 0.0186325 \\
+9.5  & 0.0188229 & 0.0186728 \\
+10.0 & 0.0186615 & 0.0185152 \\
+10.5 & 0.0187193 & 0.0185798 \\
+\hline
+\end{tabular}
+\caption{Expected limits for the ADD n=6 model, calculated using original \texttt{EL\_EFF\_Iso\_TOTAL} systematic vs a flat 20\% uncertainty.}
+\label{tab:EL_ISO_limits}
+\end{table}

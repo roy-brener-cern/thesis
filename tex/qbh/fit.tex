@@ -1,0 +1,36 @@
+The data are modelled statistically and the expected (observed) event count in each $m_{\ell j}$ bin is described as a Poisson-distributed variable. The expectation value $\lambda_{l}$ in bin $l$ is the sum of signal and background contributions,
+\begin{equation}
+    \lambda_{kl}(\mu, \boldsymbol{\theta}) = s_{kl}(\mu, \boldsymbol{\theta}) + b_{kl}(\boldsymbol{\theta}),
+\end{equation}
+%
+where $\boldsymbol{\theta}$ is a nuisance parameter encoding the effects of systematic uncertainties and $\mu$ the signal strength, which is the parameter of interest in the statistical inference. A Poisson likelihood function follows
+\begin{equation}
+    \mathcal{L}(\mu, \boldsymbol{\theta}) = P(\mathbf{n} \mid \mu, \boldsymbol{\theta}) = \prod^{N_{\textrm{channel}}}_{k=1} \prod^{N_{\textrm{bin}}}_{l=1} \frac{ \lambda_{kl}(\mu, \boldsymbol{\theta})^{n_{kl}} \textrm{e}^{-\lambda_{kl}(\mu, \boldsymbol{\theta})} }{n_{kl}!},
+\end{equation}
+%
+where $\mathbf{n}$ represents all individual bin observations, $n_{kl}$. When the QBH search is conducted for individual lepton flavour decay, $\textrm{QBH}\rightarrow e+j$ or $\textrm{QBH}\rightarrow \mu+j$ separately, $N_{\textrm{channel}} = 1$.
+
+The number of expected signal events in bin $l$ of channel $k$ is given as
+\begin{equation}
+    s_{kl}(\mu, \boldsymbol{\theta}) = \overline{s_{kl}}(\mu) \, \textrm{e}^{\bigg( \displaystyle \sum\limits_{i=1}^{N_\textrm{syst}} \textrm{sgn}\left[(\delta s_{kl})_{i}\right] \theta_{i} \ln \Big[ 1 + \Big( \frac{ (\delta s_{kl})_{i} }{\overline{s_{kl}}} \Big)^{2} \Big] \bigg) },
+\label{eq:signal_expectation}
+\end{equation}
+%
+where 
+\begin{equation}
+    \overline{s_{kl}}(\mu) = \Big(\int^{2024}_{2022} \mathcal{L}\textrm{d}t \Big) \times \mathcal{A} \times \epsilon \times \sum_{Q\textrm{-state}}(\mathcal{BR}_{Q\textrm{-state}} \times \sigma_{Q\textrm{-state}}) \times \mu
+\end{equation}
+%
+being the mean, with $\int^{2024}_{2022} \mathcal{L}\textrm{d}t$ the total integrated luminosity, $\mathcal{A}\times \epsilon$ the total acceptance times efficiency for signal events to be triggered, pass the selection and lie within the signal region (section~\ref{sec:app_acc_eff} in Appendix), $\sum_{Q\textrm{-state}}(\mathcal{BR}_{Q\textrm{-state}} \times \sigma_{Q\textrm{-state}})$ the sum of theoretical branching fraction times cross section of a QBH to decay to a $\ell+q$ final-state ($\ell \in \{ e, \mu \}$), over all $Q$-states considered at production level. $\frac{ (\delta s_{kl})_{i} }{\overline{s_{kl}}}$ is the relative shift in $s_{kl}$ caused by a one standard deviation variation of nuisance parameter $\theta_{i}$, associated with the systematic uncertainty of index $i$. The number of nuisance parameters equals to the entirety of systematic uncertainties considered, as well as the normalisation factors on the leading background processes derived from MC. Another two nuisance parameters account for the statistical and systematic uncertaintys on the data-driven fake electron background estimate, as described in Chapter \ref{chp:fakes}.
+
+Similarly, the expected number of background events is given as 
+\begin{equation}
+    b_{kl}(\boldsymbol{\theta}) = \overline{b_{kl}} \, \textrm{e}^{\bigg( \displaystyle \sum\limits_{i=1}^{N_\textrm{syst}} \textrm{sgn}\left[(\delta b_{kl})_{i}\right] \theta_{i} \ln \Big[ 1 + \Big( \frac{ (\delta b_{kl})_{i} }{\overline{b_{kl}}} \Big)^{2} \Big] \bigg) },
+\label{eq:bkg_expectation}
+\end{equation}
+%
+with $\overline{b_{kl}}(\mu)$ as its mean and $\frac{ (\delta b_{kl})_{i} }{\overline{b_{kl}}}$ the relative shifts associated with systematic uncertainty $i$. An equal set of systematic uncertainties is used as inputs to Eqs. (\ref{eq:signal_expectation})--(\ref{eq:bkg_expectation}), except the theoretical systematic uncertainties that aren't considered for the non-perturbative signal which is described at LO. Relative shifts of experimental systematic uncertainties on the electron (muon) are zero in the muon (electron) channel. $\int^{2024}_{2022} \mathcal{L}\textrm{d}t$ is the central value of the total integrated luminosity, on which a flat systematic uncertainty is considered in the fit for all MC contributions. Full description of the systematic uncertainties included is given in Chapter \ref{chp:systematic_uncertainties}.
+
+All inputs used for the statistical inference are described above, through Eqs. (\ref{eq:signal_expectation})--(\ref{eq:bkg_expectation}). Apart from the luminosity, acceptance times efficiency and theoretical values pertaining to branching fractions and production cross-sections, these are the signal and background estimates, $\overline{s_{kl}}$, $\overline{b_{kl}}$ and their systematic uncertainties, $\frac{ (\delta s_{kl})_{i} }{\overline{s_{kl}}}$, $\frac{ (\delta b_{kl})_{i} }{\overline{b_{kl}}}$, respectively. Systematic uncertainties stem from the usage of MC for signal and background estimates, relating to the generators, as well as experimental uncertainties associated with reconstructed analysis objects, derived by the Combined Performance groups. One exception is the data-driven fake electron background estimation, where dedicated systematic uncertainties are derived on the inputs to the Matrix Method, as elaborated in Chapter \ref{chp:fakes}.
+
+Each channel, $e+j$ and $\mu+j$, is fitter separately and thereby, we derive limits for each channel individually. Once the analysis is completely frozen, we may well also perform a combined fit to derive a limit on the cross-section times branching fraction of a QBH decay to light-lepton (electron or muon) plus jet. As the sensitivity is driven by the $e+j$ channel, the addition of the $\mu+j$ channel is expected to yield only a marginal improvement in the final limit. Post-unblinding, the limit stability may be tested using toys. Furthermore, the fit might be tested with signal injection. Likewise, discovery tests may be performed, should significant excesses be observed in data.
