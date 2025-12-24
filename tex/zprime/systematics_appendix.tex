@@ -1,0 +1,1213 @@
+
+\section{Uncertainty estimation on the dilepton mass}
+
+The uncertainties described above are propagated to the invariant dilepton mass distribution, $m_{\ell\ell}$. For calibration systematic uncertainties, the variation is given directly from the calculation of $m_{\ell\ell}$ via the two leptons' four-vectors. Experimental uncertainties pertaining to efficiency (SF uncertainties) and theoretical uncertainties are computed from internal reweighting of the nominal samples. The 2-point theoretical uncertainties are derived using alternative samples produced with different generators or different generator settings. Where an alternative nominal sample is used, the error of the variation w.r.t the alternative nominal is taken as the relative error which is then propagated forward. These cases are discussed above.
+
+
+
+%To estimate the overall uncertainty on the dilepton mass distribution, the ratio of each variation to the nominal distribution is calculated. Where an uncertainty is given with its up and down variation, both are taken and the band is asymmetric. Where only a one-sided variation is available, there exists two cases: either the variation is given as up or it is given as neither up nor down. Taking $y_{\textrm{nom.}}, y^{\textrm{up,down}}_{\textrm{var.}}$ as the nominal and varied (up or down) per-bin yield respectively and defining the absolute difference between the two as $\Delta^{\textrm{var.}}_{\textrm{nom.}} = |y^{\textrm{up,down}}_{\textrm{var.}}-y_{\textrm{nom.}}|$, the relative uncertainty is calculated as:
+%
+%
+%
+%\centering
+%\begin{equation}
+%    y^{\textrm{up,down}}_{\textrm{ratio}} = 
+%\begin{dcases}
+%    \frac{y_{\textrm{var.}}}{y_{\textrm{nom.}}} \; &\Big| \; \textrm{up and down given}\\
+%    1 \pm \frac{\Delta^{\textrm{var.}}_{\textrm{nom.}}}{y_{\textrm{nom.}}}  \; &\Big| \; \textrm{only one given},
+%\end{dcases}
+%\end{equation}
+%%\end{aligned}
+%%\end{equation}
+%\flushleft for the two cases respectively. The second case is a symmetrisation of the missing side uncertainty or for cases where neither up nor down is indicated. The absolute difference accounts for bins where the opposite side uncertainty is larger or smaller than the nominal \textit{i.e.} $y^{\textrm{up}}_{\textrm{var.}} < y_{\textrm{nom.}} < y^{\textrm{down}}_{\textrm{var.}}$. 
+The relative uncertainty is then propagated to the corresponding bands around the dilepton mass distribution as shown in FIG. \ref{fig:systematics_SRs_no_met_sig_ee}--\ref{fig:systematics_CRs_VRs_top} for experimental and theoretical uncertainties. For experimental uncertainties, all backgrounds are varied by the same variation and added together. For theoretical uncertainties, not all backgrounds are varied by the same variations, as the uncertainties are process- and generator-dependent. In such cases, the background for which a variation is available is correspondingly varied and added to the nominal samples of all other backgrounds for which that variation was unavailable. Treatment of theoretical uncertainties follows the recipes described in Table \ref{tab:theory_systematics}.
+
+
+
+%\hspace{-2.0cm}
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\hspace{0.15\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Experimental_and_Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/ee/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/ee/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_mumu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/ee/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_ee}
+	}
+	%\hfill
+	\\
+	%\hspace{-1.0cm}
+	\subfloat[]{
+		\hspace{-0.0cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/ee/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_mumu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/ee/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/ee/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_mumu}
+	}
+	%\hfill
+	
+	\caption{Experimental and theoretical uncertainties on the dilepton mass distributions of the dielectron channel signal regions. The ratio of each variation to the nominal distribution is computed and then either added in quadrature per variation category for experimental uncertainties or treated individually per Physics Modelling Group recommendations for theoretical uncertainties. The top row shows experimental uncertainties and the bottom row shows theoretical uncertainties. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. From left to right, the plots show the zero $b$, one $b$ and at least two $b$ signal regions. PRW stands for pileup reweighting. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The plots shown do not include a cut on the $\sigma(E^{\textrm{miss}}_{\textrm{T}})$. The top legend is inclusive to all plots; its left column is for experimental uncertainties and its two right columns are for theoretical uncertainties.}
+	\label{fig:systematics_SRs_no_met_sig_ee}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\hspace{0.15\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Experimental_and_Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/ee/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/ee/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_mumu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/ee/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_ee}
+	}
+	%\hfill
+	\\
+	%\hspace{-1.0cm}
+	\subfloat[]{
+		\hspace{-0.0cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/ee/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_mumu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/ee/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/ee/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_mumu}
+	}
+	%\hfill
+	
+	\caption{Experimental and theoretical uncertainties on the dilepton mass distributions of the dielectron channel signal regions. The ratio of each variation to the nominal distribution is computed and then either added in quadrature per variation category for experimental uncertainties or treated individually per Physics Modelling Group recommendations for theoretical uncertainties. The top row shows experimental uncertainties and the bottom row shows theoretical uncertainties. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. From left to right, the plots show the zero $b$, one $b$ and at least two $b$ signal regions. PRW stands for pileup reweighting. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The plots shown include a cut on the $\sigma(E^{\textrm{miss}}_{\textrm{T}})$. The legend is inclusive to all plots; its left column is for experimental uncertainties and its two right columns are for theoretical uncertainties.}
+	\label{fig:systematics_SRs_yes_met_sig_ee}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	%\centering
+	\hspace{-0.0cm}
+	\subfloat[]{
+		\hspace{0.15\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Experimental_and_Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/mumu/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/mumu/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_mumu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/mumu/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_ee}
+	}
+	%\hfill
+	\\
+	%\hspace{-1.0cm}
+	\subfloat[]{
+		\hspace{-0.0cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/mumu/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_mumu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/mumu/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/mumu/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_mumu}
+	}
+	%\hfill
+	
+	\caption{Experimental and theoretical uncertainties on the dilepton mass distributions of the dimuon channel signal regions. The ratio of each variation to the nominal distribution is computed and then either added in quadrature per variation category for experimental uncertainties or treated individually per Physics Modelling Group recommendations for theoretical uncertainties. The top row shows experimental uncertainties and the bottom row shows theoretical uncertainties. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. From left to right, the plots show the zero $b$, one $b$ and at least two $b$ signal regions. PRW stands for pileup reweighting. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The plots shown do not include a cut on the $\sigma(E^{\textrm{miss}}_{\textrm{T}})$. The legend is inclusive to all plots; its left column is for experimental uncertainties and its two right columns are for theoretical uncertainties.}
+	\label{fig:systematics_SRs_no_met_sig_mumu}
+\end{figure}
+
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	%\centering
+	\hspace{-0.0cm}
+	\subfloat[]{
+		\hspace{0.15\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Experimental_and_Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/mumu/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/mumu/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_mumu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/mumu/Envelope_per_Syst_Type.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_ee}
+	}
+	%\hfill
+	\\
+	%\hspace{-1.0cm}
+	\subfloat[]{
+		\hspace{-0.0cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/mumu/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_mumu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/mumu/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/mumu/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_mumu}
+	}
+	%\hfill
+	
+	\caption{Experimental and theoretical uncertainties on the dilepton mass distributions of the dimuon channel signal regions. The ratio of each variation to the nominal distribution is computed and then either added in quadrature per variation category for experimental uncertainties or treated individually per Physics Modelling Group recommendations for theoretical uncertainties. The top row shows experimental uncertainties and the bottom row shows theoretical uncertainties. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. From left to right, the plots show the zero $b$, one $b$ and at least two $b$ signal regions. PRW stands for pileup reweighting. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The plots shown include a cut on the $\sigma(E^{\textrm{miss}}_{\textrm{T}})$. The legend is inclusive to all plots; its left column is for experimental uncertainties and its two right columns are for theoretical uncertainties.}
+	\label{fig:systematics_SRs_yes_met_sig_mumu}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\hspace{0.15\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Experimental_and_Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/ee/Envelope_per_Syst_Type.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/ee/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:TC_met}
+	}
+	\\ \vspace{-1cm}
+	\subfloat[]{
+		
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/mumu/Envelope_per_Syst_Type.pdf}
+		%\label{fig:TC_njets}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/mumu/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:TC_mu_pt}
+	}
+	
+	%\vspace{-1cm}
+	\caption{Experimental and theoretical uncertainties on the dilepton mass distributions of Drell-Yan background Control Region. The ratio of each variation to the nominal distribution is computed and then either added in quadrature per variation category for experimental uncertainties or treated individually per Physics Modelling Group recommendations for theoretical uncertainties. The top row includes the dielectron channel and the bottom row the dimuon channel. Experimental uncertainties are shown on the left column and theoretical uncertainties on the right column. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. PRW stands for pileup reweighting. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The legend is inclusive to all plots; its left column is for experimental uncertainties and its two right columns are for theoretical uncertainties.}
+	\label{fig:systematics_CRs_VRs_DY}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\centering
+	\subfloat[]{
+		\hspace{0.05\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Experimental_and_Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_emu/Envelope_per_Syst_Type.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_emu/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:TC_met}
+	}
+	\\ \vspace{-1cm}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/Envelope_per_Syst_Type.pdf}
+		%\label{fig:TC_njets}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/Theoretical_Systs_Bundled.pdf}
+		%\label{fig:TC_mu_pt}
+	}
+	
+	%\vspace{-1cm}
+	\caption{Experimental and theoretical uncertainties on the dilepton mass distributions of top Control Region. The ratio of each variation to the nominal distribution is computed and then either added in quadrature per variation category for experimental uncertainties or treated individually per Physics Modelling Group recommendations for theoretical uncertainties. The top row includes the dielectron channel and the bottom row the dimuon channel. Experimental uncertainties are shown on the left column and theoretical uncertainties on the right column. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. PRW stands for pileup reweighting. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The legend is inclusive to all plots; its left column is for experimental uncertainties and its two right columns are for theoretical uncertainties.}
+	\label{fig:systematics_CRs_VRs_top}
+\end{figure}
+
+
+Several aspects pertaining to the systematic uncertainties that may be observed across FIG. \ref{fig:systematics_SRs_no_met_sig_ee}--\ref{fig:systematics_CRs_VRs_top} are worth noting. As expected, experimental uncertainties relating to objects grow with requirements made on them in the final state. That the muon, electron uncertainties are large, small for the dimuon and dielectron channels, respectively and vice versa, is trivial. More subtelly, jet uncertainties and $b$-tagging uncertainties grow in regions where more jets are required in the final state, specifically the 1-$b$-jet and at least 2-$b$-jets regions \textit{e.g.} in the top row of FIG. \ref{fig:systematics_SRs_no_met_sig_ee}. Conversely, requirements made on the $\sigma(E^{\textrm{miss}}_{\textrm{T}})$ and $E^{\textrm{miss}}_{\textrm{T}}$ hardly induce an enlargement in the overall MET error, which is consistently small.
+
+
+In order to provide an estimate of the total error due to theoretical systematic uncertainties on the total background estimate, systematic uncertainties from Sherpa and PhPy8EG, relating to the DY and $t\bar{t}$ backgrounds, respectively, are shown together although each is relevant to only part of the background. As was discussed in previous chapters, the background composition, dominated by either DY or top, is driven mainly by the $b$-jets requirement. Therefore, it is expected that uncertainties specific to backgrounds in regions where those backgrounds are leading would be accentuated. One clear example can be seen when comparing the bottom left plot to the bottom right plot in FIG. \ref{fig:systematics_SRs_no_met_sig_mumu}. In the former, where the DY background dominates, the largest theoretical error is due to the NLO EW virtual corrections; in the latter, where the top background dominantes, the largest error up to $\sim 2500 \; \textrm{GeV}$ stems from ISR $\alpha_{\textrm{S}}$. The reason that in high-mass bins uncertainties pertaining to the DY take over those pertaining to top is the longer tail of the $Z\rightarrow \ell\ell$ processes, even in regions that require $b$-jet(s) in the final state, where mostly the top dominantes. This pattern can be seen across several plots in FIG. \ref{fig:systematics_SRs_no_met_sig_ee}--\ref{fig:systematics_SRs_yes_met_sig_mumu}. In regions where the top background purity is high such as where the final state is composed of an electron and a muon and at least one $b$-jet, uncertainties stemming from the top background dominante, as can be seen in the bottom right plot of FIG. \ref{fig:systematics_CRs_VRs_top}. There, the error is largest due to the QCD $\mu_{\textrm{R}}, \mu_{\textrm{F}}$ scales, followed by the ISR $\alpha_{\textrm{S}}$. Note that in this region the mass range considered is up to 2000 GeV. In the appendix, separate plots for theoretical uncertainties from Sherpa and PhPy8EG, for the DY and $t\bar{t}$ backgrounds. respectively, will be given.
+
+
+
+In Chapter \ref{sec:systematics} the systematic uncertainties considered in the analysis are discussed. The plots therein, for experimental and theoretical uncertainties alike, represent a bundling that is done per category of systematic uncertainties. An example is the MET uncertainties, listed in Table \ref{tab:met_systematics}, that are added in quadrature and shown as a single combined source of error in FIG. \ref{fig:systematics_SRs_no_met_sig_ee}--\ref{fig:systematics_CRs_VRs_top}. Likewise, a similar procedure is done for the theoretical uncertainties that are grouped together based on PMG recommendations as indicated in Table \ref{tab:theory_systematics}. In the contents of this appendix, each individual variation is shown. The format whereby the ratio-to-nominal is calculated and symmetrisation is undertaken follows those described in Chapter \ref{sec:systematics}. But, unlike plots there, in the following each systematic uncertainty is shown with the entirty of its variations.
+
+
+\section{Experimental systematic uncertainties}
+
+
+\subsection{Signal regions with no $\sigma(E^{\textrm{miss}}_{\textrm{T}})$ selection}
+
+
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/ee/EG.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/ee/EL_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/mumu/MUON_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/mumu/MUON_SF.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+	\caption{Individual experimental systematic uncertainties on the dilepton invariant mass for (top) dielectron and (bottom) dimuon channel, in assocation with zero $b$-jets. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Both calibration systematics (left) and scale factor (right) are shown. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_Zerojb_electrons_muons}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/ee/EG.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/ee/EL_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/ee/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/ee/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/ee/btagSF.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/ee/PRW.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the dielectron in assocation with 1 $b$-jet channel. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are $e/\gamma$ calibration, electron scale factor, jet scale factor, pileup reweighting, $b$-tagging and jet calibration. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_1jb_electrons}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/mumu/MUON_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/mumu/MUON_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/mumu/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/mumu/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/mumu/btagSF.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/mumu/PRW.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the dimuon in assocation with 1 $b$-jet channel. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are muon calibration, muon scale factor, jet scale factor, pileup reweighting, $b$-tagging and jet calibration. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_1jb_muons}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/ee/EG.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/ee/EL_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/ee/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/ee/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/ee/btagSF.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/ee/PRW.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the dielectron in assocation with at least 2 $b$-jets channel. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are $e/\gamma$ calibration, electron scale factor, jet scale factor, pileup reweighting, $b$-tagging and jet calibration. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_jbjb_electrons}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/mumu/MUON_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/mumu/MUON_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/mumu/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/mumu/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/mumu/btagSF.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/mumu/PRW.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the dimuon in assocation with 1 $b$-jet channel. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are muon calibration, muon scale factor, jet scale factor, pileup reweighting, $b$-tagging and jet calibration. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_jbjb_muons}
+\end{figure}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Signal regions with $\sigma(E^{\textrm{miss}}_{\textrm{T}})$ selection}
+
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/ee/EG.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/ee/EL_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/mumu/MUON_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/mumu/MUON_SF.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+	\caption{Individual experimental systematic uncertainties on the dilepton invariant mass for (top) dielectron and (bottom) dimuon channel, in assocation with zero $b$-jets and a $\sigma(E^{\textrm{miss}}_{\textrm{T}})$ requirement. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Both calibration systematics (left) and scale factor (right) are shown. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_Zerojb_electrons_muons_met_sig}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/ee/EG.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/ee/EL_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/ee/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/ee/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/ee/btagSF.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/ee/PRW.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the dielectron in assocation with 1 $b$-jet channel and a $\sigma(E^{\textrm{miss}}_{\textrm{T}})$ requirement. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are $e/\gamma$ calibration, electron scale factor, jet scale factor, pileup reweighting, $b$-tagging and jet calibration. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_1jb_electrons_met_sig}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/mumu/MUON_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/mumu/MUON_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/mumu/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/mumu/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/mumu/btagSF.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/mumu/PRW.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the dimuon in assocation with 1 $b$-jet channel and a $\sigma(E^{\textrm{miss}}_{\textrm{T}})$ requirement. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are muon calibration, muon scale factor, jet scale factor, pileup reweighting, $b$-tagging and jet calibration. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_1jb_muons_met_sig}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/ee/EG.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/ee/EL_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/ee/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/ee/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/ee/btagSF.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/ee/PRW.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the dielectron in assocation with at least 2 $b$-jets channel and a $\sigma(E^{\textrm{miss}}_{\textrm{T}})$ requirement. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are $e/\gamma$ calibration, electron scale factor, jet scale factor, pileup reweighting, $b$-tagging and jet calibration. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_jbjb_electrons_met_sig}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/mumu/MUON_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/mumu/MUON_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/mumu/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/mumu/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/mumu/btagSF.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/mumu/PRW.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the dimuon in assocation with at least 2 $b$-jets channel and a $\sigma(E^{\textrm{miss}}_{\textrm{T}})$ requirement. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are muon calibration, muon scale factor, jet scale factor, pileup reweighting, $b$-tagging and jet calibration. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_jbjb_muons_met_sig}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Control and validation channels}
+
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/ee/EG.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/ee/EL_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/ee/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/ee/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/ee/btagSF.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/ee/MET.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the dielectron in assocation with at least 1 $b$-jet channel and a $E^{\textrm{miss}}_{\textrm{T}}$ requirement. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are $e/\gamma$ calibration, electron scale factor, jet scale factor, pileup reweighting, $b$-tagging and jet calibration. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_jb_electrons_met}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/mumu/MUON_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/mumu/MUON_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/mumu/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/mumu/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/mumu/btagSF.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/mumu/MET.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the dimuon in assocation with at least 1 $b$-jets channel and a $E^{\textrm{miss}}_{\textrm{T}}$ requirement. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are muon calibration, muon scale factor, jet scale factor, pileup reweighting, $b$-tagging and jet calibration. Other systematic uncertainty categories are not shown due to their negligibility.}
+	\label{fig:exp_systs_jb_muons_met}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu/EG.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu/EL_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu/MUON_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu/MUON_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu/PRW.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the electron-muon channel. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are $e/\gamma$ calibration, electron scale factor, muon scale factor, pileup reweighting and muon calibration. Other systematic uncertainty categories are not shown due to their negligibility, where the electron and muon scale factor as well as the muon calibration systematics are shown here for completion.}
+	\label{fig:exp_systs_emu}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		%\vspace{-1.5cm}
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/EG.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/EL_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+    \vspace{-0.9cm}
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/MUON_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/MUON_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+    \vspace{-0.5cm}
+    \subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/JET_calib.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/JET_SF.pdf}
+		%\label{fig:TC_met}
+	}
+    \\
+    \vspace{-0.5cm}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/btagSF.pdf}
+		%\label{fig:TC_met}
+	}
+    \subfloat[]{
+		\includegraphics[width=0.52\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/PRW.pdf}
+		%\label{fig:TC_met}
+	}
+	%\vspace{-1cm}
+    \caption{Individual experimental systematic uncertainties on the dilepton invariant mass in the electron-muon channel in assocation with at least 1 $b$-jet. The ratio of each variation to the nominal distribution is computed. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. Solid, dashed line is used for the up-, down-variation, respectively. Legends are given per systematic category, indicated by their headers. Clockwise, the uncertainty categories shown are $e/\gamma$ calibration, electron scale factor, muon scale factor, pileup reweighting and muon calibration. Other systematic uncertainty categories are not shown due to their negligibility, where the electron and muon scale factor as well as the muon calibration systematics are shown here for completion.}
+	\label{fig:exp_systs_emu_jb}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\clearpage
+\section{Theoretical systematic uncertainties}
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+		\hspace{0.12\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/ee/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/ee/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_mumu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/ee/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_ee}
+	}
+	%\hfill
+	\\
+	%\hspace{-1.0cm}
+	\subfloat[]{
+		\hspace{-0.0cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/ee/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_mumu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/ee/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/ee/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_mumu}
+	}
+	%\hfill
+	
+	\caption{Theoretical systematic uncertainties on the dilepton mass distributions of the dielectron channel signal regions. The ratio of each variation to the nominal distribution is computed and then treated individually per Physics Modelling Group recommendations. The top row shows theoretical uncertainties pertaining to the Drell-Yan background and the bottom row shows theoretical uncertainties pertaining to the $t\bar{t}$ background. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. From left to right, the plots show the zero $b$, one $b$ and at least two $b$ signal regions. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The plots shown do not include a cut on the $\sigma(E^{\textrm{miss}}_{\textrm{T}})$. The legend above is relevant to all plots; its left column lists sherpa uncertainties and its two right column lists $t\bar{t}$ uncertainties.}
+	\label{fig:systematics_SRs_no_met_sig_ee}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+        \hspace{0.12\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Theoretical_Systs_Legend.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/ee/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/ee/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_mumu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/ee/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_ee}
+	}
+	%\hfill
+	\\
+	%\hspace{-1.0cm}
+	\subfloat[]{
+		\hspace{-0.0cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/ee/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_mumu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/ee/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/ee/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_mumu}
+	}
+	%\hfill
+	
+	\caption{Theoretical systematic uncertainties on the dilepton mass distributions of the dimuon channel signal regions. The ratio of each variation to the nominal distribution is computed and then treated individually per Physics Modelling Group recommendations. The top row shows theoretical uncertainties pertaining to the Drell-Yan background and the bottom row shows theoretical uncertainties pertaining to the $t\bar{t}$ background. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. From left to right, the plots show the zero $b$, one $b$ and at least two $b$ signal regions. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The plots shown do not include a cut on the $\sigma(E^{\textrm{miss}}_{\textrm{T}})$. The legend above is relevant to all plots; its left column lists sherpa uncertainties and its two right column lists $t\bar{t}$ uncertainties.}
+	\label{fig:systematics_SRs_yes_met_sig_ee}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	%\centering
+	\hspace{-0.0cm}
+	\subfloat[]{
+        \hspace{0.12\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/mumu/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/mumu/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_mumu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/mumu/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_ee}
+	}
+	%\hfill
+	\\
+	%\hspace{-1.0cm}
+	\subfloat[]{
+		\hspace{-0.0cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb/mumu/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_mumu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb/mumu/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb/mumu/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_mumu}
+	}
+	%\hfill
+	
+	\caption{Theoretical systematic uncertainties on the dilepton mass distributions of the dielectron channel signal regions. The ratio of each variation to the nominal distribution is computed and then treated individually per Physics Modelling Group recommendations. The top row shows theoretical uncertainties pertaining to the Drell-Yan background and the bottom row shows theoretical uncertainties pertaining to the $t\bar{t}$ background. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. From left to right, the plots show the zero $b$, one $b$ and at least two $b$ signal regions. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The plots shown include a cut on the $\sigma(E^{\textrm{miss}}_{\textrm{T}})$. The legend above is relevant to all plots; its left column lists sherpa uncertainties and its two right column lists $t\bar{t}$ uncertainties.}
+	\label{fig:systematics_SRs_no_met_sig_mumu}
+\end{figure}
+
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	%\centering
+	\hspace{-0.0cm}
+	\subfloat[]{
+        \hspace{0.12\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/mumu/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/mumu/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_mumu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/mumu/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_ee}
+	}
+	%\hfill
+	\\
+	%\hspace{-1.0cm}
+	\subfloat[]{
+		\hspace{-0.0cm}
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_Zerojb_MET_sig/mumu/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_Zerob_mumu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_1jb_MET_sig/mumu/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_1b_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.35\textwidth]{figures/Systematic_Uncertainties/Zprime_jbjb_MET_sig/mumu/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:Sys_Exp_Ratio_bb_mumu}
+	}
+	%\hfill
+	
+	\caption{Experimental and theoretical uncertainties on the dilepton mass distributions of the dimuon channel signal regions. The ratio of each variation to the nominal distribution is computed and then either added in quadrature per variation category for experimental uncertainties or treated individually per Physics Modelling Group recommendations for theoretical uncertainties. The top row shows experimental uncertainties and the bottom row shows theoretical uncertainties. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. From left to right, the plots show the zero $b$, one $b$ and at least two $b$ signal regions. PRW stands for pileup reweighting. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The plots shown include a cut on the $\sigma(E^{\textrm{miss}}_{\textrm{T}})$. The legend above is relevant to all plots; its left column lists sherpa uncertainties and its two right column lists $t\bar{t}$ uncertainties.}
+	\label{fig:systematics_SRs_yes_met_sig_mumu}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\subfloat[]{
+        \hspace{0.12\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+		\vspace{-1.5cm}
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/ee/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/ee/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:TC_met}
+	}
+	\\ \vspace{-1cm}
+	\subfloat[]{
+		
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/mumu/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:TC_njets}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_jb_MET_ET/mumu/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:TC_mu_pt}
+	}
+
+	%\vspace{-1cm}
+	\caption{Experimental and theoretical uncertainties on the dilepton mass distributions of Drell-Yan background Control Region. The ratio of each variation to the nominal distribution is computed and then treated individually per Physics Modelling Group recommendations. The top row includes the dielectron channel and the bottom row the dimuon channel. Sherpa uncertainties are shown on the left column and $t\bar{t}$ uncertainties on the right column. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The legend above is relevant to all plots; its left column lists sherpa uncertainties and its two right column lists $t\bar{t}$ uncertainties.}
+	\label{fig:systematics_CRs_VRs_DY}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\centering
+	\subfloat[]{
+        \hspace{0.12\textwidth}
+		\frame{\includegraphics[width=0.75\textwidth]{figures/Systematic_Uncertainties/Theoretical_Systs_Legend.pdf}}
+		%\label{fig:Sys_Exp_Ratio_Zerob_ee}
+	}
+	\\
+	\subfloat[]{
+	\vspace{-1.5cm}
+	\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_emu/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_emu/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:TC_met}
+	}
+	\\ \vspace{-1cm}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/Theoretical_Systs_Bundled_DY.pdf}
+		%\label{fig:TC_njets}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Systematic_Uncertainties/Zprime_emu_jb/Theoretical_Systs_Bundled_top.pdf}
+		%\label{fig:TC_mu_pt}
+	}
+
+	%\vspace{-1cm}
+	\caption{Experimental and theoretical uncertainties on the dilepton mass distributions of top Control Region. The ratio of each variation to the nominal distribution is computed and then either added in quadrature per variation category for experimental uncertainties or treated individually per Physics Modelling Group recommendations for theoretical uncertainties. The top row includes the dielectron channel and the bottom row the dimuon channel. Experimental uncertainties are shown on the left column and theoretical uncertainties on the right column. This treatment of theoretical uncertainties is used to visualise the total error in these plots but not used for the fit, where each variation is treated as an individual nuisance parameter. PRW stands for pileup reweighting. Where available, up- and down-variation are taken and result in an asymmetric band. Elsewhere, a symmetrisation procedure is undertaken. The legend above is relevant to all plots; its left column lists sherpa uncertainties and its two right column lists $t\bar{t}$ uncertainties.}
+	\label{fig:systematics_CRs_VRs_top}
+\end{figure}

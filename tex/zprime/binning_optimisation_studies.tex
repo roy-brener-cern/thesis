@@ -1,0 +1,28 @@
+In order to gain maximal sensitivity to the signal in the dielectron and dimuon channels, the binning of the invariant mass is optimised on a par with detector resolution in each channel. The relative resolution is parameterised as a function of the pole mass, $m_{Z'}$, of a generic, 0-width $Z'$ signal. The resolution parameterisation follows a functional form involving a transformation from the truth- to reco-level mass spectra as
+\begin{equation}
+    S_{r}(M_{r}) = P(M_{r}|M_{t}) \otimes S_{t}(M_{t}) \mathcal{A}\epsilon(M_{t}),
+\end{equation}
+where $S_{t,r}$ is the truth-, reconstruction-level mass spectrum, respectively, $P(M_{r}|M_{t})$ the transfer function from truth to reconstruction level encoding the probability to reconstruct a mass $M_{t}$ at reconstruction level $M_{r}$ and $\mathcal{A}\epsilon(M_{t})$ the acceptance times efficiency, the probability of an event at at truth mass $M_{t}$ to pass the full selection.
+
+The transfer function involves a Gaussian smearing and a Crystal Ball with seven parameters whose values are gained separately for each channel. Full details of the parameterisation and fit procedure can be found in \cite{ATLAS_dilepton_2019}, where the transfer function and fit parameters were taken from. The resolution and corresponding minimum bin width as a function of $m_{Z'}$ are shown in FIG.~\ref{fig:binning_optimisation}. 
+
+
+
+\begin{figure}[h]
+	\captionsetup[subfigure]{labelformat=empty}
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/binning_optimisation/dilepton_resolutions.pdf}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/binning_optimisation/dilepton_min_binwidths.pdf}
+		%\label{fig:TC_met}
+	}	
+	\vspace{-1cm}
+	\caption{Resolution-informed binning optimisation for the dielectron and dimuon channels. (Left) dilepton invariant mass resolution as a function of the pole mass $m_{Z'}$. (Right) minimum bin width as a function of the pole mass $m_{Z'}$.}
+	\label{fig:binning_optimisation}
+\end{figure}
+
+The left plot shown in FIG.~\ref{fig:binning_optimisation} matches exactly that used in \cite{ATLAS_dilepton_2019}.

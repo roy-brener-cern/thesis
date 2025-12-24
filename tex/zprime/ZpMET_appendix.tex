@@ -1,0 +1,174 @@
+
+This appendix contains additional material and details on the $Z'+\met$ analysis. Some of the material presented here are standalone studies, while other things are further details on the updates described in Section~\ref{sec:ZpMETupdates}.
+
+\section{Event selection, background estimate and systematic uncertainties}
+
+In Section~\ref{sec:ZpMET_sel_bkg_syst_updates} a brief overview was given of the various updates implemented for the $Z'+\met$ analysis after the CONF note was published. In this section some more details are given, and some results and ``before/after comparisons'' are shown.    
+{\color{red} More material will be added to this section!}
+
+\subsection{Event selection}
+\label{sec:ZpMET_evenSelection_app} 
+
+Figure~\ref{fig:ExactlyVsAtLeast_data_SRs} shows a comparison of data yields in the signal regions when requiring \textit{exactly two loose leptons} versus the new choice of requiring \textit{at least two loose leptons}. We see that the difference is typically rather small ($<5\%$) in bins with reasonably large statistics. In some bins the difference is larger, but these are typically bins with low statistics, and where a single event may consitute a significant fraction of the events in the given bin. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_ee_SR_bin1_METsig_mll40_ExactlyTwoLooseLeptons.pdf}
+		\label{fig:ExactlyVsAtLeast_data_SR1_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_ee_SR_bin2_METsig_mll40_ExactlyTwoLooseLeptons.pdf}
+		\label{fig:ExactlyVsAtLeast_data_SR2_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_ee_SR_bin3_METsig_mll40_ExactlyTwoLooseLeptons.pdf}
+		\label{fig:ExactlyVsAtLeast_data_SR3_ee}
+	}  \hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_uu_SR_bin1_METsig_mll40_ExactlyTwoLooseLeptons.pdf}
+		\label{fig:ExactlyVsAtLeast_data_SR1_uu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_uu_SR_bin2_METsig_mll40_ExactlyTwoLooseLeptons.pdf}
+		\label{fig:ExactlyVsAtLeast_data_SR2_uu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_uu_SR_bin3_METsig_mll40_ExactlyTwoLooseLeptons.pdf}
+		\label{fig:ExactlyVsAtLeast_data_SR3_uu}
+	}        
+	\caption{Comparison of data yields in each of the three signal regions when using the ``exactly two'' and the ``least two'' loose lepton requirements as baseline selection, shown for the electron channel (top row) and the muon channel (bottom row).} 
+	\label{fig:ExactlyVsAtLeast_data_SRs}
+\end{figure}
+
+\subsection{Background estimate}
+
+\subsubsection{Top background}
+
+The $p_T$ spectrum of top quarks is known to be poorly modelled in simulations, and software packages for reweighting has been developed within ATLAS in order to improve the situation. Two packages are available:
+\begin{itemize}
+\item 1D reweighting of the top $p_T$ spectrum. \\ \href{https://gitlab.cern.ch/lserkin/TTbarNNLOReweighter}{https://gitlab.cern.ch/lserkin/TTbarNNLOReweighter}
+\item Recursive reweighting in 2D (or 3D): top $p_T$ and $m_{t\bar{t}}$ (and $p_T^{t\bar{t}}$).
+\\ \href{https://gitlab.cern.ch/pinamont/TTbarNNLOReweighter}{https://gitlab.cern.ch/pinamont/TTbarNNLOReweighter}
+\end{itemize}
+
+For the CONF note we used the 1D reweighting, but have since updated to the 2D package, and now apply the reweighting recursively for top $p_T$ and $m_{t\bar{t}}$. Figure~\ref{fig:ttbar_rw_comp} shows the effect of the two schemes compared to the nominal prediction in CR-Top as a function of $\meu$. We see that the ``shape effect'' of the reweighting is rather different between the two cases. In Figure~\ref{fig:CRtop_1Drw}--\ref{fig:CRtop_2Drw} we see data/MC comparisons for CR-Top when applying respectively the 1D and 2D reweighting to the $t\bar{t}$ background. In particular at low $\meu$ we see a clear improvement in the modelling when applying the 2D method. 
+
+The data/MC distributions in also include a change in the $W+t$ background (which is part of the single-top component), now using the samples with \textit{dynamic scales}. This change also constitutes a minor improvement in the modelling observed in CR-Top, moving the overall (pre-fit) data/MC ratio from $0.974$ to $0.981$. 
+
+It should be emphasized that the changes discussed here are in line with the procedure employed in the $\Zp+b(b)$ analysis. In order to harmonize the analyses we have also separated the single-top and $t\bar{t}$ components in the fits, meaning that the background component previously labelled ``Top'' has now been split into ``$t\bar{t}$'' and ``Single-top''. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.6\textwidth]{figures/ZpMET/all_TTbar_eu_CR_top_MET_mll40_oldTTbarNNLO_nottbarNNLOweight.pdf}
+		\label{fig:ttbar_rw_comp}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/all_eu_CR_top_MET_mll40_fakes_splitBkgs_dynWt_mixFakes_oldTTbarNNLO.pdf}
+		\label{fig:CRtop_1Drw}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/all_eu_CR_top_MET_mll40_fakes_splitBkgs_dynWt_mixFakes.pdf}
+		\label{fig:CRtop_2Drw}
+	}
+	\caption{Comparison of $t\bar{t}$ modelling with different NNLO reweighting schemes as a function of $\meu$ in CR-Top. The top plot compares the 1D and 2D schemes to the distribution without reweigthing. The bottom plots show data/MC distributions using (a) the 1D reweghting and (b) the 2D reweighting.}
+	\label{fig:ttbar_rw}
+\end{figure}
+
+
+
+\subsection{Systematic uncertainties}
+
+\clearpage 
+
+\section{Limit comparisons with inclusive dilepton search}
+\label{sec:limitComp}
+
+In order to evaluate the performance of the $\Zp+\met$ search, a comparison was done with the fiducial limits obtained in the previous inclusive dilepton resonance search by ATLAS~\cite{ATLAS_dilepton_2019}. The signal MC samples used for the search were simulated using a generator filter requiring $\met>50$ GeV, meaning---in order to calculate the signal cross-section for the ``inclusive''  fiducial region---a set of truth-level samples without the $\met$ filter had to be generated. The ``inclusive'' fiducial selection corresponds to the cuts presented in Section~\ref{sec:fiducial_signal_cuts}. 
+
+Figures~\ref{fig:fidCrossSection_lv_lds_ee}--\ref{fig:fidCrossSection_lv_hds_ee} show the fiducial cross-section limit (solid red line) from the inclusive search for a generic resonance with decay width $\Gamma_X/m_X=0.5\%$, corresponding (approximately) to the decay with of the $\Zp$ in the signals we consider. The figures also show the exclusion limit obtained in the $\Zp+\met$ search (solid blue line) for the light-vector model with light dark-sector (\ref{fig:fidCrossSection_lv_lds_ee}) and heavy dark-sector (\ref{fig:fidCrossSection_lv_hds_ee}), as well as the corresponding theory cross-sections (dashed blue line) and the calculated fiducial cross-section (dashed red line). Further, in order to compare the strength of the inclusive fiducial limit to the $\Zp+\met$ analysis limit, the limits are divided by the relevant theory signal cross-sections (i.e. blue solid line dived by blue dashed line, and same for the red lines). The results are shown in Figures~\ref{fig:fidCrossSectionRatio_lv_lds_ee}--\ref{fig:fidCrossSectionRatio_lv_hds_ee}. We see that the sensitivity to these specific processes is about an order of magnitude better in $\Zp+\met$ search than in the inclusive search. The corresponding set of results for the dark-Higgs model is found in Figure~\ref{fig:fidCrossSection_dh}. It can be noted that these comparisons have only been done for the electron channel, and we only considered signal points in steps of $100$ GeV in $m_{\Zp}$ for the comparisons. 
+
+It should be emphasised that these limit comparisons apply to the specific processes (Feynman diagrams) for the $\ell\ell+\met$ production mode. As discussed in the next section of this Appendix, the models are generally constrained by the inclusive dilepton search due to the ``Drell-Yan like'' $pp\rightarrow\Zp\rightarrow\ell\ell$ process, which is possible within both the light-vector and dark-Higgs models, but not considered in the comparisons shown here. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/fidCrossSection_LightVector_lds_ee.pdf}
+		\label{fig:fidCrossSection_lv_lds_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/fidCrossSection_LightVector_hds_ee.pdf}
+		\label{fig:fidCrossSection_lv_hds_ee}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/fidCrossSectionRatio_LightVector_lds_ee.pdf}
+		\label{fig:fidCrossSectionRatio_lv_lds_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/fidCrossSectionRatio_LightVector_hds_ee.pdf}
+		\label{fig:fidCrossSectionRatio_lv_hds_ee}
+	}
+	\caption{Fiducial cross-section limit from the ATLAS inclusive dilepton resonance search compared to the obtained exclusion limits in the $\Zp+\met$ search, considering the light-vector model with the light dark-sector (left plots) and heavy dark-sector (right plots) benchmark models.}
+	\label{fig:fidCrossSection_lv}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/fidCrossSection_darkHiggs_lds_ee.pdf}
+		\label{fig:fidCrossSection_dh_lds_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/fidCrossSection_darkHiggs_hds_ee.pdf}
+		\label{fig:fidCrossSection_dh_hds_ee}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/fidCrossSectionRatio_darkHiggs_lds_ee.pdf}
+		\label{fig:fidCrossSectionRatio_dh_lds_ee}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/fidCrossSectionRatio_darkHiggs_hds_ee.pdf}
+		\label{fig:fidCrossSectionRatio_dh_hds_ee}
+	}
+	\caption{Fiducial cross-section limit from the ATLAS inclusive dilepton resonance search compared to the obtained exclusion limits in the $\Zp+\met$ search, considering the dark-Higgs model with the light dark-sector (left plots) and heavy dark-sector (right plots) benchmark models.}
+	\label{fig:fidCrossSection_dh}
+\end{figure}
+
+\clearpage
+
+\section{Signal model studies}
+
+\subsection{Dark-matter relic density predictions}
+\label{sec:ZpMET_DMrelicDensity_app} 
+
+The signal models we use are intended to be simplified/minimal extension of the Standard Model that encompass the targeted final state, and it is therefore not considered crucial that they satisfy cosmological constraints such as the observed dark-matter relic density, which would clearly be a requirement in more complete models. However, it is still an interesting exercise to check the relic density predictions we get from these models, and how the parameters need to be set in order to reproduce the observed relic density. Figure~\ref{fig:relicDensity} shows some two-dimensional relic-density scans for both the light-vector model (top) and the dark-Higgs model (bottom). Approximately correct predicted relic density is indicated by the red areas in the plots, whereas blue and white indicate underproduction and overproduction, respectively. Generally, the signal points we consider in the analysis predict overproduced dark matter.
+
+For the light-vector model we see that the observed relic density can be reproduced only if the dark-matter candidate ($\chi_1$) is heavier than the $\Zp$. In order to produce the resonant final state we must also require $m_{\chi_2}>m_{\Zp}+m_{\chi_1}$, meaning that the dark-sector will be rather heavy, leading to a substantial decrease in the production cross-sections compared to the (already small) cross-sections for the currently considered signal points. For the dark-Higgs model we also see that we need to increase the mass of the dark-matter candidate ($\chi$) in order to get reasonable relic-density predictions. However, regions yielding correct (or underabundant) relic densities are typically found when the $\Zp$ is light and the dark Higgs is heavy, or vice versa, which again lead to a substantial drop-off in the cross-section for the production mode targeted in this search. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/lightVector_scan_Chi1vsChi2_mZp500.pdf}
+		\label{fig:lv_Chi1vsChi2}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/lightVector_scan_ZpvsChi1_mChi21500.pdf}
+		\label{fig:lv_ZpvsChi1}
+	}
+        \hfill 
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/ZpVsChi_MHD125.pdf}
+		\label{fig:dh_ZpvsChi} 
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/ZpVsHD_MChi200.pdf}
+		\label{fig:dh_ZpvsHD}
+	}
+	\caption{Two dimensional maps of relic density predictions for some scenarios in (a)--(b) the light-vector model and (c)--(d) the dark-Higgs model. The colors indicate overabundant (white), underabundant (blue) and approximately correct (red) predicted relic density.}  
+	\label{fig:relicDensity}
+\end{figure}
+

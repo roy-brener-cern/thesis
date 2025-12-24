@@ -1,0 +1,212 @@
+
+This section contains a summary of the work that has been done on the $\Zp+\met$ analysis~\cite{ATLAS-CONF-2023-045} after it was published as a conference note in August 2023, and leading up to the paper together with the $\Zp+0/1/2b$-jet analysis described througout the rest of this document. The full set of details describing the $\Zp+\met$ analysis as published in the conference note can be found in the dedicated internal note~\cite{ZprimeMETnote}. The first section contains a brief description of (minor) updates in event selection, background estimate and systematic uncertainties, while the second section contains description, studies and results for a new signal model scenario that will be added to the paper as an additional interpretation of the search.
+
+\section{Event selection, background estimate and systematic uncertainties}
+\label{sec:ZpMET_sel_bkg_syst_updates} 
+
+Some minor changes in the event selection, background estimates and handling of systematic uncertainties are done in order to harmonize the analysis with the $b(b)$ channel, and to keep up with ATLAS recommendations. They are briefly described in the following. For some items, further material and plots are provdied in Appendix~\ref{ZpMETappendix}. 
+
+\subsection{Event selection} 
+
+The only change in the event selection is to move from requiring that all events contain \textit{exactly two loose leptons} to requiring that all events contain \textit{at least two loose leptons}, in order to harmonize the selection requirements with the $b(b)$ channel. There are two small practical consequences of this change:
+\begin{itemize}
+\item It should be emphasized that in the final selection we still require \textit{exactly two tight leptons}, but after the change these events may also contain one or more additional exclusive loose lepton. Plots showing the change in data yields in the signal regions after this change are included in Appendix~\ref{sec:ZpMET_evenSelection_app}. 
+\item When running the matrix method to obtain the fakes estimate, it is slightly ambiguous which leptons to consider in events with more than two loose leptons. In such cases we choose two hardest leptons in the event, and run the matrix method on those two.    
+\end{itemize}
+
+\subsection{Background estimate}
+
+Changes in the background estimation procedure are described in the following bullet points. Some of these changes have lead to an improved background estimate (i.e. better modelling, less pulls on NPs or similar), while others have less impact and are implemented mainly for the sake of harmonization with the $b(b)$ channel. 
+
+\begin{itemize}
+\item The fakes (or FNP or multijet) background in the electron channel is estimated using the ``mixed multijet'' approach described Section~\ref{sec:mixedMultijet}. 
+\item For the $t\bar{t}$ background we have moved from using the one-dimensional top $p_T$ reweighting to NNLO, to now using the two-dimensional (top $p_T$ and $m_{t\bar{t}}$) recursive reweighting of the $t\bar{t}$ background.\footnote{See 
+\href{https://gitlab.cern.ch/pinamont/TTbarNNLOReweighter}{https://gitlab.cern.ch/pinamont/TTbarNNLOReweighter} for more details.} This change constitutes a clear improvement in modelling of the $t\bar{t}$ background. This is particularly visible in the top control region, and is reflected in the extracted normalization factor for the top background.  
+\item For the $Wt$ background we have switched to the \textit{dynamic scale} DR samples. 
+\item Backgrounds from photon induced processes have been added. These backgrounds are practically negligible in the signal regions, but contribute $\sim{2}\%$ in CR-Z for both the electron and the muon channel.  
+\item The background category previously referred to as ``Top'' have been separated into $t\bar{t}$ and single-top components.
+\item Each control region is now treated as one single bin in the fits, since the main purpose of the control regions is to extract the normalisation factors.  
+\end{itemize}
+
+\subsection{Systematic uncertainties}
+
+\begin{itemize}
+\item $t\bar{t}$ matrix element (NLO matching) uncertainty: changed from comparison with aMC@NLO+Pythia8 to comparing with Powheg+Pythia8 with pthard=1. The change is in line with the PMG recommendations for this uncertainty. 
+\item For the single-top processes and the recently added gamma-induced background we simply consider a $30\%$ flat theory uncertainty on each of them, in line with the procedure employed by the $b(b)$ analysis. 
+\item Since the way of estimating fakes has changed a little bit, some extra systematic uncertainties are added, related to the new set of fake efficiencies employed, and to the mixing method itself.
+\item The 100 PDF variations available for the Drell-Yan background samples are now treated as 100 individual NPs in the fits, instead of combining them. Previously, the combined PDF uncertainty was also combined with the $\alpha_S$ uncertainty, meaning that we had one single PDF+$\alpha_S$ uncertainty, whereas now the $\alpha_S$ uncertainty is also treated as a separate NP, meaning that we have 101 NPs in total for PDF and $\alpha_S$ variations of the Drell-Yan background. 
+\end{itemize}
+
+\section{Trials factors and global significances}
+
+The results of the search were presented in the CONF note only in terms of \textit{local} significance values. \textit{Global} significances were not calculated, partly due to time constraints, and partly due to the fact that we do not observed any significant ($>3\sigma$) deviations from the Standard Model predictions. However, we observe some ``moderate'' excesses (and deficits) in the $2$--$3\sigma$ range, thus calculating trials factors and global significances is an interesting excercise, and something we would like to include in the paper.
+
+Trials factors are calculated using the novel methods described in Refs.~\cite{ReadAnaniev:GPbasedTFs, ReadAnaniev:LinearApproxToCovMatrix}. The key idea of the method presented in Ref.~\cite{ReadAnaniev:GPbasedTFs} is that a significance field---for example from a scan across a mass spectrum---can be thought of as a Gaussian process (GP), where the kernel of the GP is the covariance matrix of the signal points across the field. Furthermore, in Ref.~\cite{ReadAnaniev:LinearApproxToCovMatrix}, it is shown that the covariance matrix can be calculated analytically, by approximating the background estimate as a linear expansion around its best-fit parameters. In this calculation we neglegt systematic uncertainties, such that the background estimate is simply given as the post-fit background histogram. 
+
+This is the first time these methods have been applied to a real analysis. Some validation studies were performed, and the results were presented to the ATLAS Statistics Forum\footnote{See \href{https://indico.cern.ch/event/1431769/}{https://indico.cern.ch/event/1431769/}}. These studies indicate that---even thought we neglegt systematic uncertainties---the method is rather robust, and provide useful results. {\color{red} More material on these studies will be added to the appendix!}
+
+The obtained trials-factors are shown in Figure~\ref{fig:trialsFactors}. Three different curves are shown in these plots, which deserve a bit further explanation:
+\begin{itemize}
+\item {\color{blue}\textbf{Blue curve:}} This is an analytic upper-limit on the trials factors using Gross \& Vitells analytic extrapolation, 
+        \begin{align*}
+            p_0^{\text{glob}} < p_0^{\text{loc}} + N_{\text{up}}e^{-\frac{1}{2}(Z_{\text{loc}}^2-Z_{\text{ref}}^2)}, 
+        \end{align*}
+        using $Z=1/\sqrt{2}$ as the reference significance level. This approximation is known to be conservative at low significance ($<3\sigma$), but in our case we see that it is in fact conservatice across the full range of significances. Some comments on this are made in the presentation linked to above.    
+\item {\color{red}\textbf{Red curve:}} Upper-limit trials factors calculated from the GP toys using the G\&V formula, but changing the reference level for each considered value of the local significance (i.e. $Z_{\text{ref}}=Z_{\text{loc}}$), so that
+      \begin{align*}
+            p_0^{\text{glob}} < p_0^{\text{loc}} + N_{\text{up}}\quad\Rightarrow\quad TF<1+\frac{N_{\text{up}}}{p_0^{\text{loc}}}. 
+      \end{align*}
+\item \textbf{Black curve:} Trials factors calculated from a set of GP toys by counting the frequency of significances above any given value of the local significance. This is the one we are primarily interested in, and which is used when we estimate global significances.  
+\end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/TF_el_SR_bin1.pdf}
+		\label{fig:trialsFactors_el}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/TF_mu_SR_bin1.pdf}
+		\label{fig:trialsFactors_mu}
+	}
+	\caption{.} 
+	\label{fig:trialsFactors}
+\end{figure}
+
+Using the trials factors given by the black curves in Figure~\ref{fig:trialsFactors_mu}, the largest local excess we observed, i.e. $2.8\sigma$ in the SR 3 for the muon channel, can be converted to a $1.6\sigma$ global excess.  
+
+\section{Signal models and interpretations}
+
+The signal models---and the dark-sector benchmarks---used for the $\Zp+\met$ search are presented in Ref.~\cite{Autran:ZpMETmodels}, and were used for a previous ATLAS search considering the $jj+\met$ final state~\cite{hadronicZpMET}. Therefore, in order to be consistent with previous efforts, we stuck to the same signal scenarios without altering the parameters. The primary focus of the search was to investigate the novel $\ell\ell+\met$ final state, and the signal benchmarks were used to optimise the search with the aim of designing a rather general set of search regions that are sensitive to a wide range of signal scenarios. Less emphasis was put on the viability of the signal models, for example due to constraints from other searches, or the model predictions for the dark-matter relic density. However, some studies of these two aspects have been performed after the analysis was published. Constraints from inclusive dilepton and dijet searches are evaluated in Section~\ref{sec:ZpMET_constraints}, while studies of dark-matter relic-density predictions are shown in \ref{sec:ZpMET_DMrelicDensity_app}.
+
+Further, in Section~\ref{sec:newLightVector}, a new model scenario, which is a variation of the light-vector model benchmarks considered previously, is presented. A new benchmark is designed, which is shown to evade the strict constraints from inclusive dilepton and dijet searches. This benchmark is interpreted in the current search, and exclusion limits are presented at the end of this section. 
+
+\subsection{Constraints from inclusive dilepton and dijet searches}
+\label{sec:ZpMET_constraints} 
+
+In Section~\ref{sec:limitComp} we compared the exclusion limits obtained in the $\Zp+\met$ with the fiducial limits from the inclusive dilepton search. However, these comparisons are valid only for the specific processes we considered, but when evaluating constraints on the models in general, we naturally also needs to take into account other processes allowed by the models, like the ``Drell-Yan like'' process ($pp\rightarrow\Zp\rightarrow\ell\ell$) or production of dijets ($pp\rightarrow\Zp\rightarrow jj$). Due to their simplicity, these processes naturally have much larger cross-sections than the $\ell\ell+\met$ processes, and the models will therefore typically get rather strongly constrained by inclusive dilepton and dijet searches. The predicted theory cross-sections for dilepton and dijet production from the signal models are shown in Figure~\ref{fig:lljj_constraints}, together with exlcusion limits from dilepton~\cite{ATLAS_dilepton_2019} and dijet~\cite{EXOT-2019-03} searches by ATLAS. We see that the strongest constraints come from the dijet search, excluding benchmark models up to ${\sim}2.2$ TeV.
+
+It should be noted that, due to the choice of dark-sector benchmarks, the theory cross-sections shown in Figure~\ref{fig:lljj_constraints} are governed only by the couplings between the $\Zp$ and quarks/leptons, and are therefore the same for both the light-vector and dark-Higgs model. However, if the masses are such that the $\Zp$ can decay on-shell to a pair of dark-sector particles, the dark coupling ($g_D$) would naturally also influence these cross-sections, as well as the width of the $\Zp$. In principle, the models (in particular the light-vector model) can therefore potentially be adjusted such that these constraints are evaded, as further discussed in~\ref{sec:newLightVector}.  
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/CrossSections_dilepton.pdf}
+		\label{fig:ll_constraints}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/CrossSections_dijet.pdf}
+		\label{fig:jj_constraints}
+	}
+	\caption{Exclusion limits from the inclusive dilepton and (high-mass) dijet searches by ATLAS, compared to the $\ell\ell$ and $jj$ production cross-sections in the light-vector and dark-Higgs models.} 
+	\label{fig:lljj_constraints}
+\end{figure}
+
+\subsection{New model scenario for the light-vector model}
+\label{sec:newLightVector}
+
+In order to provide as interesting interpretations of the search as possible, studies have been done to establish if the constraints from inclusvie dilepton and dijet searches can be evaded within the considered signal models. For the light-vector model an interesting scenario can be constructed by requiring $m_{\Zp}>m_{\chi_1}+m_{\chi_2}$, as opposed to the original scenario, where $m_{\chi_2}>m_{\chi_1}+m_{\Zp}$. In the original scenario, an on-shell $\Zp$ can only decay to quarks or leptons, hence the strong dilepton/dijet constraints, whereas in the new scenario it can also decay to a pair of dark-sector states ($\chi_1$ and $\chi_2$). Such a scenario will therefore be less constrained, in particular if the invisible decay mode is sufficiently dominant.
+
+With these considerations in mind, a new benchmark was set up and studied, where we set $m_{\Zp}=2m_{\chi_2}$, while $m_{\chi_1}=5$ GeV. In order to sufficently enhance the dark-sector decay mode and suppress the dijet decays, we adjust the couplings a little bit, setting $g_D=2$ and $g_q=0.05$. The lepton coupling, $g_{\ell}$, is kept at $0.01$. The cross-sections for $pp\rightarrow\ell\ell$ and $pp\rightarrow jj$ in this scenario are shown in Figure~\ref{fig:lljj_constraints_newLightVector}, together with ATLAS limits from inclusive dijet and dilepton searches, showing that this particular scenario is not ruled out by these searches. The plots also include the cross-sections obtained for the quark coupling $g_q=0.1$ (as used previously), but we see that this is slightly more constrained, hence motivating the decrease of $g_q$. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/CrossSections_newLightVector.pdf}
+		\label{fig:ll_constraints_newLightVector}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/CrossSections_dijet_newLightVector.pdf}
+		\label{fig:jj_constraints_newLightVector}
+	}
+	\caption{Exclusion limits from the inclusive dilepton and dijet searches by ATLAS, compared to the $\ell\ell$ and $jj$ production cross-sections in the ``new'' light-vector model scenario.} 
+	\label{fig:lljj_constraints_newLightVector}
+\end{figure}
+
+It should be noted that the kinematics of the new scenario is rather different from the previously considered benchmarks. Most importantly, we do no longer get dilepton resonance in the final state due to the new configuration of the $\Zp$, $\chi_2$ and $\chi_1$ masses. Since $m_{\Zp}>m_{\chi_1}+m_{\chi_2}$, the intial $\Zp$ produced in the $q\bar{q}$ interaction will typically be produced on-shell, while the $\Zp$ that decays to dileptons will be off-shell and the dilepton invariant mass will be below $m_{\Zp}$. This effect is shown in Figure~\ref{fig:newLightVector_gen_mll}, which shows the generator-level $\mll$ distribution for a range of $\Zp$ masses. As might be expected, we see that the location of the upper tail of the distributions are governed by the choice of masses for the dark-sector particles. The corresponding $\met$ distributions are shown in Figure~\ref{fig:newLightVector_gen_met}, and we see that these also depend heavily on the choice of mass parameters. 
+
+It should be stressed that we are not reoptimising the analysis to maximise the sensitivity to these signals, but simply adding them as an additional interpretation of the search, using the same signal regions as in the CONF note~\cite{ATLAS-CONF-2023-045}. A key observation is therefore that the $\mll$ distributions have a shape that makes them somewhat distinguishable from the background spectrum, and the search regions considered  may therefore provide some sensitivity to this scenario. Note also that---since the dileptons come from an off-shell $\Zp$---the range of $\Zp$ masses we can probe is rather different from the resonant signals, ranging from around $500$ GeV and up to several ($\sim 4$) TeV. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/LightVector_mll_mumu.pdf}
+		\label{fig:newLightVector_gen_mll}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/LightVector_met_mumu.pdf}
+		\label{fig:newLightVector_gen_met}
+	}
+	\caption{Distributions of $\mll$ and $\met$ at generator-level for the new light-vector model scenario.} 
+	\label{fig:newLightVector_gen}
+\end{figure}
+
+After the initial studies of constraints and genertor-level distributions, a set of samples for this model scenario was produced using the following set of $\Zp$ masses:
+\begin{align}
+m_{\Zp} = [500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 2000, 2500, 3000, 3500, 4000]\;\text{GeV} 
+\end{align} 
+The other free parameters of the model were set as suggested above, that is
+\begin{align}
+m_{\chi_2} = m_{\Zp}/2 \quad \text{and} \quad m_{\chi_1} = 5\;\text{GeV}, 
+\end{align} 
+and 
+\begin{align}
+g_D = 2, \quad g_q = 0.05 \quad \text{and} \quad g_{\ell} = 0.01. 
+\end{align} 
+The samples were simulated using the same generator setup as for the previous set of samples (see~\cite{ZprimeMETnote}), with the exception that the previously applied $\met$ filter was removed for the production of these new samples. As before, separate samples were simulated for the electron channel and the muon channel. Dilepton invariant-mass distributions in the three signal regions are shown for both dilepton channels in Figure~\ref{fig:newLightVector_SR}. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/all_ee_SR_bin1_METsig_mll40_lv_offsh.pdf}
+		\label{fig:newLightVector_ee_SR1}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/all_uu_SR_bin1_METsig_mll40_lv_offsh.pdf}
+		\label{fig:newLightVector_uu_SR1}
+	} \hfill 
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/all_ee_SR_bin2_METsig_mll40_lv_offsh.pdf}
+		\label{fig:newLightVector_ee_SR2}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/all_uu_SR_bin2_METsig_mll40_lv_offsh.pdf}
+		\label{fig:newLightVector_uu_SR2}
+	} \hfill 
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/all_ee_SR_bin3_METsig_mll40_lv_offsh.pdf}
+		\label{fig:newLightVector_ee_SR3}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/all_uu_SR_bin3_METsig_mll40_lv_offsh.pdf}
+		\label{fig:newLightVector_uu_SR3}
+	}
+	\caption{Distributions of $\mll$ for the new light-vector model scenario in each of the three signal regions for the electron channel (left) and the muon channel (right).} 
+	\label{fig:newLightVector_SR}
+\end{figure}
+
+Exclusion limits on the cross-section for the new model scenario are presented in Figure~\ref{fig:newLightVector_lim} for both the electron and the muon channel, as well as the combined dilepton channel. In all cases, the limits are obtained by combining the three signal regions. We see that in all three cases we exclude the scenario up to a $m_{\Zp}\approx 1$ TeV. For the muon channel and the combined channel we see that the expected limit is a bit stronger than the observed limit, due the small excess of data we see in the muon channel around $\mll\sim{500}$ GeV. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/Limit_xs_CRSRbins_comb_el_lv_offsh_obs.pdf}
+		\label{fig:newLightVector_lim_el}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/ZpMET/Limit_xs_CRSRbins_comb_mu_lv_offsh_obs.pdf}
+		\label{fig:newLightVector_lim_mu}
+	} \hfill
+        \subfloat[]{
+		\includegraphics[width=0.7\textwidth]{figures/ZpMET/Limit_xs_CRSRbins_comb_ll_lv_offsh_obs.pdf}
+		\label{fig:newLightVector_lim_ll}
+	}
+
+	\caption{Cross-section limits on the new light-vector model scenario for (a) the electron channel, (b) the muon channel and (c) the combined dilepton channel.} 
+	\label{fig:newLightVector_lim}
+\end{figure}
+
+
+%\section{Fiducial cross-section limits} 
+
+

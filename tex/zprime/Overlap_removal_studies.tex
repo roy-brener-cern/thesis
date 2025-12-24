@@ -1,0 +1,60 @@
+As described in Section~\ref{sec:mixedMultijet}, we consider two sets of fake efficiencies when calculating the fakes estimate; one set targeting ``light-flavoured fakes'' derived for the high-mass Drell-Yan (HMDY) analysis, and one set targeting ``heavy-flavoured fakes'' derived for the $\Zp+\met$ CONF note. At some point we became aware that these efficiencies are calculated using different overlap removal (OR) schemes. The efficiencies for the CONF note are calculated using the same OR scheme as elsewhere in the analyses, while the HMDY efficiencies are calculated without any OR applied. Moreover, it should be mentioned that the OR we apply in this analysis is non-standard, employing a so-called ``lepton-favoured'' working point. Therefore, some studies were done to establish what kind of impact the different OR schemes have on real data and the estimated fakes contribution, hence get a feeling for the importance of the OR when estimating fakes. 
+
+Three different OR schemes were studied, and are briefly described in the following bullet points, where ``object1-object2'' means that overlap removal is applied such that object1 is rejected if it is found to overlap with object2.  
+\begin{itemize}
+\item \textbf{Our OR:} The setup used in this analysis, i.e. OR performed on electron-muon, jet-electron and jet-muon.  
+\item \textbf{Standard OR:} A more standard OR scheme, with OR performed on electron-electron, electron-muon, muon-electron, electron-jet, jet-electron, muon-jet and jet-muon.  
+\item \textbf{No OR:} No overlap removal applied, corresponding to the scheme used to derive the HMDY fake efficiencies.  
+\end{itemize} 
+
+The selections used for these studies are dielectron selections with either 0, 1 or at least to $b$-jets. Distributions of data for both the loose and tight electron selection criteria are shown in Figure~\ref{fig:dataOR_ee}. We see that the impact of the OR depends on the $b$-jet multiplicity, with negligible impact for the selection with 0 $b$-jets, and up to around $5\%$ difference for the selection with at least 2 $b$-jets. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_ee_bb_SR_0b_mll_noOR_newOR_loose.pdf}
+		\label{fig:dataOR_ee_0b_loose}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_ee_bb_SR_1b_mll_noOR_newOR_loose.pdf}
+		\label{fig:dataOR_ee_1b_loose}
+	}
+        \subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_ee_bb_SR_2b_mll_noOR_newOR_loose.pdf}
+		\label{fig:dataOR_ee_2b_loose}
+	} \hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_ee_bb_SR_0b_mll_noOR_newOR.pdf}
+		\label{fig:dataOR_ee_0b}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_ee_bb_SR_1b_mll_noOR_newOR.pdf}
+		\label{fig:dataOR_ee_1b}
+	}
+        \subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_data_ee_bb_SR_2b_mll_noOR_newOR.pdf}
+		\label{fig:dataOR_ee_2b}
+	}
+	\caption{Data yields obtained with different OR schemes at loose level (top row) and tight level (bottom row), in selections with 0 $b$-jets (left), 1 $b$-jet (middle) and at least 2 $b$-jets (right).} 
+	\label{fig:dataYields_OR}
+\end{figure}
+
+The estimated fakes contributions with the different OR schemes ares shown for the same three selections in Figure~\ref{fig:fakesOR_ee}. It should be emphasized that the variations in OR schemes are \textit{only} applied to data, meaning that the fake efficiencies have \textit{not} been recalculated for each scheme. {\color{red}(Work is currently ongoing in the HMDY group to recalculate the fake efficiencies with the standard OR scheme applied.)} We see that the impact of varying the OR schemes applied to data are relatively small, with a maximum of about $20\%$ variation in some bins in the selection with at least 2 $b$-jets. Considering that the fakes are a minor background in these analyses, these studies suggest that the impact of the OR is minor, with the caveat that we do not yet know the impact on the fake efficiencies. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_fakes_ee_bb_SR_0b_mll_newOR_noOR.pdf}
+		\label{fig:fakesOR_ee_0b}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_fakes_ee_bb_SR_1b_mll_newOR_noOR.pdf}
+		\label{fig:fakesOR_ee_1b}
+	}
+        \subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZpMET/all_fakes_ee_bb_SR_2b_mll_newOR_noOR.pdf}
+		\label{fig:fakesOR_ee_2b}
+	}
+	\caption{Fakes estimates obtained with different OR schemes for selections with 0 $b$-jets (left), 1 $b$-jet (middle) and at least 2 $b$-jets (right).} 
+	\label{fig:fakesOR_ee}
+\end{figure}

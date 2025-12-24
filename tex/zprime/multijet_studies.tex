@@ -1,0 +1,64 @@
+%\subsection{Multijet studies}
+
+
+The multijet background consists of two components: Events with one fake lepton, and events where both leptons are fake. The latter component is expected to be smaller since it is less likely to fake two leptons. However, this is not very clear since the cross section for multijet production is much higher than the one for $\ttbar$ or W+jets.
+%\textcolor{purple} {(Not so clear. True, it is unlikely, but the cross section for MJ production is so much higher than the one for ttbar or W+Jets)}  
+The first component can principally be estimated using MC (nonallhadronic ttbar MC and W+jets MC).
+In order to obtain the fake contribution from the nonallhadronic ttbar sample, the IFF truth type \cite{IFF_truth_type} is used. Leptons with an IFF truth type of two correspond to isolated leptons, while other IFF types correspond to other lepton categories like electrons stemming from tau decays or hadron decays. 
+Figure \ref{fig:inv_mass_IFFtruth} shows the invariant dilepton mass distributions for nonallhadronic $\ttbar$ events with at least one lepton that does not have an IFF truth status of two.  
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Multijet_studies/IFF_test_invariant_mass_ee_0bLogY_Shapes_500.pdf}
+		\label{fig:inv_mass_IFFtruth_0b}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Multijet_studies/IFF_test_invariant_mass_ee_1bLogY_Shapes_500.pdf}
+		\label{fig:inv_mass_IFFtruth_1b}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Multijet_studies/IFF_test_invariant_mass_ee_atleast2bLogY_Shapes_500.pdf}
+		\label{fig:inv_mass_IFFtruth_atleast2b}
+	}
+	%\hfill
+	
+	%\hfill
+	
+	\caption{Invariant dilepton mass distribution for events in the nonallhadronic $\ttbar$ sample with at least one electron not fulfilling IFF truth status $= 2$. Shown are final states with one $b$-jet \protect \subref{fig:inv_mass_IFFtruth_0b}, one $b$-jet \protect \subref{fig:inv_mass_IFFtruth_1b} and at least two $b$-jets \protect \subref{fig:inv_mass_IFFtruth_atleast2b}.}
+	\label{fig:inv_mass_IFFtruth}
+\end{figure}
+
+
+The fakes contribution to the nonallhadronic $\ttbar$ background shown in Figure \ref{fig:inv_mass_IFFtruth} is then added to the background contribution of W+jets MC to obtain a MC-based estimation of the multijet %\textcolor{purple} {(actually only of the contribution where one lepton stems from a fake, we could call this W+Jet)} 
+contribution where just one lepton stems from a fake. The resulting distribution is then compared to the data-driven estimation of the full multijet background %\textcolor{purple} {(here the full MJ, i.e. actual MJ plus W+Jets is estimated, right ? So we ar enot comparing apples to apples, so should make this clear)} 
+and the comparison can be found in Figure \ref{fig:multijet_comparison}. It can be observed that the two multijet estimations differ from each other by a factor of 3 to 4. It should be pointed out that this is not a completely fair comparison since we are comparing the full multijet background to the multijet component where just one of the leptons stems from a fake. 
+However, even the data-driven multijet background has a contribution of less than 1\% in final states without $b$-jets and of less than 2\% in final states with one or more $b$-jets 
+%\textcolor{purple} {(are these numbers for electrons ? If so say it. Also, mention that for now we work under the assumption that the fake bg from muons is negligible)}
+, meaning that this is a minor background in this analysis. These numbers refer to the electron channel. For now, we work under the assumption that the fake background from muons is very small and we currently use W+jets MC as a placeholder in the muon channel.
+%The multijet background, and especially the real and fake efficiencies, still needs to be investigated further, but in the following the multijet background is estimated by the data-driven Matrix method using the same efficiencies as the $Z'$+MET analysis \cite{ZprimeMETnote}.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Multijet_studies/fakes_comparison_0b_IFFstatus_intnote.pdf}
+		\label{fig:multijet_comparison_0b}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Multijet_studies/fakes_comparison_1b_IFFstatus_intnote.pdf}
+		\label{fig:multijet_comparison_1b}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Multijet_studies/fakes_comparison_atleast2b_IFFstatus_intnote.pdf}
+		\label{fig:multijet_comparison_atleast2b}
+	}
+	%\hfill
+	
+	%\hfill
+	
+	\caption{Comparison of a data-driven (Matrix method) and MC-based estimation of the multijet contribution where just one lepton stems from a fake in final states with zero \protect \subref{fig:multijet_comparison_0b}, one \protect \subref{fig:multijet_comparison_1b} and at least 2 $b$-jets \protect \subref{fig:multijet_comparison_atleast2b}.}
+	\label{fig:multijet_comparison}
+\end{figure}

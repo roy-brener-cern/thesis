@@ -1,0 +1,182 @@
+Signal regions are defined by the $b$-jet multiplicity and are consisitent with Chapter \ref{analysis_strategy}. The lower threshold of the invariant dilepton mass in the signal regions is $m_{\ell\ell}>300\,\mathrm{GeV}$. Additionally, cuts based on missing transverse momentum are applied. Missing transverse momentum has in general two sources. Real $\met$ stems from neutrinos that are produced in a collision, since the neutrinos do not interact with the detector and also from pile-up and detector acceptance. Fake $\met$ is caused by mismeasurements of the transverse momenta of other particles. High $\met$ significance $\metsig$ is an indicator for the presence of real $\met$, and therefore, $\metsig$ (as defined in Equation \eqref{metsig_def}) can be used
+to distinguish between real and fake missing transverse momentum.
+
+Figure \ref{fig:metsig} shows the $\metsig$ distribution of the signal and background processes (normalised per process) for the muon channel and the electron channel, respectively. The $\ttbar$ background and also the 
+Single Top and diboson background tend to have higher values of $\metsig$, which indicates the existence of neutrinos in the final state. Since the signal process has no neutrinos in the final state, a cut on $\metsig$
+is a good possibility to reduce these backgrounds. Therefore, an event selection requirement of $\metsig < 5.0$ is introduced to reduce the background and to keep the loss of signal events small. 
+The $\metsig$-cut was optimised in a separate study which is shown in Appendix \ref{metsig_optimisation}.
+%The background composition of the signal region with the aforementioned cut on $\metsig$ is shown in Figure \ref{fig:bkg_SR} for the muon and electron channel and for different $b$-jet multiplicities in the final state.
+   
+
+\begin{figure}[h]
+\centering
+\subfloat[]{
+  \includegraphics[width=0.45\textwidth]{figures/SignalRegions/MetsigLogY_Shapes_mu.pdf}
+  \label{fig:metsig_mu}
+}
+\hfill
+\subfloat[]{
+  \includegraphics[width=0.45\textwidth]{figures/SignalRegions/MetsigLogY_Shapes_ele.pdf}
+  \label{fig:metsig_ele}
+}
+\caption{$\metsig$ of the signal and background processes for the muon channel \protect \subref{fig:metsig_mu} and the electron channel \protect \subref{fig:metsig_ele}.}
+\label{fig:metsig}
+\end{figure}
+
+Another variable that can be used to discriminate between signal and background events is the minimum of the invariant mass of any lepton-$b$-jet-pair in the event. This  variable is shown for the background processes and some signals in Figure \ref{fig:minmlb_mu} (for the muon channel). It can be seen that the shape of the distribution is different for signal and background, especially for the $\ttbar$ background and the background from single top events which have a peak around the top-quark mass. In order to supress $\ttbar$ background, a cut of $\mathrm{min}(m_{\ell b})>155\,\mathrm{GeV}$ is introduced signal regions that contain $b$-jets. 
+A study was performed to further optimise the choice of the $\mathrm{min}(m_{\ell b})$-cut. The study is shown in Appendix \ref{minmlb_optimisation} and based on this, it was decided to use a cut of $\mathrm{min}(m_{\ell b})>155\,\mathrm{GeV}$. %However, this version of the internal note still contains the results with the previously mentioned $\mathrm{min}(m_{\ell b})>175\,\mathrm{GeV}$-criterion and the results will be updated in the next version (results will not change much).
+
+Initially, a requirement of $\mathrm{min}(m_{\ell b})>175\,\mathrm{GeV}$ was applied in signal regions containing $b$-jets. A study was performed to check the impact of this additional $\mathrm{min}(m_{\ell b})>175\,\mathrm{GeV}$-criterion on the resulting limits. The results of this study can be found in Appendix \ref{mlb_impact}.
+
+The background composition of the signal regions after applying the aforementioned selection cuts is shown in Figure \ref{fig:bkg_SR}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/SignalRegions/min_mlbLogY_Shapes_normalised_mu}
+	\caption{$\mathrm{min}(m_{\ell b})$ distribution of the signal and background processes for the muon channel.}
+	\label{fig:minmlb_mu}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/Pie_0b_metsig5_mu.pdf}
+		\label{fig:bkg_SR_0b_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/Pie_0b_metsig5_ele.pdf}
+		\label{fig:bkg_SR_0b_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/Pie_1b_metsig5_minmlb155_mu.pdf}
+		\label{fig:bkg_SR_1b_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/Pie_1b_metsig5_minmlb155_ele.pdf}
+		\label{fig:bkg_SR_1b_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/Pie_atleast2b_metsig5_minmlb155_mu.pdf}
+		\label{fig:bkg_SR_atlaest2b_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/Pie_atleast2b_metsig5_minmlb155_ele.pdf}
+		\label{fig:bkg_SR_atleast2b_ele}
+	}
+	
+	
+	\caption{Background composition for the signal region in the muon channel (left) and the electron channel (right) with different $b$-jet multiplicities in the final states.}
+	\label{fig:bkg_SR}
+\end{figure}
+
+
+
+The $m_{\ell\ell}$-distribution for the background processes and some benchmark signals are can be found in Figure \ref{fig:Mll_SR}.
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/invariant_mass_mumu_0b_40logbinsLogY_Shapes.pdf}
+		\label{fig:Mll_SR_0b_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/invariant_mass_ee_0b_40logbinsLogY_Shapes.pdf}
+		\label{fig:Mll_SR_0b_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/invariant_mass_mumu_1b_40logbinsLogY_Shapes.pdf}
+		\label{fig:Mll_SR_1b_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/invariant_mass_ee_1b_40logbinsLogY_Shapes.pdf}
+		\label{fig:Mll_SR_1b_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/invariant_mass_mumu_atleast2b_40logbinsLogY_Shapes.pdf}
+		\label{fig:Mll_SR_atlaest2b_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/SignalRegions/invariant_mass_ee_atleast2b_40logbinsLogY_Shapes.pdf}
+		\label{fig:Mll_SR_atleast2b_ele}
+	}
+	
+	
+	\caption{Invariant dilepton mass distribution in the signal regions for SM background processes and some benchmark signals in the muon and electron channel.}
+	\label{fig:Mll_SR}
+\end{figure}
+
+
+%\section{NN/GNN Region}
+
+%A Neural Network/Graph Neural Network is trained to separate signal and background and a certain threshold of the NNout/GNN score defines the signal region.
+
+
+%\subsection{Neural Network}
+
+%In order to achieve a good separation between the $\Zp$ signal and the background processes, a Neural Network (NN) is used. The Neural Network allows to combine different discriminating kinematic variables into one final discriminant, the neural network output.
+
+%For this analysis the NeuroBayes neural network package \cite{neurobayes1,neurobayes2} is used, which provides a feed-forward NN consisting of three layers: an input layer with one node per input variable and an additional bias node, a hidden layer with a user-specific number of nodes, and the output layer with one node.
+
+%The input of a node $j$ is defined by the linear sum of the output values $x_i$ of all nodes in the previous layer multiplied with a weight $w_{ij}$:
+%\begin{equation}
+%	I_j=\sum_i w_{ij} x_{i} \quad.
+%\end{equation}
+%By applying the sigmoid function
+%\begin{equation}
+%        S(x)=\frac{2}{1+e^{-x}}-1
+%\end{equation}
+%as an activation function, the output of every node is mapped on the interval $[-1,+1]$ before being fed to the nodes of the following layer.
+
+%A preprocessing procedure is applied to the signal and background MC events that are used later in the training. At first, for each input variable the sum of signal and background events is transformed to a flat distribution consisting of 100 bins. Then the purity in each bin is calculated by dividing the number of signal events by the sum of signal and background events in that bin. 
+%The purity distribution is fitted with a spline function to reduce statistical fluctuations in the input variables.
+%These distributions are further transformed into gaussian distributions with a mean of $\mu = 1$ and a standard deviation of $\sigma = 0$.
+%The resulting distributions are used as potential input for the training of the NN.
+
+%For integer input variables (e.g. multiplicities), a slightly different preprocessing is applied, with regularised mean values for an unordered class being used instead of a spline fit.
+
+%As the last step of the preprocessing procedure, the importance of each variable is determined according to the loss of correlation to target when removing the respective variable in an iterative procedure.
+%Therefore the correlation matrix of all transformed input variables including the correlation to target is calculated at each step. For each variable, the loss of total correlation to target when removing that variable is calculated  and then the variable with the smallest loss of total correlation is removed. This step is repeated until there is only one variable left. Thus, a list of the input variables ordered by their loss of correlation to target is obtained.
+%Variables are only considered as important if their significance $\sigma$ is above a certain threshold. In this analysis only variables with a significance of at least $3\sigma$ are used for the training of the NN.
+
+%For the training the following variables are considered in this analysis:
+
+%\begin{itemize}
+%	\item jet multiplicity,
+%	\item $\metsig$,
+%	\item $\met$,
+%	\item $\Delta\Phi(ll,b-Jet_{1})$,
+%	\item $\Delta Y(ll,b-Jet_{1}$,
+%	\item $\Delta R(l_{1},l_{2})$,
+%	\item $\Delta \Phi(l_{1},\met)$,
+%	\item $\Delta \Phi(l_{2},\met)$,
+%	\item $Y(l_{2},l_{2})$,
+%	\item $\Delta \Phi(b-Jet_{1},\met)$,
+%	\item $\eta(l_{1})$,
+%	\item $\eta(l_{2})$,
+%	\item $\eta(b-Jet_{1})$.
+%\end{itemize}
+
+%In this analysis the hidden layer of the NN consists of 15 nodes. The NN is trained on MC events of the pre-selection region. 80\% of the events are used for the training and 20\% are used for testing
+%the NN to prevent overtraining. Furthermore, an event weighting is applied in order to train on a dataset which consists of 50\% signal and 50\% background events.
+
+%During the training of the NN the weights $w_{ij}$ are optimised in an iterative process by minimising the entropy loss function. This function is a measure for the goodness of the signal and background separation reached by the NN.
+
+%Finally, the application of the trained NN results in a distribution of the neural network output values. The output of the single output node is linearily mapped on the interval $[0,1]$, with backgrounds tending to smaller values of the so-called NNout distribution, while signal is expected at higher NNout values.
+
+%In this analysis, the NN is trained separately for the muon and electron channel and for different $\Zp$ masses.
+
+
+%\subsection{Graph Neural Network}

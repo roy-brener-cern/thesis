@@ -1,10 +1,9 @@
-\section{Data-driven estimation of fake background}
 This section describes the manner in which the fake electron background is obtained using the data-driven Matrix Method (MM) \cite{ATLAS:2022swp}. Fake electron background consists of objects that are misidentified as signal electrons, namely jets and non-prompt electrons. The latter include electrons stemming primarily from photon conversions and heavy-flavour decays. 
 Fake electrons are largely found within a jet due to decays in the showering process, misidentification and interactions with the detector. These backgrounds are poorly modelled with available MC simulations of QCD processes. They are therefore estimated using a data-driven approach, which relies on the full dataset and MC simulations to account for the contribution of real electrons originating from electroweak processes.
 
 
 
-\section{Matrix Method}
+\subsection{Matrix Method}
 To assess the number of fake electrons contaminating the signal sample as defined in Section~\ref{sec:ObjectDefinition_Electrons}, the MM is used.
 This tool relates between the probabilities that a real, fake electron meets the signal criteria, $r, f$, respectively, and the total number of fake electrons in the \textit{baseline} sample, $F$. The baseline sample definition is an analysis choice, set here following the definition in Section~\ref{sec:ObjectDefinition_Electrons} albeit passing the electron \texttt{LH\_ID} WP \textit{Medium}. This baseline is defined to avoid a trigger bias which may have been introduced if a looser ID likelihood requirement were used. The fake-electron background is estimated by using the loosest, lowest available unprescaled triggers described in Table~\ref{tab:datasets::triggers}, namely \texttt{HLT\_e140\_lhloose\_L1EM22VHI}, \texttt{HLT\_e140\_lhloose\_L1eEM26M} and \texttt{HLT\_e140\_lhloose\_L1eEM26M} for 2022, 2023 and 2024, respectively.
 The single-electron MM defines the following relation
@@ -85,7 +84,7 @@ where $i$ indicates the event index. This weight is then applied event-by-event 
 \end{equation}
 where $\sum^{N^{\textrm{data}}_{\textrm{baseline}}}_{i} 1$ is the total number of baseline data events. Description of how the real-enriched and fake-enriched regions are constructed and thus, the real and fake efficiencies measured, is given in the next sections.
 
-\section{Real rate calculation}
+\subsection{Real rate calculation}
 To compute the real electron efficiency, $r$, a real-enriched region is constructed where real electron candidates passing signal and baseline requirements are counted, following Eq. (\ref{Eq_Real_Fake_Effs}). Aiming to maximise the purity of real electrons, MC simulations of Drell-Yan processes, $Z\rightarrow \ell\ell$, are used. Description of the samples is given in Table~\ref{tab:zjets_MC} under Chapter~\ref{ch:data_mc}. In addition, MC samples whose \texttt{bornMass} variable, the invariant mass of the two leading truth leptons, is filtered above 105 GeV, are used to obtain a consistently-high $r$ throughout the electron $p_{\textrm{T}}$ spectrum. Avoiding double-counting of events, the inclusive samples are filtered at $\texttt{bornMass}<105 \; \textrm{GeV}$ when used together with the high-mass samples. As high-mass samples are not yet fully available for Run3 and hence the following plots shows real-rate calculation using Run2 simulations. A rate of above 90\% is expected regardless of which run is considered.
 
 The real-rate is binned in $|\eta|$ following detector geometry: two bins in the barrel region ($0<|\eta|<1.37$) and two bins in the endcap region, one with TRT coverage ($1.52<|\eta|<2.01$) and one without TRT coverage ($2.01<|\eta|<2.01$). Another bin, set in the barrel/endcap transition region ($1.37<|\eta|<1.52$), remains empty following rejection of electrons with these $|\eta|$ values. $p_{\textrm{T}}$ binning widens logarithmically, consistent with lowering statistics in high-$p_{\textrm{T}}$ values.
@@ -94,12 +93,13 @@ The real-rate is binned in $|\eta|$ following detector geometry: two bins in the
 Events are selected using the recommended single-electron trigger chain as specified in Table~\ref{tab:datasets::triggers}. Every event must contain exactly two truth-matched, opposite sign electrons which lie within the detector's fiducial region, $0<|\eta|<2.47$, and outside the barrel/endcap transition region. Furthermore, every electron must satisfy $p_{\textrm{T}}>150 \; \textrm{GeV}$, to remain within the trigger plateau. FIG.~\ref{fig:Real_Rates} shows the real efficiencies binned in $p_{\textrm{T}}$ and $|\eta|$.
 
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/PR/h_PR_pt_ele.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/PR/h_PR_pt_ele.pdf}
     }
     %\hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/PR/h_PR_eta_ele.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/PR/h_PR_eta_ele.pdf}
     }
 \caption{Real electron efficiency as a function of $p_{\textrm{T}}$ (left) and $|\eta|$ (right)}    
 \label{fig:Real_Rates}
@@ -109,7 +109,7 @@ As depicted, the real rate remains high throughout the phase-space, between 90\%
 
 \begin{figure}    
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/fakes/PR/PR_pT_eta_ele.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/PR/PR_pT_eta_ele.pdf}
     \caption{Real electron efficiency as a function of $p_{\textrm{T}},|\eta|$}    
     \label{fig:Real_Rate_2D}
 \end{figure}
@@ -117,7 +117,7 @@ As depicted, the real rate remains high throughout the phase-space, between 90\%
 Since the sample is purified to have a high real content, the rate is expected to remain high even if the baseline definition changes between \texttt{LH\_LooseBL} and \texttt{LH\_Medium}.
 
 
-\section{Fake rate calculation}
+\subsection{Fake rate calculation}
 
 The fake efficiency, $f$, represents the probability that a baseline fake electron satisfies the signal criteria. Since $f$ cannot be reliably determined solely from simulation, a data-driven approach is used for its calculation. This calculation is performed in a region where the QCD content is high, referred to as the fake-enriched region. The fake-background estimate is then validated in a similar (but orthogonal) fake validation region. Both the fake-enriched (control) and fake-validation regions are orthogonal to the analysis regions. This strategy is also noted and illustrated schematically under Section~\ref{sec:analysis_strategy}. The fake control region is defined by cuts designed to suppress electroweak processes, leaving a QCD-enriched sample: 
 
@@ -136,20 +136,21 @@ The fake efficiency, $f$, represents the probability that a baseline fake electr
 These cuts are placed in addition to the single-electron triggers defined in the previous section. The real-electron dilution in this region following those selections is modelled using the same MC simulations as described in Section~\ref{sec:background}. This contribution is subtracted from the data for the calculation of $f$. The behaviour of the data and MC-modelled background in the fake-enriched region is shown as a function of the leading electron $p_{\textrm{T}}$ and $|\eta|$ for both the signal and baseline criteria is shown in FIG.~\ref{fig:Fake_Enriched_Region_Dilution}.
 
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/pT_ele_medium_jet130.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/pT_ele_medium_jet130.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/eta_ele_medium_jet130.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/eta_ele_medium_jet130.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/pT_ele_tight_jet130.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/pT_ele_tight_jet130.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/eta_ele_tight_jet130.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/eta_ele_tight_jet130.pdf}
     }
 \caption{Distributions of the leading electron $p_{\textrm{T}}$ (left) and $|\eta|$ (right) following the signal (top) and baseline (bottom) requirements in the fake-enriched region. The full dataset is plotted on top of the electroweak backgrounds modelled via MC simulations. The hollow areas between the data and electroweak backgrounds is where the fake background estimate is needed.}
 \label{fig:Fake_Enriched_Region_Dilution}
@@ -157,20 +158,21 @@ These cuts are placed in addition to the single-electron triggers defined in the
 %%%
 Distributions like those in FIG.~\ref{fig:Fake_Enriched_Region_Dilution} are eventually used for the calculation of $f$. This is done in bins of $p_{\textrm{T}}$ and $|\eta|$. Accordingly, FIG.~\ref{fig:Fake_Enriched_Region_Dilution_0.00_1.37}--\ref{fig:Fake_Enriched_Region_Dilution_1.52_2.47} show the $p_{\textrm{T}}$ distributions of the signal and baseline electron in different bins of $|\eta|$.
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/pT_perEta_medium_jetpt130_eta0p00_0p70.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/pT_perEta_medium_jetpt130_eta0p00_0p70.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/pT_perEta_medium_jetpt130_eta0p70_1p37.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/pT_perEta_medium_jetpt130_eta0p70_1p37.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/pT_perEta_tight_jetpt130_eta0p00_0p70.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/pT_perEta_tight_jetpt130_eta0p00_0p70.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/pT_perEta_tight_jetpt130_eta0p70_1p37.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/pT_perEta_tight_jetpt130_eta0p70_1p37.pdf}
     }
 \caption{Distributions of the leading electron $p_{\textrm{T}}$ following the signal (top) and baseline (bottom) requirements in the fake-enriched region. (Left) $0.00<|\eta|<0.70$; (right) $0.70<|\eta|<1.37$. The full dataset is plotted on top of the electroweak backgrounds modelled via MC simulations. The hollow areas between the data and electroweak backgrounds is where the fake background estimate is needed.}
 \label{fig:Fake_Enriched_Region_Dilution_0.00_1.37}
@@ -178,20 +180,21 @@ Distributions like those in FIG.~\ref{fig:Fake_Enriched_Region_Dilution} are eve
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/pT_perEta_medium_jetpt130_eta1p52_2p00.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/pT_perEta_medium_jetpt130_eta1p52_2p00.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/pT_perEta_medium_jetpt130_eta2p00_2p47.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/pT_perEta_medium_jetpt130_eta2p00_2p47.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/pT_perEta_tight_jetpt130_eta1p52_2p00.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/pT_perEta_tight_jetpt130_eta1p52_2p00.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/dilution/pT_perEta_tight_jetpt130_eta2p00_2p47.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/dilution/pT_perEta_tight_jetpt130_eta2p00_2p47.pdf}
     }
 \caption{Distributions of the leading electron $p_{\textrm{T}}$ following the signal (top) and baseline (bottom) requirements in the fake-enriched region. (Left) $1.52<|\eta|<2.00$; (right) $2.00<|\eta|<2.47$. The full dataset is plotted on top of the electroweak backgrounds modelled via MC simulations. The hollow areas between the data and electroweak backgrounds is where the fake background estimate is needed.}
 \label{fig:Fake_Enriched_Region_Dilution_1.52_2.47}
@@ -210,12 +213,13 @@ which is the fake rate. The distributions of $f$ in $p_{\textrm{T}}$ and $|\eta|
 
 
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/rate/eleFR_mediumden_pT_per_Eta_bins_jet130.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/rate/eleFR_mediumden_pT_per_Eta_bins_jet130.pdf}
     }
     %\hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/FR/rate/eleFR_mediumden_eta_jet130.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/rate/eleFR_mediumden_eta_jet130.pdf}
     }
 \caption{Fake electron efficiency as a function of $p_{\textrm{T}}$ (left, per $|\eta|$ bin) and $|\eta|$ (right). The statistical uncertainty is shown in the hatched boxes of the left plot.}
 \label{fig:Fake_Rates}
@@ -224,8 +228,9 @@ which is the fake rate. The distributions of $f$ in $p_{\textrm{T}}$ and $|\eta|
 Combining the $p_{\textrm{T}}$ and $|\eta|$ with the binning shown in FIG.~\ref{fig:Fake_Rates}, the two-dimensional distribution follows, as shown in FIG.~\ref{fig:Fake_Rate_2D}.
 
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR/rate/FR_TH2D_FR_mediumden_pT_eta_EWKcorr_130.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR/rate/FR_TH2D_FR_mediumden_pT_eta_EWKcorr_130.pdf}
     \caption{Fake electron efficiency as a function of $p_{\textrm{T}},|\eta|$}    
     \label{fig:Fake_Rate_2D}
 \end{figure}
@@ -234,25 +239,26 @@ Using the two-dimensional distributions of the real and fake rates shown in FIG.
 
 \newpage
 
-\section{Fake background validation}
+\subsection{Fake background validation}
 The fake VR is defined to suppress contributions from electroweak backgrounds whilst being orthogonal to other analysis regions. FIG.~\ref{fig:Fake_Validation_Region_Leading_Electron} shows kinematic distributions of the leading electron in the fake VR. 
 
 
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/VR/LeadingLeptonPt.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/VR/LeadingLeptonPt.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/VR/LeadingLeptonEta.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/VR/LeadingLeptonEta.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/VR/LeadingLeptonPhi.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/VR/LeadingLeptonPhi.pdf}
     }
     \hfill
     \subfloat[]{
-      \includegraphics[width=0.5\textwidth]{figures/fakes/VR/LeadingLeptonE.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/VR/LeadingLeptonE.pdf}
     }
 \caption{Kinematic distributions of the leading electron in the fake Validation Region, $p_{\textrm{T}}$ (top left), $\eta$ (top right), $\phi$ (bottom left) and energy (bottom right)}.
 \label{fig:Fake_Validation_Region_Leading_Electron}
@@ -263,20 +269,21 @@ FIG.~\ref{fig:Fake_Validation_Region_Leading_Jet} shows kinematic distributions 
 
 
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/VR/LeadingJetPt.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/VR/LeadingJetPt.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/VR/LeadingJetEta.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/VR/LeadingJetEta.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/VR/LeadingJetPhi.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/VR/LeadingJetPhi.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/VR/LeadingJetE.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/VR/LeadingJetE.pdf}
   }
 \caption{Kinematic distributions of the leading jet in the fake Validation Region, $p_{\textrm{T}}$ (top left), $\eta$ (top right), $\phi$ (bottom left) and energy (bottom right)}.
 \label{fig:Fake_Validation_Region_Leading_Jet}
@@ -287,24 +294,25 @@ Observing the well-modelling of the data in the fake-enriched region in the lead
 
 
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/VR/fake_VR.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/VR/fake_VR.pdf}
   }
   %\hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/SRspec/mLepJet_logX}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/SRspec/mLepJet_logX}
   }
 \caption{Invariant mass distribution of the lepton-jet system. (Left) Fake validation region; (right) signal region extended down to 0.7~TeV. The LHS plot includes all statistical and systematic uncertainties on the background prediction. This contains both the uncertainties on the simulated background as well as the systematic and statistical uncertainties on the data-driven fake background estimate.}
 \label{fig:Fake_Validation_Region_High_Level_Kinematics}
 \end{figure}
 %
-FIG.~\ref{fig:Fake_Validation_Region_High_Level_Kinematics} shows good agreement between the total background, including the fake background estimate, and the data, where the invariant mass of the leading lepton and jet is included. This estimate is used in subsequent steps, through the statistical interpretation outlined in Chapter~\ref{chp:fit} and compute the results shown in Chapter~\ref{chp:results}.
+FIG.~\ref{fig:Fake_Validation_Region_High_Level_Kinematics} shows good agreement between the total background, including the fake background estimate, and the data, where the invariant mass of the leading lepton and jet is included. This estimate is used in subsequent steps, through the statistical interpretation outlined in Chapter REFER TO FIT and compute the results shown in Chapter~\ref{chp:results}.
 
 
 \newpage
 \clearpage
 
-\section{Systematic uncertainties}
+\subsection{Systematic uncertainties}
 
 The source of systematic uncertainty on $f$ relies upon the error in the MC background used to estimate the electroweak (real) contributions in the fake CR \textit{i.e.} the background subtracted from data to estimate the rate. The overall effect of different sources of systematic uncertainties on $m_{\ell j}$ in the fake CR is shown in FIG.~\ref{fig:Fake_systematics_mlj_CR}.
 
@@ -312,20 +320,21 @@ The source of systematic uncertainty on $f$ relies upon the error in the MC back
 
 
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/CR/Electron.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/CR/Electron.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/CR/MET.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/CR/MET.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/CR/Jet.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/CR/Jet.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.45\textwidth]{figures/fakes/CR/ThGrouped.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/qbh/fakes/CR/ThGrouped.pdf}
   }
 \caption{Effect of systematic uncertainties on the total electroweak background in the fake Control Region, shown in the invariant electron-jet mass. (Top left) electron systematics; (top right) $E^{\textrm{miss}}_{\textrm{T}}$ systematics; (bottom left) jet systematics; (bottom right) theory systematics.}
 \label{fig:Fake_systematics_mlj_CR}
@@ -341,20 +350,21 @@ where each $f_{\textrm{syst}}(p_{\textrm{T}},|\eta|)$ will be used in turn as a 
 
 
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_systs_EL_EFF_ID.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_systs_EL_EFF_ID.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_systs_EL_EFF_Iso.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_systs_EL_EFF_Iso.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_systs_EL_EFF_Reco.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_systs_EL_EFF_Reco.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_systs_EL_EFF_Trigger.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_systs_EL_EFF_Trigger.pdf}
   }
 \caption{Error on the fake rate due to electrons efficiency sources. (Top left) identification; (Top right) isolation; (Bottom left) reconstruction; (bottom right) trigger}.
 \label{fig:Fake_systs_FR_electron}
@@ -362,16 +372,17 @@ where each $f_{\textrm{syst}}(p_{\textrm{T}},|\eta|)$ will be used in turn as a 
 %
 In the same fashion, $f_{\textrm{syst}}(p_{\textrm{T}},|\eta|)$ is computed for the \texttt{Sherpa} modelling uncertainties, as shown in FIG.~\ref{fig:Fake_systs_TH}.
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_systs_TH_PDF.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_systs_TH_PDF.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_systs_TH_AlphaS.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_systs_TH_AlphaS.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_systs_TH_Scale.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_systs_TH_Scale.pdf}
   }
 \caption{Error on the fake rate due to theoretical uncertainty sources. (Top left) combined PDF set; (Top right) strong coupling; (Bottom left) QCD renormalisation and factorisation scales.}
 \label{fig:Fake_systs_TH}
@@ -380,20 +391,21 @@ In the same fashion, $f_{\textrm{syst}}(p_{\textrm{T}},|\eta|)$ is computed for 
 %%%%%%%%%%%%%%%%%%%%%%%%
 The uncertainty due to PDF choice and QCD scales shown in FIG.~\ref{fig:Fake_systs_TH} are combined as Hessian and envelope, respectively. Eventually, all uncorrelated errors are added in quadrature, bin-by-bin, to obtain a total systematic uncertainty on $f$. FIG.~\ref{fig:Fake_systs_total} shows the total experimental and theoretical error on $f$, as well as the two-dimensional distributions of $f(p_{\textrm{T}},|\eta|)$ corresponding to the total up and down systematic uncertainty.
 \begin{figure}[h!]
+  \captionsetup[subfigure]{labelformat=empty}
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_systs_EL_EFF_Total.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_systs_EL_EFF_Total.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_systs_TH_Total.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_systs_TH_Total.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_TH2D_systematic_up.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_TH2D_systematic_up.pdf}
   }
   \hfill
   \subfloat[]{
-    \includegraphics[width=0.5\textwidth]{figures/fakes/FR_with_systs/FR_TH2D_systematic_down.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/fakes/FR_with_systs/FR_TH2D_systematic_down.pdf}
   }
 \caption{Variation on the fake rate due to total systematic uncertainty. (Left) up variation; (right) down variation.}.
 \label{fig:Fake_systs_total}
@@ -404,9 +416,9 @@ The above two-dimensional variations on $f$, are propgated to up and down variat
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/fakes/fakes_systs_SR.png}
+\includegraphics[width=0.7\textwidth]{figures/qbh/fakes/fakes_systs_SR.png}
 \caption{Fake electron background distribution in the signal region showing the nominal estimate along with statistical and systematic uncertainty variations. The uncertainties shown are the statistical and systematic uncertainties derived on the fake rate and propagated to the fake background estimate, \texttt{fakeWeight} stat $\sigma$ and \texttt{fakeWeight} syst $\sigma$, respectively. Additionally, the hatched area shows the statistical uncertainty on the baseline data sample on which the fake weight is applied.}
 \label{fig:fake_background_sr}
 \end{figure}
 
-These sources of uncertainties are eventually considered as two nuisance parameters, fakes statistical uncertainty and fakes systematic uncertainty, in the likelihood function described in Chapter~\ref{chp:fit}.
+These sources of uncertainties are eventually considered as two nuisance parameters, fakes statistical uncertainty and fakes systematic uncertainty, in the likelihood function described in Chapter REFER TO FIT.

@@ -1,0 +1,613 @@
+
+
+\section{Multijet background}
+
+\textcolor{red}{The electron multijet background is nearly finalised. This background is  challenging to estimate and its contribution is sub-dominant for this analysis. Therefore, small adjustments in the estimation of this background cannot change the results. We also include conservative uncertainties for now.}
+
+A non-negligible source of background consists of ``fake" leptons. Fake leptons are defined as reconstructed leptons that do not correspond to a prompt lepton originating from the hard scattering process. The data-driven Matrix method is used to determine the contribution of this background. 
+%More information and details on the Matrix method and the estimation of the multijet background can be found in Section 6.1 of the common support note \cite{commonNote}. So far, the same real and fake efficiencies as in the $Z'+$MET analysis are used. These efficiencies are further explained in the common support note \cite{commonNote}.
+
+
+\subsection{Data-driven fake-lepton background estimation}
+\label{sec:fakesEstimate}
+
+In addition to the background due to events with two prompt leptons, \textit{e.g.} from $Z\to ll$, top quark pair production, or diboson production, the background due to ``fake'' leptons must be considered. In the following, a ``fake'' lepton is defined as a reconstructed lepton that does not correspond to a prompt lepton originating directly from the hard scattering process. ``Fake'' leptons, hereafter referred to also simply as fake leptons (without the quote marks for simplicity) or fakes, are typically due to hadronic jets, where the tracks and calorimeter deposits of hadrons and/or photons may mimic an electron signature or ``punch-through'' into the muon spectrometer may lead to a reconstructed muon candidate. Fake leptons from jets may also be due to decays of hadrons to electrons or muons, leading to true, but secondary/non-prompt, leptons that are in general expected to be non-isolated. Such contributions, from decays of heavy flavour hadrons in particular, are generally found to be the dominant source of fake muons.
+
+The fake-lepton background is estimated using the data-driven Matrix Method (MM) \cite{ATLAS:2022swp}. The method is based on the definition of two selection levels for leptons, Loose and Tight, where the Tight category has a smaller contamination from fake leptons. The efficiency for a prompt lepton (also referred to hereafter as a real lepton) to pass the Tight selection, given that it passes Loose, is the called the real efficiency $r$:
+\begin{equation}
+	\label{eq:realeff}
+	r = \frac{N_{T}^\mathrm{real}}{N_{L}^\mathrm{real} + N_{T}^\mathrm{real}}\,,
+\end{equation}
+where $N_{T}^\mathrm{real}$ is the number of real leptons passing the Tight requirement and $N_{L}^\mathrm{real}$
+is defined as the number of real leptons passing the Loose requirement, but failing the Tight requirement.
+The suffix $L$ is hence used to denote the ``exclusive Loose'' selection, and the sum
+$N_{L}^\mathrm{real} + N_{T}^\mathrm{real}$ corresponds to all real leptons passing the Loose selection, i.e.
+the ``inclusive Loose'' selection. The corresponding efficiency for a fake lepton is defined analogously and referred to as the
+fake efficiency $f$:
+\begin{equation}
+	\label{eq:fakeeff}
+	f = \frac{N_{T}^\mathrm{fake}}{N_{L}^\mathrm{fake} + N_{T}^\mathrm{fake}}\,.
+\end{equation}
+
+The real and fake efficiencies can be used to relate the numbers of dilepton events involving different
+combinations of ``exclusive Loose'' and Tight leptons to the corresponding numbers involving different combinations of real and fake leptons:
+\begin{equation}
+	\label{eq:MM}
+	\begin{bmatrix}
+		N_{TT} \\
+		N_{LT} \\
+		N_{TL} \\
+		N_{LL}
+	\end{bmatrix}
+	= M(r_1,r_2,f_1,f_2)
+	\begin{bmatrix}
+		N_{RR} \\
+		N_{FR} \\
+		N_{RF} \\
+		N_{FF}
+	\end{bmatrix}\,,
+\end{equation}
+where
+\begin{equation}
+	M(r_1,r_2,f_1,f_2) =
+	\begin{bmatrix}
+		r_1r_2 & f_1r_2 & r_1f_2 & f_1f_2 \\
+		(1-r_1)r_2 & (1-f_1)r_2 & (1-r_1)f_2 & (1-f_1)f_2 \\
+		r_1(1-r_2) & f_1(1-r_2) & r_1(1-f_2) & f_1(1-f_2) \\
+		(1-r_1)(1-r_2) & (1-f_1)(1-r_2) & (1-r_1)(1-f_2) & (1-f_1)(1-f_2)
+	\end{bmatrix} \, .
+\end{equation}
+The a priori unkown composition of the data in terms of the different combinations
+of real and fake leptons is obtained in terms of the directly measurable numbers by inverting the matrix:
+\begin{equation}
+	\begin{bmatrix}
+		N_{RR} \\
+		N_{FR} \\
+		N_{RF} \\
+		N_{FF}
+	\end{bmatrix}
+	= M^{-1}(r_1,r_2,f_1,f_2)
+	\begin{bmatrix}
+		N_{TT} \\
+		N_{LT} \\
+		N_{TL} \\
+		N_{LL}
+	\end{bmatrix}\, .
+\end{equation}
+It is worth noting that this expression can be split up as a sum over individual events, in which the right-hand-side
+vector contains only one non-zero entry, i.e.
+\begin{equation}
+	\begin{bmatrix}
+		N_{RR} \\
+		N_{FR} \\
+		N_{RF} \\
+		N_{FF}
+	\end{bmatrix}
+	= M^{-1}(r_1,r_2,f_1,f_2)
+	\begin{bmatrix}    1 \\    0 \\    0 \\    0 \end{bmatrix}
+	+M^{-1}(r_1,r_2,f_1,f_2)
+	\begin{bmatrix}    0 \\    1 \\    0 \\    0 \end{bmatrix}
+	+M^{-1}(r_1,r_2,f_1,f_2)
+	\begin{bmatrix}    0 \\    0 \\    0 \\    1 \end{bmatrix}
+	+ \cdots
+\end{equation}
+In this case, it is straightforward to take into account any measured dependence of $r$ and $f$ on lepton- or event properties by using the appropriate values of $r_1$, $r_2$, $f_1$, and $f_2$ in each event.
+
+The numbers $N_{RR}$ etc. refer to the corresponding numbers in the ``inclusive Loose'' selection. The total background in this selection due to events where at least one lepton is fake, is
+\begin{equation}
+	\label{eq:looseFakes}
+	N^\mathrm{fakes} = N_{RF} + N_{FR} + N_{FF}\, ,
+\end{equation}
+where the first two terms can be due to e.g. $W$+jets production with a real lepton from the $W$ and a fake lepton from the jets, and the last term is typically attributed to QCD multijet production. Except for the purpose of validating and understanding the fakes estimate, one is generally more interested in the corresponding contribution in the Tight selecton:
+\begin{equation}
+	N_{TT}^\mathrm{fakes} = r_1f_2 N_{RF} + f_1r_2N_{FR} + f_1f_2N_{FF}\, .
+\end{equation}
+
+
+\subsection{Multijet background in the muon channel}
+
+The fake muon background is estimated via the data-driven MM (as explained above) using the real and fake efficiencies from the $Z'$+MET analysis \cite{ZprimeMETnote}. It is referred to as ``Multijet \& W+jets" in the plots in the following.
+
+The muon fake estimate is validated in a fake-enriched region (SS muons). Some pie charts and data/MC plots are shown in Figure \ref{fig:fake_enriched_region_mu}. The uncertainty band covers only systematic uncertainties related to the fake background which are further explained in Chapter \ref{fake_systs}. It can be seen that there is good data/MC agreement in the fake validation region.
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region_mu/Pie_inclusive_fullrange.pdf}
+		\label{fig:fakes_pie_inclusive_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region_mu/Pie_0b.pdf}
+		\label{fig:fakes_pie_0b_mu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region_mu/Pie_atleast1b.pdf}
+		\label{fig:fakes_pie_atleast1b_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region_mu/inv_mass_mumu_inclusive_fullrange.pdf}
+		\label{fig:fakes_dataMC_inclusive_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region_mu/inv_mass_mumu_0b.pdf}
+		\label{fig:fakes_dataMC_0b_mu}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region_mu/inv_mass_mumu_atleast1b.pdf}
+		\label{fig:fakes_dataMC_atleast1b_mu}
+	}
+	%\hfill
+	
+	\caption{Pie charts and invariant dilepton mass distributions for final states with different $b$-jet multiplicities in the fake enriched region (same-sign leptons) for the muon channel. The uncertainty band covers only uncertainties related to the fake background.}
+	\label{fig:fake_enriched_region_mu}
+\end{figure}
+
+
+
+\subsection{Mixed Multijet background in the electron channel}
+\label{sec:mixedMultijet} 
+
+For this analysis, there are two different sets of fake efficiencies available. One set was estimated for the inclusive high-mass DY analysis and these efficiencies describe fake electrons from light flavour jets ($f_\text{light}$). The other fake efficiencies were calculated for the $Z'$+MET analysis \cite{ZprimeMETnote} and they cover fake electrons stemming from heavy flavour jets ($f_\text{heavy}$).
+
+Since the composition of fakes depends on the phase space, e.g. the $b$-jet multiplicity in the final state, a so-called mixed fake estimate is considered, where the fake efficiency $f$ is calculated from the light and heavy flavour fake efficiencies mentioned above:
+
+\begin{equation}
+	f=w\cdot f_\text{heavy}+ (1-w)\cdot f_\text{light}\, .
+\end{equation}
+
+The weight $w$ that gives the fraction of light and heavy flavour fakes is estimated from MC. The weight w is shown in Figure \ref{fig:light_heavy_fractions} for different $b$-jet multiplicities in the final state in a fake enriched region (requirement of same-sign electrons). It can be seen that the light flavour fakes are dominant in an inclusive selection and in final states without $b$-jets. Heavy flavour fakes are more dominant in final states with $b$-jets. This behaviour meets the expectations.
+
+The multijet background is referred to as ``Multijet \& W+jets" in the plots in the following.
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fake_enriched_region/light_ee_incl_SS_pt65_combined_MultiFileShapePlot.pdf}
+		\label{fig:light_flavour_fraction}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fake_enriched_region/heavy_ee_incl_SS_pt65_combined_MultiFileShapePlot.pdf}
+		\label{fig:heavy_flavour_fraction}
+	}
+	%\hfill
+	
+	%\hfill
+	
+	\caption{Fraction of light (\protect \subref{fig:light_flavour_fraction}) and heavy (\protect \subref{fig:heavy_flavour_fraction}) flavour fraction fakes in final states with different $b$-jet multiplicities. }
+	\label{fig:light_heavy_fractions}
+\end{figure}
+
+In a next step, the data/MC agreement is checked in the previously mentioned fake-enriched region (SS electrons). Some pie charts and data/MC plots are shown in Figure \ref{fig:fake_enriched_region} for different $b$-jet multiplicities in the final state. The uncertainty band covers only systematic uncertainties for the fake background which are further explained in Chapter \ref{fake_systs}.
+The nominal fake background and its systematic variations in the fake enriched region are shown in Figure \ref{fig:fake_systs_SS}.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region/Pie_inclusive_fullrange.pdf}
+		\label{fig:fakes_pie_inclusive}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region/Pie_0b.pdf}
+		\label{fig:fakes_pie_0b}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region/Pie_atleast1b.pdf}
+		\label{fig:fakes_pie_atleast1b}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region/inv_mass_ee_inclusive_fullrange.pdf}
+		\label{fig:fakes_dataMC_inclusive}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region/inv_mass_ee_0b.pdf}
+		\label{fig:fakes_dataMC_0b}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region/inv_mass_ee_atleast1b.pdf}
+		\label{fig:fakes_dataMC_atleast1b}
+	}
+	%\hfill
+	
+	\caption{Pie charts and invariant dilepton mass distributions for final states with different $b$-jet multiplicities in the fake enriched region (same-sign leptons) for the electron channel. The uncertainty band covers only uncertainties related to the fake background.}
+	\label{fig:fake_enriched_region}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region/multijet_Anna_mixed_invariant_mass_ee_morebins_fullrange_special_foo_combined_MultiFileShapePlot.pdf}
+		\label{fig:fake_systs_SS_inclusive}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region/multijet_Anna_mixed_invariant_mass_ee_0b_morebins_foo_combined_MultiFileShapePlot.pdf}
+		\label{fig:fake_systs_SS_0b}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fake_enriched_region/multijet_Anna_mixed_invariant_mass_ee_atleast1b_lessbins_foo_combined_MultiFileShapePlot.pdf}
+		\label{fig:fake_systs_SS_atleast1b}
+	}
+	
+	%\hfill
+	
+	\caption{Nominal fake background and the systematic variations  in the fake enriched region for different $b$-jet multiplicities in the electron channel.}
+	\label{fig:fake_systs_SS}
+\end{figure}
+
+\FloatBarrier
+
+\section{Background composition}
+
+Information on real data and background MC samples used in this analysis can be found Section \ref{data_mc_samples}. However, due to low MC statistics at high invariant dilepton masses, especially in the \ttbar background, this analysis uses non-allhadronic \ttbar samples in combination with additional samples sliced in the variable $H_T$ (instead of the dileptonic \ttbar samples). It needs to be made sure that we are only using the dileptonic part of the sample to avoid double counting of fakes from this MC and the MM. % But since the fakes contribution from this MC is expected to be small this is neglected at the moment. %\textcolor{purple} {(so here we in principle need to make sure we are only using the dileptonic part of the sample as otherwise we have double counting of fakes from this MC and the MM ?}
+More details on the MC background statistics can be found in Appendix \ref{appendix_mcstat}.
+
+Figure \ref{fig:bkg_preselection} shows the background composition of the event pre-selection for different $b$-jet multiplicities in the final state, namely zero $b$-jets, one $b$-jet, and two or more $b$-jets. It can be observed how the DY background is dominant in final states without $b$-tagged jets and how its contribution reduces with increasing $b$-jet multiplicity. The opposite behaviour is true for the $\ttbar$ background, where its contribution decreases with reduced number of $b$-jets. 
+The other background processes have only minor contributions (below 10\%) that also vary with the number of $b$-tagged jets in the final state.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/preselection/Pie_0b_mu.pdf}
+		\label{fig:bkg_preselection_0b_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/preselection/Pie_0b_ele.pdf}
+		\label{fig:bkg_preselection_0b_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/preselection/Pie_1b_mu.pdf}
+		\label{fig:bkg_preselection_1b_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/preselection/Pie_1b_ele.pdf}
+		\label{fig:bkg_preselection_1b_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/preselection/Pie_atleast2b_mu.pdf}
+		\label{fig:bkg_preselection_atlaest2b_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/preselection/Pie_atleast2b_ele.pdf}
+		\label{fig:bkg_preselection_atleast2b_ele}
+	}
+	
+	
+	\caption{Background composition for the event preselection with different $b$-jet multiplicities in the final states. It needs to be noted that the above-mentioned requirements on $\metsig$ and $\textrm{min}(m_{\ell b})$ are not applied for these plots.}
+	\label{fig:bkg_preselection}
+\end{figure}
+
+\FloatBarrier
+
+\section{Background Control Regions}
+
+Since the analysis searches for an excess in the comparison of data and MC simulations, it is important to make sure that the background processes are well modelled, both in shape and normalisation. In order to do that, dedicated background control regions are defined. These control regions must be orthogonal to the signal region. For the Z control region, this is reached by limiting the event preselection to $m_{\ell\ell}<300\,\GeV$. For the top control region, a different selection orthogonal to the signal region is chosen, as further explained in the following.
+
+
+\subsection{Top Control Region}
+
+Since the main contribution to the background in regions with at least one $b$-jet in the final state is induced by top quark pair production, a top control region is introduced to make sure that this background is well modelled.
+For this region the following event selection is applied:
+
+\begin{itemize}
+	\item one tight muon,
+	\item one tight electron,
+	\item opposite lepton charge.
+	
+\end{itemize}  
+Requirements regarding the invariant mass of the two leptons, the transverse momenta, passed triggers, jet cleaning and lepton vetos are the same as in the pre-selection (see Table 
+\ref{tab:preselection}).
+Figure \ref{fig:TopControl_Pie} shows the composition of the top control region. The $\ttbar$ background has a contribution of nearly 90\%, so the purity of the targeted
+background is high. The single top background contributes with roughly 8\% to the top control region.
+Contributions of approximately 1\% come from the multijet and the diboson background each.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/TopControl/Pie.pdf}
+    \caption{Background composition of the Top control region.}
+    \label{fig:TopControl_Pie}
+\end{figure}
+
+
+In Figure \ref{fig:TC_datamc}, the data/MC comparison in the top control region is shown for the invariant dilepton mass, the missing transverse momentum, the jet multiplicity and the transverse momentum of the muon, electron and the $p_T$-leading $b$-jet. For $p_T<400\,\text{GeV}$, it can be seen that the agreement between data and prediction is very good, while there are some deviations for larger values of $p_T$ (where statistics is also significantly reduced). But overall, data and MC are in good agreement, meaning that the top background is well modelled.
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/TopControl/inv_mass_emu.pdf}
+		\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/TopControl/met.pdf}
+		\label{fig:TC_met}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/TopControl/njets.pdf}
+		\label{fig:TC_njets}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/TopControl/mu_pt.pdf}
+		\label{fig:TC_mu_pt}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/TopControl/e_pt.pdf}
+		\label{fig:TC_e_pt}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/TopControl/bjet_pt.pdf}
+		\label{fig:TC_bjet_pt}
+	}
+	%\hfill
+	
+	\caption{Data/MC comparison for \protect\subref{fig:TC_inv_mass} the invariant dilepton mass distribution \protect\subref{fig:TC_met}, the missing transverse momentum, the jet multiplicity \protect\subref{fig:TC_njets}, and the transverse momentum of the muon \protect \subref{fig:TC_mu_pt}, electron \protect \subref{fig:TC_e_pt} and the $p_T$-leading $b$-jet \protect \subref{fig:TC_bjet_pt} in the top control region. The uncertainty band includes statistical and background systematic uncertainties, where only the shape of theoretical modelling uncertainties is taken into account. }
+	\label{fig:TC_datamc}
+\end{figure}
+
+\FloatBarrier
+
+\subsection{Z Control Region}
+
+The $Z\rightarrow\ell\ell$ background (referred to as $Z\ell\ell$ background or as DY background in the following) is a dominant background in selections with zero $b$-jets in the final state. Its background contribution reduces with increasing $b$-jet multiplicity.
+Furthermore, the physics between events from the $Z\ell\ell$ background without and with one or more $b$-jets is different. 
+Hence, dedicated control regions are necessary to validate the modelling of this source of background in regions with different $b$-jet multiplicities separately in the muon and in the electron channel.
+Events passing the the event preselection criteria in Table \ref{tab:preselection} with an invariant dilepton mass in the range between $130\,\GeV<M_{\ell\ell}<300\,\GeV$ are selected.
+
+\subsubsection*{Z+LF CR (Final states with 0 $b$-jets)}
+
+First, the Z control region with zero $b$-jets in the final state is investigated. Figure \ref{fig:ZCR_0b_composition} shows the background composition of this control region in the muon and electron channel.
+
+It can be seen that the Z+jets process is split into a light flavour (Z+LF) and a heavy flavour (Z+HF) component in order to check the normalisation of both components separately. The splitting is done based on the different filters on generator level for $b$-quarks and $c$-quarks as explained in Chapter \ref{data_mc_samples}. 
+
+As expected in the control region with zero $b$-tagged jets, the Z+LF component has with approximately 80\% the largest contribution. The second largest contribution is induced by Z+HF. The other backgrounds have only minor contributions of roughly 3\% or less to this region.
+
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/ZControl_mu/Pie_0b.pdf}
+		\label{fig:ZCR_0b_composition_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/ZControl_ele/Pie_0b.pdf}
+		\label{fig:ZCR_0b_composition_ele}
+	}
+	\caption{Background composition of the Z+LF control region in the muon \protect \subref{fig:ZCR_0b_composition_mu} and electron \protect \subref{fig:ZCR_0b_composition_ele} channel.}
+	\label{fig:ZCR_0b_composition}
+\end{figure}
+
+
+Data/MC comparison plots showing the invariant dilepton mass distribution, the missing transverse momentum and the transverse momentum of the $p_T$-leading lepton are shown in Figure \ref{fig:ZCR_0b_datamc} for the muon and electron channel. 
+%It can be noted that the data/MC-ratio is generally above a value of one. However, this cannot be observed for large values of the missing transverse momentum, where the $Z\ell\ell$ background has only a minor contribution. So it can be concluded that the observed offset in the ratio is caused by the $Z\ell\ell$ background, where a $k$-factor of 0.95 is applied. Furthermore, next-to-leading order electroweak corrections are applied for this background. There are different approaches available for the combination of electroweak and QCD components: the additive, the multiplicative and the exponentiated approach. For this analysis the multiplicative approach is chosen, but differences between the schemes are small as shown in Appendix \ref{EW_correction}.
+
+%Nevertheless, the ratio is relatively flat for the invariant dilepton mass distribution in both channels, and therefore this offset in the data/MC-ratio can be handled by the normalisation factor for this background, which is estimated in the fit. For this reason, a (shape) reweighting with Powheg is currently not performed.
+
+The distribution of the missing transverse momentum  generally looks reasonable. The $Z\ell\ell$ background has the largest contribution for low values of $\met$, while the $\ttbar$ background is dominant for larger values of $\met$. This behaviour meets the expectations since final states of a $Z$ boson decay do not contain a neutrino, while dileptonic $\ttbar$ events have neutrinos in the final state.
+It can also be seen that the multijet background contributes only for higher values of the missing transverse momentum. For low $\met$, the most dominant contribution to the multijet background is induced by events with two fake leptons in the final state, which are expected to have no real $\met$. Most of these events get a negative weight by the Matrix method. Since bins with a negative event yield are not physical, these bins are set to zero. However, this behaviour, especially the negative weights from the Matrix method, needs to be further investigated and studied.
+
+The distribution of the transverse momentum of the $p_T$-leading lepton looks generally a bit worse compared to the other two distributions discussed before. However, for low values of the transverse momentum, the ratio stays relatively flat and is in agreement with a value of one. Most deviations are covered by the uncertainty band. %behaves as observed for example in the invariant dilepton mass distribution. For increasing values of the transverse momentum, the ratio increases and a slope is visible.
+ 
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_mu/inv_mass_mumu_0b.pdf}
+		\label{fig:ZCR_0b_datamc_inv_mass_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_ele/inv_mass_ee_0b.pdf}
+		\label{fig:ZCR_0b_datamc_inv_mass_ele}
+	}
+		
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_mu/met_0b.pdf}
+		\label{fig:ZCR_0b_datamc_met_ele}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_ele/met_0b.pdf}
+		\label{fig:ZCR_0b_datamc_met_mu}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_mu/mu_pt_0b.pdf}
+		\label{fig:ZCR_0b_datamc_pt_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_ele/e_pt_0b.pdf}
+		\label{fig:ZCR_0b_datamc_pt_ele}
+	}
+
+	
+	\caption{Data/MC comparison plots for the distributions of the invariant dilepton mass \protect\subref{fig:ZCR_0b_datamc_inv_mass_mu}, \protect\subref{fig:ZCR_0b_datamc_inv_mass_ele}, the missing transverse momentum \protect \subref{fig:ZCR_0b_datamc_met_mu},\protect \subref{fig:ZCR_0b_datamc_met_ele} and the transverse momentum of the $p_T$-leading lepton \protect \subref{fig:ZCR_0b_datamc_pt_mu},\protect \subref{fig:ZCR_0b_datamc_pt_ele} for the muon and the electron channel. The uncertainty band includes statistical and background systematic uncertainties, where only the shape of theoretical modelling uncertainties is taken into account.}
+	\label{fig:ZCR_0b_datamc}
+\end{figure}
+
+\FloatBarrier
+
+
+\subsubsection*{Z+HF CR (Final states with at least 1 $b$-jet)}
+
+The second Z control region contains events with at least one $b$-jet in the final state. This control region aims to validate the shape and normalisation of the Z+HF background.
+Due to the requirement to have at least one $b$-jet in the final state, the $\ttbar$ contribution is relatively large in this control region. Therefore, an aditional cut of $\met < 20\,\GeV$ is introduced for the Z+HF control region in order to suppress the $\ttbar$ background and to thereby increase the purity of the $Z+HF$ background. The resulting background composition is shown in Figure \ref{fig:ZCR_atleast1b_composition}.
+Although the $\ttbar$ background is strongly reduced by the additional cut on the missing transverse momentum, $\ttbar$ events still contribute with roughly 32\% to this control region. The Z+HF background has the largest contribution with roughly 40\%. The Z+LF background has a contribution of approximately 22\%, while the other backgrounds have contributions below 5\%. 
+
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/ZControl_mu/Pie_atleast1b_metsmaller20.pdf}
+		\label{fig:ZCR_atleast1b_composition_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/ZControl_ele/Pie_atleast1b_metsmaller20.pdf}
+		\label{fig:ZCR_atleast1b_composition_ele}
+	}
+	\caption{Background composition of the Z+HF control region in the muon \protect \subref{fig:ZCR_atleast1b_composition_mu} and electron \protect \subref{fig:ZCR_atleast1b_composition_ele} channel.}
+	\label{fig:ZCR_atleast1b_composition}
+\end{figure}
+
+
+Figure \ref{fig:ZCR_atleast1b_datamc} shows the data/MC comparison plots for the invariant dilepton mass distribution, the missing transverse momentum and the transverse momentum of the $p_T$-leading lepton. %It needs to be noted that the aforementioned $\met$-cut is just applied for the invariant dilepton mass distributions in Figure \ref{fig:ZCR_atleast1b_datamc}. 
+
+The data/MC comparison for the invariant dilepton mass distribution looks reasonable and the ratio is overall compatible with one. 
+
+The distribution of the missing transverse momentum looks also reasonable apart from a deviation in one bin at low missing transverse momentum in the muon channel. %Furthermore it can be seen in this distribution how the additional requirement of $\met<20\,\GeV$ reduced the $\ttbar$ background.
+
+For low values of the transverse momentum of the $p_T$-leading lepton, the data/MC-ratio is compatible with a value of one. %However, there are some fluctuations for larger values of the transverse momentum, where the statistics is strongly reduced compared to the low-$p_T$ part of the spectrum.
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_mu/inv_mass_mumu_atleast1b.pdf}
+		\label{fig:ZCR_atleast1b_datamc_inv_mass_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_ele/inv_mass_ee_atleast1b.pdf}
+		\label{fig:ZCR_atleast1b_datamc_inv_mass_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_mu/met_atleast1b.pdf}
+		\label{fig:ZCR_atleast1b_datamc_met_ele}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_ele/met_atleast1b.pdf}
+		\label{fig:ZCR_atleast1b_datamc_met_mu}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_mu/mu_pt_atleast1b.pdf}
+		\label{fig:ZCR_atleast1b_datamc_pt_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZControl_ele/e_pt_atleast1b.pdf}
+		\label{fig:ZCR_atleast1b_datamc_pt_ele}
+	}
+	
+	
+	\caption{Data/MC comparison plots for the distributions of the invariant dilepton mass \protect\subref{fig:ZCR_atleast1b_datamc_inv_mass_mu}, \protect\subref{fig:ZCR_atleast1b_datamc_inv_mass_ele}, the missing transverse momentum \protect \subref{fig:ZCR_atleast1b_datamc_met_mu},\protect \subref{fig:ZCR_atleast1b_datamc_met_ele} and the transverse momentum of the $p_T$-leading lepton \protect \subref{fig:ZCR_atleast1b_datamc_pt_mu},\protect \subref{fig:ZCR_atleast1b_datamc_pt_ele} for the muon and the electron channel. The uncertainty band includes statistical and background systematic uncertainties, where only the shape of theoretical modelling uncertainties is taken into account.}
+	\label{fig:ZCR_atleast1b_datamc}
+\end{figure}
+
+\FloatBarrier
+
+
+\section{Validation region}
+
+The background estimates for the main backgrounds, namely the $\ttbar$ background and the Z background, split into a light and heavy flavour component, are tested in dedicated validation regions. Two validation regions are defined based on the event pre-selection with an additional requirement of $300<m_{\ell\ell}<500\,\GeV$ for the invariant dilepton mass. For the $Z+HF$ validation regions, an additional requirement of $\met<20\,\GeV$ is applied, similar to the Z control region with at least one $b$-jet.
+The main purpose of the validation regions is the validation of the background normalisation factors extracted in the fit of the control region. These validation regions exist only pre-unblinding.
+
+A few data/MC comparison plots for the two validation regions are shown in Figures \ref{fig:VR_0b} and \ref{fig:VR_atleast1b}. Since principally the same observations as for the control regions can be made, the validation regions are not discussed in detail here. However, results and post-fit distributions are shown in Chapter \ref{sec:result}.
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_mu/inv_mass_mumu_0b.pdf}
+		\label{fig:VR_0b_invmass_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_ele/inv_mass_ee_0b.pdf}
+		\label{fig:VR_0b_invmass_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_mu/met_0b.pdf}
+		\label{fig:VR_0b_met_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_ele/met_0b.pdf}
+		\label{fig:VR_0b_met_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_mu/mu_pt_0b.pdf}
+		\label{fig:VR_0b_pt_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_ele/e_pt_0b.pdf}
+		\label{fig:VR_0b_pt_ele}
+	}
+	
+	
+	\caption{Data/MC comparison plots for the distributions of the invariant dilepton mass \protect\subref{fig:VR_0b_invmass_mu}, \protect\subref{fig:VR_0b_invmass_ele}, the missing transverse momentum \protect \subref{fig:VR_0b_met_mu},\protect \subref{fig:VR_0b_met_ele} and the transverse momentum of the $p_T$-leading lepton \protect \subref{fig:VR_0b_pt_mu},\protect \subref{fig:VR_0b_pt_ele} for the muon and the electron channel in the validation region with zero $b$-jets in the final state. The uncertainty band includes statistical and background systematic uncertainties.}
+	\label{fig:VR_0b}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_mu/inv_mass_mumu_atleast1b.pdf}
+		\label{fig:VR_atleast1b_invmass_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_ele/inv_mass_ee_atleast1b.pdf}
+		\label{fig:VR_atleast1b_invmass_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_mu/met_atleast1b.pdf}
+		\label{fig:VR_atleast1b_met_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_ele/met_atleast1b.pdf}
+		\label{fig:VR_atleast1b_met_ele}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_mu/mu_pt_atleast1b.pdf}
+		\label{fig:VR_atleast1b_pt_mu}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/ZValidation_ele/e_pt_atleast1b.pdf}
+		\label{fig:VR_atleast1b_pt_ele}
+	}
+	
+	
+	\caption{Data/MC comparison plots for the distributions of the invariant dilepton mass \protect\subref{fig:VR_atleast1b_invmass_mu}, \protect\subref{fig:VR_atleast1b_invmass_ele}, the missing transverse momentum \protect \subref{fig:VR_atleast1b_met_mu},\protect \subref{fig:VR_atleast1b_met_ele} and the transverse momentum of the $p_T$-leading lepton \protect \subref{fig:VR_atleast1b_pt_mu},\protect \subref{fig:VR_atleast1b_pt_ele} for the muon and the electron channel in the validation region with at least one $b$-jet in the final state. The uncertainty band includes statistical and background systematic uncertainties.}
+	\label{fig:VR_atleast1b}
+\end{figure}
+

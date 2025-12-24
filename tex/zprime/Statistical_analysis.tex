@@ -1,0 +1,76 @@
+This analysis aims to search for new physics, and therefore, a statistical analysis is neccessary to test the compatibility of the signal+background hypothesis with the observed data.
+
+%\section{Profile-likelihood Fit}
+
+The first step of the statistical analysis is a simultaneous profile-likelihood fit to the observed data in the signal and control regions \cite{cowan}.
+However, at the current state of the analysis, real data is only used in the control regions, and an Asimov dataset created from the MC predictions for the background events per bin is used in the Signal regions.
+
+The likelihood function used for the fit is the product of Poisson probabilities for every bin $i$ of the binned distribution. Furthermore, it has an additional Gaussian constraint term $\rho(\theta_j)$ for each of the $M$ nuisance parameters $\theta_j$, corresponding to the systematic uncertainties.
+
+
+
+%Exclusion limits are set with the $CL_s$ technique \cite{cls_technique} implemented in the RooFit toolkit \cite{roofit} and the TRExFitter framework is used.
+
+%A binned maximum-likelihood fit to test the compatibility of the signal hypothesis with the data \cite{cowan} is performed.
+
+%The likelihood function is the product of Poisson probabilities for every bin $i$ of the fitted distribution and it has an additional term that considers nuisance parameters $\theta$ like normalisation factors and systematic uncertainties:
+
+\begin{equation}
+	\mathcal{L}(\mu, \theta) = \prod_{i=1}^N \frac{(\mu s_i+b_i)^{n_i}}{n_i !}\cdot e^{-(\mu s_i+b_i)} \prod_{j=i}^M \rho(\theta_j) \quad .
+\end{equation}
+
+Here, $s_i$ and $b_i$ denote the number of signal and background events in the $i$-th bin, and $n_i$ is the observed number of events in bin $i$.
+The parameter $\mu$ is the signal strength and it is a free parameter in the fit. A signal strength of zero corresponds to the background-only hypothesis, and a signal strength of one corresponds
+to the nominal signal hypothesis. Similary, the number of background events in each bin $b_i$ is defined as $\sum_i \mu_j b_{ij}$, where $\mu_j$ is a multiplicative normalisation factor for the background process $j$. These normalisation factors are extracted from the control regions for the $\ttbar$ and $Z\ell\ell$ background. The normalisation factors for the other background processes are set to a value of one.
+
+The likelihood function is then maximised within the constraints of the nuisance parameters. If a nuisance parameter deviates from a mean value of zero in the maximisation of the likelihood function, this is referred to as a pull. If the variance of a nuisance parameter is smaller than one, this is called constraint.
+
+In order to set exclusion limits for the signal model, a hypothesis test is performed, testing the compatibility of the observed data with the background-only hypothesis.
+The profile likelihood ratio
+
+\begin{equation}
+	\lambda(\mu) = \frac{\mathcal{L}(\mu,\hat{\hat{\theta}})}{\mathcal{L}(\hat{\mu},\hat{\theta})}
+\end{equation}
+
+is used to test a hypothesised value of the signal strength $\mu$. $\hat{\hat{\theta}}$ denotes the value of $\theta$ that maximises the likelihood function $\mathcal{L}$ for a specified $\mu$. 
+$\mathcal{L}(\hat{\mu},\hat{\theta})$ is the maximised likelihood function for the observed data or the Asimov dataset in this case.
+
+A test statistic $t_\mu$ is defined by using the profile likelihood ratio:
+
+\begin{equation}
+	t_\mu = -2 \mathrm{ln}(\lambda(\mu)) \quad .
+\end{equation}
+
+The compatibility of the observed data and the hypothesised value of the signal strength $\mu$ are quantified by computing the so-called $p$-value
+
+\begin{equation}
+	p_\mu = \int_{t_{\mu,\mathrm{obs}}}^{\infty} f(t_\mu|\mu)dt_\mu \quad ,
+\end{equation}
+
+where $f(t_\mu|\mu)$ describes the probability density of the test statistic $t_\mu$ under the assumption of the signal strength $\mu$, and $t_{\mu,\mathrm{obs}}$ is the value of the test statistic observed from the data.
+
+In order to avoid excluding a hypothesis due to statistical fluctuations, upper limits on the signal strength $\mu$ are set by using the $CL_S$ method \cite{cls_technique} (implemented in the RooFit toolkit \cite{roofit} and the TRExFitter framework is used). In this method, the confidence level (CL) is calculated as
+
+\begin{equation}
+	CL_S = \frac{CL_{S+B}}{1-CL_B} \quad .
+\end{equation}
+
+The $p$-value of the signal-plus-background hypothesis is denoted as $CL_{S+B}$, while $CL_B$ corresponds to the $p$-value of the background-only hypothesis. Signal hypotheses are excluded at a CL of 95\% when $CL_S<0.05$ for a given signal strength $\mu$. 
+
+Exclusion limits on the production cross-section can then be obtained by multiplying the upper limit on the signal strength with the theoretical predicted signal cross-section.
+
+
+
+\section{Treating signals with interference}
+In the context of the CI interpretations, as explained before, some signals can have non-negligible interference with the SM processes.
+Therefore, it is important to note that in these scenarios, the parametrization is done differently: instead of the usual $\mu \cdot S + B$, it is done as $\mu \cdot S + \sqrt{\mu} \cdot I + B$.
+In this case, the POI is $\mu \sim 1/\Lambda^4$, and $I$ is forced to have a norm factor of $\sqrt{\mu}$.
+
+Furthermore, because of the interference, some histograms have negative values. 
+This can be a problem when using some statistical tools, as done in TRExFitter which is used in this analysis.
+This is a well-known issue, and the solution is to simply add counter term to $I$, and then add a norm factor to reduce it.
+The procedure is explained in this \href{https://trexfitter-docs.web.cern.ch/trexfitter-docs/advanced_topics/interference/}{\textcolor{blue}{link}}, and was implemented already in a few analyses.
+
+
+%This test statistic is the basis of a statistical test which estimates the compatibility of the observed data with the background-only hypothesis. Furthermore, upper limits on the signal
+%production cross section are set by using the $CL_s$ technique. Values of the production cross section of a signal scenario yielding $CL_s<0.05$, are excluded at a confidence level of $\leq 95\%$. 

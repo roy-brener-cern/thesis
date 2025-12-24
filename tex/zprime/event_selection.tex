@@ -1,0 +1,88 @@
+\section{Event cleaning}
+\label{sec:cleaning}
+%Following the \href{https://twiki.cern.ch/twiki/bin/viewauth/Atlas/DataPreparationCheckListForPhysicsAnalysis}{recommendations of the DataPrep group},
+%the following event-level requirements are made.
+
+We use the official GRLs, which are specified in Section \ref{data_mc_samples}.
+The following event-level vetos are made to reject bad / corrupt events:
+\begin{itemize}
+	\item LAr noise burst and data corruption (\verb|xAOD::EventInfo::LAr|),
+	\item Tile corrupted events (\verb|xAOD::EventInfo::Tile|),
+	\item events affected by the SCT recovery procedure for single event upsets (\verb|xAOD::EventInfo::SCT|),
+	\item incomplete events (\verb|xAOD::EventInfo::Core|).
+\end{itemize}
+Events are rejected if bad jets or muons are present, as detailed in section~\ref{sec:metcalc}.
+
+%Debug stream events have not been included, but will be checked later for events passing the analysis selection.
+%Checks have not yet been done to look for the presence of duplicate events.
+
+Events are required to have a primary vertex with at least two associated tracks.
+The primary vertex is selected as the one with the largest \(\Sigma \pT^2\),
+where the sum is over all tracks with transverse momentum \(\pT > \SI{0.4}{\GeV}\) that are associated with the vertex.
+
+
+
+\section{Event pre-selection}
+
+Signal events are characterised by final states with exactly two opposite charged leptons (muons, electrons) of the same flavour. % and at least one b-tagged jet.
+
+
+For the so-called event pre-selection some additional requirements are applied which are summarised in Table \ref{tab:preselection}.
+Electrons and muons need to pass the di-electron or single-muon trigger and they are selected according to the requirements of the object definition. Based on EGAMMA and MCP reccomendations, a combination of low-$p_{\textrm{T}}$ triggers for the electron and muon are used. This is done even though a cut of $p^{\ell}_{\textrm{T}}>65\; \textrm{GeV}$ is applied on each of the two selected signal leptons as the trigger scale factors used within the experimental systematic uncertainties are calculated based on these trigger combinations. Additionally, in the case of the dielectron channel, loose or very loose ID requirements are needed at trigger level to derive the fake background estimate. Such trigger item are only available with low trigger thresholds for dielectron triggers. The single muon trigger acceptance is higher than the dimuon trigger acceptance, such that we use this trigger for the dimuon
+channel. The trigger chains for both channels are consistent with \cite{ATLAS_dilepton_2019} albeit one update in the 2018 electron trigger. More information regarding the triggers and the object definition can be found in Ref. \cite{commonNote}.
+The transverse momentum of the leptons needs to be larger than $65\,\GeV$ and the transverse momentum of the jets should be larger than $20\,\GeV$. In order to exclude the Z-peak, the invariant 
+mass of the two leptons is required to be above $130\,\GeV$.
+Furthermore, jet cleaning is applied. (A small study on the efficiency of this jet cleaning cut is shown in Appendix \ref{jet_cleaning}.) Events are vetoed if a muon is flagged as ``bad'' (meaning that it has a worse momentum resolution compared to unflaggged muons) or if an electron has a cluster energy in the range $1.37< |\eta_{\mathrm{cluster}}|<1.52$. Further cuts on $\textrm{max}(\sigma(E^{\textrm{miss}}_{\textrm{T}}))$ and $\min(\min(m_{\ell b}))$ are specificied in the last two rows pertain to specific regions only, as specificied in Chapter \ref{analysis_strategy}. These cuts are further motivated in Chapter \ref{signal_regions}. The significance of $\met$ is defined by
+\begin{equation}
+	\label{metsig_def}
+	\sigma(E^{\textrm{miss}}_{\textrm{T}})=\frac{E_\text{T}^{\text{miss}}}{\sqrt{\sigma_\text{L}^2 (1-\rho_\text{LT}^2})}\quad ,
+\end{equation}
+where $\sigma_\text{L}^2$ is the total variance parallel to the measured $\met$, and $\rho_\text{LT}$ is the correlation factor between momentum measurements parallel and orthogonal to $\met$. 
+\newline The variable 
+$\min(\min(m_{\ell b}))$ is the minimum invariant mass of any lepton-$b$-jet pair in the event.
+
+\begin{table}[h]
+	\centering
+	\caption{Event selection for the $\ell^{+}\ell^{-} + j_{b}/j_{b}j_{b}$ analysis. The inclusive and exclusive event selections are clearly marked, where the latter is applied in addition to the former. The $E^{\textrm{miss}}_{\textrm{T}}$ cuts specificied in the last two rows pertain to specific regions only, as specificied in Chapter \ref{analysis_strategy}.} % \textcolor{purple} {isolation == 2 ? Maybe say $\#$ Leptons == 2 ?} }
+	\label{tab:preselection}
+	\begin{tabular}{ccc}
+		\hhline{===}
+		
+		Final state & $\mu^{+}\mu^{-}$ & $e^{+}e^{-}$
+		
+		\\ \hline
+		
+		Cut title                           & \multicolumn{2}{c}{Requirement}                               \\ \hline
+		
+		\hspace{0.1cm} & \multicolumn{2}{c}{Inclusive}                                                                                                                                                                   \\ \hline
+%		Trigger   & \begin{tabular}[c]{@{}c@{}} \texttt{2015|HLT\_mu26\_imedium} \\ \texttt{2015|HLT\_mu50} \\ \texttt{2016|HLT\_mu26\_ivarmedium} \\ \texttt{2016|HLT\_mu50} \\ \texttt{2017|HLT\_mu26\_ivarmedium} \\ \texttt{2017|HLT\_mu50} \\ \texttt{2018|HLT\_mu26\_ivarmedium} \\ \texttt{2018|HLT\_mu50} \end{tabular}
+%		&
+%		\begin{tabular}[c]{@{}c@{}} \texttt{2015|HLT\_2e12\_lhloose\_L12EM10VH} \\ \texttt{2016|HLT\_2e17\_lhvloose\_nod0} \\ \texttt{2017|HLT\_2e24\_lhvloose\_nod0} \\ \texttt{2018|HLT\_2e24\_lhvloose\_nod0} \\ \texttt{2018|HLT\_2e17\_lhvloose\_nod0\_L12EM15VHI} 
+			
+%		\end{tabular} \\
+		Jet clean                      & Yes    & Yes                                                                                                                                                            \\
+		$N_{\textrm{Signal leptons}}$               & Exactly two  & Exactly two                                                                                                                                                    \\
+		Bad lepton veto                & Yes      & No                                                                                                                                                      \\
+		$1.37< |\eta|<1.52$ & No & Yes\\
+		$\textrm{min}(p_{\textrm{T}}^{\ell})$ & $65 \; \textrm{GeV}$   & $65 \; \textrm{GeV}$                   \\
+		$\textrm{min}(m_{\ell\ell})$   & $130 \; \textrm{GeV}$     & $130 \; \textrm{GeV}$                   \\ 
+		\hhline{===}
+		\hspace{0.1cm} & \multicolumn{2}{c}{Exclusive ($b$-jet channel)}                                                                                                                                                 \\ \hline		
+		$\textrm{min}(p^{j}_{\textrm{T}})$ & \multicolumn{2}{c}{$20 \; \textrm{GeV}$}                                                                                                                                           \\
+		$\textrm{max}(|\eta|)$ (only for $b$-tagged jets)         & \multicolumn{2}{c}{2.5} \\
+		$b$-jet tagging               & \multicolumn{2}{c}{$N(j_{\texttt{DL1r} > 0.665}) = 0, 1, \geq 2$}                                                                                                                                       \\
+		\hhline{===}
+		\hspace{0.1cm} & \multicolumn{2}{c}{Additional cuts for $b$-jet channel}                                                                                                                                                 \\ \hline		
+		$\textrm{max}(E^{\textrm{miss}}_{\textrm{T}})$ & \multicolumn{2}{c}{$20 \; \textrm{GeV}$}                                                                                                                                           \\
+		$\textrm{max}(\sigma(E^{\textrm{miss}}_{\textrm{T}}))$ & \multicolumn{2}{c}{$5.0 $}                                                                                                                                           \\
+		$\min(\min(m_{\ell b}))$ & \multicolumn{2}{c}{$155\,\mathrm{GeV} $}                                                                                                                                           \\
+		\hhline{===}
+	\end{tabular}
+	
+\end{table}
+
+
+
+
+
+

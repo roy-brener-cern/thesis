@@ -1,0 +1,116 @@
+After unblinding, a pull of $\approx 1.7\sigma$ of the \texttt{MUON\_EFF\_RECO\_SYS} uncertainty was observed. Therefore, the \texttt{MUON\_EFF\_RECO\_SYS} uncertainty was replaced by its breakdown uncertainties. These breakdown uncertainties consist of several components, which are listed in Table \ref{tab:muon_syst_breakdown}. After switching to the breakdown systematics, it could be seen that the \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} component is pulled by $\approx 1.7\sigma$. For a test, the fit was also performed without the pulled \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} uncertainty and it could be observed that other uncertainties are pulled then in order to compensate for the missing uncertainty.
+This can be seen in the nuisance parameter pull plots in Figure \ref{fig:NuisPar_1500_g05_mu_experimental} for the three above-mentioned scenarios.
+
+\begin{table}[h]
+	\centering
+	\caption{List of breakdown uncertainties of the \texttt{MUON\_EFF\_RECO\_SYS} uncertainty for muons. }
+	\label{tab:muon_syst_breakdown}
+	\begin{tabular}{l}
+		\hline \hline
+		 Systematic \\
+		\hline
+
+		
+
+		 MUON\_EFF\_RECO\_BKGFRACTION \\
+		MUON\_EFF\_RECO\_LUMIUNCERT \\
+		MUON\_EFF\_RECO\_MATCHING \\
+		MUON\_EFF\_RECO\_MCXSEC \\
+		MUON\_EFF\_RECO\_PTDEPENDENCY \\
+		MUON\_EFF\_RECO\_QCDTEMPLATE \\
+		MUON\_EFF\_RECO\_SUPRESSIONSCALE \\
+		MUON\_EFF\_RECO\_TRUTH \\
+
+		\hline \hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+	\includegraphics[width=0.3\textwidth]{figures/Muon_pull/Fit_1500_g05/NuisPar_experimental.pdf}
+	\label{fig:NuisPar_1500_g05_mu_experimental_SYS}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.3\textwidth]{figures/Muon_pull/Fit_1500_g05_breakdown/NuisPar_experimental.pdf}
+		\label{fig:NuisPar_1500_g05_mu_experimental_breakdown}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.3\textwidth]{figures/Muon_pull/Fit_1500_g05_breakdown_withoutPTDEPENDENCY/NuisPar_experimental.pdf}
+		\label{fig:NuisPar_1500_g05_mu_experimental_breakdown_withoutPTdependency}
+	}
+	\hfill
+	\caption{\textbf{(S+B fit in CR+SR(unblinded))} Nuisance parameter pull plots for experimental systematic uncertainties for the muon channel for the fit with a $Z'$ signal with $m_{Z'}=1.5\,\mathrm{TeV}$ and a coupling parameter of $g=0.5$. The plot is shown for the usage of the default \texttt{MUON\_EFF\_RECO\_SYS} uncertainty \protect \subref{fig:NuisPar_1500_g05_mu_experimental_SYS}, for the usage of the breakdown of the \texttt{MUON\_EFF\_RECO} uncertainties \protect \subref{fig:NuisPar_1500_g05_mu_experimental_breakdown} and for the case, where the breakdown is used, but without the \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} uncertainty \protect \subref{fig:NuisPar_1500_g05_mu_experimental_breakdown_withoutPTdependency}.}
+	\label{fig:NuisPar_1500_g05_mu_experimental}
+\end{figure}
+
+\FloatBarrier
+
+
+The impact of this pulled uncertainty on the results was tested by removing the \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} uncertainty from the fit. This was done for three different $Z'$ boson masses. The nuisance parameter ranking plots are shown for the different fits with and without the \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} uncertainty in Figure \ref{fig:ranking_muon_pull}, and the resulting limits are shown in Table \ref{tab:limits_muon_pull}. It can be seen that for small $Z'$ boson masses there is no impact on the limit and that the pulled systematic does not appear in the ranking plot. For higher $Z'$ boson masses, however, the \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} uncertainty appears in the ranking plot and when removing it, other uncertainties are pulled to compensate for the missing uncertainty. Also the limit changes within the large uncertainty when removing the uncertainty in the fit with higher $Z'$ boson masses.
+
+Since the \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} uncertainty is puleld to compensate the data/MC disagreement at higher invariant dilepton masses in the $0b$ signal region, it is expected that the impact is small or even negligible at small $Z'$ boson masses and is larger for increasing $Z'$ boson masses. 
+
+
+\begin{table}[h]
+	\centering
+	\caption{Expected and observed limits for the fit with and without the \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} uncertainty for different $Z'$ boson masses. }
+	\label{tab:limits_muon_pull}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+$m_{Z'}$ [GeV]	&  & With \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} & Without \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} \\
+	\hline
+500	& exp. limit & $0.16^{+0.07}_{-0.05}$ & $0.16^{+0.07}_{-0.05}$ \\
+	%\hline
+500	& obs.limit & $0.14$ & $0.13$ \\
+	\hline 
+1500	& exp. limit & $0.11^{+0.09}_{-0.04}$ & $0.10^{+0.08}_{-0.04}$ \\
+	%\hline
+1500	& obs. limit & $0.14$ & $0.12$ \\
+	\hline
+2500	& exp. limit & $1.35^{+0.79}_{-0.48}$ & $1.21^{+0.70}_{-0.42}$ \\
+	%\hline
+2500	& obs. limit & $0.89$ & $0.76$ \\
+	\hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/Muon_pull/Fit_500_g05_breakdown/Ranking_SigXsecOverSM_Breakdown.pdf}
+		\label{fig:ranking_500_with}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/Muon_pull/Fit_500_g05_breakdown_withoutPTDEPENDENCY/Ranking_SigXsecOverSM_Breakdown.pdf}
+		\label{fig:ranking_500_without}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/Muon_pull/Fit_1500_g05_breakdown/Ranking_SigXsecOverSM_Breakdown.pdf}
+		\label{fig:ranking_1500_with}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/Muon_pull/Fit_1500_g05_breakdown_withoutPTDEPENDENCY/Ranking_SigXsecOverSM_Breakdown.pdf}
+		\label{fig:ranking_1500_without}
+	}
+	
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/Muon_pull/Fit_2500_g05_breakdown/Ranking_SigXsecOverSM_Breakdown.pdf}
+		\label{fig:ranking_2500_with}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/Muon_pull/Fit_2500_g05_breakdown_withoutPTDEPENDENCY/Ranking_SigXsecOverSM_Breakdown.pdf}
+		\label{fig:ranking_2500_without}
+	}
+	
+	
+	\caption{Nuisance prameter ranking plots for the fit with and without the \texttt{MUON\_EFF\_RECO\_PTDEPENDENCY} uncertainty for $m_{Z'}=500\,\text{GeV}$ (\protect \subref{fig:ranking_500_with}, \protect \subref{fig:ranking_500_without}), $m_{Z'}=1500\,\text{GeV}$ (\protect \subref{fig:ranking_1500_with}, \protect \subref{fig:ranking_1500_without}) and $m_{Z'}=2500\,\text{GeV}$ (\protect \subref{fig:ranking_2500_with}, \protect \subref{fig:ranking_2500_without}) .}
+	\label{fig:ranking_muon_pull}
+\end{figure}

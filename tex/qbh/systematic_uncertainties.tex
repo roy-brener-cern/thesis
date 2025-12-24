@@ -1,4 +1,4 @@
-There are two types of systematic uncertainties affecting this analysis: experimental, arising from the reconstruction of physics objects, and theoretical, from modelling the background and signal. Both are discussed and evaluated in each of the analysis regions defined in Chapter~\ref{chp:EvSel}. For both channels the signal region is dominated by experimental jet uncertainities and theoretical Sherpa QCD scales.  % requested by sub conveners need to decide best place, and to be updated if changes once all CP fixes implemented 
+There are two types of systematic uncertainties affecting this analysis: experimental, arising from the reconstruction of physics objects, and theoretical, from modelling the background and signal. Both are discussed and evaluated in each of the analysis regions defined in Chapter REFERENCE. For both channels the signal region is dominated by experimental jet uncertainities and theoretical Sherpa QCD scales.  % requested by sub conveners need to decide best place, and to be updated if changes once all CP fixes implemented 
 
 A Systematic Analysis Tool\footnote{\href{https://gitlab.cern.ch/atlas-phys/exot/lpx/ana-exot-2024-32/systematic-analysis}{https://gitlab.cern.ch/atlas-phys/exot/lpx/ana-exot-2024-32/systematic-analysis}} is used to visualise the relevant systematic uncertainties for this analysis. This tool calculates a ratio for each systematic as $\frac{\textrm{Systematic}} {\textrm{Nominal}}$, producing an up and down value per  bin. These are calculated using symmetrisation on the variations provided for each systematic. This is done in one of 3 ways, depending on the type of variation provided for the systematic: 
 \begin{itemize}
@@ -9,19 +9,19 @@ A Systematic Analysis Tool\footnote{\href{https://gitlab.cern.ch/atlas-phys/exot
 Where $y_{\textrm{nom.}}$ is the bin contents for the nominal and $y_{\textrm{var.}}$ the bin contents for the variation. The plots produced using this tool show the ratio per systematic or object overlaid.   
 
 
-\section{Experimental}
+\subsection{Experimental}
 \label{sec:Syst_exp}
 
 Tables~\ref{tab:lep_exp_syst} and~\ref{tab:jet_exp_syst} summarise the experimental systematic uncertainties considered in this analysis. They are separated into two types, scale factor (SF) and calibration (calib). SFs are used when correcting MC to data such as the simulation of the efficiency of object triggers, reconstruction, identification, and isolation. The uncertainty on these SFs contributes to the experimental systematic uncertainty. Calibration systematics are kinematic, based and arise from the uncertainties of the calibration of physics objects: electrons, muons and jets. These systematic uncertainties are provided by the respective ATLAS Combined Performance (CP) groups.  
 
-\input{tables/lep_exp_systs.tex}
-\input{tables/jet_exp_systs.tex}
+\input{tables/qbh/lep_exp_systs.tex}
+\input{tables/qbh/jet_exp_systs.tex}
 
 In addition to these object-based systematics, two further experimental systematic uncertainties are considered: a luminosity uncertainty\footnote{See \href{https://twiki.cern.ch/twiki/bin/view/Atlas/LuminosityForPhysics}{Luminosity for Physics}}, which amounts to a flat 1.9\% applied to all MC processes; and the pile-up reweighting (PRW) uncertainty.
 
-\subsection{Signal Region}
+\subsubsection*{Signal Region}
 
-The signal region used for both channels is defined in Chapter~\ref{chp:EvSel} and uses cuts only on the properties of the jet and respective lepton. Therefore only systematics on these objects are presented, for the total backgrounds. 
+The signal region used for both channels is defined in Chapter REFERENCE and uses cuts only on the properties of the jet and respective lepton. Therefore only systematics on these objects are presented, for the total backgrounds. 
  
 FIG.~\ref{fig:SR_Tot_exp_syst}  shows the experimental systematic uncertainties per physics object for the total background, for both decay channels. For each decay channel FIG.~\ref{fig:SR_Lep_exp_syst} shows the breakdown of the contributions to the uncertainty of the relevant lepton. These breakdowns are available per physics object and allow for analysis of individual systematic contributions. 
 
@@ -33,11 +33,11 @@ This also details a solution used for a large muon uncertainty that is found to 
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/SR_ExpGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/SR_ExpGrouped.pdf}
   }
   %\hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/SR_ExpGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/SR_ExpGrouped.pdf}
   }
   \caption{Grouped experimental systematics for total background in the signal region for the $e+j$ channel (left) and $\mu+j$ channel (right).}
   \label{fig:SR_Tot_exp_syst}
@@ -45,11 +45,11 @@ This also details a solution used for a large muon uncertainty that is found to 
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/SR_El.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/SR_El.pdf}
   }
   % \hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/SR_Mu.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/SR_Mu.pdf}
   }
   \caption{Contributions to electron (left) and muon (right) systematics for the total background in the signal region.}
   \label{fig:SR_Lep_exp_syst}
@@ -57,11 +57,11 @@ This also details a solution used for a large muon uncertainty that is found to 
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/SR_Jet.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/SR_Jet.pdf}
   }
   % \hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/SR_Jet.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/SR_Jet.pdf}
   }
   \caption{Contributions to jet systematic for the electron (left) and muon (right) channel for the total background in the signal region.}
   \label{fig:SR_Jet_exp_syst}
@@ -69,7 +69,7 @@ This also details a solution used for a large muon uncertainty that is found to 
 
 \subsection{$W$+Jets Control and Validation Regions}
 
-The cuts used for the $W$+jets CR and VR, defined in Chapter~\ref{chp:EvSel} , are on the properties of the jet, respective lepton and the MET significance. The systematics on these objects are considered, for the total background. 
+The cuts used for the $W$+jets CR and VR, defined in Chapter REFERENCE , are on the properties of the jet, respective lepton and the MET significance. The systematics on these objects are considered, for the total background. 
 
 FIG.~\ref{fig:WCRVR_Tot_exp_syst}  shows the experimental systematic uncertainties per physics object for the background, for both decay channels. 
 For each decay channel FIG.~\ref{fig:WCRVR_Lep_exp_syst} shows the breakdown of the contributions to the uncertainty of the relevant lepton. 
@@ -78,11 +78,11 @@ Both channels again show a majority from jet objects, increasing with $m_{lj}$, 
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/WCRVR_ExpGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/WCRVR_ExpGrouped.pdf}
   }
   %\hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/WCRVR_ExpGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/WCRVR_ExpGrouped.pdf}
   }
   \caption{Grouped experimental systematics for total background in the $W$+jets control and validation regions for the $e+j$ channel (left) and $\mu+j$ channel (right). }
   \label{fig:WCRVR_Tot_exp_syst}
@@ -90,11 +90,11 @@ Both channels again show a majority from jet objects, increasing with $m_{lj}$, 
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/WCRVR_El.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/WCRVR_El.pdf}
   }
   % \hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/WCRVR_Mu.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/WCRVR_Mu.pdf}
   }
   \caption{Contributions to electron (left) and muon (right) scale factor systematics for the total background in the $W$+jets control and validation regions.}
   \label{fig:WCRVR_Lep_exp_syst}
@@ -102,17 +102,17 @@ Both channels again show a majority from jet objects, increasing with $m_{lj}$, 
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/WCRVR_Jet.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/WCRVR_Jet.pdf}
   }
   % \hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/WCRVR_Jet.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/WCRVR_Jet.pdf}
   }
   \caption{Contributions to jet systematic for the electron (left) and muon (right) channel for the total background in the $W$+jets control and validation regions.}
   \label{fig:WCRVR_Jet_exp_syst}
 \end{figure}
 
-\subsection{$Z$+Jets Control and Validation Regions}
+\subsubsection*{$Z$+Jets Control and Validation Regions}
 
 Similarly to the signal region, the $Z$+Jets CR and VR only cut on properties of the jet and respective lepton, so only these systematics are presented. 
 
@@ -124,11 +124,11 @@ though the impacts are not as large as for other regions.
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/ZCRVR_ExpGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/ZCRVR_ExpGrouped.pdf}
   }
   %\hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/ZCRVR_ExpGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/ZCRVR_ExpGrouped.pdf}
   }
   \caption{Grouped experimental systematics for total background in the $Z$+jets control and validation regions for the $e+j$ channel (left) and $\mu+j$ channel (right). }
   \label{fig:ZCRVR_Tot_exp_syst}
@@ -136,11 +136,11 @@ though the impacts are not as large as for other regions.
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/ZCRVR_El.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/ZCRVR_El.pdf}
   }
   % \hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/ZCRVR_Mu.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/ZCRVR_Mu.pdf}
   }
   \caption{Contributions to electron (left) and muon (right) scale factor systematics for the total background in the $Z$+jets control and validation regions.}
   \label{fig:ZCRVR_Lep_exp_syst}
@@ -148,11 +148,11 @@ though the impacts are not as large as for other regions.
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/ZCRVR_Jet.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/ZCRVR_Jet.pdf}
   }
   % \hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/ZCRVR_Jet.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/ZCRVR_Jet.pdf}
   }
   \caption{Contributions to jet systematic for the electron (left) and muon (right) channel for the total background in the $Z$+jets control and validation regions.}
   \label{fig:ZCRVR_Jet_exp_syst}
@@ -160,7 +160,7 @@ though the impacts are not as large as for other regions.
 
 \clearpage
 
-\section{Theoretical}
+\subsection{Theoretical}
 \label{sec:Syst_th}
 
 Theoretical systematic uncertainties arise from the modelling of background samples. These are estimated for the leading $V$+jets\footnote{\href{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PmgSystematicUncertaintyRecipes}{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PmgSystematicUncertaintyRecipes}}  and sub-leading top\footnote{\href{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PmgTopProcesses}{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PmgTopProcesses}} (ttbar and single top) backgrounds. 
@@ -230,17 +230,17 @@ $\alpha_S$ is the strong coupling constant. The uncertainty of the strong coupli
 where ISR and FRS are initial/final state radiation respectivly.  
 
 
-\subsection{Signal Region}
+\subsubsection*{Signal Region}
 
-The signal region used for both channels is defined in Chapter~\ref{chp:EvSel}. FIG.~\ref{fig:SR_TH_syst} shows the contributions to the theoretical systematic uncertainties of the total background  in the signal region. For both channels the leading contribution is from Sherpa QCD scales, and sub leading from other sherpa uncertainties, $\alpha_s$ and PDF. 
+The signal region used for both channels is defined in Chapter REFERENCE. FIG.~\ref{fig:SR_TH_syst} shows the contributions to the theoretical systematic uncertainties of the total background  in the signal region. For both channels the leading contribution is from Sherpa QCD scales, and sub leading from other sherpa uncertainties, $\alpha_s$ and PDF. 
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/SR_ThGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/SR_ThGrouped.pdf}
   }
   %\hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/SR_ThGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/SR_ThGrouped.pdf}
   }
   \caption{Grouped Theoretical systematics for total background in the signal region for the $e+j$ channel (left) and $\mu+j$ channel (right).}
   \label{fig:SR_TH_syst}
@@ -252,11 +252,11 @@ FIG.~\ref{fig:WCRVR_TH_syst} shows the contributions to the theoretical systemat
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/WCRVR_ThGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/WCRVR_ThGrouped.pdf}
   }
   %\hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/WCRVR_ThGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/WCRVR_ThGrouped.pdf}
   }
   \caption{Grouped Theoretical systematics for total background in the $W$+jets control and validation regions for the $e+j$ channel (left) and $\mu+j$ channel (right).}
   \label{fig:WCRVR_TH_syst}
@@ -269,11 +269,11 @@ FIG.~\ref{fig:ZCRVR_TH_syst} shows the contributions to the theoretical systemat
 
 \begin{figure}[h]
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/ej/ZCRVR_ThGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/ej/ZCRVR_ThGrouped.pdf}
   }
   %\hfill
   \subfloat{
-    \includegraphics[width=0.5\textwidth]{figures/SystTool/muj/ZCRVR_ThGrouped.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/qbh/SystTool/muj/ZCRVR_ThGrouped.pdf}
   }
   \caption{Grouped Theoretical systematics for total background in the $Z$+jets CR and VR for the $e+j$ channel (a) and $\mu+j$ channel (b). }
   \label{fig:ZCRVR_TH_syst}
@@ -289,39 +289,37 @@ The pulls of the nuisance parameters associated with the systematic uncertaintie
 
 \begin{figure}
     \subfloat{
-      \includegraphics[width=0.34\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/Pulls/All/NuisPar.pdf}
+      \includegraphics[width=0.34\textwidth]{figures/qbh/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/Pulls/All/NuisPar.pdf}
     }
     \hspace{2.5cm}
     \subfloat{
-      \includegraphics[width=0.33\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/Pulls/All/NuisPar.pdf}
+      \includegraphics[width=0.33\textwidth]{figures/qbh/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/Pulls/All/NuisPar.pdf}
     }
 \caption{Nuisance parameters pulls for the $e+j$ channel (left) and $\mu+j$ channel (right).}
 \label{fig:Pulls_Constraints}
 \end{figure}
 
 
-\section{Correlations}
+\subsection{Correlations}
 The correlation matrix of the nuisance parameters and the parameter of interest is shown in FIG.~\ref{fig:Correlations}. It illustrates the degree to which different uncertainties are correlated in the fit, highlighting potential degeneracies or shared sensitivities among systematic sources.
 
 
 \begin{figure}
     \subfloat{
-      \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/CorrMatrix.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/CorrMatrix.pdf}
     }
     %\hfill
     \subfloat{
-      \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/CorrMatrix.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/CorrMatrix.pdf}
     }
 \caption{Correlations between the nuisance parameters for the $e+j$ channel (left) and $\mu+j$ channel (right). The correlation threshold is set at 0.1 for illustrative purposes.}
 \label{fig:Correlations}
 \end{figure}
 
 
+\subsection{Nuisance parameter impacts}
 
-
-\section{Nuisance parameter impacts}
-
-The impact of nuisance parameters associated with the systematic uncertainties described hitherto is evaluated and ranked. A post-fit error of $\pm 1$ standard deviation is placed on each nuisance parameter, $\theta_{i}\in \boldsymbol{\theta}$. The likelihood function described in Chapter~\ref{chp:fit}, $\mathcal{L}(\mu, \boldsymbol{\theta})$ ($\mu$ is the signal strength in this very specific context, not to be confused with $\mu$ for nuisance parameter impact) is profiled with this fixed nuisance parameter to assess its impact on the Parameter of Interest (PoI), which is the signal strength, $\mu$, in this analysis. Taking all nuisance parameters to have a Gaussian PDF, the values of $\Delta\mu/\mu$ thus obtained constitute the correlation coefficients between the PoI and the nuisance parameter.
+The impact of nuisance parameters associated with the systematic uncertainties described hitherto is evaluated and ranked. A post-fit error of $\pm 1$ standard deviation is placed on each nuisance parameter, $\theta_{i}\in \boldsymbol{\theta}$. The likelihood function described in Chapter REFERENCE, $\mathcal{L}(\mu, \boldsymbol{\theta})$ ($\mu$ is the signal strength in this very specific context, not to be confused with $\mu$ for nuisance parameter impact) is profiled with this fixed nuisance parameter to assess its impact on the Parameter of Interest (PoI), which is the signal strength, $\mu$, in this analysis. Taking all nuisance parameters to have a Gaussian PDF, the values of $\Delta\mu/\mu$ thus obtained constitute the correlation coefficients between the PoI and the nuisance parameter.
 
 In other words, the impact $\Delta \mu_{i}$ of a nuisance parameter $\theta_{i}$ on the PoI is given by the shift in PoI between the nominal fit and a subsequent fit where $\theta_{i}$ is fixed to $\hat{\theta}_{i}\pm x$, where $\hat{\theta}_{i}$ is the maximum-likelihood estimator of $\theta_{i}$ \textrm{i.e.} its post-fit value. Now, $x=\Delta \theta_{i}=1$ induces the pre-fit impact, $\Delta \mu$, encoding an uncertainty on $\theta_{i}$ which shifts the likelihood by $\pm 1$ standard deviation. $\theta_{0}$ is the pre-fit value of $\theta_{i}$. Similarly, $x=\Delta \hat{\theta}_{i}\leq 1$ gives the post-fit impact, where $\Delta \hat{\theta}_{i}$ is the uncertainty on $\hat{\theta}_{i}$. Since $\theta_{i}$ can be constrained, the $\Delta \hat{\theta}_{i}$ may be smaller than $\Delta \theta_{i}$.
 
@@ -329,11 +327,11 @@ In other words, the impact $\Delta \mu_{i}$ of a nuisance parameter $\theta_{i}$
 
 \begin{figure}
     \subfloat{
-      \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/RankingSysts_SigXsecOverSM_systs.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/TRExFitter_Outputs/QBH_el_RSn1_Mth6.0/RankingSysts_SigXsecOverSM_systs.pdf}
     }
     %\hfill
     \subfloat{
-      \includegraphics[width=0.5\textwidth]{figures/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/RankingSysts_SigXsecOverSM_systs.pdf}
+      \includegraphics[width=0.5\textwidth]{figures/qbh/TRExFitter_Outputs/QBH_mu_RSn1_Mth6.0/RankingSysts_SigXsecOverSM_systs.pdf}
     }
 \caption{Nuisance parameters impact on the Parameter of Interest post-fit value for the $e+j$ channel (left) and $\mu+j$ channel (right).}
 \label{fig:Rankings}
@@ -344,4 +342,3 @@ A small positive post-fit pull of $\mu_W$ and $\mu_Z$ is not unexpected.
 In this fit configuration, the background predictions in the CRs and SR tend to slightly undershoot the observed data in regions dominated by $W{+}$jets and $Z{+}$jets.
 Since $\mu_W$ and $\mu_Z$ act as global normalisation factors for these processes, the fit compensates by increasing them mildly to better reproduce the event yields.
 Because the two processes share systematic uncertainties and populate partially overlapping kinematic regions, a coherent upward pull in both parameters is a natural outcome of the fit as it absorbs small data--MC differences. This is observed in FIG.~\ref{fig:Rankings}, especially for $\mu_Z$.
-

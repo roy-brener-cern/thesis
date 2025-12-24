@@ -1,0 +1,53 @@
+A summary of key strategy points of the analysis is given below.
+
+
+%\begin{figure}
+%	\centering
+%	% include first image
+%	\includegraphics[scale=0.45]{figures/Introduction/Analysis_Strategy_Diagram.drawio.png}  
+%	\caption{Overview of the full Run-2 dilepton-in-association-with-$b$-jets search analysis model.}
+%	\label{fig:analysis_strategy}
+%\end{figure}
+
+
+\begin{itemize}
+	\item \textbf{Physics target}: search for resonant signatures in final states including two same-flavour leptons and $b$-jets, namely ($ee$ or $\mu\mu$) with 0, 1 or at least 2 $b$-jets.
+	\item \textbf{Observable}: the dilepton invariant mass ($m_{\ell\ell}$) spectrum. The statistical analysis is conducted in bins of $m_{\ell\ell}$.
+	\item \textbf{Strategy}: the signal and background are estimated from MC simulations using a set of event generators. The search is performed in a $\Zp$ pole mass range of 0.5 TeV to 4 TeV for resonances of narrow width (about 2\%) and wide width (about 8\%). The width is controlled by the coupling constant of $\Zp$ to fermions, $g_{\Zp}=0.5,1.0$.
+\end{itemize}
+
+
+
+The fake background consists of events where at least one of the selected final-state leptons is due to a misidentified jet and its contribution is estimated by the Matrix Method using data. Dominant processes included in the fake background are $W$+jets and multijet, yielding one fake lepton or two fake leptons, respectively. Further information on the background MC samples and the Matrix Method can be found in Ref. \cite{commonNote}.
+
+
+Signals are modelled via MC simulation which interfaces the hard-scatter process with shower, hadronisation and detector response. For both dimuon and dielectron signals, two $\Zp$ coupling constants are used which induce resonance distributions of different widths. The hard process includes three subprocesses, corresponding to the number of QCD matrix elements in the amplitude: zero, one and two.
+
+
+Control regions with high leading background purities are devised. These primarily test the $t\bar{t}$ and DY estimations against data and are used to fit the backgrounds in the invariant mass spectrum and determine their normalisation towards an unblinded view of data in the signal regions (SR). Validation regions are used to test the normalisations obtained in the control regions pre-unblinding in a $m_{\ell\ell}$ range near the begining of the signal region, up to $500 \; \textrm{GeV}$. Three signal regions are defined, based on $b$-jet multiplicity in the final state: zero, one and at least two. This drives the signal and background efficiencies, as well as the background composition. The fit in the dilepton invariant mass distribution is finally used to set a limit on the $\Zp$ production cross-section against $m_{\Zp}$. The analysis regions are detailed in Table \ref{tab:analysis_regions} and illustrated schematically in Fig. \ref{fig:analysis_regions}.
+
+
+
+
+
+\begin{table}[h]
+\centering
+\input{figures/Introduction/analysis_regions_table.tex}
+\caption{Analysis regions. Key are the dilepton and $b$-jet multiplicity requirements, in conjunction with the dilepton invariant mass range.}
+\label{tab:analysis_regions}
+\end{table}
+
+
+\begin{figure}[h]
+\centering
+\input{figures/Introduction/analysis_regions_updated.tex}
+\caption{Analysis regions, illustrated through the number of $b$-jets and dilepton invariant mass range, indicated in the y- and x-axis, respectively. CR and VR are control and validation regions, respectively; LF and HF refer to light flavour and heavy flavour, respectively, in the context of $b$-jet selection for the Drell-Yan background estimation. The validation regions exist only pre-unblinding.}
+\label{fig:analysis_regions}
+\end{figure}
+
+
+The effect of experimental and theoretical systematic uncertainties on the overall error on the cross section in the $m_{\ell\ell}$ spectrum is calculated. For presentational purposes of these effects, individual theoretical uncertainties are bundled per category based on reccomendations by the Physics Modelling Group. For the fit and limit-setting though, each systematic uncertainty is individually taken as a separate nuisance parameter where pruning is applied. Finally, the sensitivity to the $\Zp$ is estimated by setting limits on its inclusive production cross-section as a function of $m_{\ell\ell}$. Limits are also set on the fiducial cross section as well as expressed in terms of the signal strength, $\mu$, for generality and a better description of the sensitivity in each SR.
+
+
+
+

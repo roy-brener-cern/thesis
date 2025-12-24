@@ -1,0 +1,324 @@
+The treatment of systematic uncertainties is discussed in the common supporting note \cite{commonNote} in the context of an inclusive dilepton final state. Therein, DY background dominantes whereas processes involving top quark decays are subdominant. In this analysis, requirement on the presence of $b$-jets in the final state is imposed and leads to a different background composition where systematic uncertainties attributed to the top background are accentuated. In the following, systematic uncertainties are divided into experimental and theoretical: uncertainties related to detector performance are referred to as experimental uncertainties and uncertainties related to the modelling of the physics processes are referred to as theoretical uncertainties.
+
+\section{Experimental systematic uncertainties}
+
+Experimental systematic uncertainties arise from the reconstruction of physics objects from measurements by ATLAS detector. Main sources of such uncertainties are the finite precision in the calibration and efficiency measurements. For each physics object, namely leptons, jets and $E^{\textrm{miss}}_{\textrm{T}}$, they may be subcategorised into two groups, calibration uncertainties and scale factor (efficiency) uncertainties. Such scale factors are used to correct for potential differences between data and MC. Several different scale factors are provided by the CP groups, e.g. for reconstruction, identification, isolation and triggers. Uncertainties on these scale factors are derived by varying various parameters in the calculation of the scale factors. Separate Calibration systematics refer to uncertainties on energy, momentum and spatial measurements of different ATLAS subdetectors. As such, they are calculated per kinematic variable, per object. Scale factor uncertainties are calculated per object, per event and applied as a variation on the event weight.
+
+\subsection{Luminosity}
+
+The total integrated luminosity collected by ATLAS is recorded using several detectors and algorithms. %An uncertainty on the luminosity is derived by a comparison of the various measurements. This uncertainty is then applied as an error on the MC normalisation. 
+The uncertainty in the 2015--2018 total integrated luminosity is 0.83\% \cite{DAPR-2021-01}, obtained using the LUCID-2 detector \cite{LUCID2} for the primary luminosity measurements, complemented by measurements using the inner detector and calorimeters.
+
+\subsection{Pile-up reweighting}
+
+Another source of systematic uncertainty is induced by the pile-up reweighting procedure. Systematic variations of the pile-up weight are available from the pile-up reweighting tool \cite{PileupReweighting}. They are derived by varying the data scale factor from its nominal value $1.0/1.03$ to $1.0/0.99$ and $1.0/1.07$ for the up- and down-variations, respectively.
+%The systematic variations are derived by varying the data scale factor.
+
+\subsection{Lepton uncertainties}
+
+A list of experimental uncertainties for the leptons, electrons and muons, is given in Table \ref{tab:lepton_systematics}.
+Uncertainties in lepton calibration arise from reconstruction, identification, isolation and trigger efficiencies. Respectively, they are referred to as ``RECO'', ``ID'', ``ISO'' and ``Trigger'' uncertainties. For these uncertainties, the so-called SIMPLIFIED model is used (as explained/recommended in this  \href{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ElectronEfficiencyCorrelationModel}{twiki} ) Further contributions are caused by energy scale and resolution measurements. For muons \cite{Muon_recommendations}, the efficiency uncertainties are split into two components, statistical and systematic, referred to as ``STAT'' and ``SYS'', respectively. Additional uncertainties on muons are induced by the bad muon quality criterion, track-to-vertex association (TTVA) and charge-dependent sagitta resolution bias.
+
+
+
+\begin{table}[h]
+	\centering
+	\caption{List of experimental systematic uncertainties for leptons. For electrons, calibration uncertainties begin with ``EG\_'' and SF (efficiency) uncertainties with ``EL\_EFF\_''; for muons, calibration uncertainties begin with ``MUON\_'' and efficiency uncertainties with ``MUON\_EFF\_''.}
+	\label{tab:lepton_systematics}
+\begin{tabular}{ll}
+	\hline \hline
+	Category & Systematic \\
+	\hline
+Electrons	&  EG\_RESOLUTION\_ALL\\ 
+	
+	&  EG\_SCALE\_ALL\\
+	
+%	&  EL\_EFF\_ChargeIDSel\_TOTAL\_1NPCOR\_PLUS\_UNCOR\\
+	
+%	&  EL\_EFF\_ID\_TOTAL\_1NPCOR\_PLUS\_UNCOR\\
+%		&  EL\_EFF\_Iso\_TOTAL\_1NPCOR\_PLUS\_UNCOR\\
+%		& EL\_EFF\_Reco\_TOTAL\_1NPCOR\_PLUS\_UNCOR \\
+%		& EL\_EFF\_TriggerEff\_TOTAL\_1NPCOR\_PLUS\_UNCOR \\
+%& EL\_EFF\_Trigger\_TOTAL\_1NPCOR\_PLUS\_UNCOR \\	\hline
+
+& EL\_EFF\_ChargeIDSel\_CorrUncertaintyNP0-9\\
+& EL\_EFF\_ChargeIDSel\_SIMPLIFIED\_UncorrUncertaintyNP0-17\\
+
+& EL\_EFF\_ID\_CorrUncertaintyNP0-15\\
+& EL\_EFF\_ID\_SIMPLIFIED\_UncorrUncertaintyNP0-17\\
+
+& EL\_EFF\_Iso\_CorrUncertaintyNP0-9\\
+& EL\_EFF\_Iso\_SIMPLIFIED\_UncorrUncertaintyNP0-17\\
+
+& EL\_EFF\_Reco\_CorrUncertaintyNP0-7\\
+& EL\_EFF\_Reco\_SIMPLIFIED\_UncorrUncertaintyNP0-17\\
+
+ & EL\_EFF\_TriggerEff\_CorrUncertaintyNP0-9 \\
+ & EL\_EFF\_TriggerEff\_SIMPLIFIED\_UncorrUncertaintyNP0-17\\
+ & EL\_EFF\_Trigger\_CorrUncertaintyNP0-9\\
+ & EL\_EFF\_Trigger\_SIMPLIFIED\_UncorrUncertaintyNP0-17\\
+
+\hline
+	
+Muons	&  MUON\_ID\\
+	
+	& MUON\_MS \\
+	
+	& MUON\_SAGITTA\_DATASTAT \\
+	
+	& MUON\_SAGITTA\_RESBIAS \\
+	
+	& MUON\_SCALE  \\
+	& MUON\_EFF\_TrigSystUncertainty \\
+	& MUON\_EFF\_TrigStatUncertainty \\
+	& MUON\_EFF\_TTVA\_SYS \\
+	& MUON\_EFF\_TTVA\_STAT \\
+	& MUON\_EFF\_RECO\_SYS \\
+	& MUON\_EFF\_RECO\_STAT \\
+	& MUON\_EFF\_ISO\_SYS \\
+	& MUON\_EFF\_ISO\_STAT \\
+	& MUON\_EFF\_BADMUON\_SYS \\
+	\hline \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Jet uncertainties}
+
+%\subsubsection*{Small-R jet calibration}
+Uncertainties on jet energy scale (JES) and jet energy resolution (JER) \cite{Jet_recommendations} stem from the calibration of small-$R$ jets. We use the JESGlobalReduction/SimpleJER systematic scenario. The JES uncertainty is split into several components for the jet flavour composition, single-flavour response, pile-up modelling and jets not fully contained in the calorimeter. %The JER uncertainties are then obtained by propagating the JES uncertainties.
+In the JER uncertainties, the non-closure in the dijet balance and alternative MC generators are taken into account. Further, JER uncertainty is decomposed into seven uncorrelated jet $p_{\textrm{T}}$- and $\eta$-dependent components. 
+Systematic uncertainties pertaining to efficiency measurements of jets (SF uncertainties) relate to jet vertex tagging (JVT) and forward jet vertex tagging (fJVT) requirements. A list of jet uncertainties is provided in Table \ref{tab:jet_systematics}.
+
+
+
+\begin{table}[h]
+	\centering
+	\caption{List of experimental systematic uncertainties for jets.}
+	\label{tab:jet_systematics}
+	\begin{tabular}{ll}
+		\hline \hline
+		Category & Systematic \\
+		\hline
+	Jet energy scale		& JET\_BJES\_Response \\ 
+		
+		& JET\_EffectiveNP (split into 8 components) \\
+		
+		& JET\_EtaIntercalibration\_Modelling \\
+		
+		& JET\_EtaIntercalibration\_NonClosure\_2018data \\
+		&  JET\_EtaIntercalibration\_NonClosure\_highE\\
+		& JET\_EtaIntercalibration\_NonClosure\_negEta \\
+		& JET\_EtaIntercalibration\_NonClosure\_posEta \\
+		& JET\_EtaIntercalibration\_TotalStat \\
+		& JET\_Flavor\_Composition \\
+		& JET\_Flavor\_Response \\
+		&  JET\_Pileup\_OffsetMu\\
+		&  JET\_Pileup\_OffsetNPV\\
+		&  JET\_Pileup\_PtTerm\\
+		&  JET\_Pileup\_RhoTopology\\
+		& JET\_PunchThrough\_MC16 \\
+		&  JET\_SingleParticle\_HighPt\\
+			\hline
+		
+		
+Jet energy resolution			& JET\_JER\_DataVsMC\_MC16 \\
+		
+		& JET\_JER\_EffectiveNP (split into 7 components)\\ \hline
+		
+	
+		
+Jet vertex tagging		&  JET\_JvtEfficiency\\
+		
+		&   JET\_fJvtEfficiency\\
+	
+		\hline \hline
+	\end{tabular}
+\end{table}
+
+
+\subsection{Flavour tagging uncertainties}
+
+Further systematic uncertainties arise from the determination of flavour tagging efficiencies of jets. These efficiencies are corrected from fit to data, and uncertainties on them are provided. These variations of the flavour tagging scale factors consist mainly of eigenvalue variations, which are further divided into the different jet flavours. The uncertainties themselves are parameterised as variations on a set of eigenvectors (EVs), which are a result of a SF-reduction method called EV decomposition \cite{ATLAS:2022xlg}. There are nine such uncertainties for $b$-tagging, and four for $c$- and light-flavour-tagging each. Another two sources of uncertainties are referred to collectively as extrapolation uncertainties, which are related to the extrapolation of the tagging efficiencies from the $p_{\textrm{T}}$ range in which they are measured to the range of interest \cite{ATLAS:2021xox}. The variations of the $b$-tagging scale factors applied in this analysis are given in Table \ref{tab:tagging_systematics}.
+
+
+\begin{table}[h]
+	\centering
+	\caption{List of experimental systematic uncertainties for flavour tagging. Uncertainties relating to EV decomposition are summarised qualitatively based on the number (nine or four) per flavour tagging.}
+	\label{tab:tagging_systematics}
+	\begin{tabular}{l}
+		\hline \hline
+		 Systematic \\
+		\hline
+		  FT\_EFF\_Eigen\_B\_0--8 \\
+				  FT\_EFF\_Eigen\_C\_0--3 \\
+				  FT\_EFF\_Eigen\_Light\_0--3 \\
+				 FT\_EFF\_extrapolation \\
+				 FT\_EFF\_extrapolation\_from\_charm \\						
+		\hline \hline
+	\end{tabular}
+\end{table}
+
+
+\subsection{$\met$ soft term uncertainties}
+
+The systematic uncertainties on the missing transverse momentum eminate from several sources relating to the track soft term (TRT) and are derived by their simulation-to-data matching. Considering the transverse momentum of the hard and soft terms, $p^{\textrm{hard}}_{\textrm{T}}$ and $p^{\textrm{soft}}_{\textrm{T}}$ respectively, an event with zero $\met$ would have the two perfectly balanced. Therefore, different projections of $p^{\textrm{soft}}_{\textrm{T}}$ along $p^{\textrm{hard}}_{\textrm{T}}$ are used to study the systematic uncertainties in the soft term simulation. For the parallel projection, $p^{\textrm{soft}}_{\parallel}$, the mean and width (RMS) of the distribution are coined scale and resolution respectively. In the perpendicular projection, $p^{\textrm{soft}}_{\perp}$, the width (RMS) of the distribution is coined the resolution. A full description of the method can be found in \cite{ATLAS:2018ghb}. Table \ref{tab:met_systematics} contains a list of $\met$ uncertainties.
+
+
+\begin{table}[h]
+	\centering
+	\caption{List of experimental systematic uncertainties for the missing transverse momentum $\met$.}
+	\label{tab:met_systematics}
+	\begin{tabular}{l}
+		\hline \hline
+		 Systematic \\
+		\hline
+		 MET\_SoftTrk\_Scale  \\
+	  MET\_SoftTrk\_ResoPara \\
+		 MET\_SoftTrk\_ResoPerp  \\		
+		\hline \hline
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{Uncertainties on fake estimate}
+\label{fake_systs}
+
+We consider several sources of systematic uncertainties on the fake background which are briefly described in the following:
+
+\begin{itemize}
+	\item Statistical uncertainty of the real and fake efficiency
+	\item Variation of the cross-section by $\pm 10\%$ in the prompt lepton subtraction  in the fake muon efficiency estimation
+	\item Variation of the cross-section by $\pm 10\%$ in the prompt lepton subtraction  in the heavy flavour fake electron efficiency estimation
+	\item Variation of the cross-section by $\pm 30\%$ in the prompt lepton subtraction  in the light flavour fake electron efficiency estimation
+	\item Variation of the fraction of light and heavy flavour fakes by $\pm 20\%$
+	\item The light flavour fake electron efficiency was estimated in a fake enriched region defined by three different cuts:
+	\begin{enumerate}
+		\item \textbf{noW: }Events with $E_T^{miss}>25\,\mathrm{GeV}$ are excluded to reduce the contribution from W decays
+		\item \textbf{no DY: }Real electrons from DY processes are suppressed by rejecting events with at least 2 objects passing the \texttt{LHMedium} ID criterion
+		\item \textbf{no Zmass:} Electrons from Z decays are eliminated by excluding events with a reconstructed mass close to the Z-peak
+	\end{enumerate}
+	We consider an uncertainty that accounts for the effect of the different cuts. For this purpose, the efficiencies are recalculated in the case where each of these cuts is not applied. By doing so, we get three systematic variations and we consider them by taking the envelope of those.
+\end{itemize}
+
+
+
+
+
+
+
+
+\section{Theoretical systematic uncertainties}
+
+
+To estimate their theoretical systematic uncertainties, the four sets of processes contributing to the background, $\ttbar$, single-$t$, DY and $VV$, can be divided into two groups according to their generators. Top processes are modelled using Powheg+Pythia8, whereas DY and $VV$ are modelled using Sherpa. Processes in each group mostly share theoretical uncertainties that are hence evaluated in a similar fashion. For the two least dominant backgrounds, single-$t$ and $VV$, the theoretical uncertainties could be estimated via assigning a flat error value based on Physics Modelling Group (PMG) recommendations. For single-$t$, a flat uncertainty of 4\% is chosen based on the single-top channel cross sections \cite{singletop_xsec}. For $VV$, a conservative value of 10\% is applied as a flat uncertainty. 
+
+
+Based on PMG recommendations, each set of theoretical variations is treated differently such its individual uncertainties are combined into a single NP. This is used for the uncertainty plots on the invariant dilepton mass in the next section, that are used to illustrate the effect of different kinds of variations on the overall theoretical uncertainty on the inv dilepton mass. However for the profile likelihood fit, each single variation is treated as an individual nuisance parameter (NP) which is eventually used to estimate the total error on the background for the fit. A summary of theoretical uncertainties and their treatment is given in Table \ref{tab:theory_systematics}. The following text describes in detail the different theoretical uncertainties considered for the $t\bar{t}$ and DY backgrounds.
+
+\subsection{$\ttbar$}
+
+For presentational usage in the next section, theoretical uncertainties on the $\ttbar$ background are evaluated following PMG/top recipes \cite{top_processes_twiki}. Most theoretical uncertainties are estimated by internal reweighting of the nominal samples, whereas several others are evaluated from alternative samples that account for so-called 2-point uncertainties, compared against an alternative nominal sample (dilepton $\ttbar$) and the relative errors are thereafter propagated onwards in the fit. Despite the different bundling procedures as per PMG recommendation, for the fit each variation is treated as an individual NP. The following list summarises the theoretical uncertainties considered for the $\ttbar$ background:
+
+\subsubsection*{Internal reweighting uncertainties}
+
+\begin{itemize}
+
+
+\item \textbf{Parton density function: } uncertainties due to the choice of the PDF are evaluated by applying the weights associated with each of the 30 functions consisting in the PDF4LHC15\_nlo set (PDFs 90901--90930). Since the PDF4LHC15\_nlo set constitutues a statistical combination of three independent PDF sets (CT14, MMHT2014, NNPDF3.0) \cite{PDF4LHC}, the errors are evaluated relative to the nominal PDF4LHC15\_nlo sample (PDF 90900), each of which as an independent NP. The relative errors are then propagated onwards to the fit using the nominal sample produced with NNPDF3.0\_nlo.
+
+\item \textbf{QCD scales:} %uncertainties related to the choice of QCD renormalisation and factorisation scales in the ME calculation are estimated by independently taking each scale half and doubled: $\{ \mu_{\textrm{R}}, \mu_{\textrm{F}}\} \times \{1.0,0.5\} \times \{0.5,1.0\} \times \{2.0,1.0\} \times \{1.0,2.0\}$. The final uncertainty is taken from the envelope of these four variations.
+Uncertainties related to the choice of QCD renormalisation and factorisation scales in the ME calculation are estimated by two NPs. There is each one NP for the $\mu_R$ scale uncertainty and the $\mu_F$ scale uncertainty. Each NP consists of two variations: one scale is kept at the nominal value of one, while the other scale is doubled and halfed.
+\\For representational plots of the systematic uncertainties, these QCD scale uncertainties are estimated by independently taking each scale half and doubled: $\{ \mu_{\textrm{R}}, \mu_{\textrm{F}}\} \times \{1.0,0.5\} \times \{0.5,1.0\} \times \{2.0,1.0\} \times \{1.0,2.0\}$. The final uncertainty is taken from the envelope of these four variations.
+%\textcolor{red}{It needs to be noted that this uncertainty is not yet included in the uncertainty band of the fit-based plots in following chapters.}
+
+
+\item \textbf{QCD FSR scales:} uncertainties attributed to the choice of FSR renormalisation scale, taking $\mu_{\textrm{R, FSR}}=0.5,2.0$ whilst keeping the ISR QCD scales constant (unity).
+
+
+\item \textbf{Strong coupling constant:} a variation whereby $\alpha_{\textrm{S}}\pm 0.001$ around nominal, $\alpha_{\textrm{S}} = 0.118$. The average of the two is used as a single NP.
+
+\item \textbf{ISR strong coupling constant:} a variation on  $\alpha_{\textrm{S}}$ in the ISR. %Each variation is taken as a separate NP.
+In the fit, these two variations are considered as one NP (the average of the two variations is used).
+
+\end{itemize}
+
+\subsubsection*{2-point uncertainties}
+
+\begin{itemize}
+
+\item \textbf{Hard scatter matrix element:} a source of uncertainty which stems from matching between the hard-scattering generator where the matrix elements, $\mathcal{M}$, is computed and the parton shower (fragmentation and hadronisation). This uncertainty is determined by comparing the nominal MC sample where the \texttt{Pythia8} parameter \texttt{pThard} is set to its default value, 0, to an alternative sample where it is set to 1. This parameter defines the vetoed region of the showering, which is important to avoid holes/overlap in the phase space filled by \texttt{Powheg} and \texttt{Pythia8}. 
+
+\item \textbf{Parton shower:} the uncertainty in the modelling of the parton shower (PS) is estimated by comparing the nominal sample to an alternative sample produced with \texttt{Herwig7} as PS generator. 
+
+\item \textbf{Damping parameter} the \texttt{Powheg}-specific parameter $h_{\textrm{damp}}$ is used to control the damping of radiation with high transverse momenta. Its nominal value, where $h_{\textrm{damp}} = 1.5 m_t$, is compared to a sample with $h_{\textrm{damp}} = 3.0  m_t$ to determine the impact of the choice $h_{\textrm{damp}}$.
+
+It needs to be noted that the alternative samples are produced with the AFII simulation, in contrast to the nominal. The difference is then propagated as the uncertainty on the full-simulation.
+
+\end{itemize}
+
+\subsection{Drell-Yan}
+
+For presentational usage in the next section, theoretical uncertainties on the Drell-Yan background are estimated following PMG/weak boson \cite{weak_boson_twiki}. All are estimated by internal reweighting.
+Despite the different bundling procedures as per PMG recommendation, for the fit each variation is treated as an individual NP. The following list summarises the theoretical uncertainties considered for the DY background:
+
+%\subsubsection*{Internal reweighting uncertainties}
+
+\begin{itemize}
+
+	
+\item \textbf{Parton density function:} the uncertainty due to PDF choice is calculated by applying the weights associated with each of 100 variations in the NNPDF3.0NNLO PDF ensemble (PDF 303201--303300) and follows specifically from PMG PDF recommendations \cite{pdf_twiki}. All of these variations are used as individual NPs.
+\\For representational systematic plots, this ensemble is made from fits to the ensemble test on the input data and therefore the uncertainty is the standard deviation. 
+
+\item \textbf{QCD scales:} as above (under top).
+%uncertainties related to the choice of QCD renormalisation and factorisation scales in the ME calculation are estimated by independently taking each scale half and doubled: $\{ \mu_{\textrm{R}}, \mu_{\textrm{F}}\} \times \{1.0,0.5\} \times \{0.5,1.0\} \times \{2.0,1.0\} \times \{1.0,2.0\}$. The final uncertainty is taken from the envelope of these four variations.
+%\textcolor{red}{It needs to be noted that this treatment of the scale uncertainty is not suited for a profile likelihood fit. Therefore, two NPs are considered for data/MC comparison plots and fit-based plots (as described in the PMG top processes twiki \cite{top_processes_twiki}), one NP for the $\mu_R$ scale uncertainty, and one for the $\mu_F$ scale uncertainty.}
+%\textcolor{red}{It needs to be noted that this uncertainty is not yet included in the uncertainty band of the fit-based plots in following chapters.}
+
+\item \textbf{Strong coupling constant:} as above (under top). 
+
+%\item \textbf{NLO electroweak virtual corrections} uncertainties due to the manner in which single-loop electroweak (EW) corrections are included in the full cross section calculation. Nominally, the cross section includes a $2\rightarrow n$ tree-level calculation added with single-loop QCD corrections. By considering single-loop EW diagrams, the cross section is corrected. These EW corrections may be included in the total cross section computation in one of three ways: additive, multiplicative or exponentiated. \cite{ATLAS:2021yza}. %On a par with PMG/weak boson recipe \cite{ew_corrections_git}, the per-bin minimal correction is calculated, followed by the mid and max corrections. The first is used as correction to the nominal whereas an envelope is made of the remaining two. 
+%The multiplicative approach is chosen as the nominal EW correction, and the additive approach is used as an alternative EW correction as a systematic uncertainty. 
+%%\textcolor{red}{since this correction makes the nominal worst (in predicting the data), still need to ask PMG whether OK make an envelope out of the three}.
+
+\end{itemize}
+
+
+
+\subsection{$Z'$ Signal}
+
+
+Theoretical uncertainties on the signal are estimated by internal reweighting. The following list summarises the theoretical uncertainties considered for the signal:
+
+\begin{itemize}
+	\item \textbf{Parton density function: }the uncertainty due to PDF choice is calculated by applying the weights associated of 100 replicas in the NNPDF3.0NLO PDF set. The different replicas are combined and the standard deviation of them is considered as PDF uncertainty in the fit. 
+	\item \textbf{QCD scales: } as above (under top)
+	\item \textbf{Strong coupling constant: } as above (under top)
+\end{itemize}
+
+The impact of the theoretical signal uncertainties on the expected cross-section limits was investigated and the results of this study can be found in Appendix \ref{impact_theory_systs}.
+
+\include{theoretical_systematics_table}
+
+
+
+
+
+
+\section{Handling of systematic uncertainties}
+
+Before systematic uncertainties are introduced to the profile likelihood fit, a pre-processing procedure is applied, which consists of several steps.
+
+
+\textbf{Pruning:} In many cases, not all systematic uncertainties have an impact on the fit results. In order to avoid numerical instabilities and to speed up the fit procedure, systematic uncertainties with a negligible effect are discarded beforehand. The elimination can happen based either on their effect on the overall normalisation or on the contents of the different bins (shape). In the first case, all systematics are removed that do not vary the overall normalisation by more than 0.2\%. In the latter case, the same threshold is applied bin-by-bin, meaning that systematics changing the content of no bin more than 0.2\% are not considered further.
+
+
+\textbf{Symmetrisation:} Systematic uncertainties can either be one-sided (only one variation is available) or two-sided (up and down variations are available). To increase the fit stability, one-sided uncertainties are symmetrised by mirroring the variation. Similarly, two-sided uncertainties are symmetrised by shifting the up- and down-variations such that the nominal value is in the center of the two variations.
+
+\textbf{Smoothening:} Systematics can be affected by statistical fluctuations. In order to avoid strange constraints caused by such fluctuations and to avoid double-counting the statistical uncertainties, a smoothing procedure is applied by rebinning the distribution until certain criteria are fulfilled.
+
+
+%Only shape and acceptance effects of theoretical modelling uncertainties are considered. The normalisation component is removed since the normalisation of the backgrounds is left free-floating in the fit.
+\textbf{Rescaling of theoretical modelling uncertainties:} Theoretical modelling uncertainties are rescaled in a way that the sum of event yields in control regions and signal regions is the same as that of the nominal event yields in these regions. This is done to remove the normalisation component of such uncertainties and to only keep shape and acceptance effects of the theoretical modelling uncertainties (of signal and background). Due to this treatment, normalisation components of theoretical modelling uncertainties are not included in the uncertainty band in the pre-fit plots.
+

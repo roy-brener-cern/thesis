@@ -1,0 +1,51 @@
+\begin{table}[h!]
+% \begin{longtable}[c]{|l|l|l|}
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \hline
+    Systematic & Type & Description \\ 
+    \hline
+    \hline
+    \multicolumn{3}{|c|}{Jet \cite{JETM-2018-05}}                                       \\
+    \hline
+    JET\_NNJvtEfficiency        & SF  & Uncertainty of NNJvt efficiency         \\
+    JET\_BJES\_Response           & Calib  &  b-quark-initiated jets                      \\
+    JET\_EffectiveNP\_Detector(1,2)   & Calib  & \multirow{4}{*}{Effective nuisance parameters}                      \\
+    JET\_EffectiveNP\_Mixed(1-3)   & Calib  &                       \\
+    JET\_EffectiveNP\_Modelling(1-4)   & Calib  &                       \\
+    JET\_EffectiveNP\_Statistical(1-6)   & Calib  &                       \\
+    JET\_EtaIntercalibration\_Modelling   & Calib  & \multirow{3}{*}{\makecell[l]{$\eta$ intercalibration corrects energy \\ scale of forward jets}}              \\
+    JET\_EtaIntercalibration\_NonClosure\_0p2\_PreRec   & Calib  &                       \\
+    JET\_EtaIntercalibration\_TotalStat   & Calib  &                       \\
+    JET\_Flavor\_Composition   & Calib  & \multirow{2}{*}{\makecell[l]{Difference of quark-initiated and \\ gluon-initiated jets}}         \\
+    JET\_Flavor\_Response   & Calib  &                    \\    
+    JET\_InSitu\_NonClosure\_PreRec   & Calib  & Description                      \\
+    JET\_JER\_DataVsMC\_MC16   & Calib  & \multirow{4}{*}{Jet energy resolution}             \\
+    JET\_JER\_EffectiveNP\_(1-11)   & Calib  &                       \\
+    JET\_JER\_EffectiveNP\_12restTerm   & Calib  &                       \\
+    JET\_JERUnc\_Noise\_PreRec   & Calib  &                       \\
+    JET\_JESUnc\_Noise\_PreRec   & Calib  & \multirow{2}{*}{Jet energy scale}                       \\
+    JET\_JESUnc\_VertexingAlg\_PreRec   & Calib  &                       \\
+    JET\_Pileup\_OffsetMu   & Calib  & \multirow{4}{*}{Description}       \\
+    JET\_Pileup\_OffsetNPV   & Calib  &                       \\
+    JET\_Pileup\_PtTerm   & Calib  &                       \\
+    JET\_Pileup\_RhoToppology   & Calib  &                       \\
+    % \multirow{2}{*}{JET\_SingleParticle\_HighPt}   & Calib  & Uncertainty from single-particle and                        \\
+      % &   & test-beam measurements                        \\
+    JET\_SingleParticle\_HighPt   & Calib  & \makecell[l]{Uncertainty from single-particle\\ and test-beam measurements}                       \\
+    
+    \hline
+    \multicolumn{3}{|c|}{MET}                                       \\
+    \hline
+    MET\_SoftTrk\_ResoPara           & Calib  & \multirow{3}{*}{Soft term calculation} 
+                      \\
+    MET\_SoftTrk\_ResoPerp           & Calib  &                       \\
+    MET\_SoftTrk\_Scale           & Calib  &                       \\
+
+    \hline
+    \hline
+    \end{tabular}
+    \caption{Experimental systematic uncertainties on the jet and $E^{\textrm{miss}}_{\textrm{T}}$.}
+    \label{tab:jet_exp_syst}
+\end{table}

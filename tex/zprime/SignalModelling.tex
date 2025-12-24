@@ -1,0 +1,567 @@
+Based on the phenomenology for a benchmark $\Zp$ decaying to a lepton pair in association with $b$-quarks \cite{Calibbi:2019lvs}, signal samples are generated from MC simulation. Using \texttt{MadGraph v.2.9.3}, hard-scatter events are produced. The electroweak parameters used in the MG5\_aMC@NLO signal production are taken directly from the \texttt{param\_card.dat}. The $Z$ boson mass was set to $m_Z = 91.1876$~GeV (block \texttt{MASS}), and the Cabibbo angle was set via \texttt{CKMBLOCK} with $\lambda = 0.227736$. No other EW parameters were explicitly defined in the card. Decay of the $\Zp$ to two muons or two electrons is modelled separately, such that each mode has $BR=1$. Coupling of the $\Zp$ to quarks is a model parameter for which two values are considered, corresponding to different resonance widths. The specific Langrangian considered for the model its
+
+\begin{align}
+\begin{split}
+\mathcal{L}_{\textrm{LH}} &= g_{Z'\mu} \mu \gamma {}^{\nu } P_L \mu \Zp_{\nu} + g_{Z'e} e\gamma {}^{\nu } P_L e \Zp_{\nu} + g_{Z'q} \bar{b} \gamma {}^{\nu } P_L b \Zp_{\nu } \\ &+ g_{\Zp q} \bar{t} \gamma^{\nu } P_L t \Zp_{\nu} + |V_{cb}|^{2} g_{\Zp q} \bar{s} \gamma {}^{\nu } P_L s \Zp_{\nu } + |V_{cb}| g_{Z'q} \bar{b} \gamma {}^{\nu } P_L s \Zp_{\nu},
+\label{specific_model_langrangian}
+\end{split}
+\end{align}
+where the first two terms define $\Zp$'s couplings to electrons, muons; the coupling is arbitrarily set such that when one flavour is on, the other is off.  Correspondingly, the hard-scatter modelling is initiated based on the generalised process,
+
+\begin{equation}
+p^{i}p^{i} \rightarrow Z' + (0/b/bb) \rightarrow \ell^{+}\ell^{-},
+\end{equation}
+%
+where $p^{i} \ni \{g, u, d, c, s, b, \bar{u}, \bar{d}, \bar{c}, \bar{s}, \bar{b} \}$ (five-flavour scheme) and $(0/b/bb)$ corresponds to the number of QCD vertices included in the matrix element, generated inclusively. A schematic representation of leading Feynman diagrams for each of the production modes is given in Fig. \ref{fig:Signal_Production_Feynman_Diagrams}.
+
+
+%\begin{figure}
+%	\centering
+%	\input{"figures/Signal/Signal_Modes_Feynman_Diagrams.tex"}
+%	\caption{Feynman diagrams representative of leading $\Zp$ production and decay modes, based on the number of QCD vertices associated with the $\Zp$. The $\Zp$ is shown produced in association with no associated $b$-quark (top-left), one associated $b$-quark (bottom-left) and two associated $b$-quarks (top-right).}
+%	\label{fig:Signal_Production_Feynman_Diagrams}
+%\end{figure}
+
+%Note that only hard-process generation associated with the matrix element is shown in Fig.~\ref{fig:Signal_Production_Feynman_Diagrams}. Different production modes at parton-level cannot be trivially linked to signal regions defined by $b$-jet multiplicity in the final state. One may consider an initial-state quark from the so-called 0-$j_{b}$ production mode that radiates a gluon which in turn splits into $b$-quarks, contributing to the final-state $b$-jet multiplicity, at reconstruction level and hence to the 1-$j_{b}$ or even $\geq 2 -j_{b}$ signal regions. Conversely, a $b$-quark in the so-called 1-$j_{b}$ mode may not be reconstructed as a $b$-jet --- such an event would contribute to the 0-$j_{b}$ signal region. More ambiguity is added by the fact that these production modes are generated together, where the leading subprocesses are determined by the generator, based on its calculated cross-sections.
+
+Hard-process generation at matrix-element level is illustrated in Fig.~\ref{fig:Signal_Production_Feynman_Diagrams}. However, production modes defined at parton level do not map straightforwardly onto the signal regions, which are categorised by the number of reconstructed $b$-jets. For example, an event generated in the so-called 0-$b$ mode may involve an initial-state quark that radiates a gluon, which then splits into a $b\bar{b}$ pair. If these $b$-quarks are reconstructed as $b$-jets, the event may populate the 1-$b$ or even $\geq$2-$b$ signal regions. Conversely, in the 1-$b$ mode, the generated $b$-quark might fail to be reconstructed as a $b$-jet, causing the event to appear in the 0-$b$ category. This illustrates the ambiguity in connecting parton-level production modes with reconstructed final-state observables.
+
+
+Free parameters include $m_{\Zp}$ and $\Zp$ couplings which are set accordingly to the theoretical model,
+
+\begin{equation}
+g_{Z', b\bar{b}} = g; \; g_{Z', b\bar{s}/s\bar{b}} = g \times |V_{cb}|; \; g_{Z', s\bar{s}} = g \times |V_{cb}|^{2},
+\end{equation}
+%
+where it is chosen $g \in \{0.5, 1.0\}$ to model two width modes of the $\Zp$ decay, namely narrow and wide resonance. The $\Zp$ mediates the transition of a $b$-quark to an $s$-quark at leading order (LO) and is taken to be left-handed. As seen, its leading coupling is to $b$-quarks whereas $s$-quark couplings are suppressed by the CKM matrix. Coupling of $\Zp$ to leptons is taken to be equal to its $b\bar{b}$ coupling, namely $g_{Z', e^{-}e^{+}/\mu^{-}\mu^{+}} = g$. The free mass parameter $m_{\Zp}$ is produced at 22 values in the range $[500, 4000] \; \textrm{GeV}$ for each value of g, for each dilepton decay mode, resulting in $22 \times 2 \times 2 = 88$ signal samples altogether. The frequency of $m_{\Zp}$ points decreases at higher masses, where the cross-section is low.
+
+
+The hard-process modelling is followed by simulation of hadronisation and parton shower using Pythia v.8.245. Multileg parton-level events are matched to Pythia using CKKW-L merging. The ATLAS detector response is simulated using Athena v.21.6.92. The Parton Distribution Function (PDF) taken is \texttt{NNPDF30\_lo\_as\_0130}. Following signal samples generation using the full ATLAS simulation chain, EXOT0 is used to produce derivations which were then employed as inputs to the analysis program. A full description of the signal samples produced, including the number of events per sample, is given in Tables \ref{tab:signal_samples_1} and \ref{tab:signal_samples_2}. The number of events given in table are a sum of the events generated for all three MC campaigns, \texttt{mc16a}, \texttt{mc16d} and \texttt{mc16e}.
+
+
+\begin{table}[H]
+	\centering
+	\input{"figures/Signal/Signal_Production_Table_1.tex"}
+	\caption{Signal simulation samples in the range $m_{\Zp} \in [500, 1500]\; \textrm{GeV}$. For each mass point, the number of events per coupling, per dilepton flavour is given in exponential format. $g$ is the nominal $\Zp$ coupling to leptons and $b$-quarks, according to which its (smaller) couplings to $s$-quarks scale.}
+	\label{tab:signal_samples_1}
+\end{table}
+
+
+
+\begin{table}[H]
+	\centering
+	\input{"figures/Signal/Signal_Production_Table_2.tex"}
+	\caption{Signal simulation samples in the range $m_{\Zp} \in [1600, 4000]\; \textrm{GeV}$. For each mass point, the number of events per coupling, per dilepton flavour is given in exponential format. $g$ is the nominal $\Zp$ coupling to leptons and $b$-quarks, according to which its (smaller) couplings to $s$-quarks scale.}
+	\label{tab:signal_samples_2}
+\end{table}
+
+
+The cross-section as a function of $m_{\Zp}$ following hard-process and shower simulation is computed and shown in Fig. \ref{fig:signal_production_xs_vs_mZp} for the different production modes and coupling value. As seen, the difference between $\Zp$ decay to electrons or muons is negligible in terms of cross-section.
+
+
+
+\begin{figure}
+	\centering
+	% include first image
+	\includegraphics[scale=0.55]{figures/Signal/XS_vs_mZp.pdf}  
+	\caption{Signal production cross section as a function of the resonant mass, $m_{\Zp}$. Different markers differentiate between  different values of $\Zp$'s coupling to leptons and $b$-quarks.}
+	\label{fig:signal_production_xs_vs_mZp}
+\end{figure}
+
+
+The decay width of $\Zp$ is computed manually on a par with the model's Langrangian in Eq. \ref{specific_model_langrangian} and inputted to \texttt{MadGraph} as a signal parameter according to
+
+\begin{align}
+\begin{split}
+\Gamma_{Z'} &= \frac{1}{8\pi} \Biggr[\frac{1}{3}\frac{g_{\Zp \ell}^{2}}{m^{2}_{\Zp}} (m^{2}_{\Zp} - m^{2}_{\ell})\sqrt{m^{2}_{\Zp} - 4m^{2}_{\ell}} + \frac{g_{\Zp q}^{2}}{m^{2}_{\Zp}} (m^{2}_{\Zp} - m^{2}_{b})\sqrt{m^{2}_{\Zp} - 4m^{2}_{b}}\Biggr] \\ &+ \frac{1}{8\pi} \Biggr[\frac{V_{cb}^{4} g_{Z'q}^{2}}{m_{Z'}^{2}} (m_{Z'}^{2} - m_{s}^{2}) \sqrt{m_{Z'}^2-4m_{s}^2} + \frac{g_{\Zp q}^{2}}{m^{2}_{\Zp}} (m^{2}_{\Zp} - m^{2}_{t})\sqrt{m^{2}_{\Zp} - 4m^{2}_{t}}\Biggr] \\ &+ 
+\frac{2}{16\pi} \frac{(g_{Z'q}V_{cb})^2}{m_{Z'}^3} \Big(\frac{m_{Z'}^2}{2}-\frac{m_{b}^2}{4}-\frac{m_{s}^2}{4}-\frac{m_{b}^4}{4m_{Z'}^2}+\frac{m_{b}^2m_{s}^2}{2m_{Z'}^2}-\frac{m_{s}^4}{4m_{Z'}^2}\Big) \sqrt{m_{b}^4-2m_{b}^2m_{s}^2+m_{s}^4-2m_{b}^2m_{Z'}^2-2m_{s}^2m_{Z'}^2+m_{Z'}^4},
+\label{eq:signal_Gamma}
+\end{split}
+\end{align}
+where the first term accounts for coupling to leptons, where $g_{\Zp e}$ is off (set to zero) when $g_{\Zp\mu}$ is on (set arbitrarily to 0.5 or 1.0). The second, third and forth terms account for $\Zp$'s coupling to $b\bar{b}, s\bar{s}$ and $t\bar{t}$, respectively. The last term accounts for the coupling to $s\bar{s}$ and its conjugate (hence the factor or 2). The signal events are generated such that $\Zp$ decays only to either two electrons or to muons and hence quarks are produced in association only. The fractional width, $\Gamma_{\Zp}/m_{\Zp}$, ranges between 1.9\%--2.3\% and 7.8\%--9.2\% for g = 0.5, 1.0, respectively.
+
+
+
+\section{Fiducial signal cuts}
+\label{sec:fiducial_signal_cuts}
+
+Signals generated with TeV-scale pole mass tend to contain an enhanced low-mass tail due to parton luminosity effects. Despite having a dilepton mass distribution, $m_{\ell\ell}$ strongly peaking around the pole mass, $m_{\Zp}$, the probability to find two partons with sufficient momenta needed for the generation of a high-mass $\Zp$ is strongly suppressed according to the PDF. Resultingly, multi-TeV resonances manifest \textit{parton luminosity tails}, yielded from the relative rise of off-shell production component. Hence, due to PDF effects on the differential cross-section, multi-TeV signals become broader i.e. contain a large fraction of the cross-section as to reduce the overall search sensitivity, especially its reach to the high-mass scale. These effect can be addressed by setting cuts which would focus the search around the core resonance, as to filter-out the cross-section fraction impacted by the parton luminosity tail.
+
+Furthermore, setting fiducial limits is consistent with the procedure done in previous dilepton searches \cite{ATLAS_dilepton_2019,ATLAS:2016cyf} and thus would help set generic, model-independent limits on this $\Zp$ cross section. The extent of the tail is model-dependent since it is based on the specific partons used to generate the $\Zp$. In this search, the strongest coupling of $\Zp$ is to a $b\bar{b}$ pair, whereas in previous searches pairs like $u\bar{u}$ were considered. In this search, the tail is not cut by default. Rather, to make the results also applicable to a wide range of models and be consistent with the inclusive search \cite{ATLAS_dilepton_2019}, the truth-level fiducial cuts defined below are applied in one mode of the limit setting (fiducial limits),
+
+
+
+\begin{align}
+	\text{individual truth lepton:} & \ 	
+	\begin{cases}
+		\ \ \ \pT^\mathrm{truth} > 30\ \mathrm{GeV} \\
+		\ \left|\eta^\mathrm{truth}\right| < 2.5  \\
+	\end{cases} \label{eq:fidCuts1and2} \\ 
+	\text{truth lepton pair:}& \ \ \ \ \ \ m_{\ell\ell}^\mathrm{truth} > m_{\Zp} - 2\Gamma_{\Zp}, \label{eq:fidCuts3}
+\end{align}
+%
+%
+where the first two cuts are applied on individual leptons at truth level, whereas the latter on the invariant mass of the two leading truth leptons in the event which had passed the individual cuts. In FIG. \ref{fig:Dielectron_Signal_Mass_no_fid_cuts} and \ref{fig:Dimuon_Signal_Mass_no_fid_cuts}, the reconstructed invariant dilepton mass distribution of several $m_{\Zp}$ values with both coupling values are shown before these fiducial truth-level cuts are applied. The $m_{\ell\ell}$ values at reconstruction level corresponding to the cuts based on Eq. (\ref{eq:fidCuts3}) are indicated.
+
+
+\begin{figure}[h!]
+	\captionsetup[subfigure]{labelformat=empty}
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_before_fid_cuts/ee/h_m_ll_100_X"}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_before_fid_cuts/ee/h_m_ll_100_Zerob"}
+		%\label{fig:TC_met}
+	}
+	\\ \vspace{-1cm}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_before_fid_cuts/ee/h_m_ll_100_1b"}
+		%\label{fig:TC_njets}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_before_fid_cuts/ee/h_m_ll_100_jbjb"}
+		%\label{fig:TC_mu_pt}
+	}
+	\vspace{-1cm}
+	\caption{Dielectron reconstructed invariant mass of $\Zp$ signals at various points in the 500--4000 GeV production range (cyan: $m_{Z'}=500\,\text{GeV}$, grey: $m_{Z'}=1500\,\text{GeV}$, pink: $m_{Z'}=2500\,\text{GeV}$, blue: $m_{Z'}=3500\,\text{GeV}$). The vertical lines indicate corresponding fiducial mass cuts applied at truth level to avoid the signals being dependent on parton luminosity tail effects, whereas the individual distributions are shown before fiducial cuts are applied. (Top left) no requirements on $b$-jet multiplicity. (Top right) final state required to contain no $b$-jets. (Bottom left) final state required to contain exactly one $b$-jet. (Bottom right) final state required to contain at least two $b$-jets. The diminishing statistics with higher number of $b$-jets required in the final state is clearly visible, going from $b$-vetoed events (top right) through exactly one $b$-jet (bottom left) to at least two $b$-jets (bottom right), where the latter's statistics are lowest.}
+	\label{fig:Dielectron_Signal_Mass_no_fid_cuts}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\captionsetup[subfigure]{labelformat=empty}
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_before_fid_cuts/mumu/h_m_ll_100_X"}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_before_fid_cuts/mumu/h_m_ll_100_Zerob"}
+		%\label{fig:TC_met}
+	}
+	\\ \vspace{-1cm}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_before_fid_cuts/mumu/h_m_ll_100_1b"}
+		%\label{fig:TC_njets}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_before_fid_cuts/mumu/h_m_ll_100_jbjb"}
+		%\label{fig:TC_mu_pt}
+	}
+	\vspace{-1cm}
+	\caption{Dimuon reconstructed invariant mass of $\Zp$ signals at various points in the 500--4000 GeV production range (cyan: $m_{Z'}=500\,\text{GeV}$, grey: $m_{Z'}=1500\,\text{GeV}$, pink: $m_{Z'}=2500\,\text{GeV}$, blue: $m_{Z'}=3500\,\text{GeV}$). The vertical lines indicate corresponding fiducial mass cuts applied at truth level to avoid the signals being dependent on parton luminosity tail effects, whereas the individual distributions are shown before fiducial cuts are applied. (Top left) no requirements on $b$-jet multiplicity. (Top right) final state required to contain no $b$-jets. (Bottom left) final state required to contain exactly one $b$-jet. (Bottom right) final state required to contain at least two $b$-jets. The diminishing statistics with higher number of $b$-jets required in the final state is clearly visible, going from $b$-vetoed events (top right) through exactly one $b$-jet (bottom left) to at least two $b$-jets (bottom right), where the latter's statistics are lowest.}
+	\label{fig:Dimuon_Signal_Mass_no_fid_cuts}
+\end{figure}
+
+\FloatBarrier
+
+
+\section{Signal kinematics}
+
+The resonance shape is affected by different selection schemes applied on the signal. Key in the analysis is the $b$-jet multiplicity in the final state, which naturally also determines the height of the peak. Furthermore, as dictated by Eq. (\ref{eq:signal_Gamma}), the coupling of $\Zp$ to leptons and $b$-quarks plays an important role in the width of the signal. Lastly, ATLAS $p_{\textrm{T}}$ resolution of high-$p_{\textrm{T}}$ electrons is significantly better than that of muons, which manifests in the dielectron vs. dimuon invariant mass distribution, respectively. Fig. \ref{fig:Dielectron_Signal_Mass} and \ref{fig:Dimuon_Signal_Mass} show the dielectron and dimuon invariant mass, respectively, for both coupling schemes, with different requirements imposed on the $b$-jet multiplicity. The $b$-jet multiplicity requirements follow the full analysis chain, with all quality cuts and event selection applied. All distributions are given at reconstruction level, with the truth-level fiducial cuts explained in \ref{sec:fiducial_signal_cuts} included, as evident in the cutoff of one-sided cutoffs of the invariant dilepton mass distributions.
+
+
+\begin{figure}[h!]
+	\captionsetup[subfigure]{labelformat=empty}
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_after_fid_cuts/ee/h_m_ll_100_X"}
+		%\label{fig:TC_inv_mass}
+		}
+		%\hfill
+		\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_after_fid_cuts/ee/h_m_ll_100_Zerob"}
+		%\label{fig:TC_met}
+		}
+		\\ \vspace{-1cm}
+		\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_after_fid_cuts/ee/h_m_ll_100_1b"}
+		%\label{fig:TC_njets}
+		}
+		\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_after_fid_cuts/ee/h_m_ll_100_jbjb"}
+		%\label{fig:TC_mu_pt}
+		}
+	\vspace{-1cm}
+	\caption{Dielectron reconstructed invariant mass of $\Zp$ signals at various points in the 500--4000 GeV production range (cyan: $m_{Z'}=500\,\text{GeV}$, grey: $m_{Z'}=1500\,\text{GeV}$, pink: $m_{Z'}=2500\,\text{GeV}$, blue: $m_{Z'}=3500\,\text{GeV}$). (Top left) no requirements on $b$-jet multiplicity. (Top right) final state required to contain no $b$-jets. (Bottom left) final state required to contain exactly one $b$-jet. (Bottom right) final state required to contain at least two $b$-jets. The diminishing statistics with higher number of $b$-jets required in the final state is clearly visible, going from $b$-vetoed events (top right) through exactly one $b$-jet (bottom left) to at least two $b$-jets (bottom right), where the latter's statistics are lowest.}
+	\label{fig:Dielectron_Signal_Mass}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+	\captionsetup[subfigure]{labelformat=empty}
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_after_fid_cuts/mumu/h_m_ll_100_X"}
+		%\label{fig:TC_inv_mass}
+		}
+		%\hfill
+		\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_after_fid_cuts/mumu/h_m_ll_100_Zerob"}
+		%\label{fig:TC_met}
+		}
+		\\ \vspace{-1cm}
+		\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_after_fid_cuts/mumu/h_m_ll_100_1b"}
+		%\label{fig:TC_njets}
+		}
+		\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{"figures/Signal/signals_after_fid_cuts/mumu/h_m_ll_100_jbjb"}
+		%\label{fig:TC_mu_pt}
+		}
+	\vspace{-1cm}
+	\caption{Dimuon reconstructed invariant mass of $\Zp$ signals at various points in the 500--4000 GeV production range (cyan: $m_{Z'}=500\,\text{GeV}$, grey: $m_{Z'}=1500\,\text{GeV}$, pink: $m_{Z'}=2500\,\text{GeV}$, blue: $m_{Z'}=3500\,\text{GeV}$). (Top left) no requirements on $b$-jet multiplicity. (Top right) final state required to contain no $b$-jets. (Bottom left) final state required to contain exactly one $b$-jet. (Bottom right) final state required to contain at least two $b$-jets. The diminishing statistics with higher number of $b$-jets required in the final state is clearly visible, going from $b$-vetoed events (top right) through exactly one $b$-jet (bottom left) to at least two $b$-jets (bottom right), where the latter's statistics are lowest.}
+	\label{fig:Dimuon_Signal_Mass}
+\end{figure}
+
+
+As depicted, the dielectron peaks are evidently narrower than the dimuon peaks, which is expected to lead to a higher sensitivity in the electron channel. In the multi-TeV region, due to falling cross-section, there are very few events left.
+
+Several objects associated with the signal are key for enhancing the analysis sensitivity, e.g. leading and subleading leptons, leading and subleading $b$-jets, missing transverse energy etc. It is useful to observe the kinematic distribution of the signals, following full event selection, focusing on leading leptons. As an example, these following kinematic plots are taken in the scheme which requires exactly one $b$-jet in the final state.
+
+
+
+\begin{figure}[h!]
+	\captionsetup[subfigure]{labelformat=empty}
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Signal/signals_after_fid_cuts/ee/h_pt_leadl_1b}
+		%\label{fig:TC_inv_mass}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Signal/signals_after_fid_cuts/ee/h_eta_leadl_1b}
+		%\label{fig:TC_met}
+	}
+	\\ \vspace{-1cm}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Signal/signals_after_fid_cuts/ee/h_phi_leadl_1b}
+		%\label{fig:TC_njets}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Signal/signals_after_fid_cuts/ee/h_E_leadl_1b}
+		%\label{fig:TC_mu_pt}
+	}
+	\vspace{-1cm}
+	\caption{Kinematic distributions of the leading electron. (Top left) Transverse momentum, (Top right) eta, (Bottom left) phi, (Bottom right) energy (cyan: $m_{Z'}=500\,\text{GeV}$, grey: $m_{Z'}=1500\,\text{GeV}$, pink: $m_{Z'}=2500\,\text{GeV}$, blue: $m_{Z'}=3500\,\text{GeV}$).}
+	\label{fig:leading_electron_kinematics_signal}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+	\captionsetup[subfigure]{labelformat=empty}
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Signal/signals_after_fid_cuts/mumu/h_pt_leadl_1b}
+		}
+		%\hfill
+		\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Signal/signals_after_fid_cuts/mumu/h_eta_leadl_1b}
+		}
+		\\ \vspace{-1cm}
+		\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Signal/signals_after_fid_cuts/mumu/h_phi_leadl_1b}
+		}
+		\subfloat[]{
+		\includegraphics[width=0.49\textwidth]{figures/Signal/signals_after_fid_cuts/mumu/h_E_leadl_1b}
+		}
+	\vspace{-1cm}
+	\caption{Kinematic distributions of the leading muon. (Top left) Transverse momentum, (Top right) eta, (Bottom left) phi, (Bottom right) energy (cyan: $m_{Z'}=500\,\text{GeV}$, grey: $m_{Z'}=1500\,\text{GeV}$, pink: $m_{Z'}=2500\,\text{GeV}$, blue: $m_{Z'}=3500\,\text{GeV}$).}
+	\label{fig:leading_muon_kinematics_signal}
+\end{figure}
+
+
+
+
+\FloatBarrier
+
+
+
+\section{Contact Interaction Interpretations}
+
+In addition to the resonant signal, an additional set of Contact Interactions (CIs) is considered, which gains an enhanced sensitivity in final states of high-mass dilepton pairs in association with $b$-tagged jets.
+This is coming from a series of papers which targeted the production of CIs in final states of two opposite-sign and same-flavor leptons and different $b$-tagged jets multiplicities, started with a search for $b \bar s \ell^+ \ell^-$ CIs~\cite{Afik:2018nlr}, performed by ATLAS~\cite{ATLAS:2021mla}.
+The scenarios that are considered here, as elaborated below. More details can be found in Refs.~\cite{Afik:2019htr,Afik:2020cvr,Afik:2021jjh,Afik:2021xmi}.
+Notably, an interpretation for $t \bar t \nu \bar \nu$ CIs was done by ATLAS in Ref.~\cite{ATLAS:2024rcx}.
+Representative Feynman diagrams for all of the different CIs targeted in the analysis are shown in Figure~\ref{CIs:Feynman_bottom} for $b \bar b \ell^+ \ell^-$, and in Figure~\ref{CIs:Feynman_top} for $t \bar u \ell^+ \ell^-, t \bar c \ell^+ \ell^-, t \bar t \ell^+ \ell^-$ CIs.
+
+Using \texttt{MadGraph v.2.9.9}, hard-scatter events are produced. The hard-process modelling is followed by simulation of hadronisation and parton shower using Pythia v.8.306. Multileg parton-level events are matched to Pythia using CKKW-L merging. The ATLAS detector response is simulated using a fast simulation. The Parton Distribution Function (PDF) taken is \texttt{NNPDF30\_nlo\_as\_0118}. The 5-flavour scheme has been used.
+As before, EXOT0 is used to produce derivations which were then employed as inputs to the analysis program. 
+All CI \texttt{mc16a} samples were generated with 50k events, \texttt{mc16d} with 70k events, and \texttt{mc16e} with 90k events.
+CI samples were generated separately for final states with electron and muons.
+
+For all $bb\ell\ell$ signals, as explained below two terms are relevant: a pure new physics term, and the interference with the SM DY process.
+Both of these parts were generated as separate samples. 
+This is especially useful in order to test other hypotheses for $\Lambda$, since, as explained below, the interference term samples can be simply scaled by $\Lambda^{-2}$, and the new physics terms can be scaled by $\Lambda^{-4}$.
+The $bb\ell\ell$ samples were generated with up to two extra partons in addition to the lepton pair.
+A generator-level $m_{\ell \ell}$ cut of at least 110~\GeV has been applied to the $bb\ell\ell$ samples, to focus on the region of interest of the analysis, which is above 130~\GeV.
+This is especially relevant for the interference term samples, which has an enhanced statistics near the $Z$ boson mass, given the large SM contribution.
+The samples were generated with a minimum $m_{\ell \ell}$ cut of at least 110~\GeV and not higher, to be able to consider migration effect to the analysis regions, which are anyway expected to be minor given the excellent experimental resolution in this region.
+
+The vector $tt\ell\ell$ samples, which have an interference term with the SM $t \bar t Z$ process, were generated similarly, as two separate samples for the pure new physics term and the interference with the SM.
+All other $tt\ell\ell$ samples, which do not have an interference term, only the new physics term was generated.
+The $tt\ell\ell$ samples were generated with no extra partons in addition to the lepton pair and top pair.
+
+For the $t u_i \ell\ell$ samples, only the new physics term was generated, as there is no interference with the SM.
+One extra parton was considered in addition to the lepton pair and top quark.
+
+
+\begin{figure}[H]
+  \centering
+        \resizebox{0.85\textwidth}{!}{
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a10) {\(b\)};
+    \vertex[below=1cm of a10] (a20);
+    \vertex[below=1cm of a20] (a30) {\(\bar b\)};
+    \vertex[right=1cm of a20] (b20);
+    \vertex[right=2cm of a10] (c10) {\(\ell^+\)};
+    \vertex[right=2cm of a30] (c30) {\(\ell^-\)};
+
+    \vertex[above=0.1cm of b20] (l20) {\(\frac{g^{2}}{\Lambda^{2}}\)};
+
+
+
+    \vertex[right=3cm of a10] (a11) {\(b\)};
+    \vertex[below=1cm of a11] (a21);
+    \vertex[below=1cm of a21] (a31) {\(g\)};
+    \vertex[right=1cm of a21] (b21);
+    \vertex[right=1cm of b21] (c21);
+    \vertex[right=3cm of a11] (d11) {\(b\)};
+    \vertex[below=1cm of d11] (d21) {\(\ell^+\)};
+    \vertex[below=2cm of d11] (d31) {\(\ell^-\)};
+
+    \vertex[above=0.1cm of c21] (l21) {\(\frac{g^{2}}{\Lambda^{2}}\)};
+
+
+
+    \vertex[right=4cm of a11] (a12) {\(g\)};
+    \vertex[right=1.5cm of a12] (a22);
+    \vertex[right=1.5cm of a22] (a32) {\(b\)};
+    \vertex[below=6em of a32] (b12) {\(\bar b\)};
+    \vertex[left=1.5cm of b12] (b22);
+    \vertex[left=1.5cm of b22] (b32) {\(g\)};
+    \vertex[below=3em of a22] (c12);
+    \vertex[right=0.5cm of c12] (c22);
+    \vertex[below=0.5em of a22] (d12);
+    \vertex[above=0.5em of b22] (d22);
+    \vertex[right=1cm of c22] (e12);
+    \vertex[right=0.5cm of e12] (e22);
+    \vertex[above=0.5em of e22] (e32) {\(\ell^+ \)};;
+    \vertex[below=0.5em of e22] (e42) {\(\ell^- \)};
+    \vertex[left=0.1cm of c22] (l22) {\(\frac{g^{2}}{\Lambda^{2}}\)};
+
+
+    \diagram* {
+      {[edges=fermion]
+        (d12) -- (a32),
+        (b12) -- (d22),
+ %       (a1) -- (c1),
+ %       (a3) -- (c3),
+ %       (d1) -- (d2),
+      },
+      (a10) -- [fermion] (b20),
+      (a30) -- [anti fermion] (b20),
+      (b20) -- [anti fermion] (c10),
+      (b20) -- [fermion] (c30),
+      
+      (a11) -- [fermion] (b21),
+      (a31) -- [gluon] (b21),
+      (b21) -- [fermion] (c21),
+      (c21) -- [fermion] (d11),
+      (c21) -- [anti fermion] (d21),
+      (c21) -- [fermion] (d31),
+
+
+      (a12) -- [gluon] (d12),
+      (d22) -- [gluon] (b32),
+      (d12) -- [anti fermion] (c22),
+      (d22) -- [fermion] (c22),
+      (c22) -- [anti fermion] (e32),
+      (c22) -- [fermion] (e42),
+
+    };
+
+  \end{feynman}
+\end{tikzpicture}
+
+
+
+
+	   % \caption{Representative Feynman diagrams for a production of a lepton pair via the $b \bar{b} \ell^+ \ell^-$ operator at the LHC, in association with 0 (left), 1 (center) and 2 (right) $b$-jets. }
+    }
+      
+  \caption{Representative Feynman diagrams for the CI scenarios pursued for an additional interpretation of the analysis: $b \bar b \ell^+ \ell^-$.}
+  \label{CIs:Feynman_bottom}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+      \resizebox{0.85\textwidth}{!}{
+\begin{tikzpicture}
+  \begin{feynman}
+
+    \vertex (a11) {\(u / c\)};
+    \vertex[below=1cm of a11] (a21);
+    \vertex[below=1cm of a21] (a31) {\(g\)};
+    \vertex[right=1cm of a21] (b21);
+    \vertex[right=1cm of b21] (c21);
+    \vertex[right=3cm of a11] (d11) {\(t\)};
+    \vertex[below=1cm of d11] (d21) {\(\ell^+\)};
+    \vertex[below=2cm of d11] (d31) {\(\ell^-\)};
+
+    \vertex[above=-0.18cm of c21] (l21) {\(\bullet\)};
+
+    \vertex[right=4cm of a11] (a12) {\(g\)};
+    \vertex[right=1.5cm of a12] (a22);
+    \vertex[right=1.5cm of a22] (a32) {\(t\)};
+    \vertex[below=6em of a32] (b12) {\(\bar u / \bar c / \bar t\)};
+    \vertex[left=1.5cm of b12] (b22);
+    \vertex[left=1.5cm of b22] (b32) {\(g\)};
+    \vertex[below=3em of a22] (c12);
+    \vertex[right=0.5cm of c12] (c22);
+    \vertex[below=0.5em of a22] (d12);
+    \vertex[above=0.5em of b22] (d22);
+    \vertex[right=1cm of c22] (e12);
+    \vertex[right=0.5cm of e12] (e22);
+    \vertex[above=0.5em of e22] (e32) {\(\ell^+ \)};;
+    \vertex[below=0.5em of e22] (e42) {\(\ell^- \)};
+    \vertex[left=-0.18cm of c22] (l22){\(\bullet\)};
+
+
+
+
+
+    \vertex[right=4.5cm of a12] (a13) {\(u / c\)};
+    \vertex[right=1.5cm of a13] (a23);
+    \vertex[right=1.5cm of a23] (a33) {\(g\)};
+    \vertex[below=6em of a33] (b13) {\(t\)};
+    \vertex[left=1.5cm of b13] (b23);
+    \vertex[left=1.5cm of b23] (b33) {\(g\)};
+    \vertex[below=3em of a23] (c13);
+    \vertex[right=0.5cm of c13] (c23);
+    \vertex[below=0.5em of a23] (d13);
+    \vertex[above=0.5em of b23] (d23);
+    \vertex[right=1cm of c23] (e13);
+    \vertex[right=0.5cm of e13] (e23);
+    \vertex[above=0.5em of e23] (e33) {\(\ell^+ \)};;
+    \vertex[below=0.5em of e23] (e43) {\(\ell^- \)};
+    \vertex[left=-0.18cm of c23] (l23){\(\bullet\)};
+
+    \diagram* {
+      {[edges=fermion]
+        (d12) -- (a32),
+        (b12) -- (d22),
+        %(d13) -- (a33),
+        %(b13) -- (d23),
+ %       (a1) -- (c1),
+ %       (a3) -- (c3),
+ %       (d1) -- (d2),
+      },
+ %     (a10) -- [fermion] (b20),
+ %     (a30) -- [anti fermion] (b20),
+ %     (b20) -- [anti fermion] (c10),
+ %     (b20) -- [fermion] (c30),
+      (a11) -- [fermion] (b21),
+      (a31) -- [gluon] (b21),
+      (b21) -- [fermion] (c21),
+      (c21) -- [fermion] (d11),
+      (c21) -- [anti fermion] (d21),
+      (c21) -- [fermion] (d31),
+
+      (a12) -- [gluon] (d12),
+      (d22) -- [gluon] (b32),
+      (d12) -- [anti fermion] (c22),
+      (d22) -- [fermion] (c22),
+      (c22) -- [anti fermion] (e32),
+      (c22) -- [fermion] (e42),
+
+
+      (a13) -- [fermion] (d13),
+      (d23) -- [gluon] (b33),
+      (d13) -- [fermion] (c23),
+      (d23) -- [anti fermion] (c23),
+      (c23) -- [anti fermion] (e33),
+      (c23) -- [fermion] (e43),
+      (d13) -- [gluon] (a33),
+      (b13) -- [anti fermion] (d23),
+
+%      (a13) -- [fermion] (d13),
+%      (d23) -- [fermion] (b33),
+%      (d13) -- [anti fermion] (c23),
+%      (d23) -- [fermion] (c23),
+%      (c23) -- [anti fermion] (e33),
+%      (c23) -- [fermion] (e43),
+
+    };
+    
+  \end{feynman}
+\end{tikzpicture}
+%\includegraphics[width=0.2\textwidth]{SM_diag1.png}
+%\includegraphics[width=0.2\textwidth]{SM_diag2.png}
+%	    \caption{Representative Feynman diagrams for the lowest order single top-quark + di-lepton production channels with no light jets $pp \to t \ell^+ \ell^-$ (left) and with one light jet $pp \to t \ell^+ \ell^- + j$ (middle and right) at the LHC, via the $t \bar{u} \ell^+ \ell^-$ 4-Fermi interaction (marked by a heavy dot).}
+  }
+  
+  \caption{Representative Feynman diagrams for the CI scenarios pursued for an additional interpretation of the analysis: $t \bar u \ell^+ \ell^-, t \bar c \ell^+ \ell^-, t \bar t \ell^+ \ell^-$.}
+  \label{CIs:Feynman_top}
+\end{figure}
+
+
+
+
+
+
+
+
+\subsection{$b \bar b \ell^+ \ell^-$ Contact Interactions}
+The phenomenological framework has been established in Ref.~\cite{Afik:2019htr}.
+The considered Lagrangian is:
+\begin{align}
+\mathcal{L}_{eff} = \frac{g^2}{\Lambda^2}\sum_{i,j=L,R} ( \eta_{ij}\bar{b}_{i} \gamma_{\mu} b_{i}) (\bar{\ell}_{j} \gamma^{\mu} \ell_{j}),
+\end{align} 
+where only $b$-quarks are considered, $\ell=\mu,e$, and $\Lambda$ is the scale of the physics beyond the SM.
+All possible chirality structures are considered with $\eta_{ij}=\pm1$, and the sign determines if the interference with the SM is constructive or destructive.
+By convention, and in order to compare to results from other experiments, we set $g=\sqrt{4\pi}$.
+Limits on similar models were set by OPAL and ALEPH collaborations for electrons. The latest combination can be found in Ref.~\cite{ALEPH:2006bhb}
+
+The differential cross-section gets contributions from both pure New Physics ($NP \times NP$) and from interference with the SM $SM \times NP$:
+\begin{align}
+\sigma(m_{\ell \ell})=\sigma^{\textbf{SM}}(m_{\ell \ell}) + \frac{g^2}{\Lambda^2} \cdot \sigma^{\textbf{SM} \times \textbf{NP}}(m_{\ell \ell}) + \frac{g^4}{\Lambda^4} \cdot \sigma^{\textbf{NP} \times \textbf{NP}}(m_{\ell \ell})
+\end{align} 
+This is an important property of this process, as we can generate separate samples for the $NP \times NP$ and the $SM \times NP$ parts, and scale them according to $\Lambda$.
+
+
+
+\subsection{$t \bar u_i \ell^+ \ell^-$ Contact Interactions}
+The phenomenological framework has been established in Ref.~\cite{Afik:2021jjh}.
+The considered Lagrangian is:
+\begin{align}
+{\cal L}_{tu\ell \ell} =  {1\over\Lambda^2} \sum_{i,j=L,R} \biggl[ V_{ij}^\ell \left({\bar \ell} \gamma_\mu P_i \ell \right) \left( \bar t \gamma^\mu P_j u \right)  + S_{ij}^\ell \left( {\bar \ell} P_i \ell \right) \left( \bar t P_j u \right) + T_{ij}^\ell \left( {\bar \ell} \sigma_{\mu \nu} P_i \ell \right) \left( \bar t \sigma_{\mu \nu} P_j u \right) \biggr]~\end{align}
+Three scenarios are considered: scalar, vector and tensor.
+We consider interactions with up-type quarks: $u_i=u,c$.
+$\ell=\mu,e$, and $\Lambda$ is the scale of the physics beyond the SM.
+$V_{ij}, S_{ij}, T_{ij}$ are the couplings of the vector, scalar and tensor scenarios.
+Similarly, we set $V_{ij} / S_{ij} / T_{ij} = 4\pi$.
+Since there is no FCNC in the SM at tree-level, there is no interference. Therefore, the cross-section can be scaled by $1/\Lambda^4$.
+
+
+\subsection{$t \bar t \ell^+ \ell^-$ Contact Interactions}
+The phenomenological framework has been established in Ref.~\cite{Afik:2021xmi}.
+The considered Lagrangian is:
+\begin{align}
+{\cal L}_{tt\ell \ell} =  {1\over\Lambda^2} \sum_{i,j=L,R} \biggl[ V_{ij}^\ell \left({\bar \ell} \gamma_\mu P_i \ell \right) \left( \bar t \gamma^\mu P_j t \right)  + S_{ij}^\ell \left( {\bar \ell} P_i \ell \right) \left( \bar t P_j t \right) + T_{ij}^\ell \left( {\bar \ell} \sigma_{\mu \nu} P_i \ell \right) \left( \bar t \sigma_{\mu \nu} P_j t \right) \biggr]~
+\end{align}
+Similarly, three scenarios are considered: scalar, vector and tensor, $\ell=\mu,e$, and $\Lambda$ is the scale of the physics beyond the SM.
+$V_{ij}, S_{ij}, T_{ij}$ are the couplings of the vector, scalar and tensor scenarios.
+Similarly, we set $V_{ij} / S_{ij} / T_{ij} = 4\pi$.
+There is interference with the SM for $V_{ij}$, with $t \bar t +Z/\gamma^* (\to \ell^+\ell^-)$, and this should be treated accordingly.
+There is no interference with the SM for $S_{ij}, T_{ij}$.
+It is important to note that similar CIs of $t \bar t \ell \ell$ were already targeted in an analysis from the Top group (\href{https://atlas-glance.cern.ch/atlas/analysis/papers/details?ref_code=TOPQ-2023-02}{\textcolor{blue}{link to glance}}), and therefore might be dropped.
+

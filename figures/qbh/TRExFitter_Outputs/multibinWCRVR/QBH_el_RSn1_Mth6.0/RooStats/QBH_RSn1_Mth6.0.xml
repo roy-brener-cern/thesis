@@ -1,0 +1,19 @@
+<!--
+This xml file created automatically on: 
+2025-12-8
+-->
+<!DOCTYPE Combination  SYSTEM 'HistFactorySchema.dtd'>
+
+<Combination OutputFilePrefix="QBH_lj_Run3_2022_2024_Systematics_Outputs/el/RSn1/multibinCRVR/QBH_RSn1_Mth6.0/RooStats/QBH_RSn1_Mth6.0" >
+
+
+  <Input>./QBH_lj_Run3_2022_2024_Systematics_Outputs/el/RSn1/multibinCRVR/QBH_RSn1_Mth6.0/RooStats//QBH_RSn1_Mth6.0_Wjets_CR.xml</Input>
+  <Input>./QBH_lj_Run3_2022_2024_Systematics_Outputs/el/RSn1/multibinCRVR/QBH_RSn1_Mth6.0/RooStats//QBH_RSn1_Mth6.0_Zjets_CR.xml</Input>
+  <Input>./QBH_lj_Run3_2022_2024_Systematics_Outputs/el/RSn1/multibinCRVR/QBH_RSn1_Mth6.0/RooStats//QBH_RSn1_Mth6.0_Signal.xml</Input>
+
+  <Measurement Name="QBH_RSn1_Mth6.0" Lumi="1" LumiRelErr="0.1" ExportOnly="True"  >
+    <POI>SigXsecOverSM</POI>  
+    <ParamSetting Const="True">Lumi</ParamSetting>
+  </Measurement> 
+
+</Combination>

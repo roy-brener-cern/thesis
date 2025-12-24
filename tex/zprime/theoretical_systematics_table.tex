@@ -1,0 +1,26 @@
+\begin{table}[]
+    \centering
+    \caption{List of theoretical systematic uncertainties. The third column indicates the treatment of the uncertainty in the context of visualisation of the overall error in the dilepton mass distribution, whereas for the fit the error estimation follows treating each variation as a separate nuisance parameter and prunning where necessary. Wherever ``individual NPs'' is indicated, each variation within an uncertainty is treated as a separate nuisance parameter in the visualisation too. The abbreviations ADD., MULT. and EXP. refer to additive, multiplicative and exponentiated respectively, in the context of NLO EW virtual (loop) corrections to the Drell-Yan background.}
+    \label{tab:theory_systematics}
+    \resizebox{1.1\textwidth}{!}{
+        \begin{tabular}{cccc}
+            \hline \hline 
+            \textbf{Uncertainty} & \textbf{Description} & \textbf{Illustrative treatment} & \textbf{Fit treatment} \\ \hline
+            \multicolumn{4}{c}{top (\texttt{PhPy8EG})} \\ \hline
+            PDF4LHC15\_nlo & 30 variations from PDF4LHC15\_nlo set (90901--90930) & Individual NPs & Individual NPs \\
+            $\mu_{\textrm{R}}, \mu_{\textrm{F}}$ scales & QCD renormalisation, factorisation scales & Envelope & Individual NPs \\
+            FSR $\mu_{\textrm{R}}$ scale & QCD renormalisation scale variation in FSR & Individual NPs & Individual NPs \\
+            $\alpha_{\textrm{S}}$ & Variations on the strong coupling constant & Average & Individual NPs \\
+            ISR $\alpha_{\textrm{S}}$ (\texttt{Var3c}) & As above in the initial state radiation & Individual NPs & Individual NPs \\
+            $h_{\textrm{damp}}$ & Variation on the damping parameter (2-point) & Individual NPs against $t\bar{t}$ dilep. & Individual NPs against $t\bar{t}$ dilep.\\
+            PS & Variation on parton shower (2-point) & Individual NPs against $t\bar{t}$ dilep. & Individual NPs against $t\bar{t}$ dilep. \\
+            $|\mathcal{M}|$ & Variation on hard-scatter ME (2-point) & Individual NPs against $t\bar{t}$ dilep. & Individual NPs against $t\bar{t}$ dilep. \\ \hline \hline 
+            \multicolumn{4}{c}{DY (\texttt{Sherpa})} \\ \hline 
+            NNPDF30nnloas0118 & 100 variations from NNPDF30nnloas0118 set (303201--303300) & Standard deviation & Individual NPs \\
+            $\mu_{\textrm{R}}, \mu_{\textrm{F}}$ scales & QCD renormalisation, factorisation scales & Envelope & Individual NPs \\
+            $\alpha_{\textrm{S}}$ & Variations on the strong coupling constant & Average & Individual NPs \\
+            & & & \\ % Empty row for spacing
+            NLO $\textrm{EW}_{\textrm{virt.}}$ & Virtual corrections inclusion method (ADD., MULT., EXP.) & Correct nominal with smallest; envelope remaining two & Individual NPs \\ \hline \hline
+        \end{tabular}
+    }
+    \end{table}

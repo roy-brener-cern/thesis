@@ -1,0 +1,155 @@
+- Region: W+jets CR
+  Samples:
+    - Sample: RSn1 | Mth=6.0 TeV
+      Yield: 0
+      Error: 0
+    - Sample: W+jets
+      Yield: 8944.0482642459028
+      Error: 367.7057152083845
+    - Sample: Z+jets
+      Yield: 117.3882062864238
+      Error: 37.275861033250301
+    - Sample: VV
+      Yield: 519.25314401574701
+      Error: 34.504060156096045
+    - Sample: t#bar{t}
+      Yield: 2368.6582003339868
+      Error: 249.24327368582112
+    - Sample: single-t
+      Yield: 496.92267656527622
+      Error: 46.168449321355951
+    - Sample: t#bar{t}V
+      Yield: 18.001200126910216
+      Error: 1.7435922643966617
+    - Sample: fakes
+      Yield: 446.57168825115468
+      Error: 8.654564983567985
+    - Sample: Total
+      Yield: 12910.843379825401
+      Error: 124.62587643127775
+    - Data: Data 22-24
+      Yield: 12910
+- Region: W+jets VR
+  Samples:
+    - Sample: RSn1 | Mth=6.0 TeV
+      Yield: 0
+      Error: 0
+    - Sample: W+jets
+      Yield: 286.76735559217394
+      Error: 14.035606962794468
+    - Sample: Z+jets
+      Yield: 4.7009491562695942
+      Error: 2.7191402324039315
+    - Sample: VV
+      Yield: 23.503706050323245
+      Error: 1.9882248325750023
+    - Sample: t#bar{t}
+      Yield: 46.674866694737659
+      Error: 6.0015753465442119
+    - Sample: single-t
+      Yield: 13.978198571911415
+      Error: 2.9916911552692111
+    - Sample: t#bar{t}V
+      Yield: 0.52624169618898231
+      Error: 0.078824118796393824
+    - Sample: fakes
+      Yield: 18.692017580261115
+      Error: 0.35459503917536672
+    - Sample: Total
+      Yield: 394.84333534186601
+      Error: 15.089634768942139
+    - Data: Data 22-24
+      Yield: 385
+- Region: Z+jets CR
+  Samples:
+    - Sample: RSn1 | Mth=6.0 TeV
+      Yield: 0
+      Error: 0
+    - Sample: W+jets
+      Yield: 1.1463684278374888
+      Error: 0.61396663093392945
+    - Sample: Z+jets
+      Yield: 7854.2205570472261
+      Error: 100.35996610180531
+    - Sample: VV
+      Yield: 289.56412386480321
+      Error: 17.649427957450118
+    - Sample: t#bar{t}
+      Yield: 79.402881033824698
+      Error: 5.8606369598349231
+    - Sample: single-t
+      Yield: 7.9005346762428319
+      Error: 0.81451850709381635
+    - Sample: t#bar{t}V
+      Yield: 9.7314308519631538
+      Error: 0.70891033104148604
+    - Sample: fakes
+      Yield: 0
+      Error: 0
+    - Sample: Total
+      Yield: 8241.965895901898
+      Error: 97.057341975235147
+    - Data: Data 22-24
+      Yield: 8242
+- Region: Z+jets VR
+  Samples:
+    - Sample: RSn1 | Mth=6.0 TeV
+      Yield: 0
+      Error: 0
+    - Sample: W+jets
+      Yield: 0.12408341055376419
+      Error: 0.20276923122304175
+    - Sample: Z+jets
+      Yield: 325.39320182715085
+      Error: 32.443704736234075
+    - Sample: VV
+      Yield: 12.944184919454434
+      Error: 0.95720603948786032
+    - Sample: t#bar{t}
+      Yield: 1.7140764263139192
+      Error: 0.23620165065171306
+    - Sample: single-t
+      Yield: 0.32058102932303306
+      Error: 0.07815581189245982
+    - Sample: t#bar{t}V
+      Yield: 0.28501119324156254
+      Error: 0.033750863719410086
+    - Sample: fakes
+      Yield: 0
+      Error: 0
+    - Sample: Total
+      Yield: 340.78113880603752
+      Error: 32.654532335353267
+    - Data: Data 22-24
+      Yield: 260
+- Region: Signal
+  Samples:
+    - Sample: RSn1 | Mth=6.0 TeV
+      Yield: 3539.7115439322142
+      Error: 59.896140739096353
+    - Sample: W+jets
+      Yield: 52.816049519575863
+      Error: 7.0077740539660942
+    - Sample: Z+jets
+      Yield: 9.2538196650545341
+      Error: 1.1161137019999658
+    - Sample: VV
+      Yield: 4.282414130733958
+      Error: 0.26113902797806532
+    - Sample: t#bar{t}
+      Yield: 5.340283082859548
+      Error: 0.76362527144257408
+    - Sample: single-t
+      Yield: 0.4141010955123306
+      Error: 0.14914000758417853
+    - Sample: t#bar{t}V
+      Yield: 0.051900750906207341
+      Error: 0.0036679085217335488
+    - Sample: fakes
+      Yield: 96.189203895311863
+      Error: 13.636548935881336
+    - Sample: Total
+      Yield: 3708.0593160721687
+      Error: 60.581698658789577
+    - Data: Data 22-24
+      Yield: 117

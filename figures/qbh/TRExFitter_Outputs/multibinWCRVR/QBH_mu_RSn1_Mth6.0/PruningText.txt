@@ -1,0 +1,1438 @@
+-------///////                 ///////-------
+-------/////// IN PRUNING PLOT ///////-------
+-------///////                 ///////-------
+In Region : Wjets_CR
+ -> In Sample : QBH_RSn1_Mth6.0
+ -> In Sample : Wjets
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is kept
+ --->>  MET_SoftTrk_ResoPara      is kept
+ --->>  MET_SoftTrk_Scale      is kept
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is kept
+ --->>  MUR_Wjets      is kept
+ --->>  MUF_Wjets      is kept
+ --->>  AlphaS_Wjets      is kept
+ --->>  PDF_Wjets      is kept
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : Zjets
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is kept
+ --->>  MET_SoftTrk_ResoPara      is kept
+ --->>  MET_SoftTrk_Scale      is kept
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is kept
+ --->>  MUR_Zjets      is kept
+ --->>  MUF_Zjets      is kept
+ --->>  AlphaS_Zjets      is kept
+ --->>  PDF_Zjets      is kept
+ -> In Sample : VV
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is kept
+ --->>  MUON_SAGITTA_RESBIAS      is kept
+ --->>  MET_SoftTrk_ResoPerp      is kept
+ --->>  MET_SoftTrk_ResoPara      is kept
+ --->>  MET_SoftTrk_Scale      is kept
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : ttbar
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is kept
+ --->>  MUON_SAGITTA_RESBIAS      is kept
+ --->>  MET_SoftTrk_ResoPerp      is kept
+ --->>  MET_SoftTrk_ResoPara      is kept
+ --->>  MET_SoftTrk_Scale      is kept
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : singletop
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is kept
+ --->>  MUON_SAGITTA_RESBIAS      is kept
+ --->>  MET_SoftTrk_ResoPerp      is kept
+ --->>  MET_SoftTrk_ResoPara      is kept
+ --->>  MET_SoftTrk_Scale      is kept
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : ttV
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is kept
+ --->>  MET_SoftTrk_ResoPara      is kept
+ --->>  MET_SoftTrk_Scale      is kept
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : jj
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is norm only
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is not present
+ --->>  MUON_EFF_ISO_SYS      is not present
+ --->>  MUON_EFF_RECO_STAT      is not present
+ --->>  MUON_EFF_RECO_SYS      is not present
+ --->>  MUON_EFF_TTVA_STAT      is not present
+ --->>  MUON_EFF_TTVA_SYS      is not present
+ --->>  MUON_EFF_TrigStatUncertainty      is not present
+ --->>  MUON_EFF_TrigSystUncertainty      is not present
+ --->>  MUON_SCALE      is not present
+ --->>  MUON_CB      is not present
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is not present
+ --->>  JET_EffectiveNP_Detector1      is not present
+ --->>  JET_EffectiveNP_Detector2      is not present
+ --->>  JET_EffectiveNP_Mixed1      is not present
+ --->>  JET_EffectiveNP_Mixed2      is not present
+ --->>  JET_EffectiveNP_Mixed3      is not present
+ --->>  JET_EffectiveNP_Modelling1      is not present
+ --->>  JET_EffectiveNP_Modelling2      is not present
+ --->>  JET_EffectiveNP_Modelling3      is not present
+ --->>  JET_EffectiveNP_Modelling4      is not present
+ --->>  JET_EffectiveNP_Statistical1      is not present
+ --->>  JET_EffectiveNP_Statistical2      is not present
+ --->>  JET_EffectiveNP_Statistical3      is not present
+ --->>  JET_EffectiveNP_Statistical4      is not present
+ --->>  JET_EffectiveNP_Statistical5      is not present
+ --->>  JET_EffectiveNP_Statistical6      is not present
+ --->>  JET_EtaIntercalibration_Modelling      is not present
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is not present
+ --->>  JET_EtaIntercalibration_TotalStat      is not present
+ --->>  JET_Flavor_Composition      is not present
+ --->>  JET_Flavor_Response      is not present
+ --->>  JET_InSitu_NonClosure_PreRec      is not present
+ --->>  JET_JER_DataVsMC_MC16      is not present
+ --->>  JET_JER_EffectiveNP_10      is not present
+ --->>  JET_JER_EffectiveNP_11      is not present
+ --->>  JET_JER_EffectiveNP_12restTerm      is not present
+ --->>  JET_JERUnc_Noise_PreRec      is not present
+ --->>  JET_JESUnc_Noise_PreRec      is not present
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is not present
+ --->>  JET_NNJvtEfficiency      is not present
+ --->>  JET_Pileup_OffsetMu      is not present
+ --->>  JET_Pileup_OffsetNPV      is not present
+ --->>  JET_Pileup_PtTerm      is not present
+ --->>  JET_Pileup_RhoTopology      is not present
+ --->>  JET_SingleParticle_HighPt      is not present
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+In Region : Zjets_CR
+ -> In Sample : QBH_RSn1_Mth6.0
+ -> In Sample : Wjets
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is kept
+ --->>  MUR_Wjets      is kept
+ --->>  MUF_Wjets      is kept
+ --->>  AlphaS_Wjets      is kept
+ --->>  PDF_Wjets      is kept
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : Zjets
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is kept
+ --->>  MUR_Zjets      is kept
+ --->>  MUF_Zjets      is kept
+ --->>  AlphaS_Zjets      is kept
+ --->>  PDF_Zjets      is kept
+ -> In Sample : VV
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is kept
+ --->>  MUON_SAGITTA_RESBIAS      is kept
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : ttbar
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is kept
+ --->>  MUON_SAGITTA_RESBIAS      is kept
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : singletop
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is kept
+ --->>  MUON_SAGITTA_RESBIAS      is kept
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : ttV
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : jj
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is norm only
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is not present
+ --->>  MUON_EFF_ISO_SYS      is not present
+ --->>  MUON_EFF_RECO_STAT      is not present
+ --->>  MUON_EFF_RECO_SYS      is not present
+ --->>  MUON_EFF_TTVA_STAT      is not present
+ --->>  MUON_EFF_TTVA_SYS      is not present
+ --->>  MUON_EFF_TrigStatUncertainty      is not present
+ --->>  MUON_EFF_TrigSystUncertainty      is not present
+ --->>  MUON_SCALE      is not present
+ --->>  MUON_CB      is not present
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is not present
+ --->>  JET_EffectiveNP_Detector1      is not present
+ --->>  JET_EffectiveNP_Detector2      is not present
+ --->>  JET_EffectiveNP_Mixed1      is not present
+ --->>  JET_EffectiveNP_Mixed2      is not present
+ --->>  JET_EffectiveNP_Mixed3      is not present
+ --->>  JET_EffectiveNP_Modelling1      is not present
+ --->>  JET_EffectiveNP_Modelling2      is not present
+ --->>  JET_EffectiveNP_Modelling3      is not present
+ --->>  JET_EffectiveNP_Modelling4      is not present
+ --->>  JET_EffectiveNP_Statistical1      is not present
+ --->>  JET_EffectiveNP_Statistical2      is not present
+ --->>  JET_EffectiveNP_Statistical3      is not present
+ --->>  JET_EffectiveNP_Statistical4      is not present
+ --->>  JET_EffectiveNP_Statistical5      is not present
+ --->>  JET_EffectiveNP_Statistical6      is not present
+ --->>  JET_EtaIntercalibration_Modelling      is not present
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is not present
+ --->>  JET_EtaIntercalibration_TotalStat      is not present
+ --->>  JET_Flavor_Composition      is not present
+ --->>  JET_Flavor_Response      is not present
+ --->>  JET_InSitu_NonClosure_PreRec      is not present
+ --->>  JET_JER_DataVsMC_MC16      is not present
+ --->>  JET_JER_EffectiveNP_10      is not present
+ --->>  JET_JER_EffectiveNP_11      is not present
+ --->>  JET_JER_EffectiveNP_12restTerm      is not present
+ --->>  JET_JERUnc_Noise_PreRec      is not present
+ --->>  JET_JESUnc_Noise_PreRec      is not present
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is not present
+ --->>  JET_NNJvtEfficiency      is not present
+ --->>  JET_Pileup_OffsetMu      is not present
+ --->>  JET_Pileup_OffsetNPV      is not present
+ --->>  JET_Pileup_PtTerm      is not present
+ --->>  JET_Pileup_RhoTopology      is not present
+ --->>  JET_SingleParticle_HighPt      is not present
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+In Region : Signal
+ -> In Sample : QBH_RSn1_Mth6.0
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is kept
+ --->>  MUON_SAGITTA_RESBIAS      is kept
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : Wjets
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is not present
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is not present
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is not present
+ --->>  JET_EtaIntercalibration_TotalStat      is not present
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is not present
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is not present
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is not present
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is kept
+ --->>  MUR_Wjets      is kept
+ --->>  MUF_Wjets      is kept
+ --->>  AlphaS_Wjets      is kept
+ --->>  PDF_Wjets      is kept
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : Zjets
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is not present
+ --->>  MUON_CB      is not present
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is not present
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is not present
+ --->>  JET_EffectiveNP_Mixed2      is not present
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is not present
+ --->>  JET_EffectiveNP_Modelling2      is not present
+ --->>  JET_EffectiveNP_Modelling3      is not present
+ --->>  JET_EffectiveNP_Modelling4      is not present
+ --->>  JET_EffectiveNP_Statistical1      is not present
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is not present
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is not present
+ --->>  JET_EtaIntercalibration_Modelling      is not present
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is not present
+ --->>  JET_EtaIntercalibration_TotalStat      is not present
+ --->>  JET_Flavor_Composition      is not present
+ --->>  JET_Flavor_Response      is not present
+ --->>  JET_InSitu_NonClosure_PreRec      is not present
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is not present
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is not present
+ --->>  JET_JESUnc_Noise_PreRec      is not present
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is not present
+ --->>  JET_Pileup_OffsetNPV      is not present
+ --->>  JET_Pileup_PtTerm      is not present
+ --->>  JET_Pileup_RhoTopology      is not present
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is kept
+ --->>  MUR_Zjets      is kept
+ --->>  MUF_Zjets      is kept
+ --->>  AlphaS_Zjets      is kept
+ --->>  PDF_Zjets      is kept
+ -> In Sample : VV
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is not present
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is not present
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : ttbar
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is kept
+ --->>  MUON_SAGITTA_RESBIAS      is kept
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : singletop
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is kept
+ --->>  MUON_SAGITTA_PTEXTRA      is kept
+ --->>  MUON_SAGITTA_RESBIAS      is kept
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : ttV
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is not present
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is kept
+ --->>  MUON_EFF_ISO_SYS      is kept
+ --->>  MUON_EFF_RECO_STAT      is kept
+ --->>  MUON_EFF_RECO_SYS      is norm only
+ --->>  MUON_EFF_TTVA_STAT      is kept
+ --->>  MUON_EFF_TTVA_SYS      is kept
+ --->>  MUON_EFF_TrigStatUncertainty      is kept
+ --->>  MUON_EFF_TrigSystUncertainty      is kept
+ --->>  MUON_SCALE      is kept
+ --->>  MUON_CB      is kept
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is kept
+ --->>  JET_EffectiveNP_Detector1      is kept
+ --->>  JET_EffectiveNP_Detector2      is kept
+ --->>  JET_EffectiveNP_Mixed1      is kept
+ --->>  JET_EffectiveNP_Mixed2      is kept
+ --->>  JET_EffectiveNP_Mixed3      is kept
+ --->>  JET_EffectiveNP_Modelling1      is kept
+ --->>  JET_EffectiveNP_Modelling2      is kept
+ --->>  JET_EffectiveNP_Modelling3      is kept
+ --->>  JET_EffectiveNP_Modelling4      is kept
+ --->>  JET_EffectiveNP_Statistical1      is kept
+ --->>  JET_EffectiveNP_Statistical2      is kept
+ --->>  JET_EffectiveNP_Statistical3      is kept
+ --->>  JET_EffectiveNP_Statistical4      is kept
+ --->>  JET_EffectiveNP_Statistical5      is kept
+ --->>  JET_EffectiveNP_Statistical6      is kept
+ --->>  JET_EtaIntercalibration_Modelling      is kept
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is kept
+ --->>  JET_EtaIntercalibration_TotalStat      is kept
+ --->>  JET_Flavor_Composition      is kept
+ --->>  JET_Flavor_Response      is kept
+ --->>  JET_InSitu_NonClosure_PreRec      is kept
+ --->>  JET_JER_DataVsMC_MC16      is kept
+ --->>  JET_JER_EffectiveNP_10      is kept
+ --->>  JET_JER_EffectiveNP_11      is kept
+ --->>  JET_JER_EffectiveNP_12restTerm      is kept
+ --->>  JET_JERUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_Noise_PreRec      is kept
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is kept
+ --->>  JET_NNJvtEfficiency      is kept
+ --->>  JET_Pileup_OffsetMu      is kept
+ --->>  JET_Pileup_OffsetNPV      is kept
+ --->>  JET_Pileup_PtTerm      is kept
+ --->>  JET_Pileup_RhoTopology      is kept
+ --->>  JET_SingleParticle_HighPt      is kept
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present
+ -> In Sample : jj
+ --->>  Lumi      is norm only
+ --->>  jj_overall      is norm only
+ --->>  PRW      is kept
+ --->>  MUON_EFF_ISO_STAT      is not present
+ --->>  MUON_EFF_ISO_SYS      is not present
+ --->>  MUON_EFF_RECO_STAT      is not present
+ --->>  MUON_EFF_RECO_SYS      is not present
+ --->>  MUON_EFF_TTVA_STAT      is not present
+ --->>  MUON_EFF_TTVA_SYS      is not present
+ --->>  MUON_EFF_TrigStatUncertainty      is not present
+ --->>  MUON_EFF_TrigSystUncertainty      is not present
+ --->>  MUON_SCALE      is not present
+ --->>  MUON_CB      is not present
+ --->>  MUON_SAGITTA_DATASTAT      is not present
+ --->>  MUON_SAGITTA_PTEXTRA      is not present
+ --->>  MUON_SAGITTA_RESBIAS      is not present
+ --->>  MET_SoftTrk_ResoPerp      is not present
+ --->>  MET_SoftTrk_ResoPara      is not present
+ --->>  MET_SoftTrk_Scale      is not present
+ --->>  JET_BJES_Response      is not present
+ --->>  JET_EffectiveNP_Detector1      is not present
+ --->>  JET_EffectiveNP_Detector2      is not present
+ --->>  JET_EffectiveNP_Mixed1      is not present
+ --->>  JET_EffectiveNP_Mixed2      is not present
+ --->>  JET_EffectiveNP_Mixed3      is not present
+ --->>  JET_EffectiveNP_Modelling1      is not present
+ --->>  JET_EffectiveNP_Modelling2      is not present
+ --->>  JET_EffectiveNP_Modelling3      is not present
+ --->>  JET_EffectiveNP_Modelling4      is not present
+ --->>  JET_EffectiveNP_Statistical1      is not present
+ --->>  JET_EffectiveNP_Statistical2      is not present
+ --->>  JET_EffectiveNP_Statistical3      is not present
+ --->>  JET_EffectiveNP_Statistical4      is not present
+ --->>  JET_EffectiveNP_Statistical5      is not present
+ --->>  JET_EffectiveNP_Statistical6      is not present
+ --->>  JET_EtaIntercalibration_Modelling      is not present
+ --->>  JET_EtaIntercalibration_NonClosure_0p2_PreRec      is not present
+ --->>  JET_EtaIntercalibration_TotalStat      is not present
+ --->>  JET_Flavor_Composition      is not present
+ --->>  JET_Flavor_Response      is not present
+ --->>  JET_InSitu_NonClosure_PreRec      is not present
+ --->>  JET_JER_DataVsMC_MC16      is not present
+ --->>  JET_JER_EffectiveNP_10      is not present
+ --->>  JET_JER_EffectiveNP_11      is not present
+ --->>  JET_JER_EffectiveNP_12restTerm      is not present
+ --->>  JET_JERUnc_Noise_PreRec      is not present
+ --->>  JET_JESUnc_Noise_PreRec      is not present
+ --->>  JET_JESUnc_VertexingAlg_PreRec      is not present
+ --->>  JET_NNJvtEfficiency      is not present
+ --->>  JET_Pileup_OffsetMu      is not present
+ --->>  JET_Pileup_OffsetNPV      is not present
+ --->>  JET_Pileup_PtTerm      is not present
+ --->>  JET_Pileup_RhoTopology      is not present
+ --->>  JET_SingleParticle_HighPt      is not present
+ --->>  MUR_MUF_Wjets      is not present
+ --->>  MUR_Wjets      is not present
+ --->>  MUF_Wjets      is not present
+ --->>  AlphaS_Wjets      is not present
+ --->>  PDF_Wjets      is not present
+ --->>  MUR_MUF_Zjets      is not present
+ --->>  MUR_Zjets      is not present
+ --->>  MUF_Zjets      is not present
+ --->>  AlphaS_Zjets      is not present
+ --->>  PDF_Zjets      is not present

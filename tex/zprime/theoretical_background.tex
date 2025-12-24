@@ -1,0 +1,99 @@
+Common solutions to $B$-anomalies come in the form of a new massive neutral vector boson which decays to two leptons. Such models introduce a $U(1)'$ extension to the SM which induce such a massive boson, $\Zp$, accessible at LHC energies through resonance searches. $\Zp$'s couplings to fermions are model-dependent and can be non-universal. The model considered in this search is a benchmark for such solutions, which can be generalised through varying the NP couplings to SM fermions. An existence of $\Zp$ interacting with leptons and quarks at tree-level could explain $B$-anomalies; to that effect its couplings are typically stronger to third-generation quarks. Hitherto, collider experiments have tightened constraints on model-specific $Z'$ masses and couplings. Comprehensive analyses \cite{constraints} of constraints set by collider experiments contend that recent searches by ATLAS and CMS imply $m_{Z'} > 1.2, 1.5 \; \textrm{TeV}$ for prominent $Z'$ models.
+
+$b\rightarrow s \ell^{+}\ell^{-}$ transitions are flavour-changing neutral current (FCNC) processes. Such loop-level transitions are significantly suppressed in the 
+SM and hence sensitive to NP \cite{bsll}. The suppression stems from three key factors, namely
+
+\begin{enumerate}
+	\item CKM matrix elements, $V_{cb}, V_{ts} \sim \mathcal{O}(10^{-2})$,
+	\item Electroweak scale,
+	\item Loop factor,
+\end{enumerate}
+%
+which reduce the cross section to considerably low values. A semileptonic process, $b\rightarrow s \ell^{+}\ell^{-}$ transitions take place within $B^{0}$ meson 
+decays, where the bottom quark decays to a strange quark through a loop involving a $u,\, c$ or $t$ quark and a $W^{\pm}$ boson. 
+Such transitions may occur via a penguin or box diagram. These interactions are described using an Effective Field Theory (EFT), where short-distance, high-energy interactions are 
+integrated out and parameterised using dimension-6 operators and Wilson coefficients. A Hamiltonian is defined in  %\cite{Z_prime_models}%
+with corresponding Wilson coefficients 
+\cite{Wilson_coefficients} and dimension-6 operators \cite{dimension_6_operators_SM}. It is hence possible to postulate a tree-level NP $b\rightarrow s$ transition which is mediated by a massive $\Zp$ boson, decaying to a lepton pair. Such a $\Zp$ is depicted in the Feynman diagram in FIG. \ref{NP_bsll_transitions}.
+
+
+\begin{figure}[h]
+	%\hspace{0.7cm}
+	\centering
+	\begin{tikzpicture}[baseline=(current bounding box.center)]
+	\begin{feynman}
+	\vertex (a1) {\(\bar b\)};
+	
+	\vertex[right=2.5cm of a1] (a2);
+	\vertex[right=2.0cm of a1] (l1);
+	\vertex[right=1.7cm of l1](li);
+	\vertex[above=0.99cm of li] (l3);
+	\vertex[right=7.0cm of a1] (a3) {\(\bar{s}\)};
+
+	
+	\vertex[above right=6em of a2](c1);
+	
+	\vertex[above = 3em of a3](c3){\(\ell^{-}\)};
+	\vertex[above = 3.3em of c3](c2){\(\ell^{+}\)};
+	
+
+	
+	\newcommand\tmpda{0.7cm}
+	\newcommand\tmpdb{-1.7cm}
+	\diagram* {
+		{[edges=fermion]
+			(l1) -- (a1),
+		},
+		
+		(a3) -- [fermion] (l1),
+		
+		(l1) -- [boson](c1),
+		
+		(c2) -- [fermion](c1),
+		(c1) -- [fermion](c3),
+		
+		
+	};
+	
+	\node[vertex, label=above:$Z'$] at (2.8, 0.65);
+	
+	
+	\end{feynman}
+	\end{tikzpicture}
+	%
+	\caption{General illustration of beyond the Standard Model $b\rightarrow s\ell^{+}\ell^{-}$ transitions. A massive vector boson, $\Zp$, couples to $b, s$ quarks and decays leptonically.}
+	\label{NP_bsll_transitions}
+\end{figure}
+
+
+Therefore, sensitivity to NP could be gained through searches in the dilepton final state across a wide mass range. Specifically, as the benchmark $\Zp$ decays to the lepton pair, reconstruction of the final-state dilepton invariant mass can yield access to the resonant mass, $m_{Z'}$, at LHC energies. A generic $\Zp$ model with arbitrary couplings to SM fermions is defined by a Lagrangian %\cite{Z_prime_models},
+
+\begin{equation}
+\mathcal{L} = \sum_{f\in\{ u, d, \ell, \nu\}} \bar{f}_{i}\gamma^{\mu} (\Gamma^{f_{L}}_{ij}P_{L} + \Gamma^{f_{R}}_{ij}P_{R})f_{j}Z'_{\mu},
+%\label{eq:Zprime_Lagrangian}
+\end{equation}
+%
+where $P_{L,R} = (1 \mp \gamma_{5})/2$ and for simplicity it is assumed that the $\Zp$ emanates from a new $U(1)'$ gauge group with gauge coupling $g_{\Zp}$ and charge $\mathcal{Q}$. Defining a minimal setup for the $Z'$-to-SM coupling parameterisation, a term is observed as
+\begin{equation}
+\Gamma^{d_{L}}_{f_{i}} \approx \begin{pmatrix}
+0 & 0 & 0\\
+0 & x^{2} & x \\
+0 & x & 1
+\end{pmatrix}\mathcal{Q}_{3},
+\quad
+\Gamma^{u_{L}}_{f_{i}} \approx \begin{pmatrix}
+0 & 0 & 0\\
+0 & (x-V_{cb})^{2} & x-V_{cb} \\
+0 & x-V_{cb} & 1
+\end{pmatrix}\mathcal{Q}_{3},
+\quad
+x \sim \mathcal{O}(V_{cb}),
+%\label{eq:Zprime_gamma}
+\end{equation}
+%
+from which a contribution to the Wilson coefficients is gained.
+
+Such NP could be reconstructed from SM signatures, via a combination of the dilepton final state as well as from $b$-tagged jets. The new resonance is directly analysable through the lepton pair whereas jets can help shed light on the total event topology and kinematics. Using these parameters, this benchmark $\Zp$ is simulated and events where it decays to two electrons or two muons are generated.
+
+
+Using an EFT, $b\rightarrow s \ell^{+} \ell^{-}$ transitions could be described at tree level in the $b$-quark mass scale, $\sim 4.18 \, \textrm{GeV}$. As discussed, these transitions could be undergoing at tree-level via the a new vector boson which decays leptonically. Such a particle has been searched with the ATLAS detector inclusively via reconstructing dilepton final states using Run-2 LHC data at a delivered luminosity of $139 \, \textrm{fb}^{-1}$. This search targets specific a specific $\Zp$ which couples strongly to third-generation quarks and decays leptonically in association with $b$-tagged jets.

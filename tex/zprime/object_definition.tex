@@ -1,0 +1,213 @@
+%%%%%%%%%%%%%%%%%%%%%%%
+
+This study analyses physics objects collected by the ATLAS detector from $pp$ collisions in the LHC during the 2015--2018 data-taking period corresponding to a total integrated luminosity of $140 \; \textrm{fb}^{-1}$ with an uncertainty of 0.83 \% \cite{DAPR-2021-01} and centre-of-mass energy of $\sqrt{s} = 13 \; \textrm{TeV}$. 
+%\cite{lumi}. 
+In this work three key physics objects are used, namely muons, electrons and jets.
+
+%The definition of the above-mentioned physics objects, information on the $\met$ calculation and the overlap removal procedure are described in detail in Chapter 4 of the common internal note \cite{commonNote}:
+%\begin{itemize}
+%	\item \textbf{Section 4.1: }Electron selection
+%	\item \textbf{Section 4.2: }Muon selection
+%	\item \textbf{Section 4.3: }$\met$ calculation
+%	\item \textbf{Section 4.5: }Jet flavour tagging selection
+%	\item \textbf{Section 4.6: }Overlap removal
+%\end{itemize}
+
+\section{Electron selection}
+Electrons are selected according to the requirements specified in Table~\ref{tab:object:electron}.
+The Medium identification working point and the FCTight isolation working point is used for the main selection. The dielectron triggers specified in Table~\ref{tab:triggersEl} allow a looser electron definition based on the LooseAndBLayer identification working point, and without application of an isolation selection, to be used for the ``Loose electron'' definition in the Matrix Method fake-electron background estimate.
+\begin{table}[ht]
+	\caption{Electron selection criteria.}%
+	\label{tab:object:electron}
+	\centering
+	% \resizebox{\textwidth}{!}{
+		\begin{tabular}{ll}
+			\toprule
+			Feature & \multicolumn{1}{c}{Criterion} \\
+			\midrule
+			Pseudorapidity range & $|\eta| < 1.37 \quad$ or $ \quad 1.52 < |\eta| < 2.47$\\
+			Energy calibration & \texttt{es2018\_R21\_v0} (ESModel)\\
+			Transverse energy & \(\ET > \SI[parse-numbers=false]{25}{\GeV}\) \\
+			\midrule
+			%\multirow{2}{*}{Object quality} & Not from a bad calorimeter cluster (\texttt{BADCLUSELECTRON})\\ %\cline{2-2}
+			Object quality & Not from a bad calorimeter cluster (\texttt{BADCLUSELECTRON})\\ %\cline{2-2}
+			%      & Remove clusters from regions with EMEC bad HV (2016 data only) \\
+			\midrule
+			\multirow{2}{*}{Track to vertex association} & \(|d_{0}^{\text{BL}}(\sigma)| < 5\) \\ %\cline{2-2}
+			& \(|\Delta z_{0}^{\text{BL}} \sin{\theta}| < \SI[parse-numbers=false]{0.5}{\mm}\) \\
+			\midrule
+			Identification & \texttt{Medium} (and \texttt{LooseAndBLayer} for Matrix Method) \\
+			Isolation & \texttt{FCTight} \\
+			\bottomrule
+		\end{tabular}
+		% }
+\end{table}
+
+\section{Muon selection}
+
+Muons are selected according to the requirements specified in Table~\ref{tab:object:muon}. The TightTrackOnly\_VarRad isolation working point is used for the main selection. This requirement is removed for the ``Loose muon'' definition used in the Matrix Method fake-muon background estimate.
+\begin{table}[ht]
+	\caption{Muon selection criteria.}%
+	\label{tab:object:muon}
+	\centering
+	% \resizebox{\textwidth}{!}{
+		\begin{tabular}[ht]{ll}
+			\toprule
+			Feature & Criterion \\
+			\midrule
+			Efficiency Calibration & \texttt{210222\_Precision\_r21}\\
+			Momentum Calibration & \texttt{Recs2021\_12\_11}\\
+			calibMode & \texttt{notCorrectData\_IDMS}\\
+			Selection working point & \texttt{High-pT} \\
+			Isolation working point & \texttt{TightTrackOnly\_VarRad}\\
+			Momentum calibration & Sagitta correction not used \\
+			\pT cut & \SI[parse-numbers=false]{25}{\GeV}  \\
+			\(|\eta|\) cut & \(|\eta|< 2.5\) \\
+			\dzero significance cut &  \(|d_{0}^{\text{BL}}(\sigma)| < 3\) \\
+			\(z_{0}\) cut & \(|\Delta z_{0}^{\text{BL}} \sin{\theta}| < \SI[parse-numbers=false]{0.5}{\mm}\) \\
+			Bad Muon Veto & is applied \\
+			\bottomrule
+		\end{tabular}
+		% }
+\end{table}
+
+
+\section{Small-\(R\) jet selection}
+
+Jets are reconstructed using the particle-flow algorithm and selected according to the requirements specified in Table~\ref{tab:object:jet1}. Forward jet vertex
+tagging\footnote{Note that the fJVT variable is defined ``opposite'' to JVT in terms of whether hard-scatter jets correspond to lower or higher values, hence
+	the ``direction'' of the cuts given for JVT and fJVT in Table~\ref{tab:object:jet1} are opposite.} 
+is used for jets to reduce the contribution from pile-up jets at high $|\eta|$.
+\begin{table}[ht]
+	\caption{Jet reconstruction criteria.}%
+	\label{tab:object:jet1}
+	\centering
+	% \resizebox{\textwidth}{!}{
+		\begin{tabular}{ll}
+			\toprule
+			Feature & Criterion \\
+			\midrule
+			Algorithm & \Antikt  \\
+			\(R\)-parameter & 0.4 \\
+			Input constituent & EMPFlow \\
+			Analysis release number & 21.2.240 \\
+			%Calibration tag & JetCalibTools-00-04-76 \\
+			\texttt{CalibArea} tag & 00-04-82 \\
+			Calibration configuration & \texttt{JES\_MC16Recommendation\_Consolidated\_PFlow\_Apr2019\_Rel21.config} \\
+			Calibration configuration (AFII) & \texttt{JES\_MC16Recommendation\_AFII\_PFlow\_Apr2019\_Rel21.config} \\
+			Calibration sequence (Data) & \texttt{JetArea\_Residual\_EtaJES\_GSC\_Insitu} \\
+			Calibration sequence (MC) & \texttt{JetArea\_Residual\_EtaJES\_GSC\_Smear} \\
+			%Calibration sequence (AFII) & \texttt{JetArea\_Residual\_EtaJES\_GSC} \\
+			\midrule
+			\multicolumn{2}{c}{Selection requirements} \\
+			\midrule
+			Observable & Requirement \\
+			\midrule
+			Jet cleaning & \texttt{LooseBad} \\
+			BatMan cleaning & No \\
+			\pT & \(> \SI[parse-numbers=false]{20}{\GeV}\) \\
+			\(|\eta|\) & \(< 4.5\) \\
+			JVT &  \(>0.5\) for \(\pT < \SI{60}{\GeV}\), \(|\eta| < 2.4\)\\
+			forward JVT &  \(\mathrm{fJVT} < 0.4\) and \(|\mathrm{timing}| < 10\,\mathrm{ns} \) for \(\pT < \SI{120}{\GeV}\), \(2.5 < |\eta| < 4.5\)\\
+			\bottomrule
+		\end{tabular}
+		% }
+\end{table}
+
+
+\section{$\met$ calculation}
+\label{sec:metcalc}
+
+The missing transverse energy is reconstructed from jets selected and calibrated according to the information
+in Table~\ref{tab:object:jet1}, using a track-based soft term. Leptons included as hard objects in the
+missing transverse energy calculation are:
+\begin{itemize}
+	\item electrons with LooseAndBLayer identification, $\pT>20\,\GeV$, and $|\eta|<2.47$,
+	\item muons with High-$\pT$ working point identification, $\pT>20\,\GeV$, and $|\eta|<2.5$.
+\end{itemize}
+Events are rejected if there are any jets failing the LooseBad cleaning criteria, or if any of the muons
+used in the \MET calculation are classified as ``bad'' according to the standard prescription from the
+Muon Combined Performance group. As this analysis uses the High-$\pT$ working point, this classification
+is based on the relative $q/p$ uncertainty from the combined track fit.
+The configuration of the missing transverse energy calculation is summarized in Table~\ref{tab:object:met}.
+\begin{table}[ht]
+	\caption{\MET reconstruction criteria.}%
+	\label{tab:object:met}
+	\centering
+	\begin{tabular}{ll}
+		\toprule
+		Parameter & Value \\ 
+		\midrule
+		Algorithm & Calo-based \\
+		Soft term & Track-based (TST) \\ 
+		MET operating point & \texttt{Tight} \\
+		Analysis release & 21.2.240 \\
+		%Muon/p-flow bug-fix & Applied \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\section{Jet flavor tagging selection}
+One object type particular to this analysis channel are $b$-tagged jets, whereby the probability of anti-$k_{\textrm{T}}$ jets to originate from the decay of a $b$-hadron is computed. This is achieved using a Deep Learning algorithm common across ATLAS, \texttt{DL1r} \cite{b_tagging_ATLAS}. 
+In addition to the jets, key ingredients provided to the algorithm include charged-particle tracks reconstructed in the ID and primary vertices (PVs) indicating the reference point from which track and vertex displacements are computed. Using \texttt{DL1r} in this analysis, a jet is deemed $b$-jet if its \texttt{DL1r} score is greater than 0.665, which corresponds to 85\% tagging efficiency, commonly known as the 85\% WP.
+The $b$-tagging for small-radius jets is configured as detailed in Table~\ref{tab:object:btag}.
+\begin{table}[ht]
+	\caption{\btag selection criteria.}%
+	\label{tab:object:btag}
+	\centering
+	% \resizebox{\textwidth}{!}{
+		\begin{tabular}{ll}
+			\toprule
+			Feature & Criterion \\ 
+			\midrule
+			& EM PFlow Jets \\
+			\midrule
+			Jet collection  & \texttt{AntiKt4EMPFlow} \\
+			Jet selection   & \(\pT > \SI[parse-numbers=false]{20}{\GeV}\) \\
+			    	            	& \(|\eta| < 2.5\) \\				
+			%                   & JVT cut if applicable \\
+			\midrule
+			Algorithm 		  & \texttt{DL1r} \\
+			\midrule
+			Operating point & Fixed \\
+			& Eff = 85 \% \\ 
+			CDI             & \texttt{2020-21-13TeV-MC16-CDI-2021-04-16\_v1} \\
+			\bottomrule
+		\end{tabular}
+		% }
+\end{table}%
+
+
+\section{Overlap removal}
+
+The reconstruction of the same energy deposits as multiple objects is resolved using the standard overlap removal tools.
+The lepton-favoured working point with slight adaptions is used, as detailed in Table~\ref{tab:OR}. Some decisions in the overlap removal are based on the angular distance \(\Delta R\), which is calculated with the angle phi and the rapidity (instead of the pseudorapidity).
+
+\begin{table}[ht]
+	% \resizebox{\textwidth}{!}{
+		\begin{tabular}{lll}
+			\toprule
+			Reject & Against & Criteria \\
+			\midrule
+			Electron & Electron & None \\
+			Muon     & Electron & is Calo-Muon and shared ID track \\
+			Electron & Muon     & None \\
+			Jet      & Electron & \(\Delta R < 0.2\) \\
+			Electron & Jet      & None \\
+			Jet      & Muon     & \(\texttt{NumTrack} < 3\) or \(p_T(j)<100p_T(\mu)\) and (ghost-associated or \(\Delta R < 0.2\)) \\
+			Muon     & Jet      & None \\
+			\bottomrule
+		\end{tabular}
+		\caption{Configuration of the overlap removal procedure.}
+		\label{tab:OR}
+		% }
+\end{table}
+
+
+%A bug was found in the treatment of muon tracks in relation to p-flow jets, affecting in particular the overlap removal between muons and p-flow jets\footnote{\url{https://indico.cern.ch/event/850794/contributions/3581581/attachments/1919208/3174139/muonpf20191001_1.pdf}\\ \url{https://indico.cern.ch/event/784283/contributions/3369773/attachments/1818503/2973229/Presentation.pdf}}. Detailed studies of $\met$ modeling were undertaken in the context of this analysis, where differences were found between the electron and muon channels. These differences were found to be mitigated by the application of a dedicated bug-fix in the overlap removal in the $\met$ calculation. As a result of these and related studies, the bug-fix was turned on by default from AnalysisBase release 21.2.164. Some details and a few selected results on this can be found in Appendix~\ref{app:muonPflow}.
+
+
+%One object type particular to this analysis channel are $b$-tagged jets, whereby the probability of anti-$k_{\textrm{T}}$ jets to originate from the decay of a $b$-hadron is computed. This is achieved using a Deep Learning algorithm common across ATLAS, \texttt{DL1r}. 
+%\cite{b_tagging_ATLAS}. 
+%In addition to the jets, key ingredients provided to the algorithm include charged-particle tracks reconstructed in the ID and primary vertices (PVs) indicating the reference point from which track and vertex displacements are computed. Using \texttt{DL1r} in this analysis, a jet is deemed $b$-jet if its \texttt{DL1r} score is greater than 0.665, which corresponds to 85\% tagging efficiency, commonly known as the 85\% WP.

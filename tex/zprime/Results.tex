@@ -1,0 +1,2225 @@
+
+
+\section{Blinded results}
+
+This section contains a set of results from the analysis, including fit results for signal-plus-background (S+B) and background only (BONLY) fits and expected exclusion limits.
+
+At the current state of the analysis, the signal regions are still blinded, meaning that an asimov dataset is used. However, in control and validation regions, real data is used.
+
+%%Simultaneous control and signal region fits are performed.
+%In a first step the signal region is still blinded, and Asimov-data is used in the signal region fits. 
+%However, in the control regions, a likelihood fit of the background to the data is performed.
+%The normalisation factors $\mu_{\ttbar}$, $\mu_{Z+LF}$ and $\mu_{Z+HF}$ for the dominating backgrounds are obtained in a background-only fit in the control regions by fitting the invariant dilepton mass distribution of the control region summed up in one bin. This is done separately for the two channels. Since this is a background-only fit, the signal strength $\mu$ is set to zero for the fit.
+%As described earlier, the $e\mu$ channel is used as top control region, meaning that exactly the same data and background is used as an input in the muon and electron channel fits.
+%
+%To obtain limits on the signal strength the signal region and the control region are fitted simultaneously in a signal-plus-background fit. Since no real data is used in the Signal region, an asimov dataset is created from the MC prediction for background event yields per bin, taking the background normalisation factors obtained from the background-only fit in the control regions into account in order to ensure consistency for the signal-plus-background fit.
+
+\subsection{B only (CR only) fits}
+
+This section contains the results of background-only fits in the control regions. A likelihood fit of the background to the data is performed for all control regions (in one single bin) simultaneously for the muon and electron channel. The top control region is the same for both channels, but it is fitted individually in the two channels.
+Pre- and post-fit plots of the control regions are shown in Figure \ref{fig:CR_fit_mu_1000_g05_bonly_CR} for the muon channel and in Figure \ref{fig:CR_fit_ele_1000_g05_bonly_CR} for the electron channel. 
+
+\begin{figure}[h]
+\centering
+\subfloat[]{
+	\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_mu/TopValidation.pdf}
+	\label{fig:CR_fit_mu_TopCR_pre_1000_g05_bonly_CR}
+}
+%\hfill
+\subfloat[]{
+	\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZControl_0b.pdf}
+	\label{fig:CR_fit_mu_ZCR_LF_pre_1000_g05_bonly_CR}
+}
+\subfloat[]{
+	\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZControl_atleast1b.pdf}
+	\label{fig:CR_fit_mu_ZCR_HF_pre_1000_g05_bonly_CR}
+}
+\hfill
+\subfloat[]{
+	\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_mu/TopValidation_postFit.pdf}
+	\label{fig:CR_fit_mu_TopCR_post_1000_g05_bonly_CR}
+}
+%\hfill
+\subfloat[]{
+	\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZControl_0b_postFit.pdf}
+	\label{fig:CR_fit_mu_ZCR_LF_post_1000_g05_bonly_CR}
+}
+\subfloat[]{
+	\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZControl_atleast1b_postFit.pdf}
+	\label{fig:CR_fit_mu_ZCR_HF_post_1000_g05_bonly_CR}
+}
+%\hfill
+
+\caption{\textbf{(B only fit in CR)} Pre-fit and post-fit plots for the single-bin fit of the Top control region (\protect\subref{fig:CR_fit_mu_TopCR_pre_1000_g05_bonly_CR}, \protect\subref{fig:CR_fit_mu_TopCR_post_1000_g05_bonly_CR}), the Z+LF control region (\protect\subref{fig:CR_fit_mu_ZCR_LF_pre_1000_g05_bonly_CR}, \protect\subref{fig:CR_fit_mu_ZCR_LF_post_1000_g05_bonly_CR}) and the Z+HF control region (\protect\subref{fig:CR_fit_mu_ZCR_HF_pre_1000_g05_bonly_CR}, \protect\subref{fig:CR_fit_mu_ZCR_HF_post_1000_g05_bonly_CR}) in the muon channel. The uncertainty band includes statistical and systematic uncertainties.}
+\label{fig:CR_fit_mu_1000_g05_bonly_CR}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_ele/TopValidation.pdf}
+		\label{fig:CR_fit_ele_TopCR_pre_1000_g05_bonly_CR}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZControl_0b.pdf}
+		\label{fig:CR_fit_ele_ZCR_LF_pre_1000_g05_bonly_CR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZControl_atleast1b.pdf}
+		\label{fig:CR_fit_ele_ZCR_HF_pre_1000_g05_bonly_CR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_ele/TopValidation_postFit.pdf}
+		\label{fig:CR_fit_ele_TopCR_post_1000_g05_bonly_CR}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZControl_0b_postFit.pdf}
+		\label{fig:CR_fit_ele_ZCR_LF_post_1000_g05_bonly_CR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZControl_atleast1b_postFit.pdf}
+		\label{fig:CR_fit_ele_ZCR_HF_post_1000_g05_bonly_CR}
+	}
+	%\hfill
+	
+	\caption{\textbf{(B only fit in CR)} Pre-fit and post-fit plots for the single-bin fit of the Top control region (\protect\subref{fig:CR_fit_ele_TopCR_pre_1000_g05_bonly_CR}, \protect\subref{fig:CR_fit_ele_TopCR_post_1000_g05_bonly_CR}), the Z+LF control region (\protect\subref{fig:CR_fit_ele_ZCR_LF_pre_1000_g05_bonly_CR}, \protect\subref{fig:CR_fit_ele_ZCR_LF_post_1000_g05_bonly_CR}) and the Z+HF control region (\protect\subref{fig:CR_fit_ele_ZCR_HF_pre_1000_g05_bonly_CR}, \protect\subref{fig:CR_fit_ele_ZCR_HF_post_1000_g05_bonly_CR}) in the electron channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:CR_fit_ele_1000_g05_bonly_CR}
+\end{figure}
+
+
+
+\FloatBarrier
+
+The obtained normalisation factors are shown in Figure \ref{fig:NP_CRs_1000_g05_BONLY_CR} for the muon and electron channel. 
+Nuisance parameter pulls, gamma pulls, pruning plots and correlation plots are shown in Figures \ref{fig:NP_CRs_1000_g05_BONLY_CR}-\ref{fig:correlations_1000_g05_BONLY_CR} for the muon and electron channel. Only those nuisance parameters that are kept after the pruning are shown in the nuisance parameter pull plot. The correlation matrices only show nuisance parameters having correlations of at least 20\% with at least one nuisance parameter or normalisation factor.
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_BONLY_CRONLY_mu/NormFactors.pdf}
+		\label{fig:NP_CRs_mu_1000_g05_BONLY_CR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_BONLY_CRONLY_ele/NormFactors.pdf}
+		\label{fig:NP_CRs_ele_1000_g05_BONLY_CR}
+	}
+	\caption{\textbf{(B only fit in CR)} Normalisation factors obtained from the single-bin fits of the Control region in the muon \protect\subref{fig:NP_CRs_mu_1000_g05_BONLY_CR} and electron channel \protect\subref{fig:NP_CRs_ele_1000_g05_BONLY_CR}. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:NP_CRs_1000_g05_BONLY_CR}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.3\textwidth]{figures/Fit_BONLY_CRONLY_mu/Pruning.pdf}
+		\label{fig:Pruning_1000_g05_mu_BONLY_CR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.3\textwidth]{figures/Fit_BONLY_CRONLY_ele/Pruning.pdf}
+		\label{fig:Pruning_1000_g05_ele_BONLY_CR}
+	}
+	\caption{\textbf{(B only fit in CR)} Pruning plots for the muon \protect \subref{fig:Pruning_1000_g05_mu_BONLY_CR} and electron \protect \subref{fig:Pruning_1000_g05_ele_BONLY_CR} channel.}
+	\label{fig:Pruning_1000_g05_BONLY_CR}
+\end{figure}
+
+
+%\begin{figure}[h]
+%	\centering
+%	\subfloat[]{
+%		\includegraphics[width=0.4\textwidth]{figures/Fit_BONLY_CRONLY_mu/NuisPar.pdf}
+%		\label{fig:NuisPar_1000_g05_mu_BONLY_CR}
+%	}
+%	\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.4\textwidth]{figures/Fit_BONLY_CRONLY_ele/NuisPar.pdf}
+%		\label{fig:NuisPar_1000_g05_ele_BONLY_CR}
+%	}
+%	\caption{\textbf{(B only fit in CR)} Nuisance parameter pull plots for the muon \protect \subref{fig:NuisPar_1000_g05_mu_BONLY_CR} and electron \protect \subref{fig:NuisPar_1000_g05_ele_BONLY_CR} channel.}
+%	\label{fig:NuisPar_1000_g05_BONLY_CR}
+%\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_BONLY_CRONLY_mu/NuisPar_experimental.pdf}
+		\label{fig:NuisPar_1000_g05_mu_BONLY_CR_experimental}
+		
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_BONLY_CRONLY_mu/NuisPar_theory.pdf}
+		\label{fig:NuisPar_1000_g05_mu_BONLY_CR_theory}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_BONLY_CRONLY_ele/NuisPar_experimental.pdf}
+		\label{fig:NuisPar_1000_g05_ele_BONLY_CR_experimental}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_BONLY_CRONLY_ele/NuisPar_theory.pdf}
+		\label{fig:NuisPar_1000_g05_ele_BONLY_CR_theory}
+	}
+	\caption{\textbf{(B only fit in CR)} Nuisance parameter pull plots (split into experimental and theory systematic uncertainties) for the muon channel (\protect \subref{fig:NuisPar_1000_g05_mu_BONLY_CR_experimental}, \protect \subref{fig:NuisPar_1000_g05_mu_BONLY_CR_theory}) and electron channel (\protect \subref{fig:NuisPar_1000_g05_ele_BONLY_CR_experimental}, \protect \subref{fig:NuisPar_1000_g05_ele_BONLY_CR_theory}).}
+	\label{fig:NuisPar_1000_g05_BONLY_CR}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_BONLY_CRONLY_mu/Gammas.pdf}
+		\label{fig:gammas_1000_g05_mu_BONLY_CR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_BONLY_CRONLY_ele/Gammas.pdf}
+		\label{fig:gammas_1000_g05_ele_BONLY_CR}
+	}
+	\caption{\textbf{(B only fit in CR)} Gamma pull plots for the muon \protect \subref{fig:gammas_1000_g05_mu_BONLY_CR} and electron \protect \subref{fig:gammas_1000_g05_ele_BONLY_CR} channel.}
+	\label{fig:gammas_1000_g05_BONLY_CR}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_BONLY_CRONLY_mu/CorrMatrix.pdf}
+		\label{fig:correlations_1000_g05_mu_BONLY_CR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_BONLY_CRONLY_ele/CorrMatrix.pdf}
+		\label{fig:correlations_1000_g05_ele_BONLY_CR}
+	}
+	\caption{\textbf{(B only fit in CR)} Nuisance parameter correlation matrices for the muon \protect \subref{fig:correlations_1000_g05_mu_BONLY_CR} and electron \protect \subref{fig:correlations_1000_g05_ele_BONLY_CR} channel for the fit. Only nuisance parameters having a correlation of at least 20\% with at least one other nuisance parameter are shown.}
+	\label{fig:correlations_1000_g05_BONLY_CR}
+\end{figure}
+
+
+
+\FloatBarrier
+
+
+Figure \ref{fig:VR_fit_mu_1000_g05_BONLY_CR} and \ref{fig:VR_fit_ele_1000_g05_BONLY_CR} show the pre-fit and post-fit plots of the validation regions for the muon and electron channel, respectively. Figure \ref{fig:VR_new_fit_mu_1000_g05_BONLY_CR} and \ref{fig:VR_new_fit_ele_1000_g05_BONLY_CR} shows the pre-fit and post-fit plots of two additional VRs with exactly one or at least 2 $b$-jets, respectively. These two regions are added as an additional check since these two regions are a bit closer to the signal region definition.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZValidation_0b.pdf}
+		\label{fig:VR_fit_mu_1000_g05_0b_pre_BONLY_CR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZValidation_atleast1b.pdf}
+		\label{fig:VR_fit_mu_1000_g05_atleast1b_pre_BONLY_CR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZValidation_0b_postFit.pdf}
+		\label{fig:VR_fit_mu_1000_g05_0b_post_BONLY_CR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZValidation_atleast1b_postFit.pdf}
+		\label{fig:VR_fit_mu_1000_g05_atleast1b_post_BONLY_CR}
+	}
+	\caption{\textbf{(B only fit in CR)} Pre-fit and post-fit plots of the validation regions with zero (\protect \subref{fig:VR_fit_mu_1000_g05_0b_pre_BONLY_CR}, \protect \subref{fig:VR_fit_mu_1000_g05_0b_post_BONLY_CR}) and at least one $b$-jet (\protect \subref{fig:VR_fit_mu_1000_g05_atleast1b_pre_BONLY_CR}, \protect \subref{fig:VR_fit_mu_1000_g05_atleast1b_post_BONLY_CR}) in the muon channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_fit_mu_1000_g05_BONLY_CR}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZValidation_1b.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_1b_pre_BONLY_CR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZValidation_atleast2b.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_atleast2b_pre_BONLY_CR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZValidation_1b_postFit.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_1b_post_BONLY_CR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_mu/ZValidation_atleast2b_postFit.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_atleast2b_post_BONLY_CR}
+	}
+	\caption{\textbf{(B only fit in CR)} Pre-fit and post-fit plots of the validation regions with exactly one (\protect \subref{fig:VR_new_fit_mu_1000_g05_1b_pre_BONLY_CR}, \protect \subref{fig:VR_new_fit_mu_1000_g05_1b_post_BONLY_CR}) and at least two $b$-jets (\protect \subref{fig:VR_new_fit_mu_1000_g05_atleast2b_pre_BONLY_CR}, \protect \subref{fig:VR_new_fit_mu_1000_g05_atleast2b_post_BONLY_CR}) in the muon channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_new_fit_mu_1000_g05_BONLY_CR}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZValidation_0b.pdf}
+		\label{fig:VR_fit_ele_1000_g05_0b_pre_BONLY_CR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZValidation_atleast1b.pdf}
+		\label{fig:VR_fit_ele_1000_g05_atleast1b_pre_BONLY_CR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZValidation_0b_postFit.pdf}
+		\label{fig:VR_fit_ele_1000_g05_0b_post_BONLY_CR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZValidation_atleast1b_postFit.pdf}
+		\label{fig:VR_fit_ele_1000_g05_atleast1b_post_BONLY_CR}
+	}
+	\caption{\textbf{(B only fit in CR)} Pre-fit and post-fit plots of the validation regions with zero (\protect \subref{fig:VR_fit_ele_1000_g05_0b_pre_BONLY_CR}, \protect \subref{fig:VR_fit_ele_1000_g05_0b_post_BONLY_CR}) and at least one $b$-jet (\protect \subref{fig:VR_fit_ele_1000_g05_atleast1b_pre_BONLY_CR}, \protect \subref{fig:VR_fit_ele_1000_g05_atleast1b_post_BONLY_CR}) in the electron channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_fit_ele_1000_g05_BONLY_CR}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZValidation_1b.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_1b_pre_BONLY_CR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZValidation_atleast2b.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_atleast2b_pre_BONLY_CR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZValidation_1b_postFit.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_1b_post_BONLY_CR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRONLY_ele/ZValidation_atleast2b_postFit.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_atleast2b_post_BONLY_CR}
+	}
+	\caption{\textbf{(B only fit in CR)} Pre-fit and post-fit plots of the validation regions with exactly one (\protect \subref{fig:VR_new_fit_ele_1000_g05_1b_pre_BONLY_CR}, \protect \subref{fig:VR_new_fit_ele_1000_g05_1b_post_BONLY_CR}) and at least two $b$-jets (\protect \subref{fig:VR_new_fit_ele_1000_g05_atleast2b_pre_BONLY_CR}, \protect \subref{fig:VR_new_fit_ele_1000_g05_atleast2b_post_BONLY_CR}) in the muon channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_new_fit_ele_1000_g05_BONLY_CR}
+\end{figure}
+
+
+
+
+\FloatBarrier
+
+
+\subsection{B only (CR+SR(asimov)) fits}
+
+This section contains the results of background-only fits in the control regions and signal regions. A likelihood fit of the background to the data is performed for all control regions (in one single bin) and for the signal regions to an asimov dataset (binned in $m_{\ell\ell}$). The top control region is the same for both channels, but it is fitted individually in the two channels.
+Pre- and post-fit plots of the control regions are shown in Figure \ref{fig:CR_fit_mu_1000_g05_bonly_CRSR} for the muon channel and in Figure \ref{fig:CR_fit_ele_1000_g05_bonly_CRSR} for the electron channel. 
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/TopValidation.pdf}
+		\label{fig:CR_fit_mu_TopCR_pre_1000_g05_bonly_CRSR}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/ZControl_0b.pdf}
+		\label{fig:CR_fit_mu_ZCR_LF_pre_1000_g05_bonly_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/ZControl_atleast1b.pdf}
+		\label{fig:CR_fit_mu_ZCR_HF_pre_1000_g05_bonly_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/TopValidation_postFit.pdf}
+		\label{fig:CR_fit_mu_TopCR_post_1000_g05_bonly_CRSR}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/ZControl_0b_postFit.pdf}
+		\label{fig:CR_fit_mu_ZCR_LF_post_1000_g05_bonly_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/ZControl_atleast1b_postFit.pdf}
+		\label{fig:CR_fit_mu_ZCR_HF_post_1000_g05_bonly_CRSR}
+	}
+	%\hfill
+	
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Pre-fit and post-fit plots for the single-bin fit of the Top control region (\protect\subref{fig:CR_fit_mu_TopCR_pre_1000_g05_bonly_CRSR}, \protect\subref{fig:CR_fit_mu_TopCR_post_1000_g05_bonly_CRSR}), the Z+LF control region (\protect\subref{fig:CR_fit_mu_ZCR_LF_pre_1000_g05_bonly_CRSR}, \protect\subref{fig:CR_fit_mu_ZCR_LF_post_1000_g05_bonly_CRSR}) and the Z+HF control region (\protect\subref{fig:CR_fit_mu_ZCR_HF_pre_1000_g05_bonly_CRSR}, \protect\subref{fig:CR_fit_mu_ZCR_HF_post_1000_g05_bonly_CRSR}) in the muon channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:CR_fit_mu_1000_g05_bonly_CRSR}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/TopValidation.pdf}
+		\label{fig:CR_fit_ele_TopCR_pre_1000_g05_bonly_CRSR}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/ZControl_0b.pdf}
+		\label{fig:CR_fit_ele_ZCR_LF_pre_1000_g05_bonly_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/ZControl_atleast1b.pdf}
+		\label{fig:CR_fit_ele_ZCR_HF_pre_1000_g05_bonly_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/TopValidation_postFit.pdf}
+		\label{fig:CR_fit_ele_TopCR_post_1000_g05_bonly_CRSR}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/ZControl_0b_postFit.pdf}
+		\label{fig:CR_fit_ele_ZCR_LF_post_1000_g05_bonly_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/ZControl_atleast1b_postFit.pdf}
+		\label{fig:CR_fit_ele_ZCR_HF_post_1000_g05_bonly_CRSR}
+	}
+	%\hfill
+	
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Pre-fit and post-fit plots for the single-bin fit of the Top control region (\protect\subref{fig:CR_fit_ele_TopCR_pre_1000_g05_bonly_CRSR}, \protect\subref{fig:CR_fit_ele_TopCR_post_1000_g05_bonly_CRSR}), the Z+LF control region (\protect\subref{fig:CR_fit_ele_ZCR_LF_pre_1000_g05_bonly_CRSR}, \protect\subref{fig:CR_fit_ele_ZCR_LF_post_1000_g05_bonly_CRSR}) and the Z+HF control region (\protect\subref{fig:CR_fit_ele_ZCR_HF_pre_1000_g05_bonly_CRSR}, \protect\subref{fig:CR_fit_ele_ZCR_HF_post_1000_g05_bonly_CRSR}) in the electron channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:CR_fit_ele_1000_g05_bonly_CRSR}
+\end{figure}
+
+
+\FloatBarrier
+
+The obtained normalisation factors are shown in Figure \ref{fig:NP_CRs_1000_g05_BONLY_CRSR} for the muon and electron channel. 
+Nuisance parameter pulls, gamma pulls, pruning plots and correlation plots are shown in Figures \ref{fig:NP_CRs_1000_g05_BONLY_CRSR}-\ref{fig:correlations_1000_g05_BONLY_CRSR} for the muon and electron channel. Only those nuisance parameters that are kept after the pruning are shown in the nuisance parameter pull plot. The correlation matrices only show nuisance parameters having correlations of at least 20\% with at least one nuisance parameter or normalisation factor.
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_BONLY_CRSR_mu/NormFactors.pdf}
+		\label{fig:NP_CRs_mu_1000_g05_BONLY_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_BONLY_CRSR_ele/NormFactors.pdf}
+		\label{fig:NP_CRs_ele_1000_g05_BONLY_CRSR}
+	}
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Normalisation factors obtained from the single-bin fits of the Control region in the muon \protect\subref{fig:NP_CRs_mu_1000_g05_BONLY_CRSR} and electron channel \protect\subref{fig:NP_CRs_ele_1000_g05_BONLY_CRSR}. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:NP_CRs_1000_g05_BONLY_CRSR}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.28\textwidth]{figures/Fit_BONLY_CRSR_mu/Pruning.pdf}
+		\label{fig:Pruning_1000_g05_mu_BONLY_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.28\textwidth]{figures/Fit_BONLY_CRSR_ele/Pruning.pdf}
+		\label{fig:Pruning_1000_g05_ele_BONLY_CRSR}
+	}
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Pruning plots for the muon \protect \subref{fig:Pruning_1000_g05_mu_BONLY_CRSR} and electron \protect \subref{fig:Pruning_1000_g05_ele_BONLY_CRSR} channel.}
+	\label{fig:Pruning_1000_g05_BONLY_CRSR}
+\end{figure}
+
+
+%\begin{figure}[h]
+%	\centering
+%	\subfloat[]{
+%		\includegraphics[width=0.4\textwidth]{figures/Fit_BONLY_CRSR_mu/NuisPar.pdf}
+%		\label{fig:NuisPar_1000_g05_mu_BONLY_CRSR}
+%	}
+%	\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.4\textwidth]{figures/Fit_BONLY_CRSR_ele/NuisPar.pdf}
+%		\label{fig:NuisPar_1000_g05_ele_BONLY_CRSR}
+%	}
+%	\caption{\textbf{(B only fit in CR+SR(asimov))} Nuisance parameter pull plots for the muon \protect \subref{fig:NuisPar_1000_g05_mu_BONLY_CRSR} and electron \protect \subref{fig:NuisPar_1000_g05_ele_BONLY_CRSR} channel.}
+%	\label{fig:NuisPar_1000_g05_BONLY_CRSR}
+%\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_BONLY_CRSR_mu/NuisPar_experimental.pdf}
+		\label{fig:NuisPar_1000_g05_mu_BONLY_CRSR_experimental}
+		
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_BONLY_CRSR_mu/NuisPar_theory.pdf}
+		\label{fig:NuisPar_1000_g05_mu_BONLY_CRSR_theory}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_BONLY_CRSR_ele/NuisPar_experimental.pdf}
+		\label{fig:NuisPar_1000_g05_ele_BONLY_CRSR_experimental}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_BONLY_CRSR_ele/NuisPar_theory.pdf}
+		\label{fig:NuisPar_1000_g05_ele_BONLY_CRSR_theory}
+	}
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Nuisance parameter pull plots (split into experimental and theory systematic uncertainties) for the muon channel (\protect \subref{fig:NuisPar_1000_g05_mu_BONLY_CRSR_experimental}, \protect \subref{fig:NuisPar_1000_g05_mu_BONLY_CRSR_theory}) and electron channel (\protect \subref{fig:NuisPar_1000_g05_ele_BONLY_CRSR_experimental}, \protect \subref{fig:NuisPar_1000_g05_ele_BONLY_CRSR_theory}).}
+	\label{fig:NuisPar_1000_g05_BONLY_CRSR}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.26\textwidth]{figures/Fit_BONLY_CRSR_mu/Gammas.pdf}
+		\label{fig:gammas_1000_g05_mu_BONLY_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.2\textwidth]{figures/Fit_BONLY_CRSR_ele/Gammas.pdf}
+		\label{fig:gammas_1000_g05_ele_BONLY_CRSR}
+	}
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Gamma pull plots for the muon \protect \subref{fig:gammas_1000_g05_mu_BONLY_CRSR} and electron \protect \subref{fig:gammas_1000_g05_ele_BONLY_CRSR} channel.}
+	\label{fig:gammas_1000_g05_BONLY_CRSR}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_BONLY_CRSR_mu/CorrMatrix.pdf}
+		\label{fig:correlations_1000_g05_mu_BONLY_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_BONLY_CRSR_ele/CorrMatrix.pdf}
+		\label{fig:correlations_1000_g05_ele_BONLY_CRSR}
+	}
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Nuisance parameter correlation matrices for the muon \protect \subref{fig:correlations_1000_g05_mu_BONLY_CRSR} and electron \protect \subref{fig:correlations_1000_g05_ele_BONLY_CRSR} channel for the fit. Only nuisance parameters having a correlation of at least 20\% with at least one other nuisance parameter are shown.}
+	\label{fig:correlations_1000_g05_BONLY_CRSR}
+\end{figure}
+
+
+\FloatBarrier
+
+Figure \ref{fig:VR_fit_mu_1000_g05_BONLY_CRSR} and \ref{fig:VR_fit_ele_1000_g05_BONLY_CRSR} show the pre-fit and post-fit plots of the validation regions for the muon and electron channel, respectively. Figure \ref{fig:VR_new_fit_mu_1000_g05_BONLY_CRSR} \ref{fig:VR_new_fit_ele_1000_g05_BONLY_CRSR} and shows the pre-fit and post-fit plots of two additional VRs with exactly one or at least 2 $b$-jets, respectively. These two regions are added as an additional check since these two regions are a bit closer to the signal region definition.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_mu/ZValidation_0b.pdf}
+		\label{fig:VR_fit_mu_1000_g05_0b_pre_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_mu/ZValidation_atleast1b.pdf}
+		\label{fig:VR_fit_mu_1000_g05_atleast1b_pre_BONLY_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_mu/ZValidation_0b_postFit.pdf}
+		\label{fig:VR_fit_mu_1000_g05_0b_post_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_mu/ZValidation_atleast1b_postFit.pdf}
+		\label{fig:VR_fit_mu_1000_g05_atleast1b_post_BONLY_CRSR}
+	}
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with zero (\protect \subref{fig:VR_fit_mu_1000_g05_0b_pre_BONLY_CRSR}, \protect \subref{fig:VR_fit_mu_1000_g05_0b_post_BONLY_CRSR}) and at least one $b$-jet (\protect \subref{fig:VR_fit_mu_1000_g05_atleast1b_pre_BONLY_CRSR}, \protect \subref{fig:VR_fit_mu_1000_g05_atleast1b_post_BONLY_CRSR}) in the muon channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_fit_mu_1000_g05_BONLY_CRSR}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_mu/ZValidation_1b.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_1b_pre_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_mu/ZValidation_atleast2b.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_atleast2b_pre_BONLY_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_mu/ZValidation_1b_postFit.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_1b_post_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_mu/ZValidation_atleast2b_postFit.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_atleast2b_post_BONLY_CRSR}
+	}
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with exactly one (\protect \subref{fig:VR_new_fit_mu_1000_g05_1b_pre_BONLY_CRSR}, \protect \subref{fig:VR_new_fit_mu_1000_g05_1b_post_BONLY_CRSR}) and at least two $b$-jets (\protect \subref{fig:VR_new_fit_mu_1000_g05_atleast2b_pre_BONLY_CRSR}, \protect \subref{fig:VR_new_fit_mu_1000_g05_atleast2b_post_BONLY_CRSR}) in the muon channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_new_fit_mu_1000_g05_BONLY_CRSR}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_ele/ZValidation_0b.pdf}
+		\label{fig:VR_fit_ele_1000_g05_0b_pre_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_ele/ZValidation_atleast1b.pdf}
+		\label{fig:VR_fit_ele_1000_g05_atleast1b_pre_BONLY_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_ele/ZValidation_0b_postFit.pdf}
+		\label{fig:VR_fit_ele_1000_g05_0b_post_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_ele/ZValidation_atleast1b_postFit.pdf}
+		\label{fig:VR_fit_ele_1000_g05_atleast1b_post_BONLY_CRSR}
+	}
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with zero (\protect \subref{fig:VR_fit_ele_1000_g05_0b_pre_BONLY_CRSR}, \protect \subref{fig:VR_fit_ele_1000_g05_0b_post_BONLY_CRSR}) and at least one $b$-jet (\protect \subref{fig:VR_fit_ele_1000_g05_atleast1b_pre_BONLY_CRSR}, \protect \subref{fig:VR_fit_ele_1000_g05_atleast1b_post_BONLY_CRSR}) in the electron channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_fit_ele_1000_g05_BONLY_CRSR}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_ele/ZValidation_1b.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_1b_pre_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_ele/ZValidation_atleast2b.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_atleast2b_pre_BONLY_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_ele/ZValidation_1b_postFit.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_1b_post_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_BONLY_CRSR_ele/ZValidation_atleast2b_postFit.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_atleast2b_post_BONLY_CRSR}
+	}
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with exactly one (\protect \subref{fig:VR_new_fit_ele_1000_g05_1b_pre_BONLY_CRSR}, \protect \subref{fig:VR_new_fit_ele_1000_g05_1b_post_BONLY_CRSR}) and at least two $b$-jets (\protect \subref{fig:VR_new_fit_ele_1000_g05_atleast2b_pre_BONLY_CRSR}, \protect \subref{fig:VR_new_fit_ele_1000_g05_atleast2b_post_BONLY_CRSR}) in the muon channel. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_new_fit_ele_1000_g05_BONLY_CRSR}
+\end{figure}
+
+
+\FloatBarrier
+
+
+The pre- and post-fit plots of the signal regions are shown in Figure \ref{fig:SR_fit_mu_1000_g05_BONLY_CRSR} and \ref{fig:SR_fit_ele_1000_g05_BONLY_CRSR}. These plots show the results of the background only fits in control and signal regions, but nevertheless the signal for a $Z'$ boson mass of $m_{Z'}=1000\,\GeV$ and a coupling parameter of $g=0.5$ is shown in these plots as well. %The ratio panel shows the ratio of signal events over the square-root of background events (\soverb). It can be seen that the \soverb-ratio is generally zero in the post-fit plots, since an Asimov dataset is used in the fit, where no signal is expected.
+%Furthermore, it can be noted that the binning in the signal regions can be further optimised and this is still under investigation. %So far, the same binning is used in all three regions. However, the statistics are quite different in the different signal regions and it would allow for more bins in the high-mass region for a selection without $b$-jets in the final state.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/Signal_0b.pdf}
+		\label{fig:SR_fit_mu_1000_g05_0b_pre_BONLY_CRSR}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/Signal_1b.pdf}
+		\label{fig:SR_fit_mu_1000_g05_0b_post_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/Signal_atleast2b.pdf}
+		\label{fig:SR_fit_mu_1000_g05_1b_pre_BONLY_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/Signal_0b_postFit.pdf}
+		\label{fig:SR_fit_mu_1000_g05_1b_post_BONLY_CRSR}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/Signal_1b_postFit.pdf}
+		\label{fig:SR_fit_mu_1000_g05_atleast2b_pre_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_mu/Signal_atleast2b_postFit.pdf}
+		\label{fig:SR_fit_mu_1000_g05_atleast2b_post_BONLY_CRSR}
+	}
+	%\hfill
+	
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Pre- and post-fit plots of the signal regions with zero (\protect \subref{fig:SR_fit_mu_1000_g05_0b_pre}, \protect \subref{fig:SR_fit_mu_1000_g05_0b_post}), one (\protect \subref{fig:SR_fit_mu_1000_g05_1b_pre}, \protect \subref{fig:SR_fit_mu_1000_g05_1b_post}) and at least two $b$-jets (\protect \subref{fig:SR_fit_mu_1000_g05_atleast2b_pre}, \protect \subref{fig:SR_fit_mu_1000_g05_atleast2b_post}) in the muon channel. Statistical and systematic uncertainties are considered for the fit. }
+	\label{fig:SR_fit_mu_1000_g05_BONLY_CRSR}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/Signal_0b.pdf}
+		\label{fig:SR_fit_ele_1000_g05_0b_pre_BONLY_CRSR}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/Signal_1b.pdf}
+		\label{fig:SR_fit_ele_1000_g05_0b_post_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/Signal_atleast2b.pdf}
+		\label{fig:SR_fit_ele_1000_g05_1b_pre_BONLY_CRSR}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/Signal_0b_postFit.pdf}
+		\label{fig:SR_fit_ele_1000_g05_1b_post_BONLY_CRSR}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/Signal_1b_postFit.pdf}
+		\label{fig:SR_fit_ele_1000_g05_atleast2b_pre_BONLY_CRSR}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_BONLY_CRSR_ele/Signal_atleast2b_postFit.pdf}
+		\label{fig:SR_fit_ele_1000_g05_atleast2b_post_BONLY_CRSR}
+	}
+	%\hfill
+	
+	\caption{\textbf{(B only fit in CR+SR(asimov))} Pre- and post-fit plots of the signal regions with zero (\protect \subref{fig:SR_fit_ele_1000_g05_0b_pre_BONLY_CRSR}, \protect \subref{fig:SR_fit_ele_1000_g05_0b_post_BONLY_CRSR}), one (\protect \subref{fig:SR_fit_ele_1000_g05_1b_pre_BONLY_CRSR}, \protect \subref{fig:SR_fit_ele_1000_g05_1b_post_BONLY_CRSR}) and at least two $b$-jets (\protect \subref{fig:SR_fit_ele_1000_g05_atleast2b_pre_BONLY_CRSR}, \protect \subref{fig:SR_fit_ele_1000_g05_atleast2b_post_BONLY_CRSR}) in the electron channel. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:SR_fit_ele_1000_g05_BONLY_CRSR}
+\end{figure}
+
+
+
+
+\FloatBarrier
+\subsection{S+B (CR-SR(asimov)) fits with $m_{Z'}=1000\,\GeV$ and $g=0.5$}
+
+This section contains results of a signal-plus-background fit in control and signal regions. Since the signal regions are still blinded, an asimov dataset is used in these regions. 
+That means that for these S+B fits, mixed data and MC fits are performed. The idea is to first perform a background-only fit to the control regions (using real data). This preliminary fit provides then a set of background normalisation factors, which are then used to construct the asimov dataset in the signal region, where no real data can be used yet. Finally, a fit and limit computation are performed considering all control and signal regions, but using a "mixed" dataset where real data is used in the control regions and the asimov dataset is used in the signal regions.
+
+Figures \ref{fig:CR_fit_mu_1000_g05} and \ref{fig:CR_fit_ele_1000_g05} show the pre-fit and post-fit plots for the single-bin fit of the Control regions for the muon and electron channel, respectively. These plots show exemplarily the $Z'$ signal with $m_{Z'}=1\TeV$ and a coupling parameter of $g=0.5$. The obtained normalisation factors are shown in Figure \ref{fig:NP_CRs_1000_g05} for both channels. It can be seen that the normalisation factors of the $\ttbar$ background and the Z+HF background are compatible with one, while the normalisation factor of the Z+LF background is above one. These normalisation factors are in agreement with the observations made in Chapter \ref{background_estimation}.
+Within the uncertainties, the normalisation factors are compatible for the muon and electron channel. 
+Furthermore, the normalisation factors are the same as in the background-only fits, which meets the expectation since Asimov data is used in the signal regions. Compared to the background-only fit in control regions only, the uncertainty is reduced since more information is used for the fit in signal and control regions.
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/TopValidation.pdf}
+		\label{fig:CR_fit_mu_TopCR_pre_1000_g05}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZControl_0b.pdf}
+		\label{fig:CR_fit_mu_ZCR_LF_pre_1000_g05}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZControl_atleast1b.pdf}
+		\label{fig:CR_fit_mu_ZCR_HF_pre_1000_g05}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/TopValidation_postFit.pdf}
+		\label{fig:CR_fit_mu_TopCR_post_1000_g05}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZControl_0b_postFit.pdf}
+		\label{fig:CR_fit_mu_ZCR_LF_post_1000_g05}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZControl_atleast1b_postFit.pdf}
+		\label{fig:CR_fit_mu_ZCR_HF_post_1000_g05}
+	}
+	%\hfill
+	
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre-fit and post-fit plots for the single-bin fit of the Top control region (\protect\subref{fig:CR_fit_mu_TopCR_pre_1000_g05}, \protect\subref{fig:CR_fit_mu_TopCR_post_1000_g05}), the Z+LF control region (\protect\subref{fig:CR_fit_mu_ZCR_LF_pre_1000_g05}, \protect\subref{fig:CR_fit_mu_ZCR_LF_post_1000_g05}) and the Z+HF control region (\protect\subref{fig:CR_fit_mu_ZCR_HF_pre_1000_g05}, \protect\subref{fig:CR_fit_mu_ZCR_HF_post_1000_g05}) in the muon channel. The uncertainty band includes statistical and systematic uncertainties. These plots show exemplarily the $Z'$ signal with $m_{Z'}=1\TeV$ and a coupling parameter of $g=0.5$.}
+	\label{fig:CR_fit_mu_1000_g05}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/TopValidation.pdf}
+		\label{fig:CR_fit_ele_TopCR_pre_1000_g05}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZControl_0b.pdf}
+		\label{fig:CR_fit_ele_ZCR_LF_pre_1000_g05}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZControl_atleast1b.pdf}
+		\label{fig:CR_fit_ele_ZCR_HF_pre_1000_g05}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/TopValidation_postFit.pdf}
+		\label{fig:CR_fit_ele_TopCR_post_1000_g05}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZControl_0b_postFit.pdf}
+		\label{fig:CR_fit_ele_ZCR_LF_post_1000_g05}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZControl_atleast1b_postFit.pdf}
+		\label{fig:CR_fit_ele_ZCR_HF_post_1000_g05}
+	}
+	%\hfill
+	
+	\caption{\textbf{(S+B fit in CR+SR(asimov))}Pre-fit and post-fit plots for the single-bin fit of the Top control region (\protect\subref{fig:CR_fit_ele_TopCR_pre_1000_g05}, \protect\subref{fig:CR_fit_ele_TopCR_post_1000_g05}), the Z+LF control region (\protect\subref{fig:CR_fit_ele_ZCR_LF_pre_1000_g05}, \protect\subref{fig:CR_fit_ele_ZCR_LF_post_1000_g05}) and the Z+HF control region (\protect\subref{fig:CR_fit_ele_ZCR_HF_pre_1000_g05}, \protect\subref{fig:CR_fit_ele_ZCR_HF_post_1000_g05}) in the electron channel for the fit with a $Z'$ signal with $m_{Z'}=1\,\mathrm{TeV}$ and a coupling parameter of $g=0.5$. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:CR_fit_ele_1000_g05}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[]{
+    	\includegraphics[width=0.45\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/NormFactors.pdf}
+    	\label{fig:NP_CRs_mu_1000_g05}
+    }
+    \hfill
+    \subfloat[]{
+    	\includegraphics[width=0.45\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/NormFactors.pdf}
+    	\label{fig:NP_CRs_ele_1000_g05}
+    }
+    \caption{\textbf{(S+B fit in CR+SR(asimov))} Normalisation factors obtained from the single-bin fits of the Control region in the muon \protect\subref{fig:NP_CRs_mu_1000_g05} and electron channel \protect\subref{fig:NP_CRs_ele_1000_g05} for the fit with a $Z'$ signal with $m_{Z'}=1\,\mathrm{TeV}$ and a coupling parameter of $g=0.5$. Statistical and systematic uncertainties are considered for the fit.}
+    \label{fig:NP_CRs_1000_g05}
+\end{figure}
+
+
+\FloatBarrier
+
+
+The pruning plots, nuisance parameter pulls, gamma pulls and correlation plots are shown in Figures \ref{fig:Pruning_1000_g05}, \ref{fig:NuisPar_1000_g05}, \ref{fig:gammas_1000_g05} and \ref{fig:correlations_1000_g05} for the muon and electron channel. %There is currently no pruning applied, meaning that all nuisance parameters are kept and shown in the nuisance parameter pull plot. 
+Only those nuisance parameters that are kept after the pruning are shown in the nuisance parameter pull plots.
+No pulls can be observed since the control regions are fitted in one single bin each. However, a few nuisance parameters, mainly related to theory uncertainties, are constrained.
+The correlation matrices only show nuisance parameters having correlations of at least 20\% with at least one other nuisance parameter or normalisation factor. It can be seen that mostly theory uncertainty nuisance parameters and normalisation factors have such correlations.
+The gamma pulls are mostly small, but some pulls are relatively large. %However, it will be tested if a different choice of the binning (less bins especially in the signal region with at least 2 $b$-jets) will reduce these pulls.
+
+Nuisance parameter ranking plots are shown in Figure \ref{fig:Ranking_1000_g05} for the muon and electron channel. It can be seen that mostly muon or electron efficiency uncertainties are entering the ranking plot. Furthermore, a few Z PDF systematic uncertainties and $\ttbar$ theory uncertainties are visible in the ranking plots. In the electron channel, the \texttt{EG SCALE ALL} systematic is ranked relatively high. Therefore, the impact of this uncertainty on the limit was checked. It was observed that the limit is $0.008600$ in the set-up where all systematic uncertainties are considered. When removingthe \texttt{EG SCALE ALL} systematic from the fit, the limit has a value of $0.008581$. Hence, it can be seen that the impact of this uncertainty on the final limit is small and therefore, we will not change to a more detailed scheme for this uncertainty. Some systematic control plots are shown for the highest ranked systematic uncertainties in Appendix \ref{syst_control_plots}.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.3\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/Pruning.pdf}
+		\label{fig:Pruning_1000_g05_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.3\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/Pruning.pdf}
+		\label{fig:Pruning_1000_g05_ele}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pruning plots for the muon \protect \subref{fig:Pruning_1000_g05_mu} and electron \protect \subref{fig:Pruning_1000_g05_ele} channel for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=0.5$.}
+	\label{fig:Pruning_1000_g05}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/NuisPar_experimental.pdf}
+		\label{fig:NuisPar_1000_g05_mu_experimental}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/NuisPar_theory.pdf}
+		\label{fig:NuisPar_1000_g05_mu_theory}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/NuisPar_experimental.pdf}
+		\label{fig:NuisPar_1000_g05_ele_experimental}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/NuisPar_theory.pdf}
+		\label{fig:NuisPar_1000_g05_ele_theory}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Nuisance parameter pull plots (split into experimental and theory systematic uncertainties) for the muon (\protect \subref{fig:NuisPar_1000_g05_mu_experimental}, \protect \subref{fig:NuisPar_1000_g05_mu_theory}) and electron (\protect \subref{fig:NuisPar_1000_g05_ele_experimental}, \protect \subref{fig:NuisPar_1000_g05_ele_theory}) channel for the fit with a $Z'$ signal with $m_{Z'}=1\,\mathrm{TeV}$ and a coupling parameter of $g=0.5$.}
+	\label{fig:NuisPar_1000_g05}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.2\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/Gammas.pdf}
+		\label{fig:gammas_1000_g05_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.2\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/Gammas.pdf}
+		\label{fig:gammas_1000_g05_ele}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Gamma pull plots for the muon \protect \subref{fig:gammas_1000_g05_mu} and electron \protect \subref{fig:gammas_1000_g05_ele} channel for the fit with a $Z'$ signal with $m_{Z'}=1\,\mathrm{TeV}$ and a coupling parameter of $g=0.5$.}
+	\label{fig:gammas_1000_g05}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/CorrMatrix.pdf}
+		\label{fig:correlations_1000_g05_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/CorrMatrix.pdf}
+		\label{fig:correlations_1000_g05_ele}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Nuisance parameter correlation matrices for the muon \protect \subref{fig:correlations_1000_g05_mu} and electron \protect \subref{fig:correlations_1000_g05_ele} channel for the fit with a $Z'$ signal with $m_{Z'}=1\,\mathrm{TeV}$ and a coupling parameter of $g=0.5$. Only nuisance parameters having a correlation of at least 20\% with at least one other nuisance parameter are shown.}
+	\label{fig:correlations_1000_g05}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/RankingSysts_SigXsecOverSM_Breakdown_syst.pdf}
+		\label{fig:Ranking_1000_g05_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/RankingSysts_SigXsecOverSM_Breakdown_syst.pdf}
+		\label{fig:Ranking_1000_g05_ele}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Nuisance parameter ranking plots for the muon \protect \subref{fig:Ranking_1000_g05_mu} and electron \protect \subref{fig:Ranking_1000_g05_ele} channel for the fit with a $Z'$ signal with $m_{Z'}=1\,\mathrm{TeV}$ and a coupling parameter of $g=0.5$.}
+	\label{fig:Ranking_1000_g05}
+\end{figure}
+
+
+
+
+Figure \ref{fig:VR_fit_mu_1000_g05} and \ref{fig:VR_fit_ele_1000_g05} show the pre-fit and post-fit plots of the validation regions for the muon and electron channel, respectively. Figure \ref{fig:VR_new_fit_mu_1000_g05} \ref{fig:VR_new_fit_ele_1000_g05} and shows the pre-fit and post-fit plots of two additional VRs with exactly one or at least 2 $b$-jets, respectively. These two regions are added as an additional check since these two regions are a bit closer to the signal region definition.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZValidation_0b.pdf}
+		\label{fig:VR_fit_mu_1000_g05_0b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZValidation_atleast1b.pdf}
+		\label{fig:VR_fit_mu_1000_g05_atleast1b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZValidation_0b_postFit.pdf}
+		\label{fig:VR_fit_mu_1000_g05_0b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZValidation_atleast1b_postFit.pdf}
+		\label{fig:VR_fit_mu_1000_g05_atleast1b_post}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with zero (\protect \subref{fig:VR_fit_mu_1000_g05_0b_pre}, \protect \subref{fig:VR_fit_mu_1000_g05_0b_post}) and at least one $b$-jet (\protect \subref{fig:VR_fit_mu_1000_g05_atleast1b_pre}, \protect \subref{fig:VR_fit_mu_1000_g05_atleast1b_post}) in the muon channel for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=0.5$. The uncertainty band includes statistical and background systematic uncertainties.}
+	\label{fig:VR_fit_mu_1000_g05}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZValidation_1b.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_1b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZValidation_atleast2b.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_atleast2b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZValidation_1b_postFit.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_1b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/ZValidation_atleast2b_postFit.pdf}
+		\label{fig:VR_new_fit_mu_1000_g05_atleast2b_post}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with exactly one (\protect \subref{fig:VR_new_fit_mu_1000_g05_1b_pre}, \protect \subref{fig:VR_new_fit_mu_1000_g05_1b_post}) and at least two $b$-jets (\protect \subref{fig:VR_new_fit_mu_1000_g05_atleast2b_pre}, \protect \subref{fig:VR_new_fit_mu_1000_g05_atleast2b_post}) in the muon channel for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=0.5$. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_new_fit_mu_1000_g05}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZValidation_0b.pdf}
+		\label{fig:VR_fit_ele_1000_g05_0b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZValidation_atleast1b.pdf}
+		\label{fig:VR_fit_ele_1000_g05_atleast1b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZValidation_0b_postFit.pdf}
+		\label{fig:VR_fit_ele_1000_g05_0b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZValidation_atleast1b_postFit.pdf}
+		\label{fig:VR_fit_ele_1000_g05_atleast1b_post}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with zero (\protect \subref{fig:VR_fit_ele_1000_g05_0b_pre}, \protect \subref{fig:VR_fit_ele_1000_g05_0b_post}) and at least one $b$-jet (\protect \subref{fig:VR_fit_ele_1000_g05_atleast1b_pre}, \protect \subref{fig:VR_fit_ele_1000_g05_atleast1b_post}) in the electron channel for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=0.5$. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_fit_ele_1000_g05}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZValidation_1b.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_1b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZValidation_atleast2b.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_atleast2b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZValidation_1b_postFit.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_1b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/ZValidation_atleast2b_postFit.pdf}
+		\label{fig:VR_new_fit_ele_1000_g05_atleast2b_post}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with exactly one (\protect \subref{fig:VR_new_fit_ele_1000_g05_1b_pre}, \protect \subref{fig:VR_new_fit_ele_1000_g05_1b_post}) and at least two $b$-jets (\protect \subref{fig:VR_new_fit_ele_1000_g05_atleast2b_pre}, \protect \subref{fig:VR_new_fit_ele_1000_g05_atleast2b_post}) in the electron channel  for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=0.5$. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_new_fit_ele_1000_g05}
+\end{figure}
+
+
+
+
+
+The pre- and post-fit plots of the signal regions are shown exemparily in Figure \ref{fig:SR_fit_mu_1000_g05} and \ref{fig:SR_fit_ele_1000_g05} for a $Z'$ boson mass of $m_{Z'}=1000\,\GeV$ and a coupling parameter of $g=0.5$. %The ratio panel shows the ratio of signal events over the square-root of background events (\soverb). It can be seen that the \soverb-ratio is generally zero in the post-fit plots, since an Asimov dataset is used in the fit, where no signal is expected.
+
+%Furthermore, it can be noted that the binning in the signal regions can be further optimised and this is still under investigation. %So far, the same binning is used in all three regions. However, the statistics are quite different in the different signal regions and it would allow for more bins in the high-mass region for a selection without $b$-jets in the final state.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/Signal_0b.pdf}
+		\label{fig:SR_fit_mu_1000_g05_0b_pre}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/Signal_1b.pdf}
+		\label{fig:SR_fit_mu_1000_g05_0b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/Signal_atleast2b.pdf}
+		\label{fig:SR_fit_mu_1000_g05_1b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/Signal_0b_postFit.pdf}
+		\label{fig:SR_fit_mu_1000_g05_1b_post}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/Signal_1b_postFit.pdf}
+		\label{fig:SR_fit_mu_1000_g05_atleast2b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_mu/Signal_atleast2b_postFit.pdf}
+		\label{fig:SR_fit_mu_1000_g05_atleast2b_post}
+	}
+	%\hfill
+	
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre- and post-fit plots of the signal regions with zero (\protect \subref{fig:SR_fit_mu_1000_g05_0b_pre}, \protect \subref{fig:SR_fit_mu_1000_g05_0b_post}), one (\protect \subref{fig:SR_fit_mu_1000_g05_1b_pre}, \protect \subref{fig:SR_fit_mu_1000_g05_1b_post}) and at least two $b$-jets (\protect \subref{fig:SR_fit_mu_1000_g05_atleast2b_pre}, \protect \subref{fig:SR_fit_mu_1000_g05_atleast2b_post}) for a signal with $m_{Z'}=1000\,\GeV$ and $g=0.5$ in the muon channel. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:SR_fit_mu_1000_g05}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/Signal_0b.pdf}
+		\label{fig:SR_fit_ele_1000_g05_0b_pre}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/Signal_1b.pdf}
+		\label{fig:SR_fit_ele_1000_g05_0b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/Signal_atleast2b.pdf}
+		\label{fig:SR_fit_ele_1000_g05_1b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/Signal_0b_postFit.pdf}
+		\label{fig:SR_fit_ele_1000_g05_1b_post}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/Signal_1b_postFit.pdf}
+		\label{fig:SR_fit_ele_1000_g05_atleast2b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g05_singlebinCRs_ele/Signal_atleast2b_postFit.pdf}
+		\label{fig:SR_fit_ele_1000_g05_atleast2b_post}
+	}
+	%\hfill
+	
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre- and post-fit plots of the signal regions with zero (\protect \subref{fig:SR_fit_ele_1000_g05_0b_pre}, \protect \subref{fig:SR_fit_ele_1000_g05_0b_post}), one (\protect \subref{fig:SR_fit_ele_1000_g05_1b_pre}, \protect \subref{fig:SR_fit_ele_1000_g05_1b_post}) and at least two $b$-jets (\protect \subref{fig:SR_fit_ele_1000_g05_atleast2b_pre}, \protect \subref{fig:SR_fit_ele_1000_g05_atleast2b_post}) for a signal with $m_{Z'}=1000\,\GeV$ and $g=0.5$ in the electron channel. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:SR_fit_ele_1000_g05}
+\end{figure}
+
+
+\FloatBarrier
+
+\subsection{S+B (CR-SR(asimov)) fits with $m_{\Zp}=1000\;\textrm{GeV}$ and $g=1.0$}
+
+Now, the fit is performed using a $Z'$ signal with $m_{Z'}=1\TeV$ and a coupling parameter of $g=1.0$. The obtained normalisation factors are shown in Figure \ref{fig:NP_CRs_1000_g10} for both channels. It can be seen that the normalisation factors of the $\ttbar$ background and the Z+HF background are compatible with one, while the normalisation factor of the Z+LF background is above one. These normalisation factors are in agreement with the observations made in Chapter \ref{background_estimation}.
+
+
+
+
+
+
+
+
+%\begin{figure}[h]
+%	\centering
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/TopValidation.pdf}
+%		\label{fig:CR_fit_mu_TopCR_pre_1000_g10}
+%	}
+%	%\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZControl_0b.pdf}
+%		\label{fig:CR_fit_mu_ZCR_LF_pre_1000_g10}
+%	}
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZControl_atleast1b.pdf}
+%		\label{fig:CR_fit_mu_ZCR_HF_pre_1000_g10}
+%	}
+%	\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/TopValidation_postFit.pdf}
+%		\label{fig:CR_fit_mu_TopCR_post_1000_g10}
+%	}
+%	%\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZControl_0b_postFit.pdf}
+%		\label{fig:CR_fit_mu_ZCR_LF_post_1000_g10}
+%	}
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZControl_atleast1b_postFit.pdf}
+%		\label{fig:CR_fit_mu_ZCR_HF_post_1000_g10}
+%	}
+%	%\hfill
+%	
+%	\caption{Pre-fit and post-fit plots for the single-bin fit of the Top control region (\protect\subref{fig:CR_fit_mu_TopCR_pre_1000_g10}, \protect\subref{fig:CR_fit_mu_TopCR_post_1000_g10}), the Z+LF control region (\protect\subref{fig:CR_fit_mu_ZCR_LF_pre_1000_g10}, \protect\subref{fig:CR_fit_mu_ZCR_LF_post_1000_g10}) and the Z+HF control region (\protect\subref{fig:CR_fit_mu_ZCR_HF_pre_1000_g10}, \protect\subref{fig:CR_fit_mu_ZCR_HF_post_1000_g10}) in the muon channel. The uncertainty band includes statistical and selected systematic uncertainties. These plots show exemplarily the $Z'$ signal with $M_{Z'}=1\TeV$ and a coupling parameter of $g=1.0$.}
+%	\label{fig:CR_fit_mu_1000_g10}
+%\end{figure}
+%
+%
+%
+%
+%
+%\begin{figure}[h]
+%	\centering
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/TopValidation.pdf}
+%		\label{fig:CR_fit_ele_TopCR_pre_1000_g10}
+%	}
+%	%\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZControl_0b.pdf}
+%		\label{fig:CR_fit_ele_ZCR_LF_pre_1000_g10}
+%	}
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZControl_atleast1b.pdf}
+%		\label{fig:CR_fit_ele_ZCR_HF_pre_1000_g10}
+%	}
+%	\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/TopValidation_postFit.pdf}
+%		\label{fig:CR_fit_ele_TopCR_post_1000_g10}
+%	}
+%	%\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZControl_0b_postFit.pdf}
+%		\label{fig:CR_fit_ele_ZCR_LF_post_1000_g10}
+%	}
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZControl_atleast1b_postFit.pdf}
+%		\label{fig:CR_fit_ele_ZCR_HF_post_1000_g10}
+%	}
+%	%\hfill
+%	
+%	\caption{Pre-fit and post-fit plots for the single-bin fit of the Top control region (\protect\subref{fig:CR_fit_ele_TopCR_pre_1000_g10}, \protect\subref{fig:CR_fit_ele_TopCR_post_1000_g10}), the Z+LF control region (\protect\subref{fig:CR_fit_ele_ZCR_LF_pre_1000_g10}, \protect\subref{fig:CR_fit_ele_ZCR_LF_post_1000_g10}) and the Z+HF control region (\protect\subref{fig:CR_fit_ele_ZCR_HF_pre_1000_g10}, \protect\subref{fig:CR_fit_ele_ZCR_HF_post_1000_g10}) in the muon channel. The uncertainty band includes statistical and selected systematic uncertainties.}
+%	\label{fig:CR_fit_ele_1000_g10}
+%\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/NormFactors.pdf}
+		\label{fig:NP_CRs_mu_1000_g10}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/NormFactors.pdf}
+		\label{fig:NP_CRs_ele_1000_g10}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Normalisation factors obtained from the single-bin fits of the Control region in the muon \protect\subref{fig:NP_CRs_mu_1000_g10} and electron channel \protect\subref{fig:NP_CRs_ele_1000_g10}  for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=1.0$. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:NP_CRs_1000_g10}
+\end{figure}
+
+
+\FloatBarrier
+The pruning plots, nuisance parameter pulls, gamma pulls and correlation plots are shown in Figures \ref{fig:Pruning_1000_g10}, \ref{fig:NuisPar_1000_g10}, \ref{fig:gammas_1000_g10} and \ref{fig:correlations_1000_g10} for the muon and electron channel. Only those nuisance parameters that are kept after the pruning are shown in the nuisance parameter pull plots. No pulls can be observed since the control regions are fitted in one single bin each. However, a few nuisance parameters, mainly related to theory uncertainties, are constrained.
+The correlation matrices only show nuisance parameters having correlations of at least 20\% with at least one other nuisance parameter or normalisation factor. It can be seen that mostly theory uncertainty nuisance parameters and normalisation factors have such correlations.
+
+Nuisance parameter ranking plots are shown in Figure \ref{fig:Ranking_1000_g10} for the muon and electron channel. It can be seen that mostly muon or electron efficiency uncertainties are entering the ranking plot. Furthermore, a few Z PDF uncertainties and $\ttbar$ theory uncertainties are visible in the ranking plots. Some systematic control plots are shown for the highest ranked systematic uncertainties in Appendix \ref{syst_control_plots}.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.3\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/Pruning.pdf}
+		\label{fig:Pruning_1000_g10_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.3\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/Pruning.pdf}
+		\label{fig:Pruning_1000_g10_ele}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pruning plots for the muon \protect \subref{fig:Pruning_1000_g10_mu} and electron \protect \subref{fig:Pruning_1000_g10_ele} channel  for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=1.0$.}
+	\label{fig:Pruning_1000_g10}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/NuisPar_experimental.pdf}
+		\label{fig:NuisPar_1000_g10_mu_experimental}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/NuisPar_theory.pdf}
+		\label{fig:NuisPar_1000_g10_mu_theory}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/NuisPar_experimental.pdf}
+		\label{fig:NuisPar_1000_g10_ele_experimental}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/NuisPar_theory.pdf}
+		\label{fig:NuisPar_1000_g10_ele_theory}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Nuisance parameter pull plots (split into experimental and theory systematic uncertainties) for the muon (\protect \subref{fig:NuisPar_1000_g10_mu_experimental}, \protect \subref{fig:NuisPar_1000_g10_mu_theory}) and electron (\protect \subref{fig:NuisPar_1000_g10_ele_experimental}, \protect \subref{fig:NuisPar_1000_g10_ele_theory}) channel  for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=1.0$.}
+	\label{fig:NuisPar_1000_g10}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.18\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/Gammas.pdf}
+		\label{fig:gammas_1000_g10_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.18\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/Gammas.pdf}
+		\label{fig:gammas_1000_g10_ele}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Gamma pull plots for the muon \protect \subref{fig:gammas_1000_g10_mu} and electron \protect \subref{fig:gammas_1000_g10_ele} channel  for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=1.0$.}
+	\label{fig:gammas_1000_g10}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/CorrMatrix.pdf}
+		\label{fig:correlations_1000_g10_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/CorrMatrix.pdf}
+		\label{fig:correlations_1000_g10_ele}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Nuisance parameter correlation matrices for the muon \protect \subref{fig:correlations_1000_g10_mu} and electron \protect \subref{fig:correlations_1000_g10_ele} channel for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=1.0$ . Only nuisance parameters having a correlation of at least 20\% with at least one other nuisance parameter are shown.}
+	\label{fig:correlations_1000_g10}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/RankingSysts_SigXsecOverSM_Breakdown_syst.pdf}
+		\label{fig:Ranking_1000_g10_mu}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.4\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/RankingSysts_SigXsecOverSM_Breakdown_syst.pdf}
+		\label{fig:Ranking_1000_g10_ele}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Nuisance parameter ranking plots for the muon \protect \subref{fig:Ranking_1000_g10_mu} and electron \protect \subref{fig:Ranking_1000_g10_ele} channel for the fit with a $Z'$ signal with $m_{Z'}=1\,\mathrm{TeV}$ and a coupling parameter of $g=1.0$. }
+	\label{fig:Ranking_1000_g10}
+\end{figure}
+
+\FloatBarrier
+
+Figure \ref{fig:VR_fit_mu_1000_g10}, \ref{fig:VR_fit_ele_1000_g10},\ref{fig:VR_new_fit_mu_1000_g10} and \ref{fig:VR_new_fit_ele_1000_g10} show the pre-fit and post-fit plots of the validation regions for the muon and electron channel, respectively.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZValidation_0b.pdf}
+		\label{fig:VR_fit_mu_1000_g10_0b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZValidation_atleast1b.pdf}
+		\label{fig:VR_fit_mu_1000_g10_atleast1b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZValidation_0b_postFit.pdf}
+		\label{fig:VR_fit_mu_1000_g10_0b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZValidation_atleast1b_postFit.pdf}
+		\label{fig:VR_fit_mu_1000_g10_atleast1b_post}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with zero (\protect \subref{fig:VR_fit_mu_1000_g10_0b_pre}, \protect \subref{fig:VR_fit_mu_1000_g10_0b_post}) and at least one $b$-jet (\protect \subref{fig:VR_fit_mu_1000_g10_atleast1b_pre}, \protect \subref{fig:VR_fit_mu_1000_g10_atleast1b_post}) in the muon channel for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=1.0$. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_fit_mu_1000_g10}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZValidation_1b.pdf}
+		\label{fig:VR_new_fit_mu_1000_g10_1b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZValidation_atleast2b.pdf}
+		\label{fig:VR_new_fit_mu_1000_g10_atleast2b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZValidation_1b_postFit.pdf}
+		\label{fig:VR_new_fit_mu_1000_g10_1b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/ZValidation_atleast2b_postFit.pdf}
+		\label{fig:VR_new_fit_mu_1000_g10_atleast2b_post}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with exactly one (\protect \subref{fig:VR_new_fit_mu_1000_g10_1b_pre}, \protect \subref{fig:VR_new_fit_mu_1000_g10_1b_post}) and at least two $b$-jets (\protect \subref{fig:VR_new_fit_mu_1000_g10_atleast2b_pre}, \protect \subref{fig:VR_new_fit_mu_1000_g10_atleast2b_post}) in the muon channel  for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=1.0$. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_new_fit_mu_1000_g10}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZValidation_0b.pdf}
+		\label{fig:VR_fit_ele_1000_g10_0b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZValidation_atleast1b.pdf}
+		\label{fig:VR_fit_ele_1000_g10_atleast1b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZValidation_0b_postFit.pdf}
+		\label{fig:VR_fit_ele_1000_g10_0b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZValidation_atleast1b_postFit.pdf}
+		\label{fig:VR_fit_ele_1000_g10_atleast1b_post}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with zero (\protect \subref{fig:VR_fit_ele_1000_g10_0b_pre}, \protect \subref{fig:VR_fit_ele_1000_g10_0b_post}) and at least one $b$-jet (\protect \subref{fig:VR_fit_ele_1000_g10_atleast1b_pre}, \protect \subref{fig:VR_fit_ele_1000_g10_atleast1b_post}) in the electron channel  for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=1.0$. The uncertainty band includes statistical and background uncertainties.}
+	\label{fig:VR_fit_ele_1000_g10}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZValidation_1b.pdf}
+		\label{fig:VR_new_fit_ele_1000_g10_1b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZValidation_atleast2b.pdf}
+		\label{fig:VR_new_fit_ele_1000_g10_atleast2b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZValidation_1b_postFit.pdf}
+		\label{fig:VR_new_fit_ele_1000_g10_1b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/ZValidation_atleast2b_postFit.pdf}
+		\label{fig:VR_new_fit_ele_1000_g10_atleast2b_post}
+	}
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre-fit and post-fit plots of the validation regions with exactly one (\protect \subref{fig:VR_new_fit_ele_1000_g10_1b_pre}, \protect \subref{fig:VR_new_fit_ele_1000_g10_1b_post}) and at least two $b$-jets (\protect \subref{fig:VR_new_fit_ele_1000_g10_atleast2b_pre}, \protect \subref{fig:VR_new_fit_ele_1000_g10_atleast2b_post}) in the electron channel  for the fit with a $Z'$ signal with $m_{Z'}=1 \,\mathrm{TeV}$ and a coupling parameter of $g=1.0$. The uncertainty band includes statistical and systematic uncertainties.}
+	\label{fig:VR_new_fit_ele_1000_g10}
+\end{figure}
+
+
+
+
+The pre- and post-fit plots of the signal regions are shown exemparily in Figure \ref{fig:SR_fit_mu_1000_g10} and \ref{fig:SR_fit_ele_1000_g10} for a $Z'$ boson mass of $m_{Z'}=1000\,\GeV$ and a coupling parameter of $g=1.0$. %The ratio panel shows the ratio of signal events over the square-root of background events (\soverb). Again, the \soverb-ratio is zero in the post-fit plots due to the usage of an Asimov dataset.
+It can be seen that there is no signal in the post-fit plots which is due to the usage of an Asimov dataset.
+Compared to the $Z'$ signal with a coupling parameter of $g=0.5$ it can be seen that the signal is wider and hence more bins contain signal events in the pre-fit distribution.
+%Furthermore, it can be noted that the binning in the signal regions can be further optimised. So far, the same binning is used in all three regions. However, the statistics are quite different in the different signal regions and it would allow for more bins in the high-mass region for a selection without $b$-jets in the final state.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/Signal_0b.pdf}
+		\label{fig:SR_fit_mu_1000_g10_0b_pre}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/Signal_1b.pdf}
+		\label{fig:SR_fit_mu_1000_g10_0b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/Signal_atleast2b.pdf}
+		\label{fig:SR_fit_mu_1000_g10_1b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/Signal_0b_postFit.pdf}
+		\label{fig:SR_fit_mu_1000_g10_1b_post}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/Signal_1b_postFit.pdf}
+		\label{fig:SR_fit_mu_1000_g10_atleast2b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_mu/Signal_atleast2b_postFit.pdf}
+		\label{fig:SR_fit_mu_1000_g10_atleast2b_post}
+	}
+	%\hfill
+	
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre- and post-fit plots of the signal regions with zero (\protect \subref{fig:SR_fit_mu_1000_g10_0b_pre}, \protect \subref{fig:SR_fit_mu_1000_g10_0b_post}), one (\protect \subref{fig:SR_fit_mu_1000_g10_1b_pre}, \protect \subref{fig:SR_fit_mu_1000_g10_1b_post}) and at least two $b$-jets (\protect \subref{fig:SR_fit_mu_1000_g10_atleast2b_pre}, \protect \subref{fig:SR_fit_mu_1000_g10_atleast2b_post}) for a signal with $m_{Z'}=1000\,\GeV$ and $g=1.0$ in the muon channel. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:SR_fit_mu_1000_g10}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/Signal_0b.pdf}
+		\label{fig:SR_fit_ele_1000_g10_0b_pre}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/Signal_1b.pdf}
+		\label{fig:SR_fit_ele_1000_g10_0b_post}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/Signal_atleast2b.pdf}
+		\label{fig:SR_fit_ele_1000_g10_1b_pre}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/Signal_0b_postFit.pdf}
+		\label{fig:SR_fit_ele_1000_g10_1b_post}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/Signal_1b_postFit.pdf}
+		\label{fig:SR_fit_ele_1000_g10_atleast2b_pre}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/Fit_1000_g10_singlebinCRs_ele/Signal_atleast2b_postFit.pdf}
+		\label{fig:SR_fit_ele_1000_g10_atleast2b_post}
+	}
+	%\hfill
+	
+	\caption{\textbf{(S+B fit in CR+SR(asimov))} Pre- and post-fit plots of the signal regions with zero (\protect \subref{fig:SR_fit_ele_1000_g10_0b_pre}, \protect \subref{fig:SR_fit_ele_1000_g10_0b_post}), one (\protect \subref{fig:SR_fit_ele_1000_g10_1b_pre}, \protect \subref{fig:SR_fit_ele_1000_g10_1b_post}) and at least two $b$-jets (\protect \subref{fig:SR_fit_ele_1000_g10_atleast2b_pre}, \protect \subref{fig:SR_fit_ele_1000_g10_atleast2b_post}) for a signal with $m_{Z'}=1000\,\GeV$ and $g=1.0$ in the electron channel. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:SR_fit_ele_1000_g10}
+\end{figure}
+
+
+\FloatBarrier
+
+\subsection{Expected cross-section limits}
+Figure \ref{fig:exp_limits} shows the expected cross-section limits for the two different coupling parameters $g=0.5$ and $g=1.0$ for the muon and electron channel. The expected limits are shown for each signal region individually and also the expected limits from a combined fit of the three signal regions. The combined fit provides the best limits since this fit uses principally all the available information.
+Systematic uncertainties are considered when deriving the expected limits.
+Additionally, the expected limits on the signal strength $\mu$ are shown in Figure \ref{fig:exp_limits_signalstrength}.
+
+The combined fit results in an expected exclusion limit for the $Z'$ boson mass of roughly $2400\,\GeV$ for a coupling parameter of $g=0.5$ and of approximately $2900\,\GeV$ for a coupling parameter of $g=1.0$ in the muon channel. In the electron channel, the expected mass exclusion limits are roughly $100\,\mathrm{GeV}$ better.
+%A few leaps can be seen in the limit plots, especially in the electron channel around $1000\,\GeV$. It is likely that these leaps are somehow related to the binning in the signal region, but this needs to be investigated further. 
+
+%It can also be seen that the limit curve is relatively flat above $1500\,\GeV$ for a coupling parameter of $g=0.5$.
+%The flatness of the limit curve can be explained with the binning of the signal region. Since there are only a few background events left at invariant dilepton masses above $1200\,\GeV$, there is only one high-mass bin in the distribution. Therefore, the information about the shape of the signal is not considered for the fit in the case of large signal masses. Nevertheless, as mentioned before, the binning in the signal region with zero $b$-jets can be adjusted at high invariant dilepton masses due to sufficient statistics there.
+
+For the coupling parameter of $g=1.0$, the expected cross-section limits increase with higher $Z'$ boson masses. This is caused by the pronounced low mass-tail of the invariant dilepton mass distribution of the signals, shown previously in Chapter \ref{signal_modelling}.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_mumu_g05_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5_limit_on_signalstrength.pdf}
+		\label{fig:exp_limits_mu_g05_signalstrength}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_ee_g05_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5_limit_on_signalstrength.pdf}
+		\label{fig:exp_limits_ele_g05_signalstrength}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_mumu_g10_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5_limit_on_signalstrength.pdf}
+		\label{fig:exp_limits_mu_g10_signalstrength}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_ee_g10_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5_limit_on_signalstrength.pdf}
+		\label{fig:exp_limits_ele_g10_signalstrength}
+	}
+	\caption{Expected limits on the signal strength $\mu$ as a function of the $Z'$ boson mass for the two coupling parameters $g=0.5$ (\protect \subref{fig:exp_limits_mu_g05_signalstrength}, \protect \subref{fig:exp_limits_ele_g05_signalstrength}) and $g=1.0$ (\protect \subref{fig:exp_limits_mu_g10_signalstrength}, \protect \subref{fig:exp_limits_ele_g10_signalstrength}) for the muon and electron channel. Statistical and systematic uncertainties are considered when deriving the expected limits.}
+	\label{fig:exp_limits_signalstrength}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_mumu_g05_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5.pdf}
+		\label{fig:exp_limits_mu_g05}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_ee_g05_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5.pdf}
+		\label{fig:exp_limits_ele_g05}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_mumu_g10_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5.pdf}
+		\label{fig:exp_limits_mu_g10}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_ee_g10_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5.pdf}
+		\label{fig:exp_limits_ele_g10}
+	}
+	\caption{Expected cross-section limits as a function of the $Z'$ boson mass for the two coupling parameters $g=0.5$ (\protect \subref{fig:exp_limits_mu_g05}, \protect \subref{fig:exp_limits_ele_g05}) and $g=1.0$ (\protect \subref{fig:exp_limits_mu_g10}, \protect \subref{fig:exp_limits_ele_g10}) for the muon and electron channel. Statistical and systematic uncertainties are considered when deriving the expected limits.}
+	\label{fig:exp_limits}
+\end{figure}
+
+
+
+Additionally, the expected cross-section limits derived without considering systematic uncertainties are shown in Figure \ref{fig:exp_limits_nosysts}. It can be seen that the limit curves are very similar to the limit curves where systematic uncertainties are considered. The combined fit results also in an expected exclusion limit for the $Z'$ boson mass of roughly $2400\,\GeV$ for a coupling parameter of $g=0.5$ and of approximately $2900\,\GeV$ for a coupling parameter of $g=1.0$.
+This leads to the conclusion that the analysis and specifically the limit setting is dominated by statistics and not by systematic uncertainties.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_mumu_g05_cut_comp_MetSigCut_march2024_nosysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5.pdf}
+		\label{fig:exp_limits_mu_g05_nosysts}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_ee_g05_cut_comp_MetSigCut_march2024_nosysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5.pdf}
+		\label{fig:exp_limits_ele_g05_nosysts}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_mumu_g10_cut_comp_MetSigCut_march2024_nosysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5.pdf}
+		\label{fig:exp_limits_mu_g10_nosysts}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_ee_g10_cut_comp_MetSigCut_march2024_nosysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5.pdf}
+		\label{fig:exp_limits_ele_g10_nosysts}
+	}
+	\caption{Expected cross-section limits as a function of the $Z'$ boson mass for the two coupling parameters $g=0.5$ (\protect \subref{fig:exp_limits_mu_g05_nosysts}, \protect \subref{fig:exp_limits_ele_g05_nosysts}) and $g=1.0$ (\protect \subref{fig:exp_limits_mu_g10_nosysts}, \protect \subref{fig:exp_limits_ele_g10_nosysts}) for the muon and electron channel. Only statistical uncertainties have been considered for deriving these expected limits.}
+	\label{fig:exp_limits_nosysts}
+\end{figure}
+
+
+\FloatBarrier
+
+\subsection{Expected fiducial cross-section limits}
+
+Furthermore, so-called fiducial cross-section limits can be calculated. This is consistent with the procedure from the previous dilepton search \cite{ATLAS_dilepton_2019} and such limits are generic and more model-independent. In order to calculate such limits, the truth-level fiducial cuts shown in Equations \eqref{eq:fidCuts1and2} and \eqref{eq:fidCuts3} are applied for the signal process.
+The expected fiducial cross-section limits are shown in Figure \ref{fig:exp_limits_fiducial}. These plots also show each two limit curves for different signal widths from the previous inclusive dilepton search \cite{ATLAS_dilepton_2019}.
+A more detailed comparison of the fiducial cross-section limits with the limits from the previous inclusive analysis can be found in Appendix \ref{limit_comp_fiducial}.
+%It still needs to be kept in mind that the binning of the SR is not optimised/finalised yet, meaning that the comparison is probably not completely fair.
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_mumu_g05_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5_fiducial.pdf}
+		\label{fig:exp_limits_mu_g05_fiducial}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_ee_g05_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5_fiducial.pdf}
+		\label{fig:exp_limits_ele_g05_fiducial}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_mumu_g10_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5_fiducial.pdf}
+		\label{fig:exp_limits_mu_g10_fiducial}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Zprime_ee_g10_cut_comp_MetSigCut_march2024_allsysts_AllSignalSystematicsScaled_withMuonMultijet_minmlbin1b2bSR_155_metsigsmaller5_fiducial.pdf}
+		\label{fig:exp_limits_ele_g10_fiducial}
+	}
+	\caption{Expected fiducial cross-section limits as a function of the $Z'$ boson mass for the two coupling parameters $g=0.5$ (\protect \subref{fig:exp_limits_mu_g05_fiducial}, \protect \subref{fig:exp_limits_ele_g05_fiducial}) and $g=1.0$ (\protect \subref{fig:exp_limits_mu_g10_fiducial}, \protect \subref{fig:exp_limits_ele_g10_fiducial}) for the muon and electron channel. Statistical and systematic uncertainties are considered when deriving the expected fiducial limits.}
+	\label{fig:exp_limits_fiducial}
+\end{figure}
+
+
+
+\FloatBarrier
+
+\input{Unblinded_results}
+
+
+
+\section{Contact Interaction Interpretation}
+
+
+
+\subsection{$b \bar b \ell^+ \ell^-$ Contact Interactions}
+
+Limits on similar models were set by OPAL and ALEPH collaborations for electrons. The latest combination can be found at Ref.~\cite{ALEPH:2006bhb}.
+In addition, CMS have set limits on $b \bar b \ell^+ \ell^-$ CIs, in a dedicated paper~\cite{CMS:2025tlo}.
+In Table~\ref{CIs:scenarios}, the different scenarios targeted by LEP are shown.
+Table~\ref{CIs:tab:limits:bbee} shows the expected results for $b \bar b e^+ e^-$ CIs, compared with the most stringent results from LEP and CMS, while Table~\ref{CIs:tab:limits:bbmm} shows the expected results for $b \bar b \mu^+ \mu^-$ CIs, compared with the most stringent results from CMS. Table~\ref{CIs:tab:limits:bbll} shows the expected results for $b \bar b \ell^+ \ell^-$ CIs, compared with the most stringent results from CMS. 
+Figures~\ref{fig:SR_fit_bbee} and ~\ref{fig:SR_fit_bbmm} show the pre- and post-fit distributions in the electron and muon signal regions, respectively.
+Figures~\ref{fig:bbll_Norm_Factors}, \ref{fig:bbll_comb_Norm_Factors}, \ref{fig:bbll_NuisPar} and \ref{fig:bbll_CorrMatrix} show the fit normalization factors, the pulls and the correlation matrices, respectively.
+As a benchmark case, $bb\ell\ell$ with $\eta_{LL} = +1$ is shown.
+Figure~\ref{fig:exp_limits_bbll} shows the results visually, including $\pm1,2\sigma$ errors bars.
+The limits were calculated using the "ASYMPTOTIC" method.
+
+
+
+\begin{table}[tp]
+ \begin{center}
+%     \resizebox{\textwidth}{!}{ 
+  \begin{tabular}{|c|c|c|c|c|}
+   \hline
+   Model      & $\eta_{LL}$ & $\eta_{RR}$ & $\eta_{LR}$ & $\eta_{RL}$ \\
+   \hline\hline
+   LL$^{\pm}$ &   $\pm 1$   &      0      &      0      &      0      \\
+   \hline
+   RR$^{\pm}$ &      0      &   $\pm 1$   &      0      &      0      \\
+   \hline
+   VV$^{\pm}$ &   $\pm 1$   &   $\pm 1$   &   $\pm 1$   &   $\pm 1$   \\
+   \hline
+   AA$^{\pm}$ &   $\pm 1$   &   $\pm 1$   &   $\mp 1$   &   $\mp 1$   \\
+   \hline
+   LR$^{\pm}$ &      0      &      0      &   $\pm 1$   &      0      \\
+   \hline
+   RL$^{\pm}$ &      0      &      0      &      0      &   $\pm 1$   \\
+   \hline
+   V0$^{\pm}$ &   $\pm 1$   &   $\pm 1$   &      0      &      0      \\
+   \hline
+   A0$^{\pm}$ &      0      &      0      &  $\pm 1$    &   $\pm 1$   \\
+   \hline
+  \end{tabular}
+ % }
+ \end{center}
+ 
+ \caption{Choices of $\eta_{ij}$ for different $b \bar b \ell^+ \ell^-$ contact interaction models, set by LEP collaborations in Ref.~\cite{ALEPH:2006bhb}.}
+ \label{CIs:scenarios}
+\end{table}
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbee_5TeV_RRp/Plots/Signal_0b_ee.pdf}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbee_5TeV_RRp/Plots/Signal_1b_ee.pdf}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbee_5TeV_RRp/Plots/Signal_atleast2b_ee.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbee_5TeV_RRp/Plots/Signal_0b_ee_postFit.pdf}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbee_5TeV_RRp/Plots/Signal_1b_ee_postFit.pdf}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbee_5TeV_RRp/Plots/Signal_atleast2b_ee_postFit.pdf}
+	}
+	%\hfill
+	
+	\caption{\textbf{(S+B fit in CR+SR)} Pre- and post-fit plots of the signal regions with zero, one and at least two $b$-jets for the fit with a $bb\ell\ell$ signal with $\Lambda=5\,\mathrm{TeV}$ with $\eta_{RR} = +1$ in the electron channel. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:SR_fit_bbee}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbmm_5TeV_LLp/Plots/Signal_0b_mm.pdf}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbmm_5TeV_LLp/Plots/Signal_1b_mm.pdf}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbmm_5TeV_LLp/Plots/Signal_atleast2b_mm.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbmm_5TeV_LLp/Plots/Signal_0b_mm_postFit.pdf}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbmm_5TeV_LLp/Plots/Signal_1b_mm_postFit.pdf}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/bbmm_5TeV_LLp/Plots/Signal_atleast2b_mm_postFit.pdf}
+	}
+	%\hfill
+	
+	\caption{\textbf{(S+B fit in CR+SR)} Pre- and post-fit plots of the signal regions with zero, one and at least two $b$-jets for the fit with a $bb\ell\ell$ signal with $\Lambda=5\,\mathrm{TeV}$ with $\eta_{LL} = +1$ in the muon channel. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:SR_fit_bbmm}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[]{
+    	\includegraphics[width=0.45\textwidth]{figures/CIs/bbee_5TeV_RRp/NormFactors.pdf}
+    }
+    \hfill
+    \subfloat[]{
+    	\includegraphics[width=0.45\textwidth]{figures/CIs/bbmm_5TeV_LLp/NormFactors.pdf}
+    }
+    \caption{\textbf{(S+B fit in CR+SR)} Normalisation factors obtained from the single-bin fits of the Control region in the electron (left) and muons (right) channel for the fit with a $bb\ell\ell$ signal with $\Lambda=10\,\mathrm{TeV}$ with $\eta_{RR} = +1$ for electrons and $\eta_{LL} = +1$ for muons. Statistical and systematic uncertainties are considered for the fit.}
+    \label{fig:bbll_Norm_Factors}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    	\includegraphics[width=0.70\textwidth]{figures/CIs/bbll_5TeV_RRp/NormFactors_comp.pdf}
+    \caption{\textbf{(S+B fit in CR+SR)} Normalisation factors obtained from the single-bin fits of the Control region in the combined electron and muons fit for the fit with a $bb\ell\ell$ signal with $\Lambda=10\,\mathrm{TeV}$ with $\eta_{RR} = +1$. Statistical and systematic uncertainties are considered for the fit.}
+    \label{fig:bbll_comb_Norm_Factors}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/CIs/bbee_5TeV_RRp/Pulls/All/NuisPar_experimental.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/CIs/bbee_5TeV_RRp/Pulls/All/NuisPar_theory.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/CIs/bbmm_5TeV_LLp/Pulls/All/NuisPar_experimental.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/CIs/bbmm_5TeV_LLp/Pulls/All/NuisPar_theory.pdf}
+	}
+	\caption{\textbf{(S+B fit in CR+SR)} Nuisance parameter pull plots (split into experimental and theory systematic uncertainties) for the electron (left) and muons (right) channel for the fit with a $bb\ell\ell$ signal with $\Lambda=10\,\mathrm{TeV}$ with $\eta_{RR} = +1$ for electrons and $\eta_{LL} = +1$ for muons.}
+    \label{fig:bbll_NuisPar}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/CIs/bbee_5TeV_RRp/CorrMatrix.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/CIs/bbmm_5TeV_LLp/CorrMatrix.pdf}
+	}
+	\caption{\textbf{(S+B fit in CR+SR)} Nuisance parameter correlation matrices for the electron (left) and muon (right) channel for the fit with a $bb\ell\ell$ signal with $\Lambda=10\,\mathrm{TeV}$ with $\eta_{RR} = +1$ for electrons and $\eta_{LL} = +1$ for muons. Only nuisance parameters having a correlation of at least 20\% with at least one other nuisance parameter are shown.}
+    \label{fig:bbll_CorrMatrix}
+\end{figure}
+
+
+
+
+
+
+
+
+\begin{table}[H]
+ \begin{center}
+%     \resizebox{\textwidth}{!}{ 
+  \begin{tabular}{|c|c|c|c|c|c|}
+\hline
+       & ATLAS Expected & ATLAS Observed  & CMS Expected & CMS Observed & LEP Observed \\
+ Model & (TeV)  &      (TeV)    &     (TeV)  &      (TeV)    &     (TeV)   \\
+\hline
+\hline
+LL+ & $9.8^{+1.1}_{-1.2}$ & 9.5 & 9.8 & 9.1 & 12.3 \\
+\hline
+LL- & $8.9\pm0.9$ & 8.4 & 7.4 & 6.9 & 9.1 \\
+\hline
+RR+ & $9.3^{+0.9}_{-1.0}$ & 8.8 & 8.8 & 8.6 & 8.1 \\
+\hline
+RR- & $8.8^{+0.8}_{-0.9}$ & 8.3 & 7.9 & 7.4 & 2.2 \\
+\hline
+LR+ & $8.9^{+0.8}_{-0.9}$ & 8.6 & 8.4 & 7.9 & 5.5 \\
+\hline
+LR- & $9.1\pm0.9$ & 8.8 & 8.1 & 7.5 & 3.1 \\
+\hline
+RL+ & $9.2\pm0.9$ & 8.9 & 8.9 & 8.3 & 2.4 \\
+\hline
+RL- & $8.9\pm0.8$ & 8.4 & 7.7 & 7.2 & 7.0 \\
+\hline
+\end{tabular}
+%}
+ \end{center}
+  
+  \caption{Limits for different $b \bar b e^+ e^-$ contact interaction models, set by LEP collaborations in Ref.~\cite{ALEPH:2006bhb} and by CMS in Ref.~\cite{CMS:2025tlo}, compared to this analysis.}
+  \label{CIs:tab:limits:bbee}
+\end{table}
+
+
+
+
+\begin{table}[H]
+ \begin{center}
+%     \resizebox{\textwidth}{!}{ 
+  \begin{tabular}{|c|c|c|c|c|}
+\hline
+       & ATLAS Expected & ATLAS Observed  & CMS Expected & CMS Observed \\
+ Model & (TeV)  &      (TeV)    &     (TeV)  &      (TeV)    \\
+\hline
+\hline
+LL+ & $9.2^{+1.0}_{-1.1}$ & 9.1 & 10.0 & 8.2 \\
+\hline
+LL- & $8.3\pm0.8$ & 8.4 & 7.8 & 7.4 \\
+\hline
+RR+ & $8.8\pm0.9$ & 8.9 & 9.6 & 7.9 \\
+\hline
+RR- & $8.2\pm0.8$ & 8.4 & 8.3 & 8.0 \\
+\hline
+LR+ & $8.4\pm0.8$ & 8.5 & 8.7 & 7.6 \\
+\hline
+LR- & $8.6^{+0.8}_{-0.9}$ & 8.7 & 8.7 & 8.4 \\
+\hline
+RL+ & $8.7^{+0.8}_{-0.9}$ & 8.8 & 9.3 & 7.8 \\
+\hline
+RL- & $8.4\pm0.8$ & 8.5 & 8.5 & 8.0 \\
+\hline
+\end{tabular}
+%}
+ \end{center}
+  
+  \caption{Limits for different $b \bar b \mu^+ \mu^-$ contact interaction models, set by CMS in Ref.~\cite{CMS:2025tlo}, compared to this analysis.}
+  \label{CIs:tab:limits:bbmm}
+\end{table}
+
+
+
+
+
+
+\begin{table}[H]
+ \begin{center}
+%     \resizebox{\textwidth}{!}{ 
+  \begin{tabular}{|c|c|c|c|c|}
+\hline
+       & ATLAS Expected & ATLAS Observed  & CMS Expected & CMS Observed \\
+ Model & (TeV)  &      (TeV)    &     (TeV)  &      (TeV)    \\
+\hline
+\hline
+LL+ & $10.6^{+1.2}_{1.3}$ & 10.3 & 11.0 & 9.0 \\
+\hline
+LL- & $9.5^{+0.9}_{1.0}$ & 9.2 & 8.3 & 7.7 \\
+\hline
+RR+ & $10.0\pm1.0$ & 9.7 & 10.4 & 8.6 \\
+\hline
+RR- & $9.4\pm0.9$ & 9.0 & 8.7 & 8.2 \\
+\hline
+LR+ & $9.5\pm0.9$ & 9.1 & 9.3 & 8.3 \\
+\hline
+LR- & $9.8^{+0.9}_{-1.0}$ & 9.6 & 9.4 & 8.6 \\
+\hline
+RL+ & $9.8^{+0.9}_{-1.0}$ & 9.7 & 10.0 & 8.5 \\
+\hline
+RL- & $9.5\pm0.9$ & 9.2 & 9.2 & 8.2 \\
+\hline
+\end{tabular}
+%}
+ \end{center}
+  
+  \caption{Limits for different $b \bar b \ell^+ \ell^-$ contact interaction models, set by CMS in Ref.~\cite{CMS:2025tlo}, compared to this analysis.}
+  \label{CIs:tab:limits:bbll}
+\end{table}
+
+
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Lambdas_bbee.png}
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Lambdas_bbmm.png}
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Lambdas_bbll.png}
+
+	\caption{Expected and observed limits for $b \bar b e^+ e^-$ (upper left), $b \bar b \mu^+ \mu^-$ (upper right) and $b \bar b \ell^+ \ell^-$ (bottom) contact interactions.}
+	\label{fig:exp_limits_bbll}
+\end{figure}
+
+
+
+
+\subsection{$t \bar u_i \ell^+ \ell^-$ Contact Interactions}
+
+Figures~\ref{fig:SR_fit_tuee} and ~\ref{fig:SR_fit_tumm} show the pre- and post-fit distributions in the electron and muon signal regions, respectively.
+Figures~\ref{fig:tull_Norm_Factors}, \ref{fig:tull_comb_Norm_Factors}, \ref{fig:tull_NuisPar} and \ref{fig:tull_CorrMatrix} show the fit normalization factors, the pulls and the correlation matrices, respectively.
+As a benchmark case, $tu\ell\ell$ with $S_{RR} = +1$ is shown.
+Figure~\ref{fig:exp_limits_tull} shows the results visually for both $t \bar u e^+ e^-, t \bar c e^+ e^-, t \bar u \mu^+ \mu^-, t \bar c \mu^+ \mu^-$ CIs, including $\pm1,2\sigma$ errors bars.
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tuee_1TeV_Srr/Plots/Signal_0b_ee.pdf}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tuee_1TeV_Srr/Plots/Signal_1b_ee.pdf}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tuee_1TeV_Srr/Plots/Signal_atleast2b_ee.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tuee_1TeV_Srr/Plots/Signal_0b_ee_postFit.pdf}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tuee_1TeV_Srr/Plots/Signal_1b_ee_postFit.pdf}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tuee_1TeV_Srr/Plots/Signal_atleast2b_ee_postFit.pdf}
+	}
+	%\hfill
+	
+	\caption{\textbf{(S+B fit in CR+SR)} Pre- and post-fit plots of the signal regions with zero, one and at least two $b$-jets for the fit with a $tu\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $S_{RR} = +1$ in the electron channel. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:SR_fit_tuee}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tumm_1TeV_Srr/Plots/Signal_0b_mm.pdf}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tumm_1TeV_Srr/Plots/Signal_1b_mm.pdf}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tumm_1TeV_Srr/Plots/Signal_atleast2b_mm.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tumm_1TeV_Srr/Plots/Signal_0b_mm_postFit.pdf}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tumm_1TeV_Srr/Plots/Signal_1b_mm_postFit.pdf}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/CIs/tumm_1TeV_Srr/Plots/Signal_atleast2b_mm_postFit.pdf}
+	}
+	%\hfill
+	
+	\caption{\textbf{(S+B fit in CR+SR)} Pre- and post-fit plots of the signal regions with zero, one and at least two $b$-jets for the fit with a $tu\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $S_{RR} = +1$ in the muon channel. Statistical and systematic uncertainties are considered for the fit.}
+	\label{fig:SR_fit_tumm}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[]{
+    	\includegraphics[width=0.45\textwidth]{figures/CIs/tuee_1TeV_Srr/NormFactors.pdf}
+    }
+    \hfill
+    \subfloat[]{
+    	\includegraphics[width=0.45\textwidth]{figures/CIs/tumm_1TeV_Srr/NormFactors.pdf}
+    }
+    \caption{\textbf{(S+B fit in CR+SR)} Normalisation factors obtained from the single-bin fits of the Control region in the electron (left) and muons (right) channel for the fit with a $tu\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $S_{RR} = +1$. Statistical and systematic uncertainties are considered for the fit.}
+    \label{fig:tull_Norm_Factors}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    	\includegraphics[width=0.70\textwidth]{figures/CIs/tull_1TeV_Srr/NormFactors_comp.pdf}
+    \caption{\textbf{(S+B fit in CR+SR)} Normalisation factors obtained from the single-bin fits of the Control region in the combined electron and muons fit for the fit with a $tu\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $S_{RR} = +1$. Statistical and systematic uncertainties are considered for the fit.}
+    \label{fig:tull_comb_Norm_Factors}
+\end{figure}
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/CIs/tuee_1TeV_Srr/Pulls/All/NuisPar_experimental.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/CIs/tuee_1TeV_Srr/Pulls/All/NuisPar_theory.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/CIs/tumm_1TeV_Srr/Pulls/All/NuisPar_experimental.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.23\textwidth]{figures/CIs/tumm_1TeV_Srr/Pulls/All/NuisPar_theory.pdf}
+	}
+	\caption{\textbf{(S+B fit in CR+SR)} Nuisance parameter pull plots (split into experimental and theory systematic uncertainties) for the electron (left) and muons (right) channel for the fit with a $tu\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $S_{RR} = +1$.}
+    \label{fig:tull_NuisPar}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/CIs/tuee_1TeV_Srr/CorrMatrix.pdf}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth]{figures/CIs/tumm_1TeV_Srr/CorrMatrix.pdf}
+	}
+	\caption{\textbf{(S+B fit in CR+SR)} Nuisance parameter correlation matrices for the electron (left) and muon (right) channel for the fit with a $tu\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $S_{RR} = +1$. Only nuisance parameters having a correlation of at least 20\% with at least one other nuisance parameter are shown.}
+    \label{fig:tull_CorrMatrix}
+\end{figure}
+
+
+
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Lambdas_tuee.png}
+		\includegraphics[width=0.47\textwidth]{figures/Limits/Lambdas_tumm.png}
+	
+	\caption{Expected and observed limits for $t \bar u_i e^+ e^-$ (upper left), $t \bar u_i \mu^+ \mu^-$ (upper right) and $t \bar u_i \ell^+ \ell^-$ (bottom) contact interactions.}
+	\label{fig:exp_limits_tull}
+\end{figure}
+
+
+
+
+%\subsection{$t \bar t \ell^+ \ell^-$ Contact Interactions}
+%
+%Figures~\ref{fig:SR_fit_ttee} and ~\ref{fig:SR_fit_ttmm} show the pre- and post-fit distributions in the electron and muon signal regions, respectively.
+%Figures~\ref{fig:ttll_Norm_Factors}, \ref{fig:ttll_NuisPar} and \ref{fig:ttll_CorrMatrix} show the fit normalization factors, the pulls and the correlation matrices, respectively.
+%Figure~\ref{fig:exp_limits_ttll} shows the results visually for both $t \bar t e^+ e^-, t \bar t \mu^+ \mu^-$ CIs, including $\pm1,2\sigma$ errors bars.
+%
+%
+%
+%\begin{figure}[h]
+%	\centering
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttee_1TeV_Trr/Plots/Signal_0b_ee.pdf}
+%	}
+%	%\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttee_1TeV_Trr/Plots/Signal_1b_ee.pdf}
+%	}
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttee_1TeV_Trr/Plots/Signal_atleast2b_ee.pdf}
+%	}
+%	\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttee_1TeV_Trr/Plots/Signal_0b_ee_postFit.pdf}
+%	}
+%	%\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttee_1TeV_Trr/Plots/Signal_1b_ee_postFit.pdf}
+%	}
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttee_1TeV_Trr/Plots/Signal_atleast2b_ee_postFit.pdf}
+%	}
+%	%\hfill
+%	
+%	\caption{\textbf{(S+B fit in CR+SR)} Pre- and post-fit plots of the signal regions with zero, one and at least two $b$-jets for the fit with a $tt\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $T_{RR} = +1$ in the electron channel. Statistical and systematic uncertainties are considered for the fit.}
+%	\label{fig:SR_fit_ttee}
+%\end{figure}
+%
+%
+%
+%\begin{figure}[h]
+%	\centering
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttmm_1TeV_Trr/Plots/Signal_0b_mm.pdf}
+%	}
+%	%\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttmm_1TeV_Trr/Plots/Signal_1b_mm.pdf}
+%	}
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttmm_1TeV_Trr/Plots/Signal_atleast2b_mm.pdf}
+%	}
+%	\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttmm_1TeV_Trr/Plots/Signal_0b_mm_postFit.pdf}
+%	}
+%	%\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttmm_1TeV_Trr/Plots/Signal_1b_mm_postFit.pdf}
+%	}
+%	\subfloat[]{
+%		\includegraphics[width=0.33\textwidth]{figures/CIs/ttmm_1TeV_Trr/Plots/Signal_atleast2b_mm_postFit.pdf}
+%	}
+%	%\hfill
+%	
+%	\caption{\textbf{(S+B fit in CR+SR)} Pre- and post-fit plots of the signal regions with zero, one and at least two $b$-jets for the fit with a $tt\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $T_{RR} = +1$ in the muon channel. Statistical and systematic uncertainties are considered for the fit.}
+%	\label{fig:SR_fit_ttmm}
+%\end{figure}
+%
+%
+%
+%
+%
+%
+%\begin{figure}[h]
+%    \centering
+%    \subfloat[]{
+%    	\includegraphics[width=0.45\textwidth]{figures/CIs/ttee_1TeV_Trr/NormFactors.pdf}
+%    }
+%    \hfill
+%    \subfloat[]{
+%    	\includegraphics[width=0.45\textwidth]{figures/CIs/ttmm_1TeV_Trr/NormFactors.pdf}
+%    }
+%    \caption{\textbf{(S+B fit in CR+SR)} Normalisation factors obtained from the single-bin fits of the Control region in the electron (left) and muons (right) channel for the fit with a $tt\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $S_{RR} = +1$. Statistical and systematic uncertainties are considered for the fit.}
+%    \label{fig:ttll_Norm_Factors}
+%\end{figure}
+%
+%
+%
+%
+%
+%
+%\begin{figure}[h]
+%	\centering
+%	\subfloat[]{
+%		\includegraphics[width=0.23\textwidth]{figures/CIs/ttee_1TeV_Trr/Pulls/All/NuisPar_experimental.pdf}
+%	}
+%	\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.23\textwidth]{figures/CIs/ttee_1TeV_Trr/Pulls/All/NuisPar_theory.pdf}
+%	}
+%	\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.23\textwidth]{figures/CIs/ttmm_1TeV_Trr/Pulls/All/NuisPar_experimental.pdf}
+%	}
+%	\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.23\textwidth]{figures/CIs/ttmm_1TeV_Trr/Pulls/All/NuisPar_theory.pdf}
+%	}
+%	\caption{\textbf{(S+B fit in CR+SR)} Nuisance parameter pull plots (split into experimental and theory systematic uncertainties) for the electron (left) and muons (right) channel for the fit with a $tt\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $T_{RR} = +1$.}
+%    \label{fig:ttll_NuisPar}
+%\end{figure}
+%
+%
+%
+%
+%
+%\begin{figure}[h]
+%	\centering
+%	\subfloat[]{
+%		\includegraphics[width=0.45\textwidth]{figures/CIs/ttee_1TeV_Trr/CorrMatrix.pdf}
+%	}
+%	\hfill
+%	\subfloat[]{
+%		\includegraphics[width=0.45\textwidth]{figures/CIs/ttmm_1TeV_Trr/CorrMatrix.pdf}
+%	}
+%	\caption{\textbf{(S+B fit in CR+SR)} Nuisance parameter correlation matrices for the electron (left) and muon (right) channel for the fit with a $tt\ell\ell$ signal with $\Lambda=1\,\mathrm{TeV}$ with $T_{RR} = +1$. Only nuisance parameters having a correlation of at least 20\% with at least one other nuisance parameter are shown.}
+%    \label{fig:ttll_CorrMatrix}
+%\end{figure}
+%
+%
+%
+%
+%\begin{figure}[h]
+%	\centering
+%		\includegraphics[width=0.47\textwidth]{figures/Limits/Lambdas_ttee.png}
+%		\includegraphics[width=0.47\textwidth]{figures/Limits/Lambdas_ttmm.png}
+%	
+%	\caption{Expected limits for $t \bar t e^+ e^-$ (left) and $t \bar t \mu^+ \mu^-$ contact interactions.}
+%	\label{fig:exp_limits_ttll}
+%\end{figure}
+%
+\FloatBarrier

@@ -1,0 +1,25 @@
+Samples:
+  - Name: W+jets
+    Yield: [0.25185884383563462]
+  - Name: Z+jets
+    Yield: [290.43823052928116]
+  - Name: VV
+    Yield: [13.196883329209946]
+  - Name: t#bar{t}
+    Yield: [1.8729923877472174]
+  - Name: single-t
+    Yield: [0.40814056992530823]
+  - Name: t#bar{t}V
+    Yield: [0.30139922603115288]
+  - Name: fakes
+    Yield: [9.9999999999999995e-07]
+Total:
+  - Yield: [306.46950588603039]
+    UncertaintyUp: [142.25046579477404]
+    UncertaintyDown: [-142.25046579477404]
+Data:
+  - Yield: [260]
+Figure:
+  - BinEdges: [2, 3]
+    XaxisLabel: m_{ej} [TeV]
+    YaxisLabel: ""

@@ -1,0 +1,66 @@
+
+The MC background statistics is very low for high invariant masses. This can be seen in figure \ref{fig:mc_stat}, which shows the MC statistics (unweighted MC events) for the muon and the electron
+channel. %Especially for the training of the NN/GNN and the limit setting procedure a sufficient number of events is needed. 
+Since $\ttbar$ has a large contribution to the 
+background, an improved number of events would be desirable.
+
+\begin{figure}[h]
+\centering
+\subfloat[]{
+  \includegraphics[width=0.45\textwidth]{figures/MC_Stat/invariant_mass_eeLogY_Shapes.pdf}
+  %\label{}
+}
+\hfill
+\subfloat[]{
+  \includegraphics[width=0.45\textwidth]{figures/MC_Stat/invariant_mass_mumuLogY_Shapes.pdf}
+  %\label{}
+}
+\caption{MC statistics for the muon and the electron channel.}
+\label{fig:mc_stat}
+\end{figure}
+
+
+
+
+For the $\ttbar$ background the dileptonic $\ttbar$ samples are used.
+In a first try to improve the statistics the non-allhadronic $\ttbar$ sample with additional samples, which are sliced in the invariant $\ttbar$ mass, are tested.
+The result of the comparison of MC statistics for the dileptonic and the non-allhadronic samples is shown in figure \ref{fig:mc_stat_nonallhad_ttbarmass}.
+The statistic improves approximately by a factor of two. However, this is still not sufficient since $\ttbar$ has a large contribution to the background.
+
+\begin{figure}[h]
+\centering
+\subfloat[]{
+  \includegraphics[width=0.45\textwidth]{figures/MC_Stat/invariant_mass_mumuLogY_Shapes_ttbarmass_slices.pdf}
+  %\label{}
+}
+\hfill
+\subfloat[]{
+  \includegraphics[width=0.45\textwidth]{figures/MC_Stat/inv_mass_eeLogY_Shapes_ttbarmass_slices.pdf}
+  %\label{}
+}
+\caption{Comparison of the MC statistics of the dileptonic $\ttbar$ samples and the non-allhadronic $\ttbar$ samples with additional $\ttbar$ mass slices for the muon and the electron channel.}
+\label{fig:mc_stat_nonallhad_ttbarmass}
+\end{figure}
+
+
+
+Next, the dileptonic $\ttbar$ samples are compared with the non-allhadronic $\ttbar$ sample with additional samples, which are sliced in the variable $H_T$. The corresponding plots are shown
+in figure \ref{fig:mc_stat_nonallhad_HT}. The improvement in statistics is now better than for the usage of the $\ttbar$ mass slices.
+
+
+\begin{figure}[h]
+\centering
+\subfloat[]{
+  \includegraphics[width=0.45\textwidth]{figures/MC_Stat/invariant_mass_mumuLogY_Shapes_mcstat_muonchannel_HTslices.pdf}
+  %\label{}
+}
+\hfill
+\subfloat[]{
+  \includegraphics[width=0.45\textwidth]{figures/MC_Stat/inv_mass_eeLogY_Shapes_mcstat_electronchannel_HTslices.pdf}
+  %\label{}
+}
+\caption{Comparison of the MC statistics of the dileptonic $\ttbar$ samples and the non-allhadronic $\ttbar$ samples with additional $H_T$ slices for the muon and the electron channel.}
+\label{fig:mc_stat_nonallhad_HT}
+\end{figure}
+
+

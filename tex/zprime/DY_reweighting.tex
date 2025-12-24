@@ -1,0 +1,80 @@
+In this analysis, Sherpa 2.2.11 is used for the simulation of the neutral DY process. However, this background is reweighted to the shape of this process simulated with Powheg with additional higher-order corrections applied.
+The same reweighting procedure was already included in the Z'+MET analysis during the EB review process.
+The weight used for the reweighting is calculated by comparing the born mass
+distribution for the two generators.
+
+The data/MC comparison plots in Figure \ref{fig:DataMC_reweighting_mu} and \ref{fig:DataMC_reweighting_ele}  show some inclusive distributions before and after the application of the DY reweighting in the muon and electron channel, respectively. It can be seen that there is a discrepancy between data and MC (which increases with higher $m_{\ell\ell}$) before the reweighting. After the reweighting the discrepancy vanished and the data/MC-ratio is mostly compatible with a value of one.
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_mu/noReweighting/invariant_mass_mumu_fullrange_40logbinsLogYLogX_Stacked_NormPred.pdf}
+		\label{fig:inv_mass_mumu_noReweighting}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_mu/noReweighting/metLogYLogX_Stacked_NormPred.pdf}
+		\label{fig:met_mumu_noReweighting}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_mu/noReweighting/mu_ptLogY_Stacked_NormPred.pdf}
+		\label{fig:mu_pt_noReweighting}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_mu/withReweighting/invariant_mass_mumu_fullrange_40logbinsLogYLogX_Stacked_NormPred.pdf}
+		\label{fig:inv_mass_mumu_withReweighting}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_mu/withReweighting/metLogYLogX_Stacked_NormPred.pdf}
+		\label{fig:met_mumu_withReweighting}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_mu/withReweighting/mu_ptLogY_Stacked_NormPred.pdf}
+		\label{fig:mu_pt_withReweighting}
+	}
+	%\hfill
+	
+	\caption{Data/MC comparison with (bottom) and without (top) the reweighting of the DY background for the invariant dilepton mass distribution (\protect\subref{fig:inv_mass_mumu_noReweighting}, \protect\subref{fig:inv_mass_mumu_withReweighting}), the missing transverse momentum (\protect\subref{fig:met_mumu_noReweighting}, \protect\subref{fig:met_mumu_withReweighting}), and the transverse momentum of the $p_T$-leading muon (\protect\subref{fig:mu_pt_noReweighting}, \protect\subref{fig:mu_pt_withReweighting}) in the muon channel. The uncertainty band includes the statistical uncertainty.}
+	\label{fig:DataMC_reweighting_mu}
+\end{figure}
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_ele/noReweighting/invariant_mass_ee_fullrange_40logbinsLogYLogX_Stacked_NormPred.pdf}
+		\label{fig:inv_mass_ee_noReweighting}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_ele/noReweighting/metLogYLogX_Stacked_NormPred.pdf}
+		\label{fig:met_ee_noReweighting}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_ele/noReweighting/e_ptLogY_Stacked_NormPred.pdf}
+		\label{fig:e_pt_noReweighting}
+	}
+	\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_ele/withReweighting/invariant_mass_ee_fullrange_40logbinsLogYLogX_Stacked_NormPred.pdf}
+		\label{fig:inv_mass_ee_withReweighting}
+	}
+	%\hfill
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_ele/withReweighting/metLogYLogX_Stacked_NormPred.pdf}
+		\label{fig:met_ee_withReweighting}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.33\textwidth]{figures/DataMC_ele/withReweighting/e_ptLogY_Stacked_NormPred.pdf}
+		\label{fig:e_pt_withReweighting}
+	}
+	%\hfill
+	
+	\caption{Data/MC comparison with (bottom) and without (top) the reweighting of the DY background for the invariant dilepton mass distribution (\protect\subref{fig:inv_mass_ee_noReweighting}, \protect\subref{fig:inv_mass_ee_withReweighting}), the missing transverse momentum (\protect\subref{fig:met_ee_noReweighting}, \protect\subref{fig:met_ee_withReweighting}), and the transverse momentum of the $p_T$-leading electron (\protect\subref{fig:e_pt_noReweighting}, \protect\subref{fig:e_pt_withReweighting}) in the electron channel. The uncertainty band includes the statistical uncertainty.}
+	\label{fig:DataMC_reweighting_ele}
+\end{figure}

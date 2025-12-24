@@ -1,0 +1,98 @@
+Data from proton--proton collisions with a bunch spacing of $25\,\mathrm{ns}$ at a centre-of-mass energy of $\sqrt{s}=13\,\TeV$ is used in this analysis. The data was collected by the ATLAS detector in Run-2 of the LHC between 2015 and 2018 corresponding to a total integrated luminosity of $140\,\mathrm{fb^{-1}}$. 
+The data were collected using the triggers listed in Tables~\ref{tab:triggersEl} and~\ref{tab:triggersMu}. Note the special treatment of the run period 326834--328393 for 2017 data in the electron channel, which is due to the fact that the trigger 2e17\_lhvloose\_nod0\_L12EM15VHI was prescaled in periods B5--B8. For the muon channel, single-muon triggers have been used in previous dilepton searches~\cite{ATLAS_dilepton_2019,ATLAS_dilepton_nonresonant_2019}. The $e\mu$ channels used to control the $t\bar{t}$ background uses $e\mu$ triggers as specified in Table~\ref{tab:triggersElMu}. Only datasets from the Good Run List (GRL) are used, meaning that these datasets fulfill certain criteria \cite{grl} \footnote{The GRL can be found in this \href{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/GoodRunListsForAnalysisRun2}{twiki}. The exact GRLs used are: \\
+	data15\_13TeV.periodAllYear\_DetStatus-v89-pro21-02\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns.xml \\
+	data16\_13TeV.periodAllYear\_DetStatus-v89-pro21-01\_DQDefects-00-02-04\_PHYS\_StandardGRL\_All\_Good\_25ns.xml \\
+	data17\_13TeV.periodAllYear\_DetStatus-v99-pro22-01\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml \\
+	data18\_13TeV.periodAllYear\_DetStatus-v102-pro22-04\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}. The data were reconstructed using Athena release 21 and the analysis is done using centrally produced EXOT0 DAODs.
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{c|c}
+      \hhline{==}
+      Run period & Triggers \\ \hline
+       276262--284484 (2015 data)  & 2e12\_lhloose\_L12EM10VH   \\ \hline
+       297730--311481 (2016 data)  & 2e17\_lhvloose\_nod0            \\ \hline
+       325713--326833 (2017 data)  & 2e24\_lhvloose\_nod0 OR 2e17\_lhvloose\_nod0\_L12EM15VHI            \\ \hline
+       326834--328393 (2017 data)  & 2e24\_lhvloose\_nod0            \\ \hline
+       328394--340453 (2017 data)  & 2e24\_lhvloose\_nod0 OR 2e17\_lhvloose\_nod0\_L12EM15VHI            \\ \hline
+       348885--364292 (2018 data)  & 2e24\_lhvloose\_nod0 OR 2e17\_lhvloose\_nod0\_L12EM15VHI        \\ 
+       \hhline{==}
+    \end{tabular}
+    \caption{Triggers used in the electron channel. The special treatment of the run period 326834--328393 for 2017 data is due to the fact that
+    2e17\_lhvloose\_nod0\_L12EM15VHI was prescaled in periods B5--B8.}
+    \label{tab:triggersEl}
+  \end{table}
+  
+  \begin{table}
+    \centering
+    \begin{tabular}{c|c}
+     \hhline{==}
+      Run period & Triggers \\ \hline
+      \multicolumn{2}{c}{Single-muon triggers} \\ \hline
+        276262--284484 (2015 data)  & mu26\_imedium OR mu50    \\ \hline
+        297730--311481 (2016 data)  & mu26\_ivarmedium OR mu50 \\ \hline
+        325713--340453 (2017 data)  & mu26\_ivarmedium OR mu50 \\ \hline
+        348885--364292 (2018 data)  & mu26\_ivarmedium OR mu50 \\ \hline
+      \multicolumn{2}{c}{Di-muon triggers} \\ \hline
+        276262--284484 (2015 data)  & mu18\_mu8noL1 OR 2mu10 \\ \hline
+        297730--311481 (2016 data)  & mu22\_mu8noL1 OR 2mu14 \\ \hline
+        325713--340453 (2017 data)  & mu22\_mu8noL1 OR 2mu14 \\ \hline
+        348885--364292 (2018 data)  & mu22\_mu8noL1 OR 2mu14 \\
+        \hhline{==}
+    \end{tabular}
+    \caption{Triggers used in the muon channel.}
+    \label{tab:triggersMu}
+  \end{table}
+  
+  \begin{table}
+    \centering \footnotesize 
+    \begin{tabular}{c|c}
+    \hhline{==}
+      Run period & Triggers \\ \hline
+        276262--284484 (2015 data)  & e17\_lhloose\_mu14 OR  e7\_lhmedium\_mu24  \\ \hline
+        297730--311481 (2016 data)  & e17\_lhloose\_nod0\_mu14 OR e26\_lhmedium\_nod0\_mu8noL1 OR e7\_lhmedium\_nod0\_mu24 \\ \hline
+        325713--340453 (2017 data)  & e17\_lhloose\_nod0\_mu14 OR e26\_lhmedium\_nod0\_mu8noL1 OR e7\_lhmedium\_nod0\_mu24 \\ \hline
+        348885--364292 (2018 data)  & e17\_lhloose\_nod0\_mu14 OR e26\_lhmedium\_nod0\_mu8noL1 OR e7\_lhmedium\_nod0\_mu24  \\ 
+        \hhline{==}
+    \end{tabular}
+    \caption{Triggers used in the electron-muon channel.}
+    \label{tab:triggersElMu}
+  \end{table}
+
+Table \ref{tab:MCsamples} gives an overview of the generators used for the different steps in the simulation chain.
+
+\begin{table}
+	\centering \footnotesize 
+	\begin{tabular}{c|c|c|c|c}%\hline
+		\hline\hline
+							Process & ME generator & ME PDF & Parton shower & Detector simulation  \\ \hline % \hline
+							%	& & & & \\
+							$Z\ell\ell$ & Sherpa 2.2.11 & NNPDF3.0nnlo & Sherpa & FullSim\\
+							$t\bar{t}$ & Powheg-Box v2 & NNPDF3.0nlo & Pythia 8 (v8.230) & FullSim\\
+							Single top & Powheg-Box v2 & NNPDF3.0nlo & Pythia 8 (v8.230)& FullSim\\
+							Diboson & Sherpa 2.2.11/2.2.12 & NNPDF3.0nnlo & Sherpa& FullSim\\
+							Photon-induced & Pythia 8 &  NNPDF3.1NLO LUX QED & Pythia 8 & FullSim\\
+							$Z'\ell\ell$ & MadGraph 2.9.3 & NNPDF3.0nlo& Pythia 8 (v8.245)& Atlfast II\\
+							\hline \hline
+						\end{tabular}
+	\caption{Generators of the MC simulated background processes and the $Z'$ signal.}
+	\label{tab:MCsamples}
+\end{table}
+
+
+The dominant background in final states with one or more $b$-jets is the top quark pair production background, which is simulated with Powheg-Box v2 as matrix element generator and Pythia8 as shower generator using the NNPDF3.0nlo PDF set. For this background, non-allhadronic $\ttbar$ 
+samples with $H_T$-slices are used instead of dileptonic $\ttbar$ samples due to issues with low MC statistics at high invariant dilepton masses. This issue is further discussed in appendix
+\ref{appendix_mcstat}.\newline
+The neutral Drell-Yan (DY) process $Z/\gamma^* \to  ll$ is the dominant background in final states without $b$-tagged jets, which is simulated with Sherpa 2.2.11 using the NNPDF3.0NNLO PDF set. Samples inclusive in the invariant dilepton mass are combined with mass-enhanced samples. The latter ones are produced with a generator level cut at an invariant mass of $120 \,\GeV$ to increase the statistics at high invariant masses. Furthermore, both types of samples are split into three samples with different filters for $b$-quarks and $c$-quarks. In the following, the DY process is often split into a light flavour and a heavy flavour component. The splitting is done based on the three aforementioned filters for $b$-quarks and $c$-quarks. The filters \texttt{BFilter} and \texttt{CFilterBVeto} are assigned to the heavy flavour component of DY while the filter \texttt{CVetoBVeto} is categorised as light flavour DY.
+The DY event yields are corrected with a rescaling that depends on the dilepton invariant mass from NLO to next-to-next-to-leading
+order (NNLO) in $\alpha_s$, computed with VRAP 0.9 \cite{PhysRevD.69.094008} and the CT14nnlo PDF set \cite{Dulat_2016}. Mass-dependent electroweak corrections were computed at NLO with mcsanc 1.20 \cite{BONDARENKO20132343}.
+%A (shape) reweighting of the Sherpa samples to the DY Powheg samples is performed since higher order QCD and EW corrections are included in the Powheg samples. More details on the reweighting can be found in Appendix \ref{DY_reweighting}.  \newline
+The photon-induced background is generated using Pythia 8 at LO and the NNPDF3.1NLO LUX QEDPDF for the matrix element, with the NNPDF2.3LO PDF for the showering and hadronisation. \newline
+The background due to top quark single production is simulated with the same matrix element generator, parton shower generator and PDF set as the $\ttbar$ background. \newline
+%The diboson background is generated with Sherpa 2.2.1 for semi-leptonic, and Sherpa 2.2.2 for fully leptonic final states, using the NNPDF3.0NNLO PDF set. \textcolor{red}{Sherpa 2.2.11 and 2.2.12 will be used in the new ntuples.}\newline
+The diboson background is generated with Sherpa 2.2.11 for semi-leptonic, and Sherpa 2.2.12 for fully leptonic final states, using the NNPDF3.0NNLO PDF set. \newline
+The "fake" lepton background consists of events where at least one of the leptons in the final state is due to a hadronic jet and its contribution is estimated with the data-driven Matrix Method. 
+This background has contributions from $W$+jets, with one "real" lepton from the leptonic $W$-decay and one "fake" lepton from the jets, and multijet events, where both leptons are ``fake''.
+
+%Further information on the background MC samples and the Matrix Method can be found in Ref. \cite{commonNote}.
